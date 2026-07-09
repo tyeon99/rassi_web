@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .offcanvas-overlay {
+    @apply fixed inset-0 bg-black/50 z-[999] flex justify-end items-stretch;
+  }
+  .offcanvas-content {
+    @apply w-full max-w-full bg-white p-5 flex flex-col justify-start items-stretch shadow-2xl pt-[10px];
+  }
+  .offcanvas-close {
+    @apply w-full flex justify-end items-center py-2;
+  }
+  .offcanvas-body{
+    @apply w-full;
+  }
+  .introOffcanvas{
+    @apply w-full pt-[30px] overflow-y-auto;
+    -ms-overflow-style: none;  /* IE, 에지 */
+    scrollbar-width: none;  /* 파이어폭스 */
+  }
+  .introOffcanvas::-webkit-scrollbar {
+    display: none;
+  }
+  .introOffcanvas .txt-wrap{
+    @apply w-full flex flex-col justify-start items-start gap-[30px];
+  }
+  .introOffcanvas .txt-group{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .introOffcanvas .txt-group .title{
+    @apply w-full flex flex-col justify-start items-start gap-1;
+  }
+  .introOffcanvas .txt-group .title strong{
+    @apply font-bold text-lg text-black;
+  }
+  .introOffcanvas .txt-group .title span{
+    @apply font-normal text-sm text-gray;
+  }
+  .introOffcanvas .txt-group .box{
+    @apply w-full rounded-[12px] border border-[#DEE2E6] bg-white p-[17px] flex flex-col justify-start items-start gap-6;
+  }
+  .introOffcanvas .txt-group .box .p-group{
+    @apply flex flex-col justify-start items-start gap-4;
+  }
+  .introOffcanvas .txt-group .box .p-group p{
+    @apply font-normal text-base text-[#515F6C];
+  }
+  .introOffcanvas .txt-group .box .p-group strong{
+    @apply font-bold text-base text-black;
+  }
+}

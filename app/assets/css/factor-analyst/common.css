@@ -1,0 +1,30 @@
+@import "~/assets/css/factor-analyst/section.css";
+@import "~/assets/css/factor-analyst/header.css";
+@import "~/assets/css/factor-analyst/tab.css";
+@import "~/assets/css/factor-analyst/offcanvas.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+em{
+  @apply not-italic;
+}
+.up{
+  @apply !text-[#FF5050];
+}
+.swiper-pagination{
+  @apply relative flex justify-center items-center mt-4 !bottom-0;
+}
+.swiper-pagination .swiper-pagination-bullet{
+  @apply w-[6px] h-[6px] opacity-100 bg-[#DEE2E6] !mx-[3px];
+}
+.swiper-pagination .swiper-pagination-bullet-active{
+  @apply bg-black;
+}
+body.scroll-lock {
+  overflow: hidden !important;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}

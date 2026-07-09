@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .mainHeader{
+    @apply w-full flex justify-between p-[10px_20px] bg-white sticky top-0 left-0 right-0 z-[999];
+  }
+  .mainHeader__logo{
+    @apply flex justify-start items-center gap-2.5;
+  }
+  .mainHeader__logo--name{
+    @apply font-bold text-black text-xl;
+  }
+  .mainHeader__logo--dropdown, .mainHeader__search{
+    @apply flex;
+  }
+}
