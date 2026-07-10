@@ -15,4 +15,7 @@
   .mainHeader__logo--dropdown, .mainHeader__search{
     @apply flex;
   }
+  .backHeader{
+    @apply w-full p-[18.5px_12px] bg-white flex justify-start items-center sticky top-0 left-0 right-0 z-[999];
+  }
 }

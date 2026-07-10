@@ -14,6 +14,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/style.css'],
 
   app: {
+    baseURL: '/rassi_web/',
     head: {
       link: [
         { 

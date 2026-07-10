@@ -17,7 +17,10 @@
             :key="sidx" 
             class="swiper-slide"
           >
-            <button class="itemList box01">
+            <button
+              class="itemList box01"
+              :class="{ masking: sidx === 1 }"
+            >
               <div class="box-title">
                 수급선행 스타일+ 추천종목 5
               </div>
@@ -43,49 +46,6 @@
                   <div class="right">
                     <span>스타일 스코어</span>
                     <p class="up">{{ item.score }}점</p>
-                  </div>
-                </div>
-              </div>
-            </button>
-          </div>
-          <div class="swiper-slide">
-            <button class="itemList box01">
-              <div class="box-title">
-                수급선행 스타일+ 추천종목 5
-              </div>
-              <div class="box-txt">
-                강세와 트랜드를 분석하여 가장 많이 상승할 스타일+를 추천해 드려요.
-              </div>
-              
-              <div class="listGroup">
-                <div class="list">
-                  <div class="left">
-                    <div class="circle none">
-                      *
-                    </div>
-                    <div class="name">
-                      <p>*****</p>
-                      <span>******</span>
-                    </div>
-                  </div>
-                  <div class="right">
-                    <span>스타일 스코어</span>
-                    <p class="up">95.3점</p>
-                  </div>
-                </div>
-                <div class="list">
-                  <div class="left">
-                    <div class="circle none">
-                      *
-                    </div>
-                    <div class="name">
-                      <p>*****</p>
-                      <span>******</span>
-                    </div>
-                  </div>
-                  <div class="right">
-                    <span>스타일 스코어</span>
-                    <p class="up">95.3점</p>
                   </div>
                 </div>
               </div>

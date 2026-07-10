@@ -3,13 +3,19 @@
 @tailwind utilities;
 
 @layer components {
-  .mainTab{
+  .mainTab, .detailTab {
     @apply w-full border-b border-[#DEE2E6] flex justify-center items-center gap-3 sticky bg-white top-[58px] left-0 right-0 z-[999];
   }
-  .mainTab button{
-    @apply p-2.5 text-base text-[#A1ABB5] font-semibold
+  .detailTab{
+    @apply gap-7;
   }
-  .mainTab button.active{
-    @apply border-b-2 border-black text-black font-bold;
+  .mainTab button, .detailTab button {
+    @apply p-2.5 text-base text-[#A1ABB5] font-semibold transition-colors duration-200;
+  }
+  .mainTab button.active, .detailTab button.active {
+    @apply text-black font-bold;
+  }
+  .mainTab .tab-indicator, .detailTab .tab-indicator {
+    @apply absolute bottom-0 left-0 h-[2px] bg-black transition-all duration-300 ease-out;
   }
 }

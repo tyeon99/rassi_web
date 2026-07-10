@@ -2,6 +2,7 @@
 @import "~/assets/css/factor-analyst/header.css";
 @import "~/assets/css/factor-analyst/tab.css";
 @import "~/assets/css/factor-analyst/offcanvas.css";
+@import "~/assets/css/factor-analyst/detail.css";
 
 @tailwind base;
 @tailwind components;
@@ -27,4 +28,23 @@ body.scroll-lock {
   position: fixed;
   width: 100%;
   height: 100%;
+}
+.tag{
+  @apply w-[60px] py-1 px-2 rounded-[4px] font-bold text-[11px] leading-[17px] flex justify-center items-center;
+}
+.tag.high{
+  @apply text-[#FF5050];
+  background: var(--color-red-6610, #FF50501A);
+}
+.tag.midlow{
+  @apply text-[#FFCC00];
+  background: var(--color-yellow-6610, #FFCC001A);
+}
+.tag.low{
+  @apply text-[#5886FE];
+  background: var(--blue_light, #5886FE1A);
+}
+.tag.on{
+  @apply text-[#03B26C];
+  background: var(--color-spring-green-3510, #03B26C1A);
 }

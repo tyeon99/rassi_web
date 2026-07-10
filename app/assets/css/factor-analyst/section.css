@@ -33,7 +33,7 @@
   .mainSection__tab button.active{
     @apply font-semibold text-[#364350];
   }
-  .tab-indicator {
+  .mainSection__tab .tab-indicator {
     @apply h-[37px] absolute rounded-[6px] bg-[#DEE2E6] z-0 ease-out top-0 bottom-0 left-5;
     transition: transform 0.3s ease-out, width 0.3s ease-out; 
   }
@@ -53,11 +53,21 @@
   .itemList.box01{
     background: linear-gradient(160.25deg, #F0F0FF 67.85%, #FEF7FF 96.06%);
   }
+  .itemList.box02{
+    @apply bg-white;
+  }
   .itemList .box-title{
     @apply w-full font-bold text-xl text-black mb-2.5;
   }
   .itemList .box-txt{
     @apply w-full font-normal text-sm text-gray mb-5;
+  }
+  .recommend-pick{
+    @apply p-[7px_16px] bg-main flex justify-center items-center gap-[5px] rounded-[50px] m-[0_auto] mb-5;
+    box-shadow: 0px 0px 10px 0px #CCCDFF;
+  }
+  .recommend-pick p{
+    @apply font-semibold text-base text-white;
   }
   .itemList .listGroup{
     @apply w-full flex flex-col justify-start items-start gap-4;
@@ -83,6 +93,9 @@
   .itemList .listGroup .list span{
     @apply font-normal text-xs text-gray leading-[18px];
   }
+  .itemList.masking .listGroup .list .left{
+    @apply blur-[4px];
+  }
   /* 날짜별 추천 스타일+ */
   .dateList{
     @apply w-full flex flex-col justify-start items-start mb-5;
@@ -97,7 +110,7 @@
     @apply w-5 h-5 bg-main left-[-1px] top-0 border-[5px] border-[#E0E0FF];
   }
   .dateList .date::after{
-    @apply content-[''] absolute w-[2px] h-full border border-dashed border-[#F5F7F9] left-2 top-0 z-[0];
+    @apply content-[''] absolute w-[2px] h-full border border-dashed border-[#DEE2E6] left-2 top-0 z-[0];
   }
   .dateList .date span{
     @apply text-gray font-normal text-[13px] leading-[20px];
@@ -110,6 +123,12 @@
   }
   .dateList .date p{
     @apply font-semibold text-base text-black;
+  }
+  .dateList .date .item-group{
+    @apply flex justify-start items-center flex-wrap gap-[6px_12px] whitespace-nowrap;
+  }
+  .dateList .date .item-group.masking{
+    @apply blur-[4px];
   }
   .style-all button{
     @apply w-full h-[46px] rounded-[8px] border border-[#DEE2E6] text-[#364350] font-normal text-base;
