@@ -9,7 +9,7 @@
         <div class="list">
           <div class="left">
             <div class="circle">
-              <img width="30" src="/_nuxt/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+              <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
             </div>
             <div class="name">
               <p>삼성전자</p><span>055872</span>
@@ -22,7 +22,7 @@
         <div class="list">
           <div class="left">
             <div class="circle">
-              <img width="30" src="/_nuxt/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+              <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
             </div>
             <div class="name">
               <p>SK하이닉스</p><span>000660</span>
@@ -35,7 +35,7 @@
         <div class="list">
           <div class="left">
             <div class="circle">
-              <img width="30" src="/_nuxt/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+              <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
             </div>
             <div class="name">
               <p>현대차</p><span>005380</span>
@@ -48,7 +48,7 @@
         <div class="list">
           <div class="left">
             <div class="circle">
-              <img width="30" src="/_nuxt/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+              <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
             </div>
             <div class="name">
               <p>네이버</p><span>035420</span>
@@ -61,7 +61,7 @@
         <div class="list">
           <div class="left">
             <div class="circle">
-              <img width="30" src="/_nuxt/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+              <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
             </div>
             <div class="name">
               <p>카카오</p><span>035720</span>
@@ -83,7 +83,7 @@
         <div class="list">
           <div class="left">
             <div class="circle">
-              <img width="30" src="/_nuxt/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+              <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
             </div>
             <div class="name">
               <p>삼성전자</p><span>055872</span>
@@ -96,7 +96,7 @@
         <div class="list">
           <div class="left">
             <div class="circle">
-              <img width="30" src="/_nuxt/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+              <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
             </div>
             <div class="name">
               <p>SK하이닉스</p><span>000660</span>
@@ -109,7 +109,7 @@
         <div class="list">
           <div class="left">
             <div class="circle">
-              <img width="30" src="/_nuxt/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+              <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
             </div>
             <div class="name">
               <p>현대차</p><span>005380</span>
@@ -122,7 +122,7 @@
         <div class="list">
           <div class="left">
             <div class="circle">
-              <img width="30" src="/_nuxt/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+              <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
             </div>
             <div class="name">
               <p>네이버</p><span>035420</span>
@@ -135,7 +135,7 @@
         <div class="list">
           <div class="left">
             <div class="circle">
-              <img width="30" src="/_nuxt/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+              <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
             </div>
             <div class="name">
               <p>카카오</p><span>035720</span>
@@ -153,7 +153,7 @@
         <div class="list">
           <div class="left">
             <div class="circle">
-              <img width="30" src="/_nuxt/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+              <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
             </div>
             <div class="name">
               <p>삼성전자</p><span>055872</span>
@@ -166,7 +166,7 @@
         <div class="list">
           <div class="left">
             <div class="circle">
-              <img width="30" src="/_nuxt/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+              <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
             </div>
             <div class="name">
               <p>SK하이닉스</p><span>000660</span>
@@ -179,7 +179,7 @@
         <div class="list">
           <div class="left">
             <div class="circle">
-              <img width="30" src="/_nuxt/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+              <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
             </div>
             <div class="name">
               <p>현대차</p><span>005380</span>
@@ -192,7 +192,7 @@
         <div class="list">
           <div class="left">
             <div class="circle">
-              <img width="30" src="/_nuxt/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+              <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
             </div>
             <div class="name">
               <p>네이버</p><span>035420</span>
@@ -205,7 +205,7 @@
         <div class="list">
           <div class="left">
             <div class="circle">
-              <img width="30" src="/_nuxt/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+              <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
             </div>
             <div class="name">
               <p>카카오</p><span>035720</span>
@@ -218,7 +218,7 @@
         <div class="list">
           <div class="left">
             <div class="circle">
-              <img width="30" src="/_nuxt/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+              <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
             </div>
             <div class="name">
               <p>카카오</p><span>035720</span>
