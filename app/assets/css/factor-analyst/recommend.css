@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .recommendListContent{
+    @apply w-full flex flex-col justify-start items-start pb-[30px];
+  }
+  .recommendListContent__list{
+    @apply w-full px-5 pt-[30px] flex flex-col justify-start items-start gap-4 bg-white;
+  }
+  .recommendListContent__list.today{
+    @apply relative py-[30px] pt-[88px] bg-transparent;
+  }
+  .recommendListContent__list.today .today-bg{
+    @apply absolute w-full h-[100dvh] left-0 right-0 top-0 bottom-0 z-[-1];
+    background: linear-gradient(172.88deg, #DDDEFF 6.6%, #FCF6FF 32.33%);
+  }
+  .recommendListContent__list .date{
+    @apply w-full flex justify-between items-center;
+  }
+  .recommendListContent__list .date p{
+    @apply font-normal text-[13px] leading-[20px] text-gray;
+  }
+  .recommendListContent__list.today .date p{
+    @apply text-main;
+  }
+  .recommendListContent__list .date span{
+    @apply p-[2px_8px] bg-[#9E75FF] rounded-[50px] font-bold text-[11px] leading-[17px] text-white;
+  }
+  .recommendListContent__list .list{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .recommendListContent__list .list button{
+    @apply w-full bg-[#F5F7F9] p-4 rounded-xl flex flex-col justify-start items-start gap-3;
+  }
+  .recommendListContent__list.today .list button{
+    background: #FFFFFF99;
+  }
+  .recommendListContent__list .list button .top{
+    @apply w-full flex justify-between items-center;
+  }
+  .recommendListContent__list .list button .top strong{
+    @apply font-bold text-base text-black;
+  }
+  .recommendListContent__list .list button .top span{
+    @apply font-normal text-[13px] leading-[20px] text-gray;
+  }
+  .recommendListContent__list .list button .bottom{
+    @apply w-full flex justify-start items-start gap-4 flex-wrap;
+  }
+  .recommendListContent__list .list button .bottom .item{
+    @apply flex justify-start items-center gap-[6px];
+  }
+  .recommendListContent__list .list button .bottom .item p{
+    @apply font-normal text-sm text-black;
+  }
+  .recommendResultContent{
+    @apply w-full;
+  }
+  .recommendResultContent__section{
+    @apply w-full py-6 px-5 border-b-[12px] border-[#F5F7F9] first:pt-0;
+  }
+  .recommendResultContent__section--title{
+    @apply w-full flex flex-col justify-start items-start gap-2 mb-4;
+  }
+  .recommendResultContent__section--title .title{
+    @apply w-full flex justify-between items-end;
+  }
+  .recommendResultContent__section--title span{
+    @apply font-normal text-[13px] leading-[20px] text-main;
+  }
+  .recommendResultContent__section--title h1{
+    @apply font-bold text-lg text-black;
+  }
+  .recommendResultContent__section--title h1 strong{
+    @apply font-bold text-[30px] text-black;
+  }
+  .recommendResultContent__section--title .title button{
+    @apply flex justify-end items-center;
+  }
+  .recommendResultContent__section--title .title button p{
+    @apply font-normal text-[13px] leading-[20px] text-gray;
+  }
+  .recommendResultContent__section--box{
+    @apply w-full rounded-2xl p-4 flex flex-col justify-start items-start gap-3 bg-[#F5F7F9];
+  }
+  .recommendResultContent__section--box .box-title{
+    @apply w-full flex justify-start items-center gap-2;
+  }
+  .recommendResultContent__section--box .box-title strong{
+    @apply font-bold text-base text-[#364350];
+  }
+  .recommendResultContent__section--box .box-txt {
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .recommendResultContent__section--box .box-txt p{
+    @apply relative font-normal text-base text-black pl-3 before:content-['•'] before:absolute before:left-[2px] before:top-0 before:text-base before:font-normal before:text-black;
+  }
+  .recommendResultContent__section--txt{
+    @apply font-normal text-[15px] leading-[22.5px] text-[#515F6C] mb-4;
+  }
+  .recommendResultContent__section--content .rate-box{
+    @apply w-full rounded-[12px] p-5 flex justify-center items-center gap-1;
+    background: var(--color-blue-7010, #6565FF1A);
+  }
+  .recommendResultContent__section--content .rate-box .rate{
+    @apply w-[120px] flex flex-col justify-start items-center gap-4;
+  }
+  .recommendResultContent__section--content .rate-box .rate .txt{
+    @apply flex flex-col justify-center items-center;
+  }
+  .recommendResultContent__section--content .rate-box .rate .txt p{
+    @apply font-semibold text-sm text-black;
+  }
+  .recommendResultContent__section--content .rate-box .rate .txt strong{
+    @apply font-bold text-xl;
+  }
+  .recommendResultContent__section--content .rate-box .rate .txt span{
+    @apply font-normal text-xs text-gray;
+  }
+  .recommendResultContent__section--content .inner-box{
+    @apply w-full h-[136px] bg-[#F5F7F9] rounded-[12px] flex justify-center items-center mt-4;
+  }
+  .recommendResultContent__section--content .chart-box{
+    @apply w-full h-full rounded-[12px] mt-4;
+  }
+}

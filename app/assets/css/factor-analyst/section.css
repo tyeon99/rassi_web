@@ -69,28 +69,28 @@
   .recommend-pick p{
     @apply font-semibold text-base text-white;
   }
-  .itemList .listGroup{
+  .listGroup{
     @apply w-full flex flex-col justify-start items-start gap-4;
   }
-  .itemList .listGroup .list{
+  .listGroup .list{
     @apply w-full flex justify-between items-center;
   }
-  .itemList .listGroup .list .left{
+  .listGroup .list .left{
     @apply flex justify-start items-center gap-3;
   }
-  .itemList .listGroup .list .left .circle.none{
+  .listGroup .list .left .circle.none{
     @apply w-[30px] h-[30px] flex justify-center items-center bg-[#FFDFDF] rounded-full text-black text-sm font-normal;
   }
-  .itemList .listGroup .list .left .name{
+  .listGroup .list .left .name{
     @apply flex flex-col;
   }
-  .itemList .listGroup .list .right{
+  .listGroup .list .right{
     @apply flex flex-col items-end;
   }
-  .itemList .listGroup .list p{
+  .listGroup .list p{
     @apply font-semibold text-base text-black;
   }
-  .itemList .listGroup .list span{
+  .listGroup .list span{
     @apply font-normal text-xs text-gray leading-[18px];
   }
   .itemList.masking .listGroup .list .left{
