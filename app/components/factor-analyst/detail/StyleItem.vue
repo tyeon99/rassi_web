@@ -15,7 +15,7 @@
               <p>삼성전자</p><span>055872</span>
             </div>
           </div>
-          <div class="right"><span>스타일 스코어</span>
+          <div class="right"><span>스코어</span>
             <p class="up">95.3점</p>
           </div>
         </div>
@@ -28,7 +28,7 @@
               <p>SK하이닉스</p><span>000660</span>
             </div>
           </div>
-          <div class="right"><span>스타일 스코어</span>
+          <div class="right"><span>스코어</span>
             <p class="up">88.5점</p>
           </div>
         </div>
@@ -41,7 +41,7 @@
               <p>현대차</p><span>005380</span>
             </div>
           </div>
-          <div class="right"><span>스타일 스코어</span>
+          <div class="right"><span>스코어</span>
             <p class="up">82.1점</p>
           </div>
         </div>
@@ -54,7 +54,7 @@
               <p>네이버</p><span>035420</span>
             </div>
           </div>
-          <div class="right"><span>스타일 스코어</span>
+          <div class="right"><span>스코어</span>
             <p class="up">79.4점</p>
           </div>
         </div>
@@ -67,7 +67,7 @@
               <p>카카오</p><span>035720</span>
             </div>
           </div>
-          <div class="right"><span>스타일 스코어</span>
+          <div class="right"><span>스코어</span>
             <p class="up">75.8점</p>
           </div>
         </div>
@@ -89,7 +89,7 @@
               <p>삼성전자</p><span>055872</span>
             </div>
           </div>
-          <div class="right"><span>스타일 스코어</span>
+          <div class="right"><span>스코어</span>
             <p class="up">95.3점</p>
           </div>
         </div>
@@ -102,7 +102,7 @@
               <p>SK하이닉스</p><span>000660</span>
             </div>
           </div>
-          <div class="right"><span>스타일 스코어</span>
+          <div class="right"><span>스코어</span>
             <p class="up">88.5점</p>
           </div>
         </div>
@@ -115,7 +115,7 @@
               <p>현대차</p><span>005380</span>
             </div>
           </div>
-          <div class="right"><span>스타일 스코어</span>
+          <div class="right"><span>스코어</span>
             <p class="up">82.1점</p>
           </div>
         </div>
@@ -128,7 +128,7 @@
               <p>네이버</p><span>035420</span>
             </div>
           </div>
-          <div class="right"><span>스타일 스코어</span>
+          <div class="right"><span>스코어</span>
             <p class="up">79.4점</p>
           </div>
         </div>
@@ -141,7 +141,7 @@
               <p>카카오</p><span>035720</span>
             </div>
           </div>
-          <div class="right"><span>스타일 스코어</span>
+          <div class="right"><span>스코어</span>
             <p class="up">75.8점</p>
           </div>
         </div>
@@ -159,7 +159,7 @@
               <p>삼성전자</p><span>055872</span>
             </div>
           </div>
-          <div class="right"><span>스타일 스코어</span>
+          <div class="right"><span>스코어</span>
             <p class="up">95.3점</p>
           </div>
         </div>
@@ -172,7 +172,7 @@
               <p>SK하이닉스</p><span>000660</span>
             </div>
           </div>
-          <div class="right"><span>스타일 스코어</span>
+          <div class="right"><span>스코어</span>
             <p class="up">88.5점</p>
           </div>
         </div>
@@ -185,7 +185,7 @@
               <p>현대차</p><span>005380</span>
             </div>
           </div>
-          <div class="right"><span>스타일 스코어</span>
+          <div class="right"><span>스코어</span>
             <p class="up">82.1점</p>
           </div>
         </div>
@@ -198,7 +198,7 @@
               <p>네이버</p><span>035420</span>
             </div>
           </div>
-          <div class="right"><span>스타일 스코어</span>
+          <div class="right"><span>스코어</span>
             <p class="up">79.4점</p>
           </div>
         </div>
@@ -211,7 +211,7 @@
               <p>카카오</p><span>035720</span>
             </div>
           </div>
-          <div class="right"><span>스타일 스코어</span>
+          <div class="right"><span>스코어</span>
             <p class="up">75.8점</p>
           </div>
         </div>
@@ -224,7 +224,7 @@
               <p>카카오</p><span>035720</span>
             </div>
           </div>
-          <div class="right"><span>스타일 스코어</span>
+          <div class="right"><span>스코어</span>
             <p class="up">75.8점</p>
           </div>
         </div>

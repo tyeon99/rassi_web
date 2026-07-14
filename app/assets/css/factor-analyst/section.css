@@ -73,23 +73,29 @@
     @apply w-full flex flex-col justify-start items-start gap-4;
   }
   .listGroup .list{
-    @apply w-full flex justify-between items-center;
+    @apply w-full flex justify-between items-center gap-2;
   }
   .listGroup .list .left{
-    @apply flex justify-start items-center gap-3;
+    @apply flex-1 flex justify-start items-center gap-3 min-w-0;
+  }
+  .listGroup .list .left .circle{
+    @apply shrink-0;
   }
   .listGroup .list .left .circle.none{
     @apply w-[30px] h-[30px] flex justify-center items-center bg-[#FFDFDF] rounded-full text-black text-sm font-normal;
   }
   .listGroup .list .left .name{
-    @apply flex flex-col;
+    @apply flex flex-col min-w-0;
   }
   .listGroup .list .right{
-    @apply flex flex-col items-end;
+    @apply shrink-0 flex flex-col items-end;
   }
   .listGroup .list p{
     @apply font-semibold text-base text-black;
   }
+  .listGroup .list .left .name p {
+  @apply truncate;
+}
   .listGroup .list span{
     @apply font-normal text-xs text-gray leading-[18px];
   }
@@ -119,11 +125,20 @@
     @apply w-full flex flex-col justify-start items-start gap-[6px];
   }
   .dateList .date .txt-group .txt{
-    @apply w-full flex justify-between items-center;
+    @apply w-full flex justify-between items-center gap-2;
   }
-  .dateList .date p{
+  .dateList .date p, .dateList .date p span{
     @apply font-semibold text-base text-black;
   }
+  .dateList .date .item{
+    @apply flex-1 flex justify-end items-center gap-[6px];
+  }
+  .dateList .date .item span{
+    @apply block;
+  }
+  .dateList .date .item em {
+  @apply shrink-0;
+}
   .dateList .date .item-group{
     @apply flex justify-start items-center flex-wrap gap-[6px_12px] whitespace-nowrap;
   }

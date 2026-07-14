@@ -44,7 +44,7 @@
                     </div>
                   </div>
                   <div class="right">
-                    <span>스타일 스코어</span>
+                    <span>스코어</span>
                     <p class="up">{{ item.score }}점</p>
                   </div>
                 </div>
@@ -75,7 +75,7 @@ const isOffcanvasAni = ref(false)
 const slides = [
   {
     items: [
-      { name: '삼성전자', code: '055872', score: 95.3 },
+      { name: '삼성전자삼성전자삼성전자삼성전자삼성전자', code: '055872', score: 95.3 },
       { name: 'SK하이닉스', code: '000660', score: 88.5 },
       { name: '현대차', code: '005380', score: 82.1 },
       { name: '네이버', code: '035420', score: 79.4 },

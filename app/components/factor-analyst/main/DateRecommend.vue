@@ -21,7 +21,10 @@
               class="txt"
             >
               <p>{{ txt.style }}</p>
-              <p>{{ txt.item }} <em class="up">{{ txt.rate }}</em></p>
+              <p class="item">
+                <span>{{ txt.item.slice(0, 6) }}</span>
+                <em class="up">{{ txt.rate }}</em>
+              </p>
             </div>
 
           </div>
@@ -41,22 +44,22 @@ const dateListData = [
   { 
     date: '6월 8일 금요일', 
     texts: [
-      { style: '정석강세 스타일', item: '삼성전자', rate: '+22.90%' },
-      { style: '수급선행 스타일', item: 'SK하이닉스', rate: '+15.40%' }
+      { style: '흙속의 진주 스타일', item: '나이스정보통신', rate: '+22.90%' },
+      { style: '흙속의 진주 스타일', item: 'SK하이닉스', rate: '+15.40%' }
     ] 
   },
   { 
     date: '6월 7일 목요일', 
     texts: [
-      { style: '황금밸런스 스타일', item: '현대차', rate: '+5.20%' },
-      { style: '정석강세 스타일', item: '네이버', rate: '+8.90%' }
+      { style: '흙속의 진주 스타일', item: '삼성전자삼성전자삼성전자', rate: '+5.20%' },
+      { style: '흙속의 진주 스타일', item: '네이버', rate: '+8.90%' }
     ] 
   },
   { 
     date: '6월 6일 수요일', 
     texts: [
-      { style: '수급선행 스타일', item: '카카오', rate: '-2.10%' },
-      { style: '정석강세 스타일', item: '삼성전자', rate: '+22.90%' }
+      { style: '흙속의 진주 스타일', item: '카카오', rate: '-2.10%' },
+      { style: '흙속의 진주 스타일', item: '삼성전자', rate: '+22.90%' }
     ] 
   }
 ]

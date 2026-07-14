@@ -47,14 +47,26 @@
     @apply font-normal text-[13px] leading-[20px] text-gray;
   }
   .recommendListContent__list .list button .bottom{
-    @apply w-full flex justify-start items-start gap-4 flex-wrap;
+    @apply w-full flex flex-col justify-start items-start gap-3;
   }
   .recommendListContent__list .list button .bottom .item{
-    @apply flex justify-start items-center gap-[6px];
+    @apply w-full flex justify-between items-center gap-[6px] min-w-0;
   }
+  .recommendListContent__list .list button .bottom .item .left{
+    @apply flex-1 flex justify-start items-center gap-[6px] min-w-0;
+  }
+  .recommendListContent__list .list button .bottom .item .left img {
+  @apply shrink-0;
+}
+.recommendListContent__list .list button .bottom .item .right {
+  @apply shrink-0;
+}
   .recommendListContent__list .list button .bottom .item p{
     @apply font-normal text-sm text-black;
   }
+  .recommendListContent__list .list button .bottom .item .left p {
+  @apply truncate;
+}
   .recommendResultContent{
     @apply w-full;
   }

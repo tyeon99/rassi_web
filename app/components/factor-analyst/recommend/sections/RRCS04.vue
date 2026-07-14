@@ -21,13 +21,17 @@
                 :key="iIdx" 
                 class="item"
               >
-                <img 
-                  width="20" 
-                  src="~/assets/img/factor-analyst/main/item-circle.png" 
-                  alt="종목 아이콘"
-                >
-                <p>{{ item.name }}</p>
-                <p class="up">{{ item.rate }}</p>
+                <div class="left">
+                  <img 
+                    width="20" 
+                    src="~/assets/img/factor-analyst/main/item-circle.png" 
+                    alt="종목 아이콘"
+                  >
+                  <p>{{ item.name }}</p>
+                </div>
+                <div class="right">
+                  <p class="up">{{ item.rate }}</p>
+                </div>
               </div>
             </div>
           </button>
