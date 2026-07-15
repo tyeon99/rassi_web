@@ -4,7 +4,7 @@
       <h1>추천 스타일⁺ 종목 Pick5</h1>
     </div>
     <div class="recommendResultContent__section--txt">
-      추천 스타일 + 종목으로 선정된 후 최대 1달 동안 성과 추척이 이루어지며, 이후에는 별도의 성과 추적이 진행되지 않습니다.
+      추천 스타일⁺ 종목으로 선정된 후 최대 1달 동안 성과 추척이 이루어지며, 이후에는 별도의 성과 추적이 진행되지 않습니다.
     </div>
     <div class="recommendResultContent__section--content">
       <div class="listGroup">
