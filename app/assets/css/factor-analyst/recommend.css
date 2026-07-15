@@ -62,7 +62,7 @@
   @apply shrink-0;
 }
   .recommendListContent__list .list button .bottom .item p{
-    @apply font-normal text-base text-black;
+    @apply font-semibold text-base text-black;
   }
   .recommendListContent__list .list button .bottom .item .left p {
   @apply truncate;
