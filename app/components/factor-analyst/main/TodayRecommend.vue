@@ -3,7 +3,7 @@
     <div class="mainSection__title items-start">
       <h2>
         <span>6월 10일 (MON)</span>
-        오늘의 추천 스타일+
+        오늘의 추천 스타일⁺
       </h2>
       <button @click="openIntroOffcanvas">
         <img width="24" src="~/assets/img/factor-analyst/main/detail-btn.png" alt="상세보기 버튼">
@@ -22,10 +22,10 @@
               :class="{ masking: sidx === 1 }"
             >
               <div class="box-title">
-                수급선행 스타일+ 추천종목 5
+                수급선행 스타일⁺ 추천종목 5
               </div>
               <div class="box-txt">
-                강세와 트랜드를 분석하여 가장 많이 상승할 스타일+를 추천해 드려요.
+                강세와 트랜드를 분석하여 가장 많이 상승할 스타일⁺를 추천해 드려요.
               </div>
               
               <div class="listGroup">
@@ -93,13 +93,13 @@ const slides = [
   }
 ]
 
-// 스타일+ 소개페이지 열기
+// 스타일⁺ 소개페이지 열기
 const openIntroOffcanvas = () => {
   isOffcanvasAni.value = true
   isIntroOffcanvasOpen.value = true
 }
 
-// 스타일+ 소개페이지 닫기
+// 스타일⁺ 소개페이지 닫기
 const closeIntroOffcanvas = () => {
   isOffcanvasAni.value = false
   setTimeout(() => {

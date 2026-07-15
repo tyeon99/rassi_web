@@ -1,7 +1,7 @@
 <template>
   <div class="recommendResultContent__section">
     <div class="recommendResultContent__section--title">
-      <h1>6월 5일 다른 추천 스타일+는?</h1>
+      <h1>6월 5일 다른 추천 스타일⁺는?</h1>
     </div>
 
     <div class="recommendResultContent__section--content">

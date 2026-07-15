@@ -2,7 +2,7 @@
   <section class="mainSection">
     <div class="mainSection__title">
       <h2>
-        날짜별 추천 스타일+
+        날짜별 추천 스타일⁺
       </h2>
     </div>
     <div class="mainSection__content">

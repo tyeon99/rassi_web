@@ -40,7 +40,7 @@
   .mainSection__content{
     @apply w-full;
   }
-  /* 오늘의 추천 스타일+ */
+  /* 오늘의 추천 스타일⁺ */
   .recommendItemSwiper, .recommendItemSwiper .swiper-slide{
     @apply w-full;
   }
@@ -102,7 +102,7 @@
   .itemList.masking .listGroup .list .left{
     @apply blur-[4px];
   }
-  /* 날짜별 추천 스타일+ */
+  /* 날짜별 추천 스타일⁺ */
   .dateList{
     @apply w-full flex flex-col justify-start items-start mb-5;
   }
@@ -116,7 +116,7 @@
     @apply w-5 h-5 bg-main left-[-1px] top-0 border-[5px] border-[#E0E0FF];
   }
   .dateList .date::after{
-    @apply content-[''] absolute w-[2px] h-full border border-dashed border-[#DEE2E6] left-2 top-0 z-[0];
+    @apply content-[''] absolute w-[1px] h-full border-l border-dashed border-[#DEE2E6] left-2 top-0 z-[0];
   }
   .dateList .date span{
     @apply text-gray font-normal text-[13px] leading-[20px];

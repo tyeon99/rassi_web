@@ -2,7 +2,7 @@
   <div class="detailContent">
     <div class="detailContent__wrap">
       <div class="detailContent__wrap--title">
-        <h1>스타일+를 구성하는 종목 스타일은?</h1>
+        <h1>스타일⁺를 구성하는 종목 스타일은?</h1>
       </div>
       <div class="detailContent__wrap--content">
         <div
@@ -50,7 +50,7 @@
     <!-- // -->
     <div class="detailContent__wrap">
       <div class="detailContent__wrap--title">
-        <h1>스타일+ 활용 방법은?</h1>
+        <h1>스타일⁺ 활용 방법은?</h1>
       </div>
       <div class="detailContent__wrap--content">
         <div class="box">

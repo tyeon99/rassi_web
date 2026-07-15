@@ -3,7 +3,7 @@
     <BackTitleHeader 
       class="recommend" 
       :class="{ 'header-fixed': isScrolled }" 
-      title="추천 스타일+" 
+      title="추천 스타일⁺" 
     />
     <main id="main" class="main">
       <RecommendListContent />

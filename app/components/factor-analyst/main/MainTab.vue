@@ -29,7 +29,7 @@ const tabs = [
   { id: 'market', name: '마켓뷰' },
   { id: 'ai-signal', name: 'AI매매신호' },
   { id: 'stock-catch', name: '종목캐치' },
-  { id: 'style-plus', name: '스타일+' }
+  { id: 'style-plus', name: '스타일⁺' }
 ]
 
 const activeTab = ref('style-plus')

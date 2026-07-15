@@ -1,7 +1,7 @@
 <template>
   <div class="recommendResultContent__section">
     <div class="recommendResultContent__section--title">
-      <h1>추천 스타일+ 종목 Pick5 1개월 성과 추적</h1>
+      <h1>추천 스타일⁺ 종목 Pick5 1개월 성과 추적</h1>
     </div>
     <div class="recommendResultContent__section--txt">
       추천 당시 제시된 목표수익률과 추천 이후 1개월 내 Pick 5 종목이 기록한 최대 달성 수익률을 확인할 수 있습니다.

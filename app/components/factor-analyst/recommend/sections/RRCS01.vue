@@ -1,7 +1,7 @@
 <template>
   <div class="recommendResultContent__section">
     <div class="recommendResultContent__section--title">
-      <span>6월 30일 추천 스타일+</span>
+      <span>6월 30일 추천 스타일⁺</span>
       <div class="title">
         <h1><strong>정석강세 스타일</strong></h1>
         <button>
@@ -16,7 +16,7 @@
 
     <div class="recommendResultContent__section--box">
       <div class="box-title">
-        <strong>스타일+ 체크 포인트</strong>
+        <strong>스타일⁺ 체크 포인트</strong>
       </div>
       <div class="box-txt">
         <p>정석강세 스타일은 한달간 <strong>+36.2%</strong> 수익률을 달성했어요.</p>
