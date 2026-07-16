@@ -23,6 +23,7 @@
             </div>
             <div class="name">
               <p>{{ item.name }}</p>
+              <span>{{ item.code }}</span>
             </div>
           </div>
           <div class="right">
@@ -39,10 +40,10 @@
 import '~/assets/css/factor-analyst/common.css'
 
 const pickList = [
-  { name: '삼성전자', rate: '95.3' },
-  { name: 'SK하이닉스', rate: '88.5' },
-  { name: '현대차', rate: '82.1' },
-  { name: '네이버', rate: '79.4' },
-  { name: '카카오', rate: '75.8' }
+  { name: '삼성전자', code: '055872', rate: '95.3' },
+  { name: 'SK하이닉스', code: '055872', rate: '88.5' },
+  { name: '현대차', code: '055872', rate: '82.1' },
+  { name: '네이버', code: '055872', rate: '79.4' },
+  { name: '카카오', code: '055872', rate: '75.8' }
 ]
 </script>
