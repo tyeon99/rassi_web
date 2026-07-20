@@ -16,7 +16,10 @@
 
     <div class="recommendResultContent__section--box">
       <div class="box-title">
-        <strong>스타일⁺ 체크 포인트</strong>
+        <strong>
+          <img width="22" src="~/assets/img/factor-analyst/recommend/pin-icon.png" alt="핀 아이콘">
+          <span>스타일⁺ 체크 포인트</span>
+        </strong>
       </div>
       <div class="box-txt">
         <p>정석강세 스타일은 한달간 <strong>+36.2%</strong> 수익률을 달성했어요.</p>

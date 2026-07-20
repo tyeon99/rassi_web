@@ -101,7 +101,7 @@
     @apply w-full flex justify-start items-center gap-2;
   }
   .recommendResultContent__section--box .box-title strong{
-    @apply font-bold text-lg text-[#364350];
+    @apply font-bold text-base text-[#364350] flex justify-start items-center gap-[6px];
   }
   .recommendResultContent__section--box .box-txt {
     @apply w-full flex flex-col justify-start items-start gap-4;
