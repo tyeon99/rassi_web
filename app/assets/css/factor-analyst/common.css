@@ -4,6 +4,7 @@
 @import "~/assets/css/factor-analyst/offcanvas.css";
 @import "~/assets/css/factor-analyst/detail.css";
 @import "~/assets/css/factor-analyst/recommend.css";
+@import "~/assets/css/factor-analyst/item.css";
 
 @tailwind base;
 @tailwind components;

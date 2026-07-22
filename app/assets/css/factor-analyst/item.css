@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .itemStyleContent{
+    @apply w-full;
+  }
+  .itemStyleContent__top{
+    @apply w-full p-[30px_20px] bg-[#F5F7F9] flex flex-col justify-center items-center gap-4;
+  }
+  .itemStyleContent__top .item{
+    @apply flex justify-center items-center gap-[6px];
+  }
+  .itemStyleContent__top .item p{
+    @apply font-bold text-2xl text-black;
+  }
+  .itemStyleContent__top .style p{
+    @apply font-normal text-base text-black;
+  }
+  .itemStyleContent__top .style p span{
+    @apply font-bold text-main;
+  }
+  .itemStyleContent__section{
+    @apply w-full py-6 px-5 border-b-[12px] border-[#F5F7F9];
+  }
+  .itemStyleContent__section--title{
+    @apply font-bold text-lg text-black mb-[6px];
+  }
+  .itemStyleContent__section--txt{
+    @apply font-normal text-base text-[#515F6C] mb-4;
+  }
+  .itemStyleContent__section--content{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .itemStyleContent__section--content .box{
+    @apply w-full p-5 rounded-[12px] border border-[#DEE2E6] bg-white flex flex-col justify-center items-center;
+  }
+  .itemStyleContent__section--content .box .round{
+    @apply mb-[6px] rounded-[50px] p-[4px_13px] font-bold text-[11px] leading-[17px] text-main;
+    background: var(--color-blue-7020, #6565FF33);
+  }
+  .itemStyleContent__section--content .box .box-title{
+    @apply w-full font-bold text-base text-black;
+  }
+  .itemStyleContent__section--content .box .box-txt{
+    @apply w-full mt-2 text-gray font-normal text-base;
+  }
+  .itemStyleContent__section--content .box .donut-chart{
+    @apply mt-4 w-full flex justify-center items-center gap-4;
+  }
+  .itemStyleContent__section--content .box .donut-chart .chart{
+    @apply flex justify-center items-center flex-col gap-4;
+  }
+  .itemStyleContent__section--content .box .donut-chart .chart .donut{
+    @apply w-full h-full;
+  }
+  .itemStyleContent__section--content .box .donut-chart .chart p{
+    @apply font-semibold text-base text-black;
+  }
+  .donut-chart .no-payment{
+    @apply w-[135px] h-[135px] flex flex-col justify-center items-center gap-[10px] bg-[#F5F7F9] rounded-[12px];
+  }
+  .donut-chart .no-payment span{
+    @apply font-normal text-xs text-gray leading-[18px];
+  }
+  .itemStyleContent__section--content .box .condition{
+    @apply w-full flex justify-start items-center gap-2 flex-wrap mt-2;
+  }
+  .itemStyleContent__section--content .box .condition span{
+    @apply rounded-[4px] border border-[#DEE2E6] py-0.5 px-1 font-semibold text-xs text-gray;
+  }
+  .itemStyleContent__section--content .box .note{
+    @apply w-full mt-[30px] rounded-[16px] py-4 px-3 bg-[#F5F7F9] flex flex-col justify-start items-start gap-3 font-normal text-base text-black;
+  }
+  .itemStyleContent__section--content .box .note strong{
+    @apply font-bold text-main;
+  }
+  .itemStyleContent__section--content .box .more{
+    @apply w-full mt-[30px];
+  }
+  .itemStyleContent__section--content .box .more button{
+    @apply w-full h-[54px] bg-main rounded-[12px] p-[10px] font-semibold text-base text-white;
+  }
+}
