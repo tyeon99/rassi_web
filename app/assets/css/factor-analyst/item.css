@@ -34,7 +34,7 @@
     @apply w-full flex flex-col justify-start items-start gap-4;
   }
   .itemStyleContent__section--content .box{
-    @apply w-full p-5 rounded-[12px] border border-[#DEE2E6] bg-white flex flex-col justify-center items-center;
+    @apply w-full p-5 rounded-[16px] border border-[#DEE2E6] bg-white flex flex-col justify-center items-center;
   }
   .itemStyleContent__section--content .box .round{
     @apply mb-[6px] rounded-[50px] p-[4px_13px] font-bold text-[11px] leading-[17px] text-main;

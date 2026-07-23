@@ -75,13 +75,13 @@
     @apply font-normal text-base text-[#515F6C];
   }
   .detailContent__wrap--content .box .inner-box{
-    @apply w-full h-[136px] flex justify-center items-center bg-[#F5F7F9] rounded-[8px] mb-4;
+    @apply w-full h-[136px] flex justify-center items-center bg-[#F5F7F9] rounded-[12px] mb-4;
   }
   .detailContent__wrap--content .box .chart-box{
     @apply w-full h-full;
   }
   .no-record{
-    @apply w-full p-[20px_12px] flex flex-col justify-center items-center bg-[#F5F7F9] rounded-[8px] gap-2;
+    @apply w-full p-[20px_12px] flex flex-col justify-center items-center bg-[#F5F7F9] rounded-[12px] gap-2;
   }
   .no-record p{
     @apply font-normal text-base text-black text-center;
