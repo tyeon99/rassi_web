@@ -1,7 +1,7 @@
 <template>
   <div class="itemStyleContent__section">
     <div class="itemStyleContent__section--title">
-      SK하이닉스의 종목 스타일⁺이<br />
+      SK하이닉스의 종목 스타일이<br />
       속한 스타일⁺는?
     </div>
     <div class="itemStyleContent__section--txt">

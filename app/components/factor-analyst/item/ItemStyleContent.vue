@@ -7,7 +7,7 @@
       </div>
       <div class="style">
         <p>
-          종목 스타일⁺ <span>3</span>개와 스타일⁺ <span>2</span>개 포착
+          종목 스타일 <span>3</span>개와 스타일⁺ <span>2</span>개 포착
         </p>
       </div>
     </div>
