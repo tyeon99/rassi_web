@@ -1,7 +1,7 @@
 <template>
   <div class="recommendResultContent__section">
     <div class="recommendResultContent__section--title">
-      <span>6월 30일 추천 스타일⁺</span>
+      <span>6월 30일 추천 스타일 패스</span>
       <div class="title">
         <h1><strong>정석강세 스타일</strong></h1>
         <button>
@@ -18,7 +18,7 @@
       <div class="box-title">
         <strong>
           <img width="22" src="~/assets/img/factor-analyst/recommend/pin-icon.png" alt="핀 아이콘">
-          <span>스타일⁺ 체크 포인트</span>
+          <span>스타일 패스 체크 포인트</span>
         </strong>
       </div>
       <div class="box-txt">

@@ -40,7 +40,7 @@
   .mainSection__content{
     @apply w-full;
   }
-  /* 오늘의 추천 스타일⁺ */
+  /* 오늘의 추천 스타일 패스 */
   .recommendItemSwiper, .recommendItemSwiper .swiper-slide{
     @apply w-full;
   }
@@ -102,7 +102,7 @@
   .itemList.masking .listGroup .list .left{
     @apply blur-[4px];
   }
-  /* 날짜별 추천 스타일⁺ */
+  /* 날짜별 추천 스타일 패스 */
   .dateList{
     @apply w-full flex flex-col justify-start items-start mb-5;
   }
