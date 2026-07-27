@@ -50,4 +50,192 @@
   .introOffcanvas .txt-group .box .p-group strong{
     @apply font-bold text-base text-black;
   }
+  .itemStyleDetailOffcanvas{
+    @apply bg-[#F0F0FF] p-0 pt-2.5;
+  }
+  .itemStyleDetailOffcanvas .offcanvas-close{
+    @apply px-5;
+  }
+  .itemStyleDetailOffcanvas .offcanvas-body{
+    @apply w-full h-full overflow-auto;
+  }
+  .itemStyleDetailOffcanvas .body-top{
+    @apply w-full p-[8px_20px_30px] flex flex-col justify-start items-start gap-4;
+  }
+  .itemStyleDetailOffcanvas .title{
+    @apply w-full flex flex-col justify-start items-start gap-1;
+  }
+  .itemStyleDetailOffcanvas .title h1{
+    @apply font-bold text-2xl text-[#364350];
+  }
+  .itemStyleDetailOffcanvas .title span{
+    @apply font-normal text-[13px] leading-[20px] text-gray;
+  }
+  .itemStyleDetailOffcanvas .top-box{
+    @apply w-full py-5 px-4 bg-white rounded-[16px] flex flex-col justify-start items-start gap-5
+  }
+  .itemStyleDetailOffcanvas .quality-score{
+    @apply w-full flex justify-between items-end;
+  }
+  .itemStyleDetailOffcanvas .quality-score .left{
+    @apply flex flex-col justify-start items-start gap-[2px];
+  }
+  .itemStyleDetailOffcanvas .quality-score .left span{
+    @apply font-normal text-[11px] leading-[17px] text-black;
+  }
+  .itemStyleDetailOffcanvas .quality-score .left p{
+    @apply font-normal text-[11px] leading-[25px] text-gray flex justify-start items-end;
+  }
+  .itemStyleDetailOffcanvas .quality-score .left p strong{
+    @apply font-bold text-3xl leading-[40px] text-black;
+  }
+  .itemStyleDetailOffcanvas .quality-score .right span{
+    @apply py-1 px-2 bg-main rounded-[50px] font-bold text-[12px] leading-[18px] text-white;
+  }
+  .itemStyleDetailOffcanvas .range-wrap{
+    @apply w-full;
+  }
+  .itemStyleDetailOffcanvas .range-wrap .range{
+    @apply w-full relative py-1;
+  }
+  .itemStyleDetailOffcanvas .range-wrap .range .bar{
+    @apply relative w-full h-[10px] bg-[#EBEBEB] rounded-[50px];
+  }
+  .itemStyleDetailOffcanvas .range-wrap .range .bar span{
+    @apply absolute w-[1px] h-[14px] bg-[#A1ABB5] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[10];
+  }
+  .itemStyleDetailOffcanvas .range-wrap .range .score{
+    @apply absolute h-[10px] bg-main rounded-[50px] left-0 top-1;
+  }
+  .itemStyleDetailOffcanvas .range-wrap .range .score .item-icon{
+    @apply absolute w-[18px] h-[18px] rounded-full outline outline-2 outline-white top-1/2 -translate-y-1/2 right-0 translate-x-1/2;
+  }
+  .itemStyleDetailOffcanvas .range-wrap .txt{
+    @apply w-full flex justify-between items-center;
+  }
+  .itemStyleDetailOffcanvas .range-wrap .txt span{
+    @apply flex-1 font-normal text-[11px] leading-[17px] text-gray text-center first:text-left last:text-right whitespace-nowrap;
+  }
+  .itemStyleDetailOffcanvas .inner-box{
+    @apply w-full flex flex-col justify-start items-start gap-[6px] bg-[#F5F7F9] rounded-[12px] p-4;
+  }
+  .itemStyleDetailOffcanvas .inner-box.no-signal{
+    @apply items-center;
+  }
+  .itemStyleDetailOffcanvas .inner-box p{
+    @apply font-normal text-base text-[#364350];
+  }
+  .itemStyleDetailOffcanvas .inner-box button{
+    @apply flex justify-start items-center gap-[6px];
+  }
+  .itemStyleDetailOffcanvas .inner-box button p{
+    @apply font-normal text-xs text-gray;
+  }
+  .itemStyleDetailOffcanvas .inner-box span{
+    @apply p-[3px_8px] bg-white rounded-[4px] font-semibold text-[12px] leading-[18px];
+  }
+  .itemStyleDetailOffcanvas .inner-box span.pass{
+    @apply text-[#03B26C];
+  }
+  .itemStyleDetailOffcanvas .inner-box span.fail{
+    @apply text-[#FF5050];
+  }
+  .itemStyleDetailOffcanvas .txt-box{
+    @apply w-full flex flex-col justify-start items-start gap-[6px];
+  }
+  .itemStyleDetailOffcanvas .txt-box .txt-title{
+    @apply flex justify-start items-center gap-[6px];
+  }
+  .itemStyleDetailOffcanvas .txt-box .txt-title p{
+    @apply font-semibold text-sm text-black;
+  }
+  .itemStyleDetailOffcanvas .txt-box .txt{
+    @apply font-normal text-sm text-[#364350];
+  }
+  .itemStyleDetailOffcanvas .offcanvas-section{
+    @apply w-full py-6 px-5 border-b-[12px] border-[#F5F7F9] bg-white flex flex-col justify-start items-start gap-6;
+  }
+  .itemStyleDetailOffcanvas  .box-group{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .itemStyleDetailOffcanvas  .box-group .box{
+    @apply w-full rounded-[16px] border border-[#DEE2E6] p-4 flex flex-col justify-start items-start gap-5;
+  }
+  .itemStyleDetailOffcanvas  .box-group .box .box-title{
+    @apply w-full flex justify-start items-center gap-[6px];
+  }
+  .itemStyleDetailOffcanvas  .box-group .box .box-title span{
+    @apply w-6 h-6 rounded-[50px] flex justify-center items-center bg-main font-semibold text-sm text-white;
+  }
+  .itemStyleDetailOffcanvas  .box-group .box .box-title p{
+    @apply font-semibold text-base text-black;
+  } 
+  .itemStyleDetailOffcanvas .gpa-group{
+    @apply w-full flex flex-col justify-start items-start gap-6;
+  }
+  .itemStyleDetailOffcanvas .gpa-group .gpa{
+    @apply w-full;
+  }
+  .itemStyleDetailOffcanvas .gpa-group .gpa .gpa-title{
+    @apply w-full flex justify-between items-center mb-[6px];
+  }
+  .itemStyleDetailOffcanvas .gpa-group .gpa .gpa-title p{
+    @apply font-bold text-base text-black;
+  }
+  .itemStyleDetailOffcanvas .gpa-group .gpa .gpa-title span{
+    @apply px-2 rounded-[4px] font-bold text-base text-main;
+    background: var(--color-blue-7010, #6565FF1A);
+  }
+  .itemStyleDetailOffcanvas .gpa-group .gpa .gpa-txt{
+    @apply w-full mb-3 font-normal text-base text-[#515F6C];
+  }
+  .itemStyleDetailOffcanvas .gpa-group .gpa .gpa-box{
+    @apply w-full p-5 rounded-[12px] bg-[#F5F7F9] flex flex-col justify-start items-start gap-5;
+  }
+  .itemStyleDetailOffcanvas .gpa-group .gpa .gpa-box p{
+    @apply font-normal text-base text-black;
+  }
+  .offcanvas-overlay.itemStyleListOffcanvas{
+    @apply items-end;
+  }
+  .offcanvas-content.itemStyleListOffcanvas{
+    @apply h-[80%] rounded-t-[20px];
+  }
+  .itemStyleListOffcanvas .offcanvas-body{
+    @apply overflow-auto
+  }
+  .itemStyleListOffcanvas .body-top{
+    @apply w-full pt-2 pb-4 border-b border-[#EDF0F3] flex flex-col justify-start items-start gap-1 mb-4;
+  }
+  .itemStyleListOffcanvas .body-top strong{
+    @apply font-bold text-lg text-black;
+  }
+  .itemStyleListOffcanvas .body-top p{
+    @apply font-normal text-sm text-gray;
+  }
+  .itemStyleListOffcanvas .body-content{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .itemStyleListOffcanvas .quality-box{
+    @apply w-full py-5 px-3 rounded-[8xp] flex flex-col justify-center items-center gap-[10px];
+    background: var(--color-blue-7010, #6565FF1A);
+  }
+  .itemStyleListOffcanvas .quality-box strong{
+    @apply font-bold text-lg text-black;
+  }
+  .itemStyleListOffcanvas .quality-box p{
+    @apply font-normal text-sm text-gray;
+  }
+  .itemStyleListOffcanvas .txt-group{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .itemStyleListOffcanvas .txt-group .txt{
+    @apply w-full flex flex-col justify-start items-start gap-2;
+  }
+  .itemStyleListOffcanvas .txt-group .txt strong{
+    @apply font-semibold text-base text-black;
+  }
+  .itemStyleListOffcanvas .txt-group .txt p{
+    @apply font-normal text-base text-[#515F6C];
+  }
 }

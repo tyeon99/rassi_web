@@ -20,6 +20,7 @@
           <button 
             v-for="(chart, cIdx) in box.charts" 
             :key="cIdx" 
+            @click="openItemStyleDetailOffcanvas"
             class="chart"
           >
             <div v-if="chart.isPayment" class="donut">
@@ -36,11 +37,20 @@
         </div>
       </div>
     </div>
+    <ItemStyleDetailOffcanvas 
+      v-if="isItemStyleDetailOffcanvasOpen"
+      :isOffcanvasAni="isOffcanvasAni"
+      @close-itemStyleDetailOffcanvas="closeItemStyleDetailOffcanvas"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
 import '~/assets/css/factor-analyst/common.css'
+import ItemStyleDetailOffcanvas from '~/components/factor-analyst/offcanvas/ItemStyleDetailOffcanvas.vue'
+
+const isItemStyleDetailOffcanvasOpen = ref(false)
+const isOffcanvasAni = ref(false)
 
 const roundBoxes = [
   {
@@ -84,4 +94,26 @@ const roundBoxes = [
     ]
   }
 ]
+
+// 종목 스타일 상세보기 열기
+const openItemStyleDetailOffcanvas = () => {
+  isOffcanvasAni.value = true
+  isItemStyleDetailOffcanvasOpen.value = true
+}
+
+// 종목 스타일 상세보기 닫기
+const closeItemStyleDetailOffcanvas = () => {
+  isOffcanvasAni.value = false
+  setTimeout(() => {
+    isItemStyleDetailOffcanvasOpen.value = false
+  }, 300)
+}
+
+watch(isItemStyleDetailOffcanvasOpen, (isOpen) => {
+  if (isOpen) {
+    document.body.classList.add('scroll-lock')
+  } else {
+    document.body.classList.remove('scroll-lock')
+  }
+})
 </script>

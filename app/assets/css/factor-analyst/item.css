@@ -82,4 +82,19 @@
   .itemStyleContent__section--content .box .more button{
     @apply w-full h-[54px] bg-main rounded-[12px] p-[10px] font-semibold text-base text-white;
   }
+  .itemStyleListContent{
+    @apply pt-6;
+  }
+  .itemStyleListContent .summary-box{
+    @apply w-full p-4 border border-[#DEE2E6] rounded-[12px] flex flex-col justify-center items-center gap-[6px] mb-6;
+  }
+  .itemStyleListContent .summary-box p{
+    @apply font-semibold text-base text-black text-center;
+  }
+  .itemStyleListContent .summary-box button{
+    @apply flex justify-center items-center gap-1;
+  }
+  .itemStyleListContent .summary-box button span{
+    @apply font-normal text-xs text-gray;
+  }
 }
