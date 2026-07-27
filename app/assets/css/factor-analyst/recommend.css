@@ -9,21 +9,11 @@
   .recommendListContent__list{
     @apply w-full px-5 pt-[30px] flex flex-col justify-start items-start gap-4 bg-white;
   }
-  .recommendListContent__list.today{
-    @apply relative py-[30px] pt-[88px] bg-transparent;
-  }
-  .recommendListContent__list.today .today-bg{
-    @apply absolute w-full h-[100dvh] left-0 right-0 top-0 bottom-0 z-[-1];
-    background: linear-gradient(172.88deg, #DDDEFF 6.6%, #FCF6FF 32.33%);
-  }
   .recommendListContent__list .date{
     @apply w-full flex justify-between items-center;
   }
   .recommendListContent__list .date p{
     @apply font-normal text-[13px] leading-[20px] text-gray;
-  }
-  .recommendListContent__list.today .date p{
-    @apply text-main;
   }
   .recommendListContent__list .date span{
     @apply p-[2px_8px] bg-[#9E75FF] rounded-[50px] font-bold text-[11px] leading-[17px] text-white;
@@ -33,9 +23,6 @@
   }
   .recommendListContent__list .list button{
     @apply w-full bg-[#F5F7F9] p-4 rounded-xl flex flex-col justify-start items-start gap-3;
-  }
-  .recommendListContent__list.today .list button{
-    background: #FFFFFF99;
   }
   .recommendListContent__list .list button .top{
     @apply w-full flex justify-between items-center;

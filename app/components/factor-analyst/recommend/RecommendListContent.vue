@@ -4,13 +4,10 @@
       v-for="(group, gIdx) in listGroups" 
       :key="gIdx" 
       class="recommendListContent__list"
-      :class="{ today: gIdx === 0 }"
     >
-      <div v-if="gIdx === 0" class="today-bg"></div>
       
       <div class="date">
         <p>{{ group.dateText }}</p>
-        <span v-if="gIdx === 0">TODAY</span>
       </div>
       
       <div class="list">
