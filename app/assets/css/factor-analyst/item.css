@@ -64,11 +64,20 @@
   .donut-chart .no-payment span{
     @apply font-normal text-xs text-gray leading-[18px];
   }
-  .itemStyleContent__section--content .box .condition{
+  .condition{
     @apply w-full flex justify-start items-center gap-2 flex-wrap mt-2;
   }
-  .itemStyleContent__section--content .box .condition span{
-    @apply rounded-[4px] border border-[#DEE2E6] py-0.5 px-1 font-semibold text-xs text-gray;
+  .condition span{
+    @apply rounded-[4px] border border-[#DEE2E6] py-0.5 px-1 font-semibold text-xs text-[#515F6C];
+  }
+  .condition span em.high{
+    @apply text-[#FF5050];
+  }
+  .condition span em.midLow{
+    @apply text-[#03B26C];
+  }
+  .condition span em.low{
+    @apply text-[#5886FE];
   }
   .itemStyleContent__section--content .box .note{
     @apply w-full mt-[30px] rounded-[16px] py-4 px-3 bg-[#F5F7F9] flex flex-col justify-start items-start gap-3 font-normal text-base text-black;

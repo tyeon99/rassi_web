@@ -25,8 +25,9 @@
           좋은 기업의 체력과 강한 주가 흐름이 함께 나타나는 황금밸런스 구조예요.
         </div>
         <div class="condition">
-          <span>퀄리티 60점 이상달성</span>
-          <span>주가모멘텀 60점 이상</span>
+          <span>퀄리티 <em class="high">&nbsp;High</em></span>
+          <span>주가모멘텀 <em class="midLow">&nbsp;MidLow</em></span>
+          <span>주가모멘텀 <em class="low">&nbsp;Low</em></span>
         </div>
         <div class="note">
           <strong>스타일 패스 노트</strong>
