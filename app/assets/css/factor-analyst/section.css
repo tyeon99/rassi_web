@@ -79,7 +79,7 @@
     @apply flex-1 flex justify-start items-center gap-3 min-w-0;
   }
   .listGroup .list .left .circle{
-    @apply shrink-0;
+    @apply shrink-0 w-[30px] h-[30px] rounded-full flex justify-center items-center text-base text-white font-normal;
   }
   .listGroup .list .left .circle.none{
     @apply w-[30px] h-[30px] flex justify-center items-center bg-[#FFDFDF] rounded-full text-black text-sm font-normal;
@@ -100,8 +100,14 @@
     @apply font-normal text-xs text-gray leading-[18px];
   }
   .itemList.masking .listGroup .list .left{
-    @apply blur-[4px];
+    @apply blur-[4px] select-none;
   }
+  .itemList.masking .listGroup .list .circle.circle01 { @apply bg-[#BCBCBC]; }
+  .itemList.masking .listGroup .list .circle.circle02 { @apply bg-white text-[#968989] }
+  .itemList.masking .listGroup .list .circle.circle03 { @apply bg-[#BCB5EB]; }
+  .itemList.masking .listGroup .list .circle.circle04 { @apply bg-[#DF9CAC]; }
+  .itemList.masking .listGroup .list .circle.circle05 { @apply bg-[#9DACBA]; }
+
   /* 날짜별 추천 스타일 패스 */
   .dateList{
     @apply w-full flex flex-col justify-start items-start mb-5;
@@ -143,7 +149,7 @@
     @apply flex justify-start items-center flex-wrap gap-[6px_12px] whitespace-nowrap;
   }
   .dateList .date .item-group.masking{
-    @apply blur-[4px];
+    @apply blur-[4px] select-none;
   }
   .style-all button{
     @apply w-full h-[46px] rounded-[8px] border border-[#DEE2E6] text-[#364350] font-normal text-base;

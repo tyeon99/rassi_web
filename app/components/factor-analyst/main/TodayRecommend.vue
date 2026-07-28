@@ -34,15 +34,35 @@
                   :key="iidx" 
                   class="list"
                 >
-                  <div class="left">
-                    <div class="circle">
-                      <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+                
+                <!-- 기본 리스트 -->
+                  <template v-if="sidx === 0">
+                    <div class="left">
+                      <div class="circle">
+                        <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+                        <!-- 종목 로고 없을 때 대체 이미지 -->
+                        <!-- <img width="30" src="~/assets/img/factor-analyst/main/item-circle_no.png" alt="종목로고 디폴트"> -->
+                      </div>
+                      <div class="name">
+                        <p>{{ item.name }}</p>
+                        <span>{{ item.code }}</span>
+                      </div>
                     </div>
-                    <div class="name">
-                      <p>{{ item.name }}</p>
-                      <span>{{ item.code }}</span>
+                  </template>
+
+                  <!-- 마스킹 리스트 -->
+                  <template v-else>
+                    <div class="left">
+                      <div class="circle" :class="`circle0${iidx + 1}`">
+                        <span>872</span>
+                      </div>
+                      <div class="name">
+                        <p>{{ item.name }}</p>
+                        <span>{{ item.code }}</span>
+                      </div>
                     </div>
-                  </div>
+                  </template>
+
                   <div class="right">
                     <span>스코어</span>
                     <p class="up">{{ item.score }}점</p>
