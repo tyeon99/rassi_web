@@ -5,7 +5,7 @@
 @layer components {
   /* 공통 */
   .mainSection{
-    @apply w-full border-b-[12px] border-[#F5F7F9] bg-white py-6 px-5;
+    @apply w-full border-b-[12px] border-[#F5F7F9] bg-white py-6 px-5 last:border-b-[0px];
   }
   .mainSection__title{
     @apply w-full flex justify-between items-center mb-4;

@@ -5,6 +5,7 @@
 @import "~/assets/css/factor-analyst/detail.css";
 @import "~/assets/css/factor-analyst/recommend.css";
 @import "~/assets/css/factor-analyst/item.css";
+@import "~/assets/css/factor-analyst/payment.css";
 
 @tailwind base;
 @tailwind components;

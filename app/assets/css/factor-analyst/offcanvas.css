@@ -14,6 +14,11 @@
   }
   .offcanvas-body{
     @apply w-full;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .offcanvas-body::-webkit-scrollbar{
+    display: none;
   }
   .introOffcanvas{
     @apply w-full pt-[30px] overflow-y-auto;
@@ -153,7 +158,7 @@
     @apply font-normal text-sm text-[#364350];
   }
   .itemStyleDetailOffcanvas .offcanvas-section{
-    @apply w-full py-6 px-5 border-b-[12px] border-[#F5F7F9] bg-white flex flex-col justify-start items-start gap-6;
+    @apply w-full py-6 px-5 border-b-[12px] border-[#F5F7F9] bg-white flex flex-col justify-start items-start gap-6 last:border-b-[0px];
   }
   .itemStyleDetailOffcanvas  .box-group{
     @apply w-full flex flex-col justify-start items-start gap-4;
@@ -195,14 +200,14 @@
   .itemStyleDetailOffcanvas .gpa-group .gpa .gpa-box p{
     @apply font-normal text-base text-black;
   }
-  .offcanvas-overlay.itemStyleListOffcanvas{
+  .offcanvas-overlay.itemStyleListOffcanvas, .offcanvas-overlay.paymentOffcanvas{
     @apply items-end;
   }
-  .offcanvas-content.itemStyleListOffcanvas{
-    @apply h-[80%] rounded-t-[20px];
+  .offcanvas-content.itemStyleListOffcanvas, .offcanvas-content.paymentOffcanvas{
+    @apply max-h-[80%] rounded-t-[20px];
   }
-  .itemStyleListOffcanvas .offcanvas-body{
-    @apply overflow-auto
+  .itemStyleListOffcanvas .offcanvas-body, .paymentOffcanvas .offcanvas-body{
+    @apply overflow-auto;
   }
   .itemStyleListOffcanvas .body-top{
     @apply w-full pt-2 pb-4 border-b border-[#EDF0F3] flex flex-col justify-start items-start gap-1 mb-4;
@@ -237,5 +242,69 @@
   }
   .itemStyleListOffcanvas .txt-group .txt p{
     @apply font-normal text-base text-[#515F6C];
+  }
+  .paymentOffcanvas .offcanvas-body{
+    @apply w-full flex flex-col justify-start items-start gap-[30px] pb-[84px];
+  }
+  .paymentOffcanvas .body-title{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .paymentOffcanvas .body-title strong{
+    @apply font-bold text-2xl text-[#364350];
+  }
+  .paymentOffcanvas .body-title p{
+    @apply font-normal text-base text-[#364350];
+  }
+  .paymentOffcanvas .body-title span{
+    @apply font-normal text-sm text-[#A1ABB5];
+  }
+  .paymentOffcanvas .body-box{
+    @apply w-full rounded-[16px] py-6 px-5 bg-[#F7F7F8] flex flex-col justify-start items-start gap-4;
+  }
+  .paymentOffcanvas .body-box .box-title{
+    @apply font-bold text-[15px] leading-[19px] text-[#364350];
+  }
+  .paymentOffcanvas .body-box .box-txt{
+    @apply w-full flex flex-col justify-start items-start gap-3;
+  }
+  .paymentOffcanvas .body-box .box-txt .txt{
+    @apply w-full flex justify-start items-start gap-[6px];
+  }
+  .paymentOffcanvas .body-box .box-txt .txt svg{
+    @apply block mt-0.5;
+  }
+  .paymentOffcanvas .body-box .box-txt .txt p{
+    @apply font-normal text-base text-[#364350];
+  }
+  .paymentOffcanvas .body-select{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .paymentOffcanvas .body-select .select-title{
+    @apply font-normal text-base text-black;
+  }
+  .paymentOffcanvas .body-select .select-box{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .paymentOffcanvas .body-select .select-box .box{
+    @apply w-full flex flex-col justify-start items-start gap-[5px] border border-[#D2D2D2] p-4 rounded-[16px];
+  }
+  .paymentOffcanvas .body-select .select-box .box.selected{
+    @apply border-main;
+  }
+  .paymentOffcanvas .body-select .select-box .box .box-title{
+    @apply w-full flex justify-between items-center font-bold text-base text-black;
+  }
+  .paymentOffcanvas .body-select .select-box .box .box-title span{
+    @apply py-0.5 px-2 font-bold text-[11px] leading-[17px] text-white bg-main rounded-[50px];
+  }
+  .paymentOffcanvas .body-select .select-box .box .box-txt{
+    @apply font-normal text-base text-black text-left;
+  }
+  .paymentOffcanvas .offcanvas-footer{
+    @apply w-full p-5 fixed bottom-0 right-0 left-0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 35.48%);
+  }
+  .paymentOffcanvas .offcanvas-footer button{
+    @apply w-full h-[54px] rounded-[12px] bg-main font-semibold text-base text-white;
   }
 }

@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .paymentContent{
+    @apply w-full;
+  }
+  .paymentContent__top{
+    @apply w-full py-4 flex flex-col justify-center items-center gap-4;
+  }
+  .paymentContent__top strong{
+    @apply font-bold text-2xl text-black;
+  }
+  .paymentContent__top p{
+    @apply font-normal text-base text-black text-center;
+  }
+  .paymentContent__banner{
+    @apply w-full mb-6;
+  }
+  .paymentContent__section{
+    @apply w-full pb-[30px] px-4 flex flex-col justify-start items-start gap-6;
+  }
+  .paymentSection{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .paymentSection .title{
+    @apply font-bold text-lg text-black;
+  }
+  .paymentSection .box{
+    @apply w-full p-4 rounded-[16px] border border-[#DEE2E6];
+  }
+  .paymentSection .box-txt{
+    @apply w-full flex flex-col justify-start items-start gap-3;
+  }
+  .paymentSection .box-txt .txt{
+    @apply w-full flex justify-start items-start gap-[6px];
+  }
+  .paymentSection .box-txt .txt svg{
+    @apply block mt-0.5;
+  }
+  .paymentSection .box-txt .txt p{
+    @apply font-normal text-base text-[#364350];
+  }
+  .paymentSection .select-box{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .paymentSection .select-box .box{
+    @apply w-full flex justify-between items-center;
+  }
+  .paymentSection .select-box .box .left{
+    @apply flex justify-between items-center w-[calc(100%-48px)];
+  }
+  .paymentSection .select-box .box .left .txt{
+    @apply flex flex-col justify-start items-start;
+  }
+  .paymentSection .select-box .box .left .txt p{
+    @apply font-normal text-base text-[#515F6C] flex justify-start items-center gap-[6px];
+  }
+  .paymentSection .select-box .box .left .txt p span{
+    @apply line-through;
+  }
+  .paymentSection .select-box .box .left .txt p strong{
+    @apply font-bold text-[#364350];
+  }
+  .paymentSection .select-box .box .left .sale{
+    @apply flex justify-center items-center bg-main rounded-[4px] py-1 px-2 font-semibold text-sm text-white;
+  }
+  .paymentSection .select-box .box.selected{
+    @apply border-main;
+  }
+  .paymentSection .select-box .box.selected .right svg path{
+    @apply fill-main;
+  }
+  .paymentSection .guide{
+    @apply font-normal text-base text-gray;
+  }
+  .paymentSection .box .contract{
+    @apply w-full flex justify-between items-center pb-2 border-b border-[#EDF0F3] last:border-b-0 last:pb-0 last:pt-2;
+  }
+  .paymentSection .box .contract p{
+    @apply font-normal text-base text-[#515F6C];
+  }
+  .paymentSection .box .contract button{
+    @apply flex justify-end items-center gap-[6px];
+  }
+  .paymentSection .box .contract button span{
+    @apply font-normal text-base text-[#515F6C];
+  }
+  .paymentFooter{
+    @apply w-full py-6 px-4 bg-[#F5F7F9] flex flex-col justify-start items-start gap-4;
+  }
+  .paymentFooter .title{
+    @apply font-bold text-lg text-black;
+  }
+  .paymentFooter .txt{
+    @apply font-normal text-base text-gray;
+  }
+}
