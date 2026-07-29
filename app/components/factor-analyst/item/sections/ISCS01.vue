@@ -23,14 +23,28 @@
             @click="openItemStyleDetailOffcanvas"
             class="chart"
           >
+            <!-- 도넛차트 -->
             <div v-if="chart.isPayment" class="donut">
               <img width="135" src="~/assets/img/factor-analyst/item/donut-chart.png" alt="도넛차트">
             </div>
 
+            <!-- 결제정보 없을 때 -->
             <div v-else class="no-payment">
               <img width="24" src="~/assets/img/factor-analyst/item/question-icon.png" alt="물음표 아이콘">
               <span>눌러서<br />종목 스타일을<br />확인해 보세요.</span>
             </div>
+
+            <!-- 낙폭과대 -->
+            <!-- <div class="signal">
+              <img width="60" src="~/assets/img/factor-analyst/item/signal.png" alt="낙폭과대">
+              <p>과매도 구간</p>
+            </div> -->
+
+            <!-- 낙폭과대 신호없음 -->
+            <!-- <div class="signal">
+              <img width="60" src="~/assets/img/factor-analyst/item/no-signal.png" alt="낙폭과대">
+              <p>신호없음</p>
+            </div> -->
 
             <p>{{ chart.label }}</p>
           </button>

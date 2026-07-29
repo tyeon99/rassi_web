@@ -64,6 +64,9 @@
   .donut-chart .no-payment span{
     @apply font-normal text-xs text-gray leading-[18px];
   }
+  .donut-chart .signal{
+    @apply w-[135px] h-[135px] flex flex-col justify-center items-center gap-[10px] bg-[#F5F7F9] rounded-[12px];
+  }
   .condition{
     @apply w-full flex justify-start items-center gap-2 flex-wrap mt-2;
   }
