@@ -19,7 +19,7 @@
     @apply w-full mb-6;
   }
   .paymentContent__section{
-    @apply w-full pb-[30px] px-4 flex flex-col justify-start items-start gap-6;
+    @apply w-full pb-[30px] px-4 flex flex-col justify-start items-start gap-[30px];
   }
   .paymentSection{
     @apply w-full flex flex-col justify-start items-start gap-4;

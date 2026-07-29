@@ -1,6 +1,6 @@
 <template>
   <div class="paymentSection">
-    <div class="title">이런 기능을 이용할 수 있어요.</div>
+    <div class="title">이런 기능을 이용할 수 있어요</div>
     <div class="box">
       <div class="box-txt">
         <div class="txt">

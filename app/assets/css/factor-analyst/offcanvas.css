@@ -222,7 +222,7 @@
     @apply w-full flex flex-col justify-start items-start gap-4;
   }
   .itemStyleListOffcanvas .quality-box{
-    @apply w-full py-5 px-3 rounded-[8xp] flex flex-col justify-center items-center gap-[10px];
+    @apply w-full py-5 px-3 rounded-[12px] flex flex-col justify-center items-center gap-[10px];
     background: var(--color-blue-7010, #6565FF1A);
   }
   .itemStyleListOffcanvas .quality-box strong{
