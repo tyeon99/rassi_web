@@ -24,4 +24,10 @@
   .backTitleHeader h1{
     @apply font-bold text-lg text-black;
   }
+  .closeHeader{
+    @apply w-full p-[16px_20px] bg-white flex justify-end items-center gap-2.5 sticky top-0 left-0 right-0 z-[999];
+  }
+  .closeHeader h1{
+    @apply font-bold text-lg text-black;
+  }
 }
