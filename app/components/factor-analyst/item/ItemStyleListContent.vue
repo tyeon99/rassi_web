@@ -34,6 +34,7 @@
           </button>
         </div>
 
+        <!-- 종목 리스트 -->
         <div class="listGroup">
           <div 
             v-for="(item, idx) in activeTab.list" 
@@ -59,6 +60,13 @@
             </div>
           </div>
         </div>
+
+        <!-- 종목 없을 때 -->
+        <div class="no-item">
+          <img width="20" src="~/assets/img/factor-analyst/detail/no-icon.png" alt="아이콘">
+          <p>해당 종목 스타일에 속하는 <br />종목이 없습니다.</p>
+        </div>
+
       </div>
     </div>
     <ItemStyleListOffcanvas 
