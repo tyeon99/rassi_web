@@ -18,6 +18,9 @@ em{
 .up{
   @apply !text-[#FF5050];
 }
+.down{
+  @apply !text-[#5886FE];
+}
 .swiper-pagination{
   @apply relative flex justify-center items-center mt-4 !bottom-0;
 }

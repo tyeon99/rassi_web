@@ -1,15 +1,15 @@
 <template>
-  <div class="offcanvas-section">
+  <div class="content-section">
     <div class="title">
       <span>돈 버는 효율성은 괜찮을까?</span>
       <h1>GP/A는?</h1>
     </div>
     
-    <div class="gpa-group">
+    <div class="list-group">
       <div 
         v-for="(item, idx) in gpaList" 
         :key="idx" 
-        class="gpa"
+        class="list"
       >
         <div class="gpa-title">
           <p>{{ item.companyName }}의 GP/A 스코어는?</p>
@@ -18,7 +18,7 @@
         <div class="gpa-txt">
           {{ item.description }}
         </div>
-        <div class="gpa-box">
+        <div class="gray-box">
           <p>전 종목 중 {{ item.companyName }} GP/A의 위치는?</p>
 
           <div class="range-wrap">

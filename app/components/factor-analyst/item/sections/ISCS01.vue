@@ -20,7 +20,7 @@
           <button 
             v-for="(chart, cIdx) in box.charts" 
             :key="cIdx" 
-            @click="openItemStyleDetailOffcanvas"
+            @click="goToDetail(chart.itemStyle)"
             class="chart"
           >
             <!-- 도넛차트 -->
@@ -34,100 +34,83 @@
               <span>눌러서<br />종목 스타일을<br />확인해 보세요.</span>
             </div>
 
-            <!-- 낙폭과대 -->
-            <!-- <div class="signal">
-              <img width="60" src="~/assets/img/factor-analyst/item/signal.png" alt="낙폭과대">
-              <p>과매도 구간</p>
-            </div> -->
-
-            <!-- 낙폭과대 신호없음 -->
-            <!-- <div class="signal">
-              <img width="60" src="~/assets/img/factor-analyst/item/no-signal.png" alt="낙폭과대">
-              <p>신호없음</p>
-            </div> -->
-
-            <p>{{ chart.label }}</p>
+            <p>{{ chart.itemStyle }}</p>
           </button>
         </div>
       </div>
     </div>
-    <ItemStyleDetailOffcanvas 
-      v-if="isItemStyleDetailOffcanvasOpen"
-      :isOffcanvasAni="isOffcanvasAni"
-      @close-itemStyleDetailOffcanvas="closeItemStyleDetailOffcanvas"
-    />
   </div>
 </template>
 
 <script setup lang="ts">
+import { useRouter } from 'vue-router'
 import '~/assets/css/factor-analyst/common.css'
-import ItemStyleDetailOffcanvas from '~/components/factor-analyst/offcanvas/ItemStyleDetailOffcanvas.vue'
 
-const isItemStyleDetailOffcanvasOpen = ref(false)
-const isOffcanvasAni = ref(false)
+const router = useRouter()
+
+const typeMap: Record<string, string> = {
+  '퀄리티': 'quality',
+  '주가모멘텀': 'stock-momentum',
+  '실적모멘텀': 'earnings-momentum',
+  '미래전망': 'outlook',
+  '밸류에이션': 'valuation',
+  '수급': 'supply',
+  '주주환원': 'shareholder',
+  '초저평가': 'underrated',
+  '저변동성': 'low-vol',
+  '낙폭과대': 'oversold'
+}
+
+const goToDetail = (itemStyle: string) => {
+  const typeParam = typeMap[itemStyle]
+  
+  if (typeParam) {
+    router.push(`/factor-analyst/item/style/detail/${typeParam}`)
+  } else {
+    console.warn(`[Warning] '${itemStyle}'에 해당하는 URL type 매핑이 없습니다.`)
+  }
+}
 
 const roundBoxes = [
   {
     roundNum: 1,
     title: '이 회사가 돈 버는 능력',
     charts: [
-      { label: '퀄리티', isPayment: true },
-      { label: '미래전망', isPayment: false }
+      { itemStyle: '퀄리티', isPayment: true },
+      { itemStyle: '주가모멘텀', isPayment: false }
     ]
   },
   {
     roundNum: 2,
     title: '수익성 및 성장성 분석',
     charts: [
-      { label: '실적모멘텀', isPayment: true },
-      { label: '성장성', isPayment: true }
+      { itemStyle: '실적모멘텀', isPayment: true },
+      { itemStyle: '미래전망', isPayment: true }
     ]
   },
   {
     roundNum: 3,
     title: '주가 변동 및 위험도',
     charts: [
-      { label: '저변동성', isPayment: true },
-      { label: '안정성', isPayment: true }
+      { itemStyle: '밸류에이션', isPayment: true },
+      { itemStyle: '수급', isPayment: true }
     ]
   },
   {
     roundNum: 4,
     title: '시장 관심도 및 수급',
     charts: [
-      { label: '수급선행', isPayment: true },
-      { label: '거래대금', isPayment: true }
+      { itemStyle: '주주환원', isPayment: true },
+      { itemStyle: '초저평가', isPayment: true }
     ]
   },
   {
     roundNum: 5,
     title: '밸류에이션 평가',
     charts: [
-      { label: '저평가', isPayment: false },
-      { label: '배당성향', isPayment: true }
+      { itemStyle: '저변동성', isPayment: false },
+      { itemStyle: '낙폭과대', isPayment: true }
     ]
   }
 ]
-
-// 종목 스타일 상세보기 열기
-const openItemStyleDetailOffcanvas = () => {
-  isOffcanvasAni.value = true
-  isItemStyleDetailOffcanvasOpen.value = true
-}
-
-// 종목 스타일 상세보기 닫기
-const closeItemStyleDetailOffcanvas = () => {
-  isOffcanvasAni.value = false
-  setTimeout(() => {
-    isItemStyleDetailOffcanvasOpen.value = false
-  }, 300)
-}
-
-watch(isItemStyleDetailOffcanvasOpen, (isOpen) => {
-  if (isOpen) {
-    document.body.classList.add('scroll-lock')
-  } else {
-    document.body.classList.remove('scroll-lock')
-  }
-})
 </script>

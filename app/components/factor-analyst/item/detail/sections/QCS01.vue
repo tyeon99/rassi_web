@@ -1,5 +1,5 @@
 <template>
-  <div class="offcanvas-section">
+  <div class="content-section">
     <div class="title">
       <span>이 회사 장부는 괜찮을까?</span>
       <h1>F스코어 OX</h1>

@@ -30,4 +30,7 @@
   .closeHeader h1{
     @apply font-bold text-lg text-black;
   }
+  .itemStyleDetailHeader{
+    @apply bg-[#F0F0FF];
+  }
 }

@@ -83,7 +83,7 @@
     @apply text-[#5886FE];
   }
   .itemStyleContent__section--content .box .note{
-    @apply w-full mt-[30px] rounded-[16px] py-4 px-3 bg-[#F5F7F9] flex flex-col justify-start items-start gap-3 font-normal text-base text-black;
+    @apply w-full mt-[30px] rounded-[16px] py-4 px-3 bg-[#F5F7F9] flex flex-col justify-start items-start gap-3 font-normal text-base text-[#364350];
   }
   .itemStyleContent__section--content .box .note strong{
     @apply font-bold text-main;
