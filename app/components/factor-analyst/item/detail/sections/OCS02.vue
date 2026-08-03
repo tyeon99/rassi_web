@@ -81,24 +81,24 @@ const rateList = [
   {
     question: '매출 예상치가 높아졌을까?',
     isPass: true,
-    description: '최근 1개월 동안 매출 예상치가 <strong class="up">+0.42%p</strong> 높아졌어요'
+    description: '최근 3개월 동안 매출 예상치가 <strong class="up">+0.42%p</strong> 높아졌어요'
   },
   {
     question: '영업이익 예상치가 높아졌을까?',
     isPass: true,
-    description: '최근 1개월 동안 영업이익 예상치가 <strong class="up">+0.85%p</strong> 높아졌어요.'
+    description: '최근 3개월 동안 영업이익 예상치가 <strong class="up">+0.85%p</strong> 높아졌어요.'
   },
   {
     question: '당기순이익 예상치가 높아졌을까?',
     isPass: false,
-    description: '최근 1개월 동안 당기순이익 예상치가 <strong class="down">-0.51%p</strong> 높아졌어요.'
+    description: '최근 3개월 동안 당기순이익 예상치가 <strong class="down">-0.51%p</strong> 낮아졌어요.'
   }
 ]
 
 const itemList = ref([
   {
     title: '같은 업종과 비교하면?',
-    subTitle: '매출·영업이익·당기순이익 1개월 예상치 변화를 전체 종목과 비교한 위치',
+    subTitle: '매출·영업이익·당기순이익 3개월 예상치 변화를 전체 종목과 비교한 위치',
     isScore: false,
     ranges: [
       { label: '업종 상대 (3개월)', val: '91.2', score: 91.2 }

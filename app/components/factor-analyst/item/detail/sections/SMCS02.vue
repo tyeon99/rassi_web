@@ -67,27 +67,27 @@ const itemList = ref([
     ]
   },
   {
-    title: '동종 업계와 비교하면?',
-    subTitle: '동종 업계 종목 중 SK 하이닉스보다 수익률이 낮은 종목의 비율',
+    title: 'SK하이닉스가 속한 반도체 업종의 평균 스코어는?',
+    subTitle: '반도체 업종 (총 32종목)에 속한 종목들의 평균 스코어',
     isScore: true, 
     maxScore: '96.4',
     maxScorePeriod: '12개월',
     minScore: '12.5',
     minScorePeriod: '12개월',
     ranges: [
-      { label: '3개월 업종', val: '85.4', score: 85.4 },
-      { label: '6개월 업종', val: '88.0', score: 88.0 },
-      { label: '12개월 업종', val: '96.4', score: 96.4 }
+      { label: '3개월 업종평균', val: '85.4', score: 85.4 },
+      { label: '6개월 업종평균', val: '88.0', score: 88.0 },
+      { label: '12개월 업종평균', val: '96.4', score: 96.4 }
     ]
   },
   {
-    title: '동일 테마와 비교하면?',
-    subTitle: '동일 테마 종목 중 SK 하이닉스보다 수익률이 낮은 종목의 비율',
+    title: '같은 업종과 비교하면?',
+    subTitle: '반도체 업종 안에서 SK 하이닉스보다 수익률이 낮은 종목의 비율',
     isScore: false,
     ranges: [
-      { label: '3개월 테마', val: '74.5', score: 74.5 },
-      { label: '6개월 테마', val: '80.1', score: 80.1 },
-      { label: '12개월 테마', val: '82.3', score: 82.3 }
+      { label: '3개월 업종', val: '74.5', score: 74.5 },
+      { label: '6개월 업종', val: '80.1', score: 80.1 },
+      { label: '12개월 업종', val: '82.3', score: 82.3 }
     ]
   }
 ])
