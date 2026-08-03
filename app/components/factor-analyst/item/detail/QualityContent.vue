@@ -31,7 +31,8 @@
           </div>
           <div class="txt">
             <span>저퀄리티</span>
-            <span>튼튼하지만 수익 낮은 퀄리티</span>
+            <span>수익 대비 재무<br />질낮은 퀄리티</span>
+            <span>튼튼하지만 <br />수익 낮은 퀄리티</span>
             <span>고퀄리티</span>
           </div>
         </div>
