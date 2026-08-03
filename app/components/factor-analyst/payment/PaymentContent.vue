@@ -5,7 +5,7 @@
       <strong>스타일 패스 가입하기</strong>
       <p>
         종목의 투자 이유를 한눈에 분석하고<br />
-        매일 업데이트 되는 추천 스타일패스를 확인하세요.
+        매일 업데이트 되는 추천 스타일⁺를 확인하세요.
       </p>
     </div>
     <div class="paymentContent__banner">

@@ -6,9 +6,9 @@
     <main id="main" class="main">
 
       <!-- 확인용(삭제..부탁해용) -->
-      <button @click="openFreePaymentOffcanvas">결제 무료</button>
+      <!-- <button @click="openFreePaymentOffcanvas">결제 무료</button>
       <button @click="openUnderPaymentOffcanvas">결제 1개월 미만</button>
-      <button @click="openOverPaymentOffcanvas">결제 2개월 이상</button>
+      <button @click="openOverPaymentOffcanvas">결제 2개월 이상</button> -->
       <!-- // -->
 
       <TodayRecommend />

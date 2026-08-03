@@ -1,7 +1,7 @@
 <template>
   <section class="mainSection px-0">
     <div class="mainSection__title px-5">
-      <h2>추천 스타일에 대한 기록</h2>
+      <h2>추천 스타일⁺에 대한 기록</h2>
       <em>5/20 ~ 6/20</em>
     </div>
     

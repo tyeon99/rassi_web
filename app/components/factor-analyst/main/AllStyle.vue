@@ -1,7 +1,7 @@
 <template>
   <section class="mainSection px-0">
     <div class="mainSection__title px-5">
-      <h2>모든 스타일 보기</h2>
+      <h2>모든 스타일⁺ 보기</h2>
     </div>
     
     <div ref="tabContainer" class="mainSection__tab">

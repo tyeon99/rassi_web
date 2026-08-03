@@ -40,7 +40,7 @@
   .mainSection__content{
     @apply w-full;
   }
-  /* 오늘의 추천 스타일 패스 */
+  /* 오늘의 추천 스타일⁺ */
   .recommendItemSwiper, .recommendItemSwiper .swiper-slide{
     @apply w-full;
   }
@@ -108,7 +108,7 @@
   .itemList.masking .listGroup .list .circle.circle04 { @apply bg-[#DF9CAC]; }
   .itemList.masking .listGroup .list .circle.circle05 { @apply bg-[#9DACBA]; }
 
-  /* 날짜별 추천 스타일 패스 */
+  /* 날짜별 추천 스타일⁺ */
   .dateList{
     @apply w-full flex flex-col justify-start items-start mb-5;
   }

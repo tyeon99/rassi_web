@@ -1,6 +1,6 @@
 <template>
   <div id="wrap">
-    <BackTitleHeader title="추천 스타일 패스" />
+    <BackTitleHeader title="추천 스타일⁺" />
     <main id="main" class="main">
       <RecommendListContent />
     </main>

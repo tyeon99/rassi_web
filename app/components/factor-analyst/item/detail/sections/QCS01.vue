@@ -21,7 +21,7 @@
           >
             {{ item.isPass ? 'PASS' : 'FAIL' }}
           </span>
-          <p>{{ item.description }}</p>
+          <p v-html="item.description"></p>
         </div>
       </div>
     </div>
@@ -35,22 +35,22 @@ const fScoreList = [
   {
     question: '올해 당기순이익은 0보다 큰가?',
     isPass: true,
-    description: '최근 당기순이익은 1조 3,500억원으로 전년 대비 증가했습니다.'
+    description: '네, 2026년 SK하이닉스의 당기순이익은 <strong class="up">1조 3500억</strong>이예요.  '
   },
   {
-    question: '영업활동 현금흐름이 양수(+)인가?',
+    question: '올해 영업으로 번 진짜 현금이 0보다 큰가?',
     isPass: true,
-    description: '영업활동 현금흐름이 2조 1,000억원으로 유입되었습니다.'
+    description: '네, 2026년 SK하이닉스의 영업현금흐름은 <strong class="up">2500억</strong>이예요.  '
   },
   {
-    question: '전년 대비 순이익률(ROA)이 증가했는가?',
+    question: '작년보다 자산 대비 이익률(ROA)이 좋아졌나?',
     isPass: false,
-    description: '원가 상승으로 인해 순이익률이 전년 대비 1.2%p 감소했습니다.'
+    description: '아니요, 2026년 자산 대비 이익률은 <strong class="up">+17.18%</strong>이고, 2025년 자산 대비 이익률은 <strong class="up">+25.21%</strong> 이예요.'
   },
   {
-    question: '장기부채 비율이 전년 대비 감소했는가?',
+    question: '작년보다 빚(부채비율)이 줄었나?',
     isPass: false,
-    description: '신규 설비 투자 자금 조달로 인해 부채 비율이 상승했습니다.'
+    description: '네, 2025년 부채비율은 <strong class="up">+25.21%</strong>이고, 2026년 부채비율은 <strong class="up">+12.12%</strong> 이예요.   '
   }
 ]
 </script>

@@ -12,14 +12,14 @@
         class="list"
       >
         <div class="gpa-title">
-          <p>{{ item.companyName }}의 GP/A 스코어는?</p>
+          <p>{{ item.question }}</p>
           <span>{{ item.gpaScore }}</span>
         </div>
         <div class="gpa-txt">
           {{ item.description }}
         </div>
         <div class="gray-box">
-          <p>전 종목 중 {{ item.companyName }} GP/A의 위치는?</p>
+          <p>{{ item.boxTxt }}</p>
 
           <div class="range-wrap">
             <div class="range">
@@ -53,16 +53,18 @@ import '~/assets/css/factor-analyst/common.css'
 
 const gpaList = ref([
   {
-    companyName: 'SK하이닉스',
+    question: 'SK하이닉스의 GP/A 스코어는?',
     gpaScore: 86.2,
     description: '매출 총이익 2500억을 총자산 250억으로 나눈 값이예요.',
-    score: 86.2
+    score: 86.2,
+    boxTxt: '전 종목 중 SK하이닉스 GP/A의 위치는?'
   },
   {
-    companyName: '삼성전자',
+    question: '반도체 섹터의 평균 스코어는?',
     gpaScore: 74.5,
-    description: '매출 총이익 1조 2000억을 총자산 1조 6000억으로 나눈 값이예요.',
-    score: 74.5
+    description: '반도체 섹터의 총 종목수는 32종목이고, 가장 높은 스코어는 99.2, 가장 낮은 스코어는 35.2 예요.',
+    score: 74.5,
+    boxTxt: '업종 내 SK하이닉스 GP/A의 위치는?'
   }
 ])
 </script>

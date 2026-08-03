@@ -96,4 +96,10 @@
   .paymentFooter .txt{
     @apply font-normal text-base text-gray;
   }
+  .paymentStart{
+    @apply w-full fixed bottom-0 left-0 right-0;
+  }
+  .paymentStart button{
+    @apply w-full bg-main h-[54px] flex justify-center items-center font-semibold text-lg text-white;
+  }
 }

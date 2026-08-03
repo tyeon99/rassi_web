@@ -139,7 +139,7 @@
   .itemStyleDetailContent .range-group{
     @apply w-full flex flex-col justify-start items-start gap-4;
   }
-  .itemStyleDetailContent .range-group .period{
+  .itemStyleDetailContent .period{
     @apply p-[3px_13px] rounded-[20px] bg-[#DEE2E6] font-semibold text-[12px] leading-[18px] text-[#364350];
   }
   .itemStyleDetailContent .range-wrap{
