@@ -54,19 +54,6 @@
             </div>
           </div>
 
-          <div v-if="item.isScore" class="score-box">
-            <div class="score">
-              <p>가장 높은 스코어</p>
-              <strong class="up">{{ item.maxScore }}</strong>
-              <span>{{ item.maxScorePeriod }} 기준</span>
-            </div>
-            <div class="score">
-              <p>가장 낮은 스코어</p>
-              <strong class="down">{{ item.minScore }}</strong>
-              <span>{{ item.minScorePeriod }} 기준</span>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
@@ -92,10 +79,6 @@ const itemList = ref([
     title: 'SK하이닉스가 속한 반도체 업종의 평균 스코어는?',
     subTitle: '반도체 업종 (총 32종목)에 속한 종목들의 평균 스코어',
     isScore: true, 
-    maxScore: '96.4',
-    maxScorePeriod: '12개월',
-    minScore: '12.5',
-    minScorePeriod: '12개월',
     ranges: [
       { label: '3개월 업종평균', val: '85.4', score: 85.4 },
       { label: '12개월 업종평균', val: '88.0', score: 88.0 }

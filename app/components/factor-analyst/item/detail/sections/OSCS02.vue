@@ -61,18 +61,7 @@
             </div>
           </div>
 
-          <!-- <div v-if="item.isScore" class="score-box">
-            <div class="score">
-              <p>가장 높은 스코어</p>
-              <strong class="up">{{ item.maxScore }}</strong>
-              <span>{{ item.maxScorePeriod }} 기준</span>
-            </div>
-            <div class="score">
-              <p>가장 낮은 스코어</p>
-              <strong class="down">{{ item.minScore }}</strong>
-              <span>{{ item.minScorePeriod }} 기준</span>
-            </div>
-          </div> -->
+
 
         </div>
       </div>
