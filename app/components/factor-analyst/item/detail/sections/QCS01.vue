@@ -52,7 +52,7 @@
             <div class="txt">
               <span>0</span>
               <span>전종목 평균</span>
-              <span>12000</span>
+              <span>100</span>
             </div>
           </div>
         </div>
