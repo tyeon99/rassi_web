@@ -16,8 +16,8 @@
   .mainSection__title h2 span{
     @apply block font-normal text-xs text-gray mb-1;
   }
-  .mainSection__title em{
-    @apply font-normal text-[13px] leading-5 text-gray;
+  .mainSection__title em, .mainSection__title button{
+    @apply font-normal text-[13px] leading-5 text-gray flex justify-start items-center gap-0.5;
   }
   .mainSection__tab{
     @apply relative w-full pl-5 flex justify-start items-center gap-0.5 flex-nowrap whitespace-nowrap overflow-x-auto mb-5;

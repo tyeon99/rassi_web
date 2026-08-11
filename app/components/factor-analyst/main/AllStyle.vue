@@ -2,6 +2,12 @@
   <section class="mainSection px-0">
     <div class="mainSection__title px-5">
       <h2>모든 스타일⁺ 보기</h2>
+      <button @click="openAllStyleOffcanvas">
+        <span>스타일 전체보기</span>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.5 12.75L11.25 9L7.5 5.25" stroke="#D3D3D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
     </div>
     
     <div ref="tabContainer" class="mainSection__tab">
@@ -73,14 +79,21 @@
         </div>
       </div>
     </div>
+    <AllStyleOffcanvas 
+      v-if="isAllStyleOffcanvasOpen"
+      :isOffcanvasAni="isOffcanvasAni"
+      @close-allStyleOffcanvas="closeAllStyleOffcanvas"
+    />
   </section>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, nextTick } from 'vue'
+import { ref, onMounted, nextTick, watch } from 'vue'
 import type { ComponentPublicInstance } from 'vue'
+import AllStyleOffcanvas from '~/components/factor-analyst/offcanvas/AllStyleOffcanvas.vue'
 import '~/assets/css/factor-analyst/common.css'
 
+// 탭 전환
 const currentTabIdx = ref(0)
 const tabContainer = ref<HTMLDivElement | null>(null) 
 const tabButtons = ref<HTMLButtonElement[]>([])
@@ -200,6 +213,32 @@ const updateIndicator = (index: number) => {
     }
   }
 }
+
+// 스타일 전체보기 레이어
+const isAllStyleOffcanvasOpen = ref(false)
+const isOffcanvasAni = ref(false)
+
+// 스타일 전체보기 열기
+const openAllStyleOffcanvas = () => {
+  isOffcanvasAni.value = true
+  isAllStyleOffcanvasOpen.value = true
+}
+
+// 스타일 전체보기 닫기
+const closeAllStyleOffcanvas = () => {
+  isOffcanvasAni.value = false
+  setTimeout(() => {
+    isAllStyleOffcanvasOpen.value = false
+  }, 300)
+}
+
+watch(isAllStyleOffcanvasOpen, (isOpen) => {
+  if (isOpen) {
+    document.body.classList.add('scroll-lock')
+  } else {
+    document.body.classList.remove('scroll-lock')
+  }
+})
 
 onMounted(async () => {
   await nextTick() 

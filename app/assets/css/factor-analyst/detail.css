@@ -30,13 +30,16 @@
     @apply font-normal text-base text-black;
   }
   .detailTab-content{
-    @apply w-full p-5 bg-[#F5F7F9];
+    @apply w-full bg-[#F5F7F9];
   }
   .styleItem{
-    @apply w-full flex flex-col justify-start items-start gap-5;
+    @apply w-full;
+  }
+  .styleItem .item-group{
+    @apply w-full p-5 flex flex-col justify-start items-start gap-5;
   }
   .detailContent{
-    @apply w-full flex flex-col justify-start items-start gap-[30px];
+    @apply w-full flex flex-col justify-start items-start gap-[30px] p-5;
   }
   .detailContent__wrap--title{
     @apply w-full mb-4;
@@ -193,6 +196,9 @@
   .itemStyleDetailContent .inner-box.no-signal{
     @apply items-center;
   }
+  .itemStyleDetailContent .inner-box.no-signal p{
+    @apply text-center;
+  }
   .itemStyleDetailContent .inner-box p{
     @apply font-normal text-base text-[#364350];
   }
@@ -316,6 +322,34 @@
   }
   .itemStyleDetailContent .gray-box p{
     @apply font-normal text-base text-black;
+  }
+  .itemStyleDetailContent .gray-box .inner-box{
+    @apply bg-white
+  }
+  .allStyle{
+    @apply w-full flex flex-col justify-start items-start gap-4 bg-white;
+  }
+  .allStyle .title{
+    @apply font-bold text-lg text-black;
+  }
+  .allStyle .style-group{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .allStyle .style-group .box{
+    @apply w-full rounded-[12px] p-4 border border-[#DEE2E6] flex flex-col justify-start items-start gap-2;
+  }
+  .allStyle .style-group .box .box-title{
+    @apply font-semibold text-base text-black;
+  }
+  .allStyle .style-group .box .box-txt{
+    @apply text-left font-normal text-base text-gray;
+  }
+  .allStyle .style-group .box .item-style{
+    @apply flex justify-start items-center gap-[10px];
+  }
+  .allStyle .style-group .box .item-style a{
+    @apply px-[5px] rounded-[4px] font-semibold text-xs leading-[18px] text-main;
+    background: var(--color-blue-7020, #6565FF33);
   }
   .offcanvas-overlay.itemStyleListOffcanvas, .offcanvas-overlay.paymentOffcanvas{
     @apply items-end;

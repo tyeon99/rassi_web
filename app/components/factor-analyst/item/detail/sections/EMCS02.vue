@@ -24,6 +24,13 @@
           <p v-html="item.description"></p>
 
         </div>
+
+        <!-- 컨세서스 데이터가 없는 경우 -->
+        <div class="inner-box no-signal">
+          <img width="20" src="~/assets/img/factor-analyst/detail/no-icon.png" alt="없음 아이콘">
+          <p v-html="item.noSignal"></p>
+        </div>
+        <!-- // -->
       </div>
     </div>
 
@@ -55,6 +62,11 @@
           </div>
 
 
+          <!-- 컨세서스 데이터가 없는 경우 -->
+          <div class="inner-box no-signal">
+            <img width="20" src="~/assets/img/factor-analyst/detail/no-icon.png" alt="없음 아이콘">
+            <p>최근 발표된 컨세서스 추정치가 없어서<br /> 비교할 수 없어요</p>
+          </div>
 
         </div>
       </div>
@@ -70,17 +82,20 @@ const rateList = [
   {
     question: '매출 전망이 좋아질까?',
     isPass: true,
-    description: '향후 12개월 매출 컨센서스는 35.8조원으로, 최근 실적 32.0조원 대비 늘어날 전망이에요. 시가총액 대비로 환산하면 <strong class="up">+2.13%p</strong>예요.'
+    description: '향후 12개월 매출 컨센서스는 35.8조원으로, 최근 실적 32.0조원 대비 늘어날 전망이에요. 시가총액 대비로 환산하면 <strong class="up">+2.13%p</strong>예요.',
+    noSignal: '최근 발표된 매출 추정치가 없어서 <br />표시하지 못했어요.'
   },
   {
     question: '영업이익 전망이 좋아질까?',
     isPass: true,
-    description: '향후 12개월 영업이익 컨센서스는 10.6조원으로, 최근 실적 8.9조원 대비 늘어날 망이에요. 시가총액 대비로 환산하면 <strong class="up">+0.96%p</strong>예요.'
+    description: '향후 12개월 영업이익 컨센서스는 10.6조원으로, 최근 실적 8.9조원 대비 늘어날 망이에요. 시가총액 대비로 환산하면 <strong class="up">+0.96%p</strong>예요.',
+    noSignal: '최근 발표된 영업이익 추정치가 없어서 <br />표시하지 못했어요.'
   },
   {
     question: '당기순이익 전망이 좋아질까?',
     isPass: false,
-    description: '향후 12개월 당기순이익 컨센서스는 8.5조원으로, 최근 실적 7.2조원 대비 늘어날 망이에요. 시가총액 대비로 환산하면 <strong class="up">+0.73%p</strong>예요.'
+    description: '향후 12개월 당기순이익 컨센서스는 8.5조원으로, 최근 실적 7.2조원 대비 늘어날 망이에요. 시가총액 대비로 환산하면 <strong class="up">+0.73%p</strong>예요.',
+    noSignal: '최근 발표된 당기순이익 추정치가 없어서 <br />표시하지 못했어요.'
   }
 ]
 

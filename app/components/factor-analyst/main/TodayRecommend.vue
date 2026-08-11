@@ -5,7 +5,7 @@
         <span>6월 10일 (MON)</span>
         오늘의 추천 스타일⁺
       </h2>
-      <button @click="openIntroOffcanvas">
+      <button>
         <img width="24" src="~/assets/img/factor-analyst/main/detail-btn.png" alt="상세보기 버튼">
       </button>
     </div>
@@ -76,21 +76,12 @@
         <div class="swiper-pagination"></div>
       </div>
     </div>
-    <IntroOffcanvas 
-      v-if="isIntroOffcanvasOpen"
-      :isOffcanvasAni="isOffcanvasAni"
-      @close-introOffcanvas="closeIntroOffcanvas"
-    />
   </section>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, watch } from 'vue'
-import IntroOffcanvas from '~/components/factor-analyst/offcanvas/IntroOffcanvas.vue'
+import { onMounted } from 'vue'
 import '~/assets/css/factor-analyst/common.css'
-
-const isIntroOffcanvasOpen = ref(false)
-const isOffcanvasAni = ref(false)
 
 const slides = [
   {
@@ -112,28 +103,6 @@ const slides = [
     ]
   }
 ]
-
-// 스타일⁺ 소개페이지 열기
-const openIntroOffcanvas = () => {
-  isOffcanvasAni.value = true
-  isIntroOffcanvasOpen.value = true
-}
-
-// 스타일⁺ 소개페이지 닫기
-const closeIntroOffcanvas = () => {
-  isOffcanvasAni.value = false
-  setTimeout(() => {
-    isIntroOffcanvasOpen.value = false
-  }, 300)
-}
-
-watch(isIntroOffcanvasOpen, (isOpen) => {
-  if (isOpen) {
-    document.body.classList.add('scroll-lock')
-  } else {
-    document.body.classList.remove('scroll-lock')
-  }
-})
 
 // Swiper 인스턴스 초기화
 onMounted(() => {
