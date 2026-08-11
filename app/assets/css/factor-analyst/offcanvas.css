@@ -20,14 +20,6 @@
   .offcanvas-body::-webkit-scrollbar{
     display: none;
   }
-  .allStyleOffcanvas{
-    @apply w-full pt-[30px] overflow-y-auto;
-    -ms-overflow-style: none;  /* IE, 에지 */
-    scrollbar-width: none;  /* 파이어폭스 */
-  }
-  .allStyleOffcanvas::-webkit-scrollbar {
-    display: none;
-  }
   .paymentOffcanvas .offcanvas-body{
     @apply w-full flex flex-col justify-start items-start gap-[30px] pb-[84px];
   }
