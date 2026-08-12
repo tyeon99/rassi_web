@@ -23,6 +23,8 @@
             @click="goToDetail(chart.itemStyle)"
             class="chart"
           >
+            <p>{{ chart.itemStyle }}</p>
+
             <!-- 도넛차트 -->
             <div v-if="chart.isPayment" class="donut">
               <img width="135" src="~/assets/img/factor-analyst/item/donut-chart.png" alt="도넛차트">
@@ -34,7 +36,11 @@
               <span>눌러서<br />종목 스타일을<br />확인해 보세요.</span>
             </div>
 
-            <p>{{ chart.itemStyle }}</p>
+            <div class="analyze">
+              <span>분석</span>
+              <p>{{ chart.isPayment ? chart.analyzeTxt : '-' }}</p>
+            </div>
+
           </button>
         </div>
       </div>
@@ -76,40 +82,40 @@ const roundBoxes = [
     roundNum: 1,
     title: '이 회사가 돈 버는 능력',
     charts: [
-      { itemStyle: '퀄리티', isPayment: true },
-      { itemStyle: '주가모멘텀', isPayment: false }
+      { itemStyle: '퀄리티', isPayment: true, analyzeTxt: '튼튼하지만 수익 낮은 퀄리티' },
+      { itemStyle: '주가모멘텀', isPayment: false, analyzeTxt: '단기조정' }
     ]
   },
   {
     roundNum: 2,
     title: '수익성 및 성장성 분석',
     charts: [
-      { itemStyle: '실적모멘텀', isPayment: true },
-      { itemStyle: '미래전망', isPayment: true }
+      { itemStyle: '실적모멘텀', isPayment: true, analyzeTxt: '실적 개선 기대' },
+      { itemStyle: '미래전망', isPayment: true, analyzeTxt: '전망 상향' }
     ]
   },
   {
     roundNum: 3,
     title: '주가 변동 및 위험도',
     charts: [
-      { itemStyle: '밸류에이션', isPayment: true },
-      { itemStyle: '수급', isPayment: true }
+      { itemStyle: '밸류에이션', isPayment: true, analyzeTxt: '고평가 구간' },
+      { itemStyle: '수급', isPayment: true, analyzeTxt: '거래는 활발' }
     ]
   },
   {
     roundNum: 4,
     title: '시장 관심도 및 수급',
     charts: [
-      { itemStyle: '주주환원', isPayment: true },
-      { itemStyle: '초저평가', isPayment: true }
+      { itemStyle: '주주환원', isPayment: true, analyzeTxt: '배당 높음 자사주 매입 저조' },
+      { itemStyle: '초저평가', isPayment: true, analyzeTxt: '청산가치 보다 낮음' }
     ]
   },
   {
     roundNum: 5,
     title: '밸류에이션 평가',
     charts: [
-      { itemStyle: '저변동성', isPayment: false },
-      { itemStyle: '낙폭과대', isPayment: true }
+      { itemStyle: '저변동성', isPayment: false, analyzeTxt: '변동성 전환' },
+      { itemStyle: '낙폭과대', isPayment: true, analyzeTxt: '과매도 구간' }
     ]
   }
 ]

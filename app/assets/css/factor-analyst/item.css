@@ -58,6 +58,15 @@
   .itemStyleContent__section--content .box .donut-chart .chart p{
     @apply font-semibold text-base text-black;
   }
+  .itemStyleContent__section--content .box .donut-chart .chart .analyze{
+    @apply flex flex-col justify-center items-center gap-[6px];
+  }
+  .itemStyleContent__section--content .box .donut-chart .chart .analyze span{
+    @apply p-[2px_10px] border border-[#DEE2E6] rounded-[50px] font-semibold text-xs leading-[18px] text-gray;
+  }
+  .itemStyleContent__section--content .box .donut-chart .chart .analyze p{
+    @apply font-normal text-xs leading-[18px] text-gray;
+  }
   .donut-chart .no-payment{
     @apply w-[135px] h-[135px] flex flex-col justify-center items-center gap-[10px] bg-[#F5F7F9] rounded-[12px];
   }
