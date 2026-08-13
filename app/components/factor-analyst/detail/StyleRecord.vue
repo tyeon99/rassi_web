@@ -12,10 +12,16 @@
           <!-- <div class="chart-box">
             실제 차트는 여기 안에 넣어주세여
           </div> -->
+          <!-- 기록이 없을 때 -->
           <div class="no-record">
             <img width="20" src="~/assets/img/factor-analyst/detail/no-icon.png" alt="아이콘">
             <p>해당 스타일⁺는 추천 스타일⁺ 선정이 되지 않아 스타일⁺ 기록이 없습니다.</p>
           </div>
+          <!-- 1개월 수익률이 모두 음전인 경우 -->
+          <!-- <div class="no-record">
+            <img width="20" src="~/assets/img/factor-analyst/detail/no-icon.png" alt="아이콘">
+            <p>최근 1개월 동안 상승한 종목이 없어 <br />TOP 종목을 제공하지 않아요.</p>
+          </div> -->
           <div class="more-btn">
             <button>삼성전자 종목 스타일 더 보기</button>
           </div>
