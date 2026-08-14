@@ -1,6 +1,6 @@
 <template>
   <div class="itemStyleSection">
-    <div class="title">매일 오전 업데이트되는<br />종목 분석 리포트</div>
+    <div class="title">매일 오전 업데이트되는 종목 분석 리포트</div>
     
     <div class="report">
       <div class="txt">

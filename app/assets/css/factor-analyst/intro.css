@@ -26,8 +26,11 @@
   .introContent__tabContent, .itemStyleSection__tabContent, .introTabContent, .itemStyleSection{
     @apply w-full;
   }
-  .introTabContent, .itemStyleSection{
+  .introTabContent{
     @apply flex flex-col justify-start items-start gap-4;
+  }
+  .itemStyleSection{
+    @apply flex flex-col justify-start items-start gap-3;
   }
   .itemStyleSection__tab{
     @apply w-full flex justify-start items-center gap-[10px];
