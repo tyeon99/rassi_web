@@ -33,7 +33,7 @@ import '~/assets/css/factor-analyst/common.css'
 const qList = [
   {
     question: '모든 스타일이 매일 추천되나요?',
-    description: '아니요, 그날 시장에서 가장 좋은 성과가 기대되는 상위 스타일만 선별해서 보여드려요.'
+    description: '네, 향후 1개월 동안 가장 좋은 성과가 기대되는 상위 스타일 2개를 선별해서 보여드려요.'
   },
   {
     question: '추천 스타일은 언제 바뀌나요?',
@@ -41,7 +41,7 @@ const qList = [
   },
   {
     question: 'Pick 5 종목은 어떻게 확인하나요?',
-    description: '추천 스타일 카드 안에서 확인할 수 있어요. 해당 스타일 기준 상위 5종목이 선정돼요.'
+    description: '추천 스타일 페이지 안에서 확인할 수 있어요. 해당 스타일 기준 상위 5종목이 선정돼요.'
   },
   {
     question: '추천된 스타일의 과거 성과는 어디서 볼 수 있나요?',
