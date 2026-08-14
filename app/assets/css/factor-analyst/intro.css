@@ -4,33 +4,144 @@
 
 @layer components {
   .introContent{
-    @apply w-full p-[30px_20px];
+    @apply w-full p-[30px_20px] flex flex-col justify-start items-start gap-4;
   }
-  .introContent .txt-wrap{
-    @apply w-full flex flex-col justify-start items-start gap-[30px];
+  .introContent .title{
+    @apply w-full font-bold text-lg text-black;
   }
-  .introContent .txt-group{
-    @apply w-full flex flex-col justify-start items-start gap-4;
+    .introContent__tab{
+    @apply relative w-full h-[38px] flex justify-center items-center bg-[#EDF0F3] p-1 rounded-[8px];
   }
-  .introContent .txt-group .title{
-    @apply w-full flex flex-col justify-start items-start gap-1;
+  .introContent__tab button{
+    @apply relative flex-1 rounded-[6px] font-normal text-base text-gray bg-transparent z-[1];
   }
-  .introContent .txt-group .title strong{
-    @apply font-bold text-lg text-black;
+  .introContent__tab button.active{
+    @apply font-bold text-black;
   }
-  .introContent .txt-group .title span{
-    @apply font-normal text-sm text-gray;
+  .introContent__tab .tab-indicator {
+    @apply h-[30px] absolute rounded-[6px] bg-white z-0 ease-out top-1 bottom-1 left-5;
+    transition: transform 0.3s ease-out, width 0.3s ease-out; 
+    box-shadow: 0px 0px 4px 0px #0000001A;
   }
-  .introContent .txt-group .box{
-    @apply w-full rounded-[12px] border border-[#DEE2E6] bg-white p-[17px] flex flex-col justify-start items-start gap-6;
+  .introContent__tabContent, .itemStyleSection__tabContent, .introTabContent, .itemStyleSection{
+    @apply w-full;
   }
-  .introContent .txt-group .box .p-group{
+  .introTabContent, .itemStyleSection{
     @apply flex flex-col justify-start items-start gap-4;
   }
-  .introContent .txt-group .box .p-group p{
+  .itemStyleSection__tab{
+    @apply w-full flex justify-start items-center gap-[10px];
+  }
+  .itemStyleSection__tab button{
+    @apply p-[5.5px_16px] rounded-[50px] border border-[#DEE2E6] font-normal text-base text-gray transition-all;
+  }
+  .itemStyleSection__tab button.active{
+    @apply bg-[#364350] text-white font-semibold border-[#364350];
+  }
+  .itemStyleSection__tabContent .list-box{
+    @apply w-full flex flex-col justify-start items-start border border-[#DEE2E6] rounded-[12px] p-4;
+  }
+  .itemStyleSection__tabContent .list-box .list{
+    @apply w-full py-2 first:pt-0 last:pb-0 border-b border-[#EDF0F3] last:border-none flex justify-between items-center text-left;
+  }
+  .itemStyleSection__tabContent .list-box .list .left{
+    @apply flex flex-col justify-start items-start gap-2;
+  }
+  .itemStyleSection__tabContent .list-box .list .left strong{
+    @apply font-semibold text-base text-black leading-[21px];
+  }
+  .itemStyleSection__tabContent .list-box .list .left p{
+    @apply font-normal text-sm text-[#515F6C];
+  }
+  .itemStyleSection .report{
+    @apply w-full pb-[14px] flex flex-col justify-start items-start gap-4;
+  }
+  .itemStyleSection .report .box-group{
+    @apply w-full flex justify-center items-center gap-[3px];
+  }
+  .itemStyleSection .report .box-group .box{
+    @apply flex-1 h-[110px] flex justify-center items-center flex-col bg-[#F5F7F9] rounded-[12px] text-center text-black;
+  }
+  .itemStyleSection .report .box-group .box.mainColor{
+    @apply bg-main text-white;
+  }
+  .itemStyleSection .report .box-group .box strong{
+    @apply font-bold text-lg;
+  }
+  .itemStyleSection .report .box-group .box strong p{
+    @apply font-normal text-base;
+  }
+  .itemStyleSection .report .txt p{
     @apply font-normal text-base text-[#515F6C];
   }
-  .introContent .txt-group .box .p-group strong{
-    @apply font-bold text-base text-black;
+  .itemStyleSection .report .txt-box{
+    @apply w-full flex flex-col justify-start items-start gap-[6px] bg-[#F5F7F9] rounded-[12px] p-4;
+  }
+  .itemStyleSection .report .txt-box strong{
+    @apply font-bold text-base text-[#364350];
+  }
+  .itemStyleSection .report .txt-box p{
+    @apply font-normal text-base text-black;
+  }
+  .itemStyleSection .recommend{
+    @apply w-full pb-[14px] flex flex-col justify-start items-start gap-4;
+  }
+  .itemStyleSection .recommend .txt{
+    @apply w-full font-normal text-base text-[#515F6C];
+  }
+  .itemStyleSection .recommend .box{
+    @apply w-full border border-[#DEE2E6] rounded-[16px] px-4 py-5;
+  }
+  .itemStyleSection .recommend .box .top{
+    @apply w-full flex flex-col justify-start items-start gap-5 pb-5 border-b border-[#DEE2E6];
+  }
+  .itemStyleSection .recommend .box .top .box-title{
+    @apply w-full flex flex-col justify-start items-start gap-1;
+  }
+  .itemStyleSection .recommend .box .top .box-title strong{
+    @apply font-bold text-lg text-black;
+  }
+  .itemStyleSection .recommend .box .top .box-title p{
+    @apply font-normal text-sm text-gray;
+  }
+  .itemStyleSection .recommend .box .top .box-txt{
+    @apply font-normal text-base text-[#515F6C];
+  }
+  .itemStyleSection .recommend .box .top .inner-box{
+    @apply w-full rounded-[12px] p-4 font-normal text-base text-[#364350];
+    background: var(--color-blue-7010, #6565FF1A);
+  }
+  .itemStyleSection .recommend .box .bottom{
+    @apply w-full flex justify-end items-center pt-[10px];
+  }
+  .itemStyleSection .recommend .box .bottom button{
+    @apply flex justify-end items-center gap-[6px];
+  }
+  .itemStyleSection .recommend .box .bottom button p{
+    @apply font-normal text-base text-[#515F6C];
+  }
+  .itemStyleSection  .question{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .itemStyleSection  .question .box{
+    @apply w-full rounded-[16px] border border-[#DEE2E6] p-4 flex flex-col justify-start items-start gap-5;
+  }
+  .itemStyleSection  .question .box .box-title{
+    @apply w-full flex justify-start items-start gap-[6px];
+  }
+  .itemStyleSection  .question .box .box-title span{
+    @apply w-6 h-6 rounded-[50px] flex justify-center items-center bg-main font-semibold text-sm text-white;
+  }
+  .itemStyleSection  .question .box .box-title p{
+    @apply font-semibold text-base text-black;
+  } 
+  .itemStyleSection .question .inner-box{
+    @apply w-full bg-[#F5F7F9] rounded-[12px] p-4;
+  }
+  .itemStyleSection .question .inner-box p{
+    @apply font-normal text-base text-[#364350];
+  }
+  .itemStyleSection .question .notice{
+    @apply w-full p-4 rounded-[12px] bg-[#F5F7F9] font-normal text-xs text-gray;
   }
 }

@@ -1,75 +1,93 @@
 <template>
   <div class="introContent">
-    <div class="txt-wrap">
-      <div class="txt-group">
-        <div class="title">
-          <strong>추천 스타일⁺</strong>
-          <span>현재 시장에서 좋은 성과가 기대되는 스타일⁺</span>
-        </div>
-        <div class="box">
-          <div class="p-group">
-            <p>
-              하루에 2개씩 1M·3M 기대수익률이 높을 것으로 예상되는 추천 스타일⁺와 Pick 5 종목을 제공합니다.<br /><br />
+    <div class="title">스타일 패스란?</div>
 
-              추천 스타일⁺는 강한 주가 흐름, 개선되는 실적, 긍정적인 수급 등 여러 종목 스타일이 함께 나타나는 종목을 중심으로 선별합니다.<br /><br />
+    <div ref="tabContainer" class="introContent__tab">
+      <div 
+        class="tab-indicator"
+        :style="{
+          width: `${indicatorStyle.width}px`,
+          transform: `translateX(${indicatorStyle.left}px)`
+        }"
+      ></div>
 
-              또한 추천된 Pick 5 종목은 추천 이후 1개월 동안의 성과를 추적하여, 제시된 목표수익률과 실제 달성한 최대 평균 수익률까지 함께 확인할 수 있습니다.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="txt-group">
-        <div class="title">
-          <strong>스타일⁺</strong>
-          <span>매일 오전 업데이트되는 종목 분석 리포트</span>
-        </div>
-        <div class="box">
-          <div class="p-group">
-            <p>
-              10개의 종목스타일을 종합 분석해 종목과 연관된 23가지 스타일⁺ 유형으로 제공하며, 종목을 쉽고 직관적으로 이해할 수 있도록 도와줍니다.<br /><br />
-
-              스타일⁺에 해당하는 종목을 스코어 순으로 확인할 수 있으며, 스타일의 상세 설명과 활용 방법, 구성 종목의 분석 내용을 함께 제공합니다. 최근 1개월 동안 높은 수익률을 기록한 TOP 5
-              종목도 확인할 수 있습니다.
-            </p>
-          </div>
-          <div class="p-group">
-            <strong>활용 방법</strong>
-            <p>
-              스타일⁺는 종목의 현재 특징을 이해하고, 유사한 투자 패턴의 종목을 찾는 데 활용할 수 있습니다.<br /><br />
-
-              • 스타일의 특징과 투자 포인트 확인<br />
-              • 스타일에 속한 종목을 스코어 순으로 비교<br />
-              • 구성 종목의 상세 데이터 확인<br />
-              • 최근 1개월 수익률 TOP 5 종목 확인<br /><br />
-
-              스타일별 특징과 성과를 함께 확인하면 현재 시장에서 어떤 종목이 주목받고 있는지 더욱 쉽게 파악할 수 있습니다.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="txt-group">
-        <div class="title">
-          <strong>종목 스타일</strong>
-          <span>현재 시장에서 좋은 성과가 기대되는 팩터 스타일</span>
-        </div>
-        <div class="box">
-          <div class="p-group">
-            <p>
-              10개의 종목스타일을 통해 현재 종목이 어떤 신호를 보이고 있는지 한 눈에 확인할 수 있습니다.<br /><br />
-
-              각 종목스타일을 선택하면 해당 신호가 포착된 이유와 주요 분석 내용을 확인할 수 있습니다.<br /><br />
-
-              또한 해당 종목이 속한 스타일⁺를 함께 제공하여, 비슷한 특징을 가진 종목과 스타일의 상세 설명, 활용 방법까지 함께 확인할 수 있습니다.
-            </p>
-          </div>
-        </div>
-      </div>
+      <button 
+        v-for="(tab, tidx) in styleTabs" 
+        :key="tidx"
+        :ref="(el) => setTabRef(el, tidx)"
+        :class="{ active: currentTabIdx === tidx }"
+        @click="updateIndicator(tidx)"
+      >
+        {{ tab }}
+      </button>
     </div>
+
+    <div class="introContent__tabContent">
+      <component :is="activeTabComponent" />
+    </div>
+    
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref, computed, onMounted, nextTick, type Component, type ComponentPublicInstance } from 'vue'
 // style
 import '~/assets/css/factor-analyst/common.css'
+import ItemStyleTabContent from '~/components/factor-analyst/intro/ItemStyleTabContent.vue'
+import StyleTabContent from '~/components/factor-analyst/intro/StyleTabContent.vue'
+import RecommendStyleTabContent from '~/components/factor-analyst/intro/RecommendStyleTabContent.vue'
 
+const currentTabIdx = ref(0)
+const tabContainer = ref<HTMLDivElement | null>(null) 
+const tabButtons = ref<HTMLButtonElement[]>([])
+
+const indicatorStyle = ref({
+  width: 0,
+  left: 0
+})
+
+const styleTabs = ['종목스타일', '스타일', '추천스타일']
+
+const tabComponents: Component[] = [
+  ItemStyleTabContent,
+  StyleTabContent,
+  RecommendStyleTabContent
+]
+
+const activeTabComponent = computed<Component | undefined>(() => tabComponents[currentTabIdx.value])
+
+const setTabRef = (el: Element | ComponentPublicInstance | null, index: number) => {
+  if (el) {
+    tabButtons.value[index] = el as HTMLButtonElement
+  }
+}
+
+const updateIndicator = (index: number) => {
+  currentTabIdx.value = index
+  const targetButton = tabButtons.value[index]
+  const container = tabContainer.value
+  
+  if (targetButton) {
+    indicatorStyle.value = {
+      width: targetButton.offsetWidth,
+      left: targetButton.offsetLeft - 20
+    }
+
+    if (container) {
+      const buttonCenter = targetButton.offsetLeft + (targetButton.offsetWidth / 2)
+      const containerHalfWidth = container.offsetWidth / 2
+      const targetScrollLeft = buttonCenter - containerHalfWidth
+
+      container.scrollTo({
+        left: targetScrollLeft,
+        behavior: 'smooth'
+      })
+    }
+  }
+}
+
+onMounted(async () => {
+  await nextTick() 
+  updateIndicator(0)
+})
 </script>
