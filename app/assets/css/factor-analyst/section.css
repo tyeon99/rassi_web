@@ -45,7 +45,7 @@
     @apply w-full;
   }
   .recommendItemSwiper .swiper-slide{
-    @apply h-[354px];
+    @apply h-[404px];
   }
   .itemList{
     @apply w-full h-full rounded-[20px] p-4 text-left flex flex-col justify-start items-start;
@@ -57,7 +57,7 @@
     @apply bg-white;
   }
   .itemList .box-title{
-    @apply w-full font-bold text-xl text-black mb-5;
+    @apply w-full font-bold text-xl text-black mb-2.5;
   }
   .itemList .box-txt{
     @apply w-full font-normal text-sm text-gray mb-5;
