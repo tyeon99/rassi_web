@@ -53,6 +53,18 @@
   .itemStyleSection__tabContent .list-box .list .left p{
     @apply font-normal text-sm text-[#515F6C];
   }
+  .itemStyleSection .introTop{
+    @apply w-full;
+  }
+  .itemStyleSection .introTop .box{
+    @apply w-full rounded-[12px] border border-[#DEE2E6] p-4 flex flex-col justify-start items-start gap-2;
+  }
+  .itemStyleSection .introTop .box strong{
+    @apply font-semibold text-base text-black;
+  }
+  .itemStyleSection .introTop .box p{
+    @apply font-normal text-base text-[#515F6C];
+  }
   .itemStyleSection .report{
     @apply w-full pb-[14px] flex flex-col justify-start items-start gap-4;
   }

@@ -1,6 +1,6 @@
 <template>
   <div class="itemStyleSection">
-    <div class="title">이 회사가 돈 버는 능력</div>
+    <div class="title">1. 이 회사가 돈 버는 능력</div>
 
     <div class="itemStyleSection__tab">
       <button 

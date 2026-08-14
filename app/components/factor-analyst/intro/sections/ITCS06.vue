@@ -3,6 +3,14 @@
     <div class="title">매일 오전 업데이트되는<br />종목 분석 리포트</div>
     
     <div class="report">
+      <div class="txt">
+        <p>
+          10개의 종목 스타일을 조합해 22가지 스타일을 제공합니다. <br />
+          스타일의 특징과 성과를 함께 살펴보고,<br />
+          현재 시장에서 주목받는 스타일과 종목을 쉽게 파악할 수 있습니다.
+        </p>
+      </div>
+
       <div class="box-group">
         <div class="box">
           <strong>N개</strong>

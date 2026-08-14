@@ -1,6 +1,6 @@
 <template>
   <div class="itemStyleSection">
-    <div class="title">상승세와 돈의 흐름</div>
+    <div class="title">2. 상승세와 돈의 흐름</div>
 
     <div class="itemStyleSection__tab">
       <button 

@@ -1,6 +1,6 @@
 <template>
   <div class="itemStyleSection">
-    <div class="title">기업가치와 평가</div>
+    <div class="title">3. 기업가치와 평가</div>
 
     <div class="itemStyleSection__tab">
       <button 

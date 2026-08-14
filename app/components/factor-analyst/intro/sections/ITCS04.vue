@@ -1,6 +1,6 @@
 <template>
   <div class="itemStyleSection">
-    <div class="title">시장관심과 주주챙기기</div>
+    <div class="title">4. 시장관심과 주주챙기기</div>
 
     <div class="itemStyleSection__tab">
       <button 

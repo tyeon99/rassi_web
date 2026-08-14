@@ -1,6 +1,6 @@
 <template>
   <div class="introContent">
-    <div class="title">스타일 패스란?</div>
+    <div class="title">스타일 패스에서 모두 이용해보세요.</div>
 
     <div ref="tabContainer" class="introContent__tab">
       <div 

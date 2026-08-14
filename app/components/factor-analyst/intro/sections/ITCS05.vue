@@ -1,6 +1,6 @@
 <template>
   <div class="itemStyleSection">
-    <div class="title">안전성과 역발상</div>
+    <div class="title">5. 안전성과 역발상</div>
 
     <div class="itemStyleSection__tab">
       <button 
