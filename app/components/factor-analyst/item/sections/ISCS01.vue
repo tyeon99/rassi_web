@@ -29,6 +29,12 @@
               <img width="135" src="~/assets/img/factor-analyst/item/donut-chart.png" alt="도넛차트">
             </div>
 
+            <!-- 스코어가 포함된 차트 -->
+            <!-- <div class="chart-score">
+              //// 차트영역 (밑에 스코어 빼고 위에부분 차트 묶음만 넣으면 될 거 같아여) /////
+              <span>92.8</span>
+            </div> -->
+
             <!-- 결제정보 없을 때 -->
             <div v-else class="no-payment">
               <img width="24" src="~/assets/img/factor-analyst/item/question-icon.png" alt="물음표 아이콘">

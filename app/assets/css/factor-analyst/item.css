@@ -73,6 +73,12 @@
   .donut-chart .signal{
     @apply w-[135px] h-[135px] flex flex-col justify-center items-center gap-[10px] bg-[#F5F7F9] rounded-[12px];
   }
+  .chart-score{
+    @apply w-[135px] h-[135px] flex flex-col justify-end items-center gap-[10px];
+  }
+  .chart-score span{
+    @apply font-semibold text-lg text-black;
+  }
   .condition{
     @apply w-full flex justify-start items-center gap-2 flex-wrap mt-2;
   }
