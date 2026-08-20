@@ -47,25 +47,22 @@
     @apply w-full mt-2 text-gray font-normal text-base;
   }
   .itemStyleContent__section--content .box .donut-chart{
-    @apply mt-4 w-full flex justify-center items-center gap-4;
+    @apply mt-4 w-full flex justify-center items-stretch gap-4;
   }
   .itemStyleContent__section--content .box .donut-chart .chart{
-    @apply flex justify-center items-center flex-col gap-4;
+    @apply flex-1 flex justify-start items-center flex-col gap-4;
   }
   .itemStyleContent__section--content .box .donut-chart .chart .donut{
-    @apply w-full h-full;
+    @apply w-full;
   }
-  .itemStyleContent__section--content .box .donut-chart .chart p{
+  .itemStyleContent__section--content .box .donut-chart .chart .txt{
+    @apply flex flex-col justify-center items-center;
+  }
+  .itemStyleContent__section--content .box .donut-chart .chart .txt span{
+    @apply font-normal text-sm leading-[21px] text-gray;
+  }
+  .itemStyleContent__section--content .box .donut-chart .chart .txt p{
     @apply font-semibold text-base text-black;
-  }
-  .itemStyleContent__section--content .box .donut-chart .chart .analyze{
-    @apply flex flex-col justify-center items-center gap-[6px];
-  }
-  .itemStyleContent__section--content .box .donut-chart .chart .analyze span{
-    @apply p-[2px_10px] border border-[#DEE2E6] rounded-[50px] font-semibold text-xs leading-[18px] text-gray;
-  }
-  .itemStyleContent__section--content .box .donut-chart .chart .analyze p{
-    @apply font-normal text-xs leading-[18px] text-gray;
   }
   .donut-chart .no-payment{
     @apply w-[135px] h-[135px] flex flex-col justify-center items-center gap-[10px] bg-[#F5F7F9] rounded-[12px];
@@ -104,7 +101,7 @@
     @apply w-full h-[54px] bg-main rounded-[12px] p-[10px] font-semibold text-base text-white;
   }
   .itemStyleListContent{
-    @apply pt-6;
+    @apply py-6;
   }
   .itemStyleListContent .summary-box{
     @apply w-full p-4 border border-[#DEE2E6] rounded-[12px] flex flex-col justify-center items-center gap-[6px] mb-6;

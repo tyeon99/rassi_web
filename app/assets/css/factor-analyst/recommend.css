@@ -61,13 +61,13 @@
     @apply w-full py-6 px-5 border-b-[12px] border-[#F5F7F9] first:pt-0 last:border-b-[0px];
   }
   .recommendResultContent__section--title{
-    @apply w-full flex flex-col justify-start items-start gap-2 mb-4;
+    @apply w-full flex flex-col justify-start items-start gap-3 mb-4;
   }
   .recommendResultContent__section--title .title{
     @apply w-full flex justify-between items-end;
   }
   .recommendResultContent__section--title span{
-    @apply font-normal text-[13px] leading-[20px] text-main;
+    @apply font-medium text-[15px] leading-[22px] text-main;
   }
   .recommendResultContent__section--title h1{
     @apply font-bold text-lg text-black;

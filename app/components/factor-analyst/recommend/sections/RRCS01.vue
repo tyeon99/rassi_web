@@ -1,11 +1,11 @@
 <template>
   <div class="recommendResultContent__section">
     <div class="recommendResultContent__section--title">
-      <span>6월 30일 추천 스타일⁺</span>
+      <span>6월 30일 추천스타일 입니다.</span>
       <div class="title">
         <h1><strong>정석강세 스타일</strong></h1>
         <button>
-          <p>자세히 보기</p>
+          <p>스타일 보기</p>
           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7.5 12.75L11.25 9L7.5 5.25" stroke="#D3D3D3" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" />

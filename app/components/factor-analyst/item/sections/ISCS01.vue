@@ -23,7 +23,6 @@
             @click="goToDetail(chart.itemStyle)"
             class="chart"
           >
-            <p>{{ chart.itemStyle }}</p>
 
             <!-- 도넛차트 -->
             <div v-if="chart.isPayment" class="donut">
@@ -36,9 +35,9 @@
               <span>눌러서<br />종목 스타일을<br />확인해 보세요.</span>
             </div>
 
-            <div class="analyze">
-              <span>분석</span>
-              <p>{{ chart.isPayment ? chart.analyzeTxt : '-' }}</p>
+            <div class="txt">
+              <p>{{ chart.itemStyle }}</p>
+              <span>{{ chart.isPayment ? chart.analyzeTxt : '-' }}</span>
             </div>
 
           </button>
