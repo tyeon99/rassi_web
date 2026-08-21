@@ -1,7 +1,7 @@
 <template>
   <div class="recommendResultContent__section">
     <div class="recommendResultContent__section--title">
-      <span>6월 30일 추천스타일 입니다.</span>
+      <span>6월 30일 추천스타일 입니다</span>
       <div class="title">
         <h1><strong>정석강세 스타일</strong></h1>
         <button>
