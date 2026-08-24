@@ -326,6 +326,27 @@
   .itemStyleDetailContent .gray-box .inner-box{
     @apply bg-white
   }
+  .itemStyleDetailContent .score-wrap{
+    @apply w-full flex justify-center items-center gap-3;
+  }
+  .itemStyleDetailContent .score-wrap .box{
+    @apply w-full flex-1;
+  }
+  .itemStyleDetailContent .score-wrap .box .top{
+    @apply py-[5px] w-full text-center bg-main rounded-t-[12px] font-bold text-sm text-white;
+  }
+  .itemStyleDetailContent .score-wrap .box .bottom{
+    @apply w-full p-3 rounded-b-[12px] bg-white flex flex-col justify-start items-start gap-[6px];
+  }
+  .itemStyleDetailContent .score-wrap .box .bottom .score{
+    @apply w-full flex justify-between items-center;
+  }
+  .itemStyleDetailContent .score-wrap .box .bottom .score span{
+    @apply font-normal text-base text-gray;
+  }
+  .itemStyleDetailContent .score-wrap .box .bottom .score p{
+    @apply font-bold text-base text-[#364350];
+  }
   .allStyle{
     @apply w-full flex flex-col justify-start items-start gap-4 bg-white;
   }

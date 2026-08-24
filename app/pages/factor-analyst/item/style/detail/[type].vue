@@ -24,7 +24,7 @@ import QualityContent from '~/components/factor-analyst/item/detail/QualityConte
 import StockMomentumContent from '~/components/factor-analyst/item/detail/StockMomentumContent.vue'
 import EarningsMomentumContent from '~/components/factor-analyst/item/detail/EarningsMomentumContent.vue'
 import OutlookContent from '~/components/factor-analyst/item/detail/OutlookContent.vue'
-// import ValuationContent from '~/components/factor-analyst/item/detail/ValuationContent.vue'
+import ValuationContent from '~/components/factor-analyst/item/detail/ValuationContent.vue'
 import SupplyContent from '~/components/factor-analyst/item/detail/SupplyContent.vue'
 import ShareholderContent from '~/components/factor-analyst/item/detail/ShareholderContent.vue'
 import UnderratedContent from '~/components/factor-analyst/item/detail/UnderratedContent.vue'
@@ -40,7 +40,7 @@ const contentMap: Record<string, Component> = {
   'stock-momentum': StockMomentumContent,
   'earnings-momentum': EarningsMomentumContent,
   'outlook': OutlookContent,
-  // 'valuation': ValuationContent,
+  'valuation': ValuationContent,
   'supply': SupplyContent,
   'shareholder': ShareholderContent,
   'underrated': UnderratedContent,
