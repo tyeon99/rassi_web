@@ -40,6 +40,16 @@
           <button>황금밸런스 스타일의 다른 종목 보기</button>
         </div>
       </div>
+
+      <!-- 스타일 없을 때 -->
+      <div class="no-style">
+        <div class="box">
+          <img width="20" src="~/assets/img/factor-analyst/detail/no-icon.png" alt="없음 아이콘">
+          <p>SK하이닉스의 종목스타일이 속한 <br />스타일이 없어요.</p>
+        </div>
+        <button>스타일 전체 보기</button>
+      </div>
+
     </div>
   </div>
 </template>

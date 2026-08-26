@@ -38,6 +38,12 @@
   .styleItem .item-group{
     @apply w-full p-5 flex flex-col justify-start items-start gap-5;
   }
+  .styleItem .no-item{
+    @apply w-full py-5 px-3 rounded-[12px] bg-white flex flex-col justify-center items-center gap-2;
+  }
+  .styleItem .no-item p{
+    @apply font-normal text-base text-[#364350] text-center;
+  }
   .detailContent{
     @apply w-full flex flex-col justify-start items-start gap-[30px] p-5;
   }
@@ -131,7 +137,7 @@
     @apply font-bold text-3xl leading-[40px] text-black;
   }
   .itemStyleDetailContent .quality-score .right span{
-    @apply py-1 px-2 bg-main rounded-[50px] font-bold text-[12px] leading-[18px] text-white;
+    @apply py-0.5 px-3 bg-main rounded-[50px] font-semibold text-[16px] leading-[21px] text-white;
   }
   .itemStyleDetailContent .quality-score .right span.no-signal{
     @apply flex w-[74px] h-[22px] justify-center items-center bg-gray;

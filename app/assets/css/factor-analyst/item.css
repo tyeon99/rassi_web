@@ -64,6 +64,18 @@
   .itemStyleContent__section--content .box .donut-chart .chart .txt p{
     @apply font-semibold text-base text-black;
   }
+  .itemStyleContent__section--content .no-style{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .itemStyleContent__section--content .no-style .box{
+    @apply border-none gap-2 rounded-[12px] bg-[#F5F7F9];
+  }
+  .itemStyleContent__section--content .no-style .box p{
+    @apply font-normal text-base text-[#364350] text-center;
+  }
+  .itemStyleContent__section--content .no-style button{
+    @apply w-full h-[54px] bg-main rounded-[12px] p-[10px] font-semibold text-base text-white;
+  }
   .donut-chart .no-payment{
     @apply w-[135px] h-[135px] flex flex-col justify-center items-center gap-[10px] bg-[#F5F7F9] rounded-[12px];
   }

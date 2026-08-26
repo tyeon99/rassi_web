@@ -231,6 +231,13 @@
           </div>
         </div>
       </div>
+
+      <!-- 종목 없을 때 -->
+      <div class="no-item">
+        <img width="20" src="~/assets/img/factor-analyst/detail/no-icon.png" alt="없음 아이콘">
+        <p>스타일에 속한 종목이 없어요.</p>
+      </div>
+
     </div>
 
     <!-- 스타일 전체보기 -->
