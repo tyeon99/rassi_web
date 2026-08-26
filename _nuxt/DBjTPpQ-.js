@@ -1,0 +1,1 @@
+/* empty css        */import{C as a}from"./TvYArpTs.js";import{A as o}from"./BL4v23Rl.js";import{d as t,B as s,E as e,C as n,A as r}from"./DK87fxq2.js";const i={id:"wrap"},c={id:"main",class:"main"},u=t({__name:"index",setup(m){return(d,p)=>(r(),s("div",i,[e(a),n("main",c,[e(o,{class:"p-5"})])]))}});export{u as default};
