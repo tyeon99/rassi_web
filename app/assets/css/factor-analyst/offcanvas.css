@@ -20,13 +20,13 @@
   .offcanvas-body::-webkit-scrollbar{
     display: none;
   }
-  .offcanvas-overlay.itemStyleListOffcanvas, .offcanvas-overlay.paymentOffcanvas{
+  .offcanvas-overlay.itemStyleListOffcanvas, .offcanvas-overlay.paymentOffcanvas, .offcanvas-overlay.recommendInfoOffcanvas{
     @apply items-end;
   }
-  .offcanvas-content.itemStyleListOffcanvas, .offcanvas-content.paymentOffcanvas{
+  .offcanvas-content.itemStyleListOffcanvas, .offcanvas-content.paymentOffcanvas, .offcanvas-content.recommendInfoOffcanvas{
     @apply max-h-[90%] rounded-t-[20px];
   }
-  .itemStyleListOffcanvas .offcanvas-body, .paymentOffcanvas .offcanvas-body{
+  .itemStyleListOffcanvas .offcanvas-body, .paymentOffcanvas .offcanvas-body, .recommendInfoOffcanvas .offcanvas-body{
     @apply overflow-auto;
   }
   .itemStyleListOffcanvas .body-top{
@@ -62,6 +62,27 @@
   }
   .itemStyleListOffcanvas .txt-group .txt p{
     @apply font-normal text-base text-[#515F6C];
+  }
+  .recommendInfoOffcanvas .offcanvas-body{
+    @apply flex flex-col justify-start items-start gap-4;
+  }
+  .recommendInfoOffcanvas .offcanvas-body .title{
+    @apply font-bold text-lg text-black;
+  }
+  .recommendInfoOffcanvas .offcanvas-body .box-group{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .recommendInfoOffcanvas .offcanvas-body .box-group .box{
+    @apply w-full py-6 px-5 bg-[#F7F7F8] rounded-[16px] flex flex-col justify-start items-start gap-4;
+  }
+  .recommendInfoOffcanvas .offcanvas-body .box-group .box .box-title{
+    @apply font-semibold text-base text-black;
+  }
+  .recommendInfoOffcanvas .offcanvas-body .box-group .box .box-txt{
+    @apply font-normal text-base text-[#515F6C];
+  }
+  .recommendInfoOffcanvas .offcanvas-body .guide{
+    @apply font-normal text-base text-gray;
   }
   .paymentOffcanvas .offcanvas-body{
     @apply w-full flex flex-col justify-start items-start gap-[30px] pb-[84px];

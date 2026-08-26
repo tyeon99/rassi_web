@@ -70,13 +70,13 @@
     @apply font-medium text-[14px] leading-[21px] text-white p-[2px_8px] bg-main rounded-[50px];
   }
   .recommendResultContent__section--title h1{
-    @apply font-bold text-lg text-black;
+    @apply w-full font-bold text-lg text-black flex justify-between items-center;
   }
   .recommendResultContent__section--title h1 strong{
     @apply font-bold text-[30px] leading-[40px] text-black;
   }
   .recommendResultContent__section--title .title button{
-    @apply flex justify-end items-center;
+    @apply flex justify-end items-center whitespace-nowrap;
   }
   .recommendResultContent__section--title .title button p{
     @apply font-normal text-[13px] leading-[20px] text-gray;
