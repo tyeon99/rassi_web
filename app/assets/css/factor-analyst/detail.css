@@ -181,6 +181,9 @@
   .itemStyleDetailContent .range-wrap .txt strong{
     @apply font-bold text-sm text-[#364350];
   }
+  .itemStyleDetailContent .range-wrap .txt.four-span span{
+    @apply flex-none;
+  }
   .itemStyleDetailContent .score-box{
     @apply w-full flex justify-center items-center gap-1 p-5 rounded-[12px] bg-white;
   }
@@ -352,6 +355,12 @@
   }
   .itemStyleDetailContent .score-wrap .box .bottom .score p{
     @apply font-bold text-base text-[#364350];
+  }
+  .itemStyleDetailContent .no-data{
+    @apply w-full py-5 px-3 flex flex-col justify-center items-center gap-2 bg-[#F5F7F9] rounded-[8px];
+  }
+  .itemStyleDetailContent .no-data p{
+    @apply font-normal text-base text-black text-center;
   }
   .allStyle{
     @apply w-full flex flex-col justify-start items-start gap-4 bg-white;

@@ -66,6 +66,7 @@
     </div>
 
     <div class="body-content">
+      <NODATA title="미래전망" />
       <OCS01 />
       <OCS02 />
     </div>
@@ -75,6 +76,7 @@
 <script setup lang="ts">
 import OCS01 from '~/components/factor-analyst/item/detail/sections/OCS01.vue'
 import OCS02 from '~/components/factor-analyst/item/detail/sections/OCS02.vue'
+import NODATA from '~/components/factor-analyst/item/detail/sections/NODATA.vue'
 
 defineProps({
   isOffcanvasAni: {

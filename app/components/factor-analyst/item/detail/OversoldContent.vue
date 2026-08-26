@@ -65,6 +65,7 @@
     </div>
 
     <div class="body-content">
+      <NODATA title="낙폭과대" />
       <OSCS01 />
       <OSCS02 />
       <OSCS03 />
@@ -76,6 +77,7 @@
 import OSCS01 from '~/components/factor-analyst/item/detail/sections/OSCS01.vue'
 import OSCS02 from '~/components/factor-analyst/item/detail/sections/OSCS02.vue'
 import OSCS03 from '~/components/factor-analyst/item/detail/sections/OSCS03.vue'
+import NODATA from '~/components/factor-analyst/item/detail/sections/NODATA.vue'
 
 defineProps({
   isOffcanvasAni: {

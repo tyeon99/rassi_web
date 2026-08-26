@@ -66,6 +66,7 @@
     </div>
 
     <div class="body-content">
+      <NODATA title="저변동성" />
       <LVCS01 />
     </div>
   </div>
@@ -73,6 +74,7 @@
 
 <script setup lang="ts">
 import LVCS01 from '~/components/factor-analyst/item/detail/sections/LVCS01.vue'
+import NODATA from '~/components/factor-analyst/item/detail/sections/NODATA.vue'
 
 defineProps({
   isOffcanvasAni: {

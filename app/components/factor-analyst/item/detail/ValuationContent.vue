@@ -65,6 +65,7 @@
     </div>
 
     <div class="body-content">
+      <NODATA title="밸류에이션" />
       <VCS01 />
       <VCS02 />
       <VCS03 />
@@ -76,6 +77,7 @@
 import VCS01 from '~/components/factor-analyst/item/detail/sections/VCS01.vue'
 import VCS02 from '~/components/factor-analyst/item/detail/sections/VCS02.vue'
 import VCS03 from '~/components/factor-analyst/item/detail/sections/VCS03.vue'
+import NODATA from '~/components/factor-analyst/item/detail/sections/NODATA.vue'
 
 defineProps({
   isOffcanvasAni: {

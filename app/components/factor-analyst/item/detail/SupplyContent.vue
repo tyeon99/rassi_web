@@ -29,7 +29,7 @@
               />
             </div>
           </div>
-          <div class="txt">
+          <div class="txt four-span">
             <span>수급 부재</span>
             <span>매물 부담</span>
             <span>거래는 활발</span>
@@ -67,6 +67,7 @@
     </div>
 
     <div class="body-content">
+      <NODATA title="수급" />
       <SCS01 />
       <SCS02 />
       <SCS03 />
@@ -78,6 +79,7 @@
 import SCS01 from '~/components/factor-analyst/item/detail/sections/SCS01.vue'
 import SCS02 from '~/components/factor-analyst/item/detail/sections/SCS02.vue'
 import SCS03 from '~/components/factor-analyst/item/detail/sections/SCS03.vue'
+import NODATA from '~/components/factor-analyst/item/detail/sections/NODATA.vue'
 
 defineProps({
   isOffcanvasAni: {

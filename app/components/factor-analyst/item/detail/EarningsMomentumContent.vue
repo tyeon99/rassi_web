@@ -29,7 +29,7 @@
               />
             </div>
           </div>
-          <div class="txt">
+          <div class="txt four-span">
             <span>컨센서스 부재</span>
             <span>실적 개선 기대</span>
             <span>성장둔화</span>
@@ -67,6 +67,7 @@
     </div>
 
     <div class="body-content">
+      <NODATA title="실적모멘텀" />
       <EMCS01 />
       <EMCS02 />
     </div>
@@ -76,6 +77,7 @@
 <script setup lang="ts">
 import EMCS01 from '~/components/factor-analyst/item/detail/sections/EMCS01.vue'
 import EMCS02 from '~/components/factor-analyst/item/detail/sections/EMCS02.vue'
+import NODATA from '~/components/factor-analyst/item/detail/sections/NODATA.vue'
 
 defineProps({
   isOffcanvasAni: {

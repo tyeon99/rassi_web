@@ -65,6 +65,7 @@
     </div>
 
     <div class="body-content">
+      <NODATA title="초저평가" />
       <UCS01 />
     </div>
   </div>
@@ -72,6 +73,7 @@
 
 <script setup lang="ts">
 import UCS01 from '~/components/factor-analyst/item/detail/sections/UCS01.vue'
+import NODATA from '~/components/factor-analyst/item/detail/sections/NODATA.vue'
 
 defineProps({
   isOffcanvasAni: {

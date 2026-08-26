@@ -66,6 +66,7 @@
     </div>
 
     <div class="body-content">
+      <NODATA title="주주환원" />
       <SHCS01 />
       <SHCS02 />
     </div>
@@ -75,6 +76,7 @@
 <script setup lang="ts">
 import SHCS01 from '~/components/factor-analyst/item/detail/sections/SHCS01.vue'
 import SHCS02 from '~/components/factor-analyst/item/detail/sections/SHCS02.vue'
+import NODATA from '~/components/factor-analyst/item/detail/sections/NODATA.vue'
 
 defineProps({
   isOffcanvasAni: {

@@ -29,7 +29,7 @@
               />
             </div>
           </div>
-          <div class="txt">
+          <div class="txt four-span">
             <span>저퀄리티</span>
             <span>수익 대비 <br />재무 질낮은 퀄리티</span>
             <span>튼튼하지만 <br />수익 낮은 퀄리티</span>
@@ -67,6 +67,7 @@
     </div>
 
     <div class="body-content">
+      <NODATA title="퀄리티" />
       <QCS01 />
       <QCS02 />
     </div>
@@ -76,6 +77,7 @@
 <script setup lang="ts">
 import QCS01 from '~/components/factor-analyst/item/detail/sections/QCS01.vue'
 import QCS02 from '~/components/factor-analyst/item/detail/sections/QCS02.vue'
+import NODATA from '~/components/factor-analyst/item/detail/sections/NODATA.vue'
 
 const score = ref(86.2)
 </script>

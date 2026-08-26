@@ -29,7 +29,7 @@
               />
             </div>
           </div>
-          <div class="txt">
+          <div class="txt four-span">
             <span>추세 부재</span>
             <span>반등초기</span>
             <span>단기조정</span>
@@ -67,6 +67,7 @@
     </div>
 
     <div class="body-content">
+      <NODATA title="주가모멘텀" />
       <SMCS01 />
       <SMCS02 />
     </div>
@@ -76,6 +77,7 @@
 <script setup lang="ts">
 import SMCS01 from '~/components/factor-analyst/item/detail/sections/SMCS01.vue'
 import SMCS02 from '~/components/factor-analyst/item/detail/sections/SMCS02.vue'
+import NODATA from '~/components/factor-analyst/item/detail/sections/NODATA.vue'
 
 defineProps({
   isOffcanvasAni: {
