@@ -1,1 +1,0 @@
-/* empty css        */import{C as a}from"./D9iHl-fk.js";import{A as o}from"./CZGTXKUq.js";import{d as t,B as s,E as e,C as n,A as r}from"./B46HT28g.js";const i={id:"wrap"},c={id:"main",class:"main"},u=t({__name:"index",setup(m){return(d,p)=>(r(),s("div",i,[e(a),n("main",c,[e(o,{class:"p-5"})])]))}});export{u as default};
