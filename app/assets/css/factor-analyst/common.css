@@ -16,7 +16,7 @@ em{
   @apply not-italic;
 }
 #wrap {
-  padding-bottom: env(safe-area-inset-bottom, 0px);
+  /* padding-bottom: env(safe-area-inset-bottom, 0px); */
 }
 .up{
   @apply !text-[#FF5050];
