@@ -5,6 +5,7 @@
 @layer components {
   .itemStyleContent{
     @apply w-full;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
   }
   .itemStyleContent__top{
     @apply w-full p-[30px_20px] bg-[#F5F7F9] flex flex-col justify-center items-center gap-4;
