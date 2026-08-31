@@ -1,6 +1,6 @@
 <template>
   <div class="introContent">
-    <div class="title">스타일 패스에서 모두 이용해보세요.</div>
+    <div class="title">스타일 패스에서 모두 이용하실 수 있어요!</div>
 
     <div ref="tabContainer" class="introContent__tab">
       <div 
@@ -46,7 +46,7 @@ const indicatorStyle = ref({
   left: 0
 })
 
-const styleTabs = ['종목스타일', '스타일', '추천스타일']
+const styleTabs = ['종목스타일', '스타일⁺', '추천스타일']
 
 const tabComponents: Component[] = [
   ItemStyleTabContent,

@@ -1,18 +1,14 @@
 <template>
   <div class="introTabContent">
     <div class="itemStyleSection">
-      <div class="title">종목의 강점과 약점을 보여주는 핵심 투자 지표</div>
+      <div class="topTitle">종목을 분석하는 <br /><span>10가지 종목스타일</span></div>
       <div class="introTop">
-        <div class="box">
-          <strong>5개 라운드와 10개의 종목 스타일을 통해 현재 종목의 특징을 한눈에 확인해보세요.</strong>
-          <p>
-            • 단계별 신호와 현재 상태 확인<br />
-            • 신호를 판단한 주요 근거 확인<br />
-            • 같은 종목 스타일을 가진 유사 종목 확인
-          </p>
-        </div>
+        <p>
+          종목스타일에서는 각 개별 종목을 분석하는 10가지 스타일을 제공해 드립니다. 10가지 스타일은 5개의 라운드에서 확인이 가능합니다. 10가지 스타일은 점수에 따라 단계가 나누어 지며, 점수에 대한 정확한 근거를 확인하실 수 있습니다.
+        </p>
       </div>
     </div>
+    
     <ITCS01 />
     <ITCS02 />
     <ITCS03 />

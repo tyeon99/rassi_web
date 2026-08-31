@@ -27,25 +27,33 @@
     @apply w-full;
   }
   .introTabContent{
-    @apply flex flex-col justify-start items-start gap-4;
+    @apply flex flex-col justify-start items-start gap-[30px];
   }
   .itemStyleSection{
-    @apply flex flex-col justify-start items-start gap-3;
+    @apply flex flex-col justify-start items-start gap-4;
+  }
+  .itemStyleSection .tab-box{
+    @apply w-full rounded-[12px] bg-[#F5F7F9] p-4 flex flex-col justify-start items-start gap-3;
   }
   .itemStyleSection__tab{
-    @apply w-full flex justify-start items-center gap-[10px];
+    @apply relative w-full h-[40px] flex justify-center items-center bg-[#EDF0F3] rounded-[8px];
   }
   .itemStyleSection__tab button{
-    @apply p-[5.5px_16px] rounded-[50px] border border-[#DEE2E6] font-normal text-base text-gray transition-all;
+    @apply relative flex-1 rounded-[6px] font-normal text-base text-gray bg-transparent z-[1];
   }
   .itemStyleSection__tab button.active{
-    @apply bg-[#364350] text-white font-semibold border-[#364350];
+    @apply font-bold text-main;
+  }
+  .itemStyleSection__tab .tab-indicator {
+    @apply h-[40px] absolute rounded-[8px] bg-white z-0 ease-out top-0 bottom-0 left-5;
+    transition: transform 0.3s ease-out, width 0.3s ease-out; 
+    box-shadow: 0px 0px 4px 0px #0000001A;
   }
   .itemStyleSection__tabContent .list-box{
-    @apply w-full flex flex-col justify-start items-start border border-[#DEE2E6] rounded-[12px] p-4;
+    @apply w-full flex flex-col justify-start items-start pt-[10px] gap-4;
   }
   .itemStyleSection__tabContent .list-box .list{
-    @apply w-full py-2 first:pt-0 last:pb-0 border-b border-[#EDF0F3] last:border-none flex justify-between items-center text-left;
+    @apply w-full  flex justify-between items-center text-left;
   }
   .itemStyleSection__tabContent .list-box .list .left{
     @apply flex flex-col justify-start items-start gap-2;
@@ -56,20 +64,20 @@
   .itemStyleSection__tabContent .list-box .list .left p{
     @apply font-normal text-sm text-[#515F6C];
   }
+  .itemStyleSection .topTitle{
+    @apply font-bold text-xl text-black w-full text-center pt-[14px];
+  }
+  .itemStyleSection .topTitle span{
+    @apply text-main;
+  }
   .itemStyleSection .introTop{
     @apply w-full;
   }
-  .itemStyleSection .introTop .box{
-    @apply w-full rounded-[12px] border border-[#DEE2E6] p-4 flex flex-col justify-start items-start gap-2;
-  }
-  .itemStyleSection .introTop .box strong{
-    @apply font-semibold text-base text-black;
-  }
-  .itemStyleSection .introTop .box p{
+  .itemStyleSection .introTop p{
     @apply font-normal text-base text-[#515F6C];
   }
   .itemStyleSection .report{
-    @apply w-full pb-[14px] flex flex-col justify-start items-start gap-4;
+    @apply w-full flex flex-col justify-start items-start gap-4;
   }
   .itemStyleSection .report .box-group{
     @apply w-full flex justify-center items-center gap-[3px];
@@ -87,7 +95,7 @@
     @apply font-normal text-base;
   }
   .itemStyleSection .report .txt p{
-    @apply font-normal text-base text-[#515F6C];
+    @apply relative font-normal text-base text-[#515F6C] pl-3 before:content-['•'] before:absolute before:left-0 before:top-0 before:leading-[20px];
   }
   .itemStyleSection .report .txt-box{
     @apply w-full flex flex-col justify-start items-start gap-[6px] bg-[#F5F7F9] rounded-[12px] p-4;
@@ -99,7 +107,13 @@
     @apply font-normal text-base text-black;
   }
   .itemStyleSection .recommend{
-    @apply w-full pb-[14px] flex flex-col justify-start items-start gap-4;
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .itemStyleSection .recommend .txt-box{
+    @apply w-full p-4 bg-[#F5F7F9] rounded-[12px]
+  }
+  .itemStyleSection .recommend .txt-box p{
+    @apply relative font-normal text-base text-[#515F6C] pl-3 before:content-['•'] before:absolute before:left-0 before:top-0 before:leading-[20px];
   }
   .itemStyleSection .recommend .txt{
     @apply w-full font-normal text-base text-[#515F6C];
