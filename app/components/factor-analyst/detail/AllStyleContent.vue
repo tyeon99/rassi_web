@@ -1,6 +1,6 @@
 <template>
   <div class="allStyle">
-    <div class="title">스타일 전체보기</div>
+    <div class="title">스타일⁺ 전체보기</div>
     <div class="style-group">
       <button 
         v-for="(box, idx) in styleList" 

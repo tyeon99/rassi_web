@@ -32,12 +32,8 @@ import '~/assets/css/factor-analyst/common.css'
 
 const qList = [
   {
-    question: '모든 스타일이 매일 추천되나요?',
-    description: '아니요, 그날 시장에서 가장 좋은 성과가 기대되는 상위 스타일만 선별해서 보여드려요.'
-  },
-  {
     question: '추천 스타일은 언제 바뀌나요?',
-    description: '매일 아침 장 시작 전에 추천 스타일 TOP 2이 갱신되며, 추천 스타일에 속한 Pick 5를 확인할 수 있어요.'
+    description: '매일 아침 장 시작 전에 추천 스타일 TOP이 갱신되며, 추천 스타일에 속한 Pick 5를 확인할 수 있어요.'
   },
   {
     question: 'Pick 5 종목은 어떻게 확인하나요?',

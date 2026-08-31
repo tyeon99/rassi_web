@@ -11,8 +11,8 @@
         </div>
         <img width="38" src="~/assets/img/factor-analyst/intro/box-arrow.png" alt="화살표">
         <div class="box mainColor">
-          <strong>22개</strong>
-          <p>스타일 완성</p>
+          <strong>22개의</strong>
+          <p>스타일⁺ 완성</p>
         </div>
       </div>
 

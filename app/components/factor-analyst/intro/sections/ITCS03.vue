@@ -53,7 +53,7 @@ import type { ComponentPublicInstance } from 'vue'
 // style
 import '~/assets/css/factor-analyst/common.css'
 
-const tabs = ['밸류에이션', '초저평가']
+const tabs = ['밸류에이션', '딥밸류']
 const currentTab = ref(0)
 
 const tabContainer = ref<HTMLDivElement | null>(null)
@@ -68,7 +68,7 @@ const tabData = [
   // 밸류에이션 데이터
   ['저평가 매력', '고평가 구간'],
   // 초저평가 데이터
-  ['청산가치 보다 낮음']
+  ['초저평가']
 ]
 
 const currentList = computed(() => tabData[currentTab.value])

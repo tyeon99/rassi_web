@@ -1,6 +1,6 @@
 <template>
   <div class="itemStyleSection">
-    <div class="title">추천스타일의 추천근거는?</div>
+    <div class="title">추천스타일의 추천 근거는?</div>
     
     <div class="recommend">
 
