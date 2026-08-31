@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .version{
+    @apply w-full p-[30px_20px] flex flex-col justify-start items-start gap-[30px];
+  }
+  .version-top{
+    @apply w-full flex flex-col justify-start items-start gap-3;
+  }
+  .version-top .title{
+    @apply w-full flex flex-col justify-start items-start gap-[6px];
+  }
+  .version-top .title span{
+    @apply font-normal text-[13px] leading-[20px] text-main;
+  }
+  .version-top .title strong{
+    @apply font-bold text-2xl leading-[29px] text-black;
+  }
+  .version-top .txt{
+    @apply font-normal text-base text-[#515F6C];
+  }
+  .version-box{
+    @apply w-full flex justify-between items-center p-4 bg-[#F5F7F9] rounded-[12px];
+  }
+  .version-box div{
+    @apply flex-1 flex flex-col justify-start items-start
+  }
+  .version-box .right{
+    @apply items-end border-l border-[#DEE2E6];
+  }
+  .version-box div span{
+    @apply font-normal text-[13px] leading-[20px] text-gray;
+  }
+  .version-box div strong{
+    @apply font-bold text-base text-black;
+  }
+  .version-history{
+    @apply w-full flex flex-col justify-start items-start;
+  }
+  .version-history .list{
+    @apply relative w-full pb-5 last:pb-0 flex flex-col justify-start items-start gap-[6px] pl-[26px];
+  }
+  .version-history .list::before{
+    @apply content-[''] w-2.5 h-2.5 rounded-full bg-[#DEE2E6] absolute left-1 top-1 z-[1];
+  }
+  .version-history .list:first-child::before{
+    @apply w-5 h-5 bg-main left-[-1px] top-0 border-[5px] border-[#E0E0FF];
+  }
+  .version-history .list::after{
+    @apply content-[''] absolute w-[1px] h-full border-l border-dashed border-[#DEE2E6] left-2 top-0 z-[0];
+  }
+  .version-history .list .year{
+    @apply text-gray font-normal text-[13px] leading-[20px];
+  }
+  .version-history .list:first-child .year{
+    @apply text-main;
+  }
+  .version-history .list .txt-group{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .version-history .list .txt-group .item-wrap{
+    @apply w-full flex flex-col justify-start items-start gap-[6px]; 
+  }
+  .version-history .list .txt-group .item-wrap .title{
+    @apply w-full flex justify-between items-center;
+  }
+  .version-history .list .txt-group .item-wrap .title strong{
+    @apply font-semibold text-base text-black;
+  }
+  .version-history .list .txt-group .item-wrap .title span{
+    @apply font-normal text-[13px] leading-[20px] text-gray;
+  }
+  .version-history .list .txt-group .item-wrap .txt{
+    @apply font-normal text-base text-[#364350];
+  }
+}
