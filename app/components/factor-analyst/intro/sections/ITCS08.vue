@@ -7,7 +7,7 @@
       <div class="box">
         <div class="top">
           <div class="box-title">
-            <strong>추천근거</strong>
+            <strong>추천 근거</strong>
             <p>‘Factor Momentum Everywhere(2019)’ 연구</p>
           </div>
           <div class="box-txt">
