@@ -11,6 +11,9 @@
       <button @click="openOverPaymentOffcanvas">결제 2개월 이상</button> -->
       <!-- // -->
 
+        <!-- 오늘의 추천 스타일 스켈레톤 UI -->
+        <TodayRecommendSkeleton />
+
       <TodayRecommend />
       <DateRecommend />
       <RecommendRecipe />
@@ -50,6 +53,7 @@ import AllStyle from '~/components/factor-analyst/main/AllStyle.vue'
 import FreePaymentOffcanvas from '~/components/factor-analyst/offcanvas/FreePaymentOffcanvas.vue'
 import UnderPaymentOffcanvas from '~/components/factor-analyst/offcanvas/UnderPaymentOffcanvas.vue'
 import OverPaymentOffcanvas from '~/components/factor-analyst/offcanvas/OverPaymentOffcanvas.vue'
+import TodayRecommendSkeleton from '~/components/factor-analyst/main/TodayRecommendSkeleton.vue'
 
 const isFreePaymentOffcanvasOpen = ref(false)
 const isUnderPaymentOffcanvasOpen = ref(false)
