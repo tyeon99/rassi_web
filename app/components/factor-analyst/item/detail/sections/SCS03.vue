@@ -11,7 +11,7 @@
         <span>86.2</span>
       </div>
       <div class="gpa-txt !mb-0">
-        공매도잔고율은 1.8%로 낮은 편이에요. <br />
+        공매도잔고율은 <strong>1.8%</strong>로 낮은 편이에요. <br />
         (낮을수록 공급 부담이 적어요)
       </div>
     </div>
@@ -22,7 +22,7 @@
         <span>86.2</span>
       </div>
       <div class="gpa-txt !mb-0">
-        대차잔고율은 2.3%로 낮은 편이에요.<br />
+        대차잔고율은 <strong>2.3%</strong>로 낮은 편이에요.<br />
         (낮을수록 공급 부담이 적어요)
       </div>
     </div>
