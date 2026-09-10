@@ -11,17 +11,17 @@
         <!-- <span>86.2</span> -->
       </div>
       <div class="gpa-txt !mb-0">
-        최근 1개월 고점 대비 <span class="down">-18.5%</span> 하락했고, 저점 대비로는 <span class="up">+3.1%</span> 반등한 상태예요.
+        최근 1개월 고점 대비 <strong>-18.5%</strong> 하락했고, 저점 대비로는 <strong>+3.1%</strong> 반등한 상태예요.
       </div>
     </div>
 
     <div class="list">
       <div class="gpa-title">
         <p>최근 3개월로 보면 낙폭이 더 클까?</p>
-        <span>86.2</span>
+        <!-- <span>86.2</span> -->
       </div>
       <div class="gpa-txt !mb-0">
-        최근 3개월 고점 대비 <span class="down">-22.0%</span> 하락했고, 저점 대비로는 <span class="up">+5.4%</span> 반등한 상태예요.
+        최근 3개월 고점 대비 <strong>-22.0%</strong> 하락했고, 저점 대비로는 <strong>+5.4%</strong> 반등한 상태예요.
       </div>
     </div>
 

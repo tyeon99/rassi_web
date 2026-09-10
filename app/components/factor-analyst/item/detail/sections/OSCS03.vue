@@ -11,7 +11,7 @@
         <span>86.2</span>
       </div>
       <div class="gpa-txt !mb-0">
-        현재가 1,300,000원이 최근 1개월 이동평균선보다 <span class="down">9.8%</span> 낮아요. 
+        현재가 <strong>1,300,000원</strong>이 최근 1개월 이동평균선보다 <strong>9.8%</strong> 낮아요. 
       </div>
     </div>
 
@@ -21,7 +21,7 @@
         <span>86.2</span>
       </div>
       <div class="gpa-txt !mb-0">
-        현재가 1,300,000원이 최근 3개월 이동평균선보다 <span class="down">13.4%</span> 낮아요. 
+        현재가 <strong>1,300,000원</strong>이 최근 3개월 이동평균선보다 <strong>13.4%</strong> 낮아요. 
       </div>
     </div>
 

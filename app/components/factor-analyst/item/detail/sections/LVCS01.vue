@@ -11,7 +11,7 @@
         <span>86.2</span>
       </div>
       <div class="gpa-txt !mb-0">
-        SK하이닉스의 최근 3개월 변동성은 <span class="up">+18.7%</span> 로 낮은편이에요. 낮을 수록 안정적인 흐름이에요
+        SK하이닉스의 최근 3개월 변동성은 <strong>+18.7%</strong> 로 낮은편이에요. 낮을 수록 안정적인 흐름이에요
       </div>
     </div>
 
@@ -21,7 +21,7 @@
         <span>86.2</span>
       </div>
       <div class="gpa-txt !mb-0">
-        SK하이닉스의 최근 12개월 변동성으은 <span class="up">+36.6%</span>로 낮은 편이에요. 낮을 수록 안정적인 흐름이에요
+        SK하이닉스의 최근 12개월 변동성으은 <strong>+36.6%</strong>로 낮은 편이에요. 낮을 수록 안정적인 흐름이에요
       </div>
     </div>
 

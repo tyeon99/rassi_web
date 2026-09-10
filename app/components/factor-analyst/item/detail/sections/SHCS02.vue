@@ -11,8 +11,8 @@
         <span>86.2</span>
       </div>
       <div class="gpa-txt !mb-0">
-        3개월 자사주 순매입액은 <span class="up">1,070억원</span>으로, <br />
-        시가총액 178조원 대비 0.6%예요.
+        3개월 자사주 순매입액은 <strong>1,070억원</strong>으로, <br />
+        시가총액 <strong>178조</strong>원 대비 <strong>0.6%</strong>예요.
       </div>
     </div>
 
@@ -22,8 +22,8 @@
         <span>86.2</span>
       </div>
       <div class="gpa-txt !mb-0">
-        최근 12개월 자사주 순매입액은 <span class="up">4,070억원</span>으로, <br />
-        시가총액 178조원 대비 2.4%예요.
+        최근 12개월 자사주 순매입액은 <strong>4,070억원</strong>으로, <br />
+        시가총액 <strong>178조</strong>원 대비 <strong>2.4%</strong>예요.
       </div>
     </div>
 

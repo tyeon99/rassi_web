@@ -11,7 +11,7 @@
         <span>86.2</span>
       </div>
       <div class="gpa-txt !mb-0">
-        SK하이닉스의 최근 1주 수익률은 <span class="down">-6.8%</span>로, 단기 낙폭이 컸어요.
+        SK하이닉스의 최근 1주 수익률은 <strong>-6.8%</strong>로, 단기 낙폭이 컸어요.
       </div>
     </div>
 
@@ -21,7 +21,7 @@
         <span>86.2</span>
       </div>
       <div class="gpa-txt !mb-0">
-        SK하이닉스의 최근 1개월 수익률은 <span class="down">-14.2%</span>로, 낙폭이 더 커졌어요.
+        SK하이닉스의 최근 1개월 수익률은 <strong>-14.2%</strong>로, 낙폭이 더 커졌어요.
       </div>
     </div>
 

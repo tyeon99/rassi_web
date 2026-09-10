@@ -11,7 +11,7 @@
         <span>86.2</span>
       </div>
       <div class="gpa-txt !mb-0">
-        매출 총이익 2500억을 총자산 250억으로 나눈 값이예요.
+        매출 총이익 <strong>2500억</strong>을 총자산 <strong>250억</strong>으로 나눈 값 으로, GP/A는 <strong>86.2%</strong>이에요.
       </div>
     </div>
 
@@ -21,7 +21,7 @@
         <span>86.2</span>
       </div>
       <div class="gpa-txt !mb-0">
-        반도체 섹터의 총 종목수는 32종목이고, 가장 높은 GP/A는 99.2, 가장 낮은 GP/A는 35.2 예요.
+        반도체 섹터의 총 종목수는 <strong>32종목</strong>이고, 가장 높은 GP/A는 <strong>99.2%</strong>, 가장 낮은 GP/A는 <strong>35.2%</strong> 예요.
       </div>
     </div>
     
