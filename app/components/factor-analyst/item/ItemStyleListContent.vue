@@ -22,7 +22,12 @@
     </div>
 
     <!-- 탭 컨텐츠 영역 -->
-    <div class="mainSection__content px-5">
+    <div 
+      class="mainSection__content px-5"
+      @touchstart="handleTouchStart"
+      @touchmove="handleTouchMove"
+      @touchend="handleTouchEnd"
+    >
       <div class="tab-content">
         <div class="summary-box">
           <p v-html="activeTab.summary"></p>
@@ -35,7 +40,7 @@
         </div>
 
         <!-- 종목 리스트 -->
-        <div class="listGroup">
+        <div v-if="activeTab.list && activeTab.list.length > 0" class="listGroup">
           <div 
             v-for="(item, idx) in activeTab.list" 
             :key="idx" 
@@ -62,7 +67,7 @@
         </div>
 
         <!-- 종목 없을 때 -->
-        <div class="no-item">
+        <div v-else class="no-item">
           <img width="20" src="~/assets/img/factor-analyst/detail/no-icon.png" alt="아이콘">
           <p>해당 종목 스타일에 속하는 <br />종목이 없습니다.</p>
         </div>
@@ -78,7 +83,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, nextTick } from 'vue'
+import { ref, computed, watch, onMounted, nextTick } from 'vue'
 import type { ComponentPublicInstance } from 'vue'
 import '~/assets/css/factor-analyst/common.css'
 import ItemStyleListOffcanvas from '~/components/factor-analyst/offcanvas/ItemStyleListOffcanvas.vue'
@@ -93,6 +98,12 @@ const indicatorStyle = ref({
   width: 0,
   left: 0
 })
+
+const startX = ref(0)
+const startY = ref(0)
+const endX = ref(0)
+const endY = ref(0)
+const minSwipeDistance = 50
 
 const qualityTabs = [
   { 
@@ -185,6 +196,40 @@ const updateIndicator = (index: number) => {
       })
     }
   }
+}
+
+const handleTouchStart = (e: TouchEvent) => {
+  if (e.touches && e.touches[0]) {
+    startX.value = e.touches[0].clientX
+    startY.value = e.touches[0].clientY
+  }
+}
+
+const handleTouchMove = (e: TouchEvent) => {
+  if (e.touches && e.touches[0]) {
+    endX.value = e.touches[0].clientX
+    endY.value = e.touches[0].clientY
+  }
+}
+
+const handleTouchEnd = () => {
+  if (!startX.value || !endX.value) return
+
+  const diffX = startX.value - endX.value
+  const diffY = startY.value - endY.value
+
+  if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > minSwipeDistance) {
+    if (diffX > 0 && currentTabIdx.value < qualityTabs.length - 1) {
+      updateIndicator(currentTabIdx.value + 1)
+    } else if (diffX < 0 && currentTabIdx.value > 0) {
+      updateIndicator(currentTabIdx.value - 1)
+    }
+  }
+
+  startX.value = 0
+  startY.value = 0
+  endX.value = 0
+  endY.value = 0
 }
 
 onMounted(async () => {
