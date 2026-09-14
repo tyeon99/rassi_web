@@ -85,7 +85,7 @@
 <script setup lang="ts">
 import { ref, onMounted, nextTick } from 'vue'
 import type { ComponentPublicInstance } from 'vue'
-import '~/assets/css/factor-analyst/common.css'
+
 
 // 탭 전환
 const currentTabIdx = ref(0)
@@ -213,3 +213,7 @@ onMounted(async () => {
   updateIndicator(0)
 })
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

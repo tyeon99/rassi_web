@@ -21,9 +21,13 @@
 
 <script setup lang="ts">
 // style
-import '~/assets/css/factor-analyst/common.css'
+
 import PMCS01 from '~/components/factor-analyst/payment/sections/PMCS01.vue';
 import PMCS02 from '~/components/factor-analyst/payment/sections/PMCS02.vue';
 import PMCS03 from '~/components/factor-analyst/payment/sections/PMCS03.vue';
 
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

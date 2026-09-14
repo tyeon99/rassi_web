@@ -246,7 +246,11 @@
 </template>
 
 <script setup lang="ts">
-import '~/assets/css/factor-analyst/common.css'
+
 import AllStyleContent from '~/components/factor-analyst/detail/AllStyleContent.vue'
 
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

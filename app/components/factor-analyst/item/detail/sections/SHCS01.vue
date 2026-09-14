@@ -55,7 +55,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 // style
-import '~/assets/css/factor-analyst/common.css'
+
 
 const infoList = ref([
   {
@@ -81,3 +81,7 @@ const chartList = ref([
   }
 ])
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

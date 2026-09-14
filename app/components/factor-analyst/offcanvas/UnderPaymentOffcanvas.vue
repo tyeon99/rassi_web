@@ -112,3 +112,7 @@ const closeUnderPaymentOffcanvas = () => {
   emit('close-underPaymentOffcanvas')
 }
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

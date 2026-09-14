@@ -17,7 +17,7 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 
 // style
-import '~/assets/css/factor-analyst/common.css'
+
 import CloseHeader from '~/components/factor-analyst/header/CloseHeader.vue'
 
 import QualityContent from '~/components/factor-analyst/item/detail/QualityContent.vue'
@@ -50,3 +50,7 @@ const contentMap: Record<string, Component> = {
 
 const activeContentComponent = computed(() => contentMap[currentType.value] || null)
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

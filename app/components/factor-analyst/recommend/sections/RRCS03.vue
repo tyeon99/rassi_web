@@ -37,7 +37,7 @@
 </template>
 
 <script setup lang="ts">
-import '~/assets/css/factor-analyst/common.css'
+
 
 const pickList = [
   { name: '삼성전자', code: '055872', rate: '95.3' },
@@ -47,3 +47,7 @@ const pickList = [
   { name: '카카오', code: '055872', rate: '75.8' }
 ]
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

@@ -19,7 +19,7 @@
 
 <script setup lang="ts">
 // style
-import '~/assets/css/factor-analyst/common.css'
+
 
 import ITCS01 from '~/components/factor-analyst/intro/sections/ITCS01.vue'
 import ITCS02 from '~/components/factor-analyst/intro/sections/ITCS02.vue'
@@ -28,3 +28,7 @@ import ITCS04 from '~/components/factor-analyst/intro/sections/ITCS04.vue'
 import ITCS05 from '~/components/factor-analyst/intro/sections/ITCS05.vue'
 
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

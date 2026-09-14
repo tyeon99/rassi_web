@@ -51,7 +51,7 @@ import { ref, computed, onMounted, nextTick } from 'vue'
 import type { ComponentPublicInstance } from 'vue'
 
 // style
-import '~/assets/css/factor-analyst/common.css'
+
 
 const tabs = ['저변동성', '낙폭과대']
 const currentTab = ref(0)
@@ -108,3 +108,7 @@ onMounted(async () => {
   updateIndicator(0)
 })
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

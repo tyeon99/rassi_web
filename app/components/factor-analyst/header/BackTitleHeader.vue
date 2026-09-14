@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import '~/assets/css/factor-analyst/common.css'
+
 
 defineProps({
   title: {
@@ -19,3 +19,7 @@ defineProps({
   }
 })
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

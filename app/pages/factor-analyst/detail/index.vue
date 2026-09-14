@@ -20,7 +20,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 // style
-import '~/assets/css/factor-analyst/common.css'
+
 
 import BackHeader from '~/components/factor-analyst/header/BackHeader.vue'
 import DetailTop from '~/components/factor-analyst/detail/DetailTop.vue'
@@ -68,3 +68,7 @@ const processSwipe = () => {
   }
 }
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

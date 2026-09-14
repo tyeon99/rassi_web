@@ -36,6 +36,10 @@
 
 <script setup lang="ts">
 // style
-import '~/assets/css/factor-analyst/common.css'
+
 
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

@@ -92,3 +92,7 @@ const closeQualityOffcanvas = () => {
   emit('close-qualityOffcanvas')
 }
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

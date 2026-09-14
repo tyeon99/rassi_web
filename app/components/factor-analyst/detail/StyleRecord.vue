@@ -61,7 +61,7 @@
 </template>
 
 <script setup lang="ts">
-import '~/assets/css/factor-analyst/common.css'
+
 
 const dateRecords = [
   {
@@ -78,3 +78,7 @@ const dateRecords = [
   }
 ]
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

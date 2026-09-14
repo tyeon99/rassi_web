@@ -72,7 +72,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import '~/assets/css/factor-analyst/common.css'
+
 
 const itemList = ref([
   {
@@ -140,3 +140,7 @@ const itemList = ref([
   }
 ])
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

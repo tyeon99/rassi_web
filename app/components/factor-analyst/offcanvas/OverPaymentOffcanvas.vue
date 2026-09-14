@@ -73,3 +73,7 @@ const closeOverPaymentOffcanvas = () => {
   emit('close-overPaymentOffcanvas')
 }
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

@@ -81,3 +81,7 @@ import NODATA from '~/components/factor-analyst/item/detail/sections/NODATA.vue'
 
 const score = ref(86.2)
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

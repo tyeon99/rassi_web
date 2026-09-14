@@ -32,7 +32,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, nextTick, type Component, type ComponentPublicInstance } from 'vue'
 // style
-import '~/assets/css/factor-analyst/common.css'
+
 import ItemStyleTabContent from '~/components/factor-analyst/intro/ItemStyleTabContent.vue'
 import StyleTabContent from '~/components/factor-analyst/intro/StyleTabContent.vue'
 import RecommendStyleTabContent from '~/components/factor-analyst/intro/RecommendStyleTabContent.vue'
@@ -91,3 +91,7 @@ onMounted(async () => {
   updateIndicator(0)
 })
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

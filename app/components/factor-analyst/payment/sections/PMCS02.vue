@@ -41,7 +41,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 // style
-import '~/assets/css/factor-analyst/common.css'
+
 
 const selectedIndex = ref(0)
 
@@ -64,3 +64,7 @@ const paymentOptions = [
   }
 ]
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

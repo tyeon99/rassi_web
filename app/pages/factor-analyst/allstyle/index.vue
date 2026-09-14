@@ -9,8 +9,12 @@
 
 <script setup lang="ts">
 // style
-import '~/assets/css/factor-analyst/common.css'
+
 import CloseHeader from '~/components/factor-analyst/header/CloseHeader.vue';
 import AllStyleContent from '~/components/factor-analyst/detail/AllStyleContent.vue';
 
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

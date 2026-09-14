@@ -75,7 +75,7 @@
 </template>
 
 <script setup lang="ts">
-import '~/assets/css/factor-analyst/common.css'
+
 
 const introBoxes = [
   {
@@ -110,3 +110,7 @@ const introBoxes = [
   }
 ]
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

@@ -21,8 +21,12 @@
 
 <script setup lang="ts">
 // style
-import '~/assets/css/factor-analyst/common.css'
+
 import BackHeader from '~/components/factor-analyst/header/BackHeader.vue';
 import PaymentContent from '~/components/factor-analyst/payment/PaymentContent.vue';
 
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

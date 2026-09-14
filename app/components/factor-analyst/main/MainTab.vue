@@ -23,7 +23,7 @@
 <script setup lang="ts">
 import { ref, onMounted, nextTick } from 'vue'
 import type { ComponentPublicInstance } from 'vue'
-import '~/assets/css/factor-analyst/common.css'
+
 
 const tabs = [
   { id: 'market', name: '마켓뷰' },
@@ -66,3 +66,7 @@ onMounted(async () => {
   updateTab('style-plus', 3)
 })
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>

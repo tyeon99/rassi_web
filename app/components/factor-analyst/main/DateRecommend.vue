@@ -38,7 +38,7 @@
 </template>
 
 <script setup lang="ts">
-import '~/assets/css/factor-analyst/common.css'
+
 
 const dateListData = [
   { 
@@ -64,3 +64,7 @@ const dateListData = [
   }
 ]
 </script>
+
+<style scoped>
+  @import '~/assets/css/factor-analyst/common.css';
+</style>
