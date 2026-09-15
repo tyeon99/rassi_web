@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .wrap, .main{
+    @apply w-full h-full;
+  }
+
+  /* 메인 헤더 */
+  .mainHeader{
+    @apply w-full p-[15px_12px] flex justify-between items-center border-b border-[#DEE2E6] bg-white sticky top-0 left-0 right-0 z-[999];
+  }
+  .mainHeader .left{
+    @apply flex justify-start items-center gap-[10px];
+  }
+  .mainHeader .left .title{
+    @apply font-bold text-lg text-black;
+  }
+  .mainHeader .right{
+    @apply flex;
+  }
+  .mainHeader .right button{
+    @apply font-normal text-xs text-gray underline;
+  }
+  /* 닫기 헤더 */
+  .closeHeader{
+    @apply w-full p-[16px_20px] bg-white flex justify-end items-center gap-2.5 sticky top-0 left-0 right-0 z-[999];
+  }
+  .closeHeader h1{
+    @apply font-bold text-lg text-black;
+  }
+  /* 메인 css */
+  .mainTab{
+    @apply w-full pt-6 px-5 pb-4;
+  }
+  .mainTab .main__tab{
+    @apply relative w-full h-[38px] flex justify-center items-center bg-[#EDF0F3] p-1 rounded-[8px];
+  }
+  .mainTab .main__tab button{
+    @apply relative flex-1 rounded-[6px] font-normal text-base text-gray bg-transparent z-[1];
+  }
+  .mainTab .main__tab button.active{
+    @apply font-bold text-black;
+  }
+  .mainTab .main__tab .tab-indicator {
+    @apply h-[30px] absolute rounded-[6px] bg-white z-0 ease-out top-1 bottom-1 left-5;
+    transition: transform 0.3s ease-out, width 0.3s ease-out; 
+    box-shadow: 0px 0px 4px 0px #0000001A;
+  }
+  .main__tabContent{
+    @apply w-full px-5;
+  }
+  .mainTabContent{
+    @apply w-full;
+  }
+  .mainTabContent .tab-title{
+    @apply font-normal text-base text-black mb-4;
+  }
+  .mainTabContent .dateList{
+    @apply w-full flex flex-col justify-start items-start mb-5;
+  }
+  .mainTabContent .dateList .list{
+    @apply relative w-full pb-5 last:pb-0 flex flex-col justify-start items-start gap-5 pl-[25px];
+  }
+  .mainTabContent .dateList .list::before{
+    @apply content-[''] w-2.5 h-2.5 rounded-full bg-[#DEE2E6] absolute left-1 top-1 z-[1];
+  }
+  .mainTabContent .dateList .list:first-child::before{
+    @apply w-5 h-5 bg-main left-[-1px] top-0 border-[5px] border-[#E0E0FF];
+  }
+  .mainTabContent .dateList .list::after{
+    @apply content-[''] absolute w-[1px] h-full border-l border-dashed border-[#DEE2E6] left-2 top-0 z-[0];
+  }
+  .mainTabContent .dateList .list .date{
+    @apply font-normal text-[13px] leading-[20px] text-gray;
+  }
+  .mainTabContent .dateList .list .item-group{
+    @apply w-full flex flex-col justify-start items-start gap-5;
+  }
+  .mainTabContent .dateList .list .item-group .item{
+    @apply w-full flex flex-col justify-start items-start gap-[6px];
+  }
+  .mainTabContent .dateList .list .item-group .item .title{
+    @apply w-full flex justify-between items-center gap-2;
+  }
+  .mainTabContent .dateList .list .item-group .item .title .left{
+    @apply flex justify-start items-center gap-[6px] min-w-0 flex-1;
+  }
+  .mainTabContent .dateList .list .item-group .item .title .left img{
+    @apply overflow-hidden rounded-full shrink-0;
+  }
+  .mainTabContent .dateList .list .item-group .item .title .left .name{
+    @apply font-semibold text-base text-black truncate;
+  }
+  .mainTabContent .dateList .list .item-group .item .title .right{
+    @apply shrink-0 bg-[#6565FF1A] p-[2px_10px] flex justify-center items-center gap-[5px] rounded-[50px] font-semibold text-[13px] leading-[20px] text-[#515F6C];
+  }
+  .mainTabContent .dateList .list .item-group .item .title .right span{
+    @apply text-[#FF5050] text-[12px] leading-[18px];
+  }
+  .mainTabContent .dateList .list .item-group .item .txt{
+    @apply font-normal text-base text-black;
+  }
+  .mainTabContent .dateList .list .item-group .detail-box{
+    @apply w-full text-left rounded-[12px] bg-[#F5F7F9] p-4;
+  }
+  .mainTabContent .dateList .list .item-group .detail-box.bg{
+    @apply bg-[#EDF0F3];
+  }
+  .mainTabContent .dateList .list .item-group .detail-box .title{
+    @apply w-full flex justify-between items-center;
+  }
+  .mainTabContent .dateList .list .item-group .detail-box .title strong{
+    @apply font-bold text-base text-black flex justify-start items-center gap-1;
+  }
+  .mainTabContent .dateList .list .item-group .detail-box .txt{
+    @apply font-normal text-sm text-gray line-clamp-2;
+  }
+  .mainTabContent .dateList .list .item-group .detail-box .txt.lock{
+    @apply blur-sm;
+  }
+
+  /* 종목 빠르게보기 css */
+  .itemContent{
+    @apply w-full flex flex-col justify-start items-start gap-[30px] px-5 pb-6;
+  }
+  .itemContent .date-group{
+    @apply w-full flex flex-col justify-start items-start gap-5;
+  }
+  .itemContent .date-group .date{
+    @apply font-normal text-xs text-gray;
+  }
+  .itemContent .date-group .box-group{
+    @apply w-full flex flex-col justify-start items-start gap-3;
+  }
+  .itemContent .date-group .box-group .box{
+    @apply w-full p-4 bg-[#F5F7F9] rounded-[12px] flex flex-col justify-start items-start gap-[10px];
+  }
+  .itemContent .date-group .box-group .box p{
+    @apply bg-[#6565FF1A] flex justify-center items-center gap-[5px] rounded-[50px] p-[2px_10px]
+  }
+  .itemContent .date-group .box-group .box p span{
+    @apply font-semibold text-[13px] leading-[20px] text-[#515F6C];
+  }
+  .itemContent .date-group .box-group .box p strong{
+    @apply font-semibold text-xs text-[#FF5050];
+  }
+  .itemContent .date-group .box-group .box .item-group{
+    @apply w-full flex flex-wrap gap-[0px_20px];
+  }
+  .itemContent .date-group .box-group .box .item-group button{
+    @apply font-semibold text-base text-black;
+  }
+
+  /* 트리거뷰 내용보기 css */
+  .offcanvas-overlay.detailOffcanvas {
+    @apply fixed inset-0 bg-black/50 z-[999] flex justify-end items-end;
+  }
+  .offcanvas-content {
+    @apply w-full max-w-full max-h-[calc(100%-60px)] bg-white flex flex-col justify-start items-stretch shadow-2xl rounded-t-[25px];
+  }
+  .offcanvas-header {
+    @apply w-full flex justify-between items-start p-[30px_20px_16px];
+  }
+  .offcanvas-header .title{
+    @apply flex flex-col justify-start items-start gap-1;
+  }
+  .offcanvas-header .title .top{
+    @apply flex justify-start items-center gap-[6px];
+  }
+  .offcanvas-header .title .top strong{
+    @apply font-bold text-lg text-[#364350];
+  }
+  .offcanvas-header .title .bottom{
+    @apply font-normal text-xs text-gray;
+  }
+  .offcanvas-header button{
+    @apply -translate-y-1;
+  }
+  .offcanvas-body{
+    @apply w-full overflow-auto px-5 pb-5;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .offcanvas-body::-webkit-scrollbar{
+    display: none;
+  }
+  .offcanvas__tab{
+    @apply relative w-full pl-5 flex justify-start items-center gap-0.5 flex-nowrap whitespace-nowrap overflow-x-auto mb-5 flex-shrink-0;
+    -ms-overflow-style: none;  /* IE, 에지 */
+    scrollbar-width: none;  /* 파이어폭스 */
+  }
+  .offcanvas__tab::-webkit-scrollbar {
+    display: none;
+  }
+  .offcanvas__tab button{
+    @apply relative p-[6.5px_16px] rounded-[6px] font-normal text-base text-gray last:mr-5 bg-transparent z-[1];
+  }
+  .offcanvas__tab button.active{
+    @apply font-semibold text-[#364350];
+  }
+  .offcanvas__tab .tab-indicator {
+    @apply h-[37px] absolute rounded-[6px] bg-[#DEE2E6] z-0 ease-out top-0 bottom-0 left-5;
+    transition: transform 0.3s ease-out, width 0.3s ease-out; 
+  }
+  .offcanvas-body .tab-content{
+    @apply w-full;
+  }
+  .offcanvas-body .tab-content .txt-box{
+    @apply font-normal text-base text-[#364350];
+  }
+  .offcanvas-body .tab-content .check-group{
+    @apply w-full flex flex-col justify-start items-start gap-5;
+  }
+  .offcanvas-body .tab-content .check-group .check{
+    @apply w-full flex flex-col justify-start items-start gap-[10px];
+  }
+  .offcanvas-body .tab-content .check-group .check .title{
+    @apply w-full flex justify-start items-center gap-[10px];
+  }
+  .offcanvas-body .tab-content .check-group .check .title span{
+    @apply font-bold text-[13px] leading-[20px] text-main;
+  }
+  .offcanvas-body .tab-content .check-group .check .title strong{
+    @apply font-bold text-base text-black;
+  }
+  .offcanvas-body .tab-content .check-group .check .box-group{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .offcanvas-body .tab-content .check-group .check .box-group .box{
+    @apply w-full p-4 border border-[#D2D2D2] rounded-[16px] flex flex-col justify-start items-start gap-[5px];
+  }
+  .offcanvas-body .tab-content .check-group .check .box-group .box .title{
+    @apply font-bold text-base text-black;
+  }
+  .offcanvas-body .tab-content .check-group .check .box-group .box .txt{
+    @apply font-normal text-base text-black;
+  }
+}
