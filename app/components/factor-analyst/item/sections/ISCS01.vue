@@ -55,7 +55,7 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
-
+import '~/assets/css/factor-analyst/common.css'
 
 const router = useRouter()
 
@@ -125,7 +125,3 @@ const roundBoxes = [
   }
 ]
 </script>
-
-<style scoped>
-  @import '~/assets/css/factor-analyst/common.css';
-</style>

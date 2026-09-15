@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
-
+import '~/assets/css/factor-analyst/common.css'
 import BackTitleHeader from '~/components/factor-analyst/header/BackTitleHeader.vue'
 import RecommendListContent from '~/components/factor-analyst/recommend/RecommendListContent.vue'
 
@@ -27,7 +27,3 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 </script>
-
-<style scoped>
-  @import '~/assets/css/factor-analyst/common.css';
-</style>

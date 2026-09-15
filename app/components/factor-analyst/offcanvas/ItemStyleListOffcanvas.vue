@@ -69,7 +69,3 @@ const closeItemStyleListOffcanvas = () => {
   emit('close-itemStyleListOffcanvas')
 }
 </script>
-
-<style scoped>
-  @import '~/assets/css/factor-analyst/common.css';
-</style>

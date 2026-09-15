@@ -52,7 +52,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 // style
-
+import '~/assets/css/factor-analyst/common.css'
 import RecommendInfoOffcanvas from '~/components/factor-analyst/offcanvas/RecommendInfoOffcanvas.vue'
 
 const isRecommendInfoOffcanvasOpen = ref(false)
@@ -81,7 +81,3 @@ watch(isRecommendInfoOffcanvasOpen, (isOpen) => {
 })
 
 </script>
-
-<style scoped>
-  @import '~/assets/css/factor-analyst/common.css';
-</style>

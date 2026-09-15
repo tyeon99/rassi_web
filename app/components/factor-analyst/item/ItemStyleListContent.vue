@@ -85,7 +85,7 @@
 <script setup lang="ts">
 import { ref, computed, watch, onMounted, nextTick } from 'vue'
 import type { ComponentPublicInstance } from 'vue'
-
+import '~/assets/css/factor-analyst/common.css'
 import ItemStyleListOffcanvas from '~/components/factor-analyst/offcanvas/ItemStyleListOffcanvas.vue'
 
 const isItemStyleListOffcanvasOpen = ref(false)
@@ -237,7 +237,3 @@ onMounted(async () => {
   updateIndicator(0)
 })
 </script>
-
-<style scoped>
-  @import '~/assets/css/factor-analyst/common.css';
-</style>

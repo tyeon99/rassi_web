@@ -63,7 +63,7 @@
 </template>
 
 <script setup lang="ts">
-
+import '~/assets/css/factor-analyst/common.css'
 
 const fScoreList = [
   {
@@ -115,7 +115,3 @@ const itemFScore = ref([
   }
 ])
 </script>
-
-<style scoped>
-  @import '~/assets/css/factor-analyst/common.css';
-</style>

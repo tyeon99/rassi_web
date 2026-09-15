@@ -42,7 +42,7 @@
 
 <script setup lang="ts">
 // style
-// 
+import '~/assets/css/factor-analyst/common.css'
 // components
 import MainHeader from '~/components/factor-analyst/header/MainHeader.vue'
 import MainTab from '~/components/factor-analyst/main/MainTab.vue'
@@ -127,7 +127,3 @@ watch(isOverPaymentOffcanvasOpen, (isOpen) => {
 })
 
 </script>
-
-<style scoped>
-  @import '~/assets/css/factor-analyst/common.css';
-</style>

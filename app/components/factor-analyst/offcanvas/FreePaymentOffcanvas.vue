@@ -73,7 +73,3 @@ const closeFreePaymentOffcanvas = () => {
   emit('close-freePaymentOffcanvas')
 }
 </script>
-
-<style scoped>
-  @import '~/assets/css/factor-analyst/common.css';
-</style>

@@ -32,13 +32,9 @@
 </template>
 
 <script setup lang="ts">
-
+import '~/assets/css/factor-analyst/common.css'
 import ISCS01 from '~/components/factor-analyst/item/sections/ISCS01.vue';
 import ISCS02 from '~/components/factor-analyst/item/sections/ISCS02.vue';
 import ISCS01Skeleton from '~/components/factor-analyst/item/sections/ISCS01Skeleton.vue';
 
 </script>
-
-<style scoped>
-  @import '~/assets/css/factor-analyst/common.css';
-</style>

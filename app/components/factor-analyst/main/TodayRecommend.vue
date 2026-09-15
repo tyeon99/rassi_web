@@ -81,7 +81,7 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue'
-
+import '~/assets/css/factor-analyst/common.css'
 
 const slides = [
   {
@@ -137,7 +137,3 @@ onMounted(() => {
   initSwiper()
 })
 </script>
-
-<style scoped>
-  @import '~/assets/css/factor-analyst/common.css';
-</style>

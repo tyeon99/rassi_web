@@ -47,7 +47,7 @@
 <script setup lang="ts">
 import { ref, onMounted, nextTick } from 'vue'
 import type { ComponentPublicInstance } from 'vue'
-
+import '~/assets/css/factor-analyst/common.css'
 
 const currentTabIdx = ref(0)
 const tabContainer = ref<HTMLDivElement | null>(null) 
@@ -130,7 +130,3 @@ onMounted(async () => {
   updateIndicator(0)
 })
 </script>
-
-<style scoped>
-  @import '~/assets/css/factor-analyst/common.css';
-</style>

@@ -9,12 +9,8 @@
 
 <script setup lang="ts">
 // style
-
+import '~/assets/css/factor-analyst/common.css'
 import BackTitleHeader from '~/components/factor-analyst/header/BackTitleHeader.vue';
 import ItemStyleListContent from '~/components/factor-analyst/item/ItemStyleListContent.vue';
 
 </script>
-
-<style scoped>
-  @import '~/assets/css/factor-analyst/common.css';
-</style>

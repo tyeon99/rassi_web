@@ -58,7 +58,3 @@ const closeRecommendInfoOffcanvas = () => {
   emit('close-recommendInfoOffcanvas')
 }
 </script>
-
-<style scoped>
-  @import '~/assets/css/factor-analyst/common.css';
-</style>
