@@ -19,10 +19,10 @@ em{
 #wrap {
   /* padding-bottom: env(safe-area-inset-bottom, 0px); */
 }
-.up{
+:deep(.up){
   @apply !text-[#FF5050];
 }
-.down{
+:deep(.down){
   @apply !text-[#5886FE];
 }
 .swiper-pagination{

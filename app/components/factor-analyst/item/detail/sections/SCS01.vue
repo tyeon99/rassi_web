@@ -5,21 +5,28 @@
       <h1>순매수지속성은?</h1>
     </div>
     
-    <div class="box-group">
-      <div 
-        v-for="(item, idx) in rateList" 
-        :key="idx" 
-        class="box"
-      >
-        <div class="box-title">
-          <span>Q</span>
-          <p>{{ item.question }}</p>
-        </div>
-        <div class="inner-box">
-          <span :class="item.isPass ? 'pass' : 'fail'">
-            {{ item.isPass ? 'PASS' : 'FAIL' }}
-          </span>
-          <p v-html="item.description"></p>
+    <div 
+      v-for="(group, gIdx) in rateGroups" 
+      :key="gIdx" 
+      class="box-wrap"
+    >
+      <span class="period">{{ group.period }}</span>
+      <div class="box-group">
+        <div 
+          v-for="(item, idx) in group.list" 
+          :key="idx" 
+          class="box"
+        >
+          <div class="box-title">
+            <span>Q</span>
+            <p>{{ item.question }}</p>
+          </div>
+          <div class="inner-box">
+            <span :class="item.isPass ? 'pass' : 'fail'">
+              {{ item.isPass ? 'PASS' : 'FAIL' }}
+            </span>
+            <p v-html="item.description"></p>
+          </div>
         </div>
       </div>
     </div>
@@ -73,36 +80,51 @@
 import { ref } from 'vue'
 
 
-const rateList = [
+const rateGroups = [
   {
-    question: '외국인이 최근 1주 동안 계속 사들였을까?',
-    isPass: true,
-    description: '외국인 1주 누적 순매수대금은 <strong class="up">1,800억</strong>원이에요.'
+    period: '1주',
+    list: [
+      {
+        question: '외국인이 최근 1주 동안 계속 사들였을까?',
+        isPass: true,
+        description: '외국인 1주 누적 순매수대금은 <strong class="up">1,800억</strong>원이에요.'
+      },
+      {
+        question: '기관이 최근 1주 동안 계속 사들였을까?',
+        isPass: false,
+        description: '기관 1주 누적 순매수대금은 <strong class="down">-320억</strong>원으로, 순매도였어요.'
+      }
+    ]
   },
   {
-    question: '기관이 최근 1주 동안 계속 사들였을까?',
-    isPass: true,
-    description: '기관 1주 누적 순매수대금은 <strong class="down">-320억</strong>원으로, 순매도였어요.'
+    period: '1개월',
+    list: [
+      {
+        question: '외국인이 최근 1개월 동안 계속 사들였을까?',
+        isPass: true,
+        description: '외국인 1개월 누적 순매수대금은 <strong class="up">9,500억</strong>원이에요.'
+      },
+      {
+        question: '기관이 최근 1개월 동안 계속 사들였을까?',
+        isPass: true,
+        description: '기관 1개월 누적 순매수대금은 <strong class="up">2,100억</strong>원이에요.'
+      }
+    ]
   },
   {
-    question: '외국인이 최근 1개월 동안 계속 사들였을까?',
-    isPass: false,
-    description: '외국인 1개월 누적 순매수대금은 <strong class="up">9,500억</strong>원이에요.'
-  },
-  {
-    question: '기관이 최근 1개월 동안 계속 사들였을까?',
-    isPass: true,
-    description: '기관 1개월 누적 순매수대금은 <strong class="up">2,100억</strong>원이에요.'
-  },
-  {
-    question: '외국인이 최근 3개월 동안 계속 사들였을까?',
-    isPass: true,
-    description: '외국인 3개월 누적 순매수대금은 2조 1,000억원으로, 유동시총 대비 <strong class="up">4.8%</strong>예요.'
-  },
-  {
-    question: '기관이 최근 3개월 동안 계속 사들였을까?',
-    isPass: false,
-    description: '기관 3개월 누적 순매수대금은 8,200억원으로, 유동시총 대비 <strong class="up">1.9%</strong>예요'
+    period: '3개월',
+    list: [
+      {
+        question: '외국인이 최근 3개월 동안 계속 사들였을까?',
+        isPass: true,
+        description: '외국인 3개월 누적 순매수대금은 2조 1,000억원으로, 유동시총 대비 <strong class="up">4.8%</strong>예요.'
+      },
+      {
+        question: '기관이 최근 3개월 동안 계속 사들였을까?',
+        isPass: true,
+        description: '기관 3개월 누적 순매수대금은 8,200억원으로, 유동시총 대비 <strong class="up">1.9%</strong>예요'
+      }
+    ]
   }
 ]
 
