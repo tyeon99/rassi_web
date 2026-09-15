@@ -3,34 +3,34 @@
 @tailwind utilities;
 
 @layer components {
-  .mainHeader{
+.factor-analyst .mainHeader{
     @apply w-full flex justify-between p-[10px_20px] bg-white sticky top-0 left-0 right-0 z-[999];
   }
-  .mainHeader__logo{
+.factor-analyst .mainHeader__logo{
     @apply flex justify-start items-center gap-2.5;
   }
-  .mainHeader__logo--name{
+.factor-analyst .mainHeader__logo--name{
     @apply font-bold text-black text-xl;
   }
-  .mainHeader__logo--dropdown, .mainHeader__search{
+.factor-analyst .mainHeader__logo--dropdown, .mainHeader__search{
     @apply flex;
   }
-  .backHeader{
+.factor-analyst .backHeader{
     @apply w-full p-[18.5px_12px] bg-white flex justify-start items-center sticky top-0 left-0 right-0 z-[999];
   }
-  .backTitleHeader{
+.factor-analyst .backTitleHeader{
     @apply w-full p-[15px_12px] bg-white flex justify-start items-center gap-2.5 sticky top-0 left-0 right-0 z-[999] border-b border-[#DEE2E6];
   }
-  .backTitleHeader h1{
+.factor-analyst .backTitleHeader h1{
     @apply font-bold text-lg text-black;
   }
-  .closeHeader{
+.factor-analyst .closeHeader{
     @apply w-full p-[16px_20px] bg-white flex justify-end items-center gap-2.5 sticky top-0 left-0 right-0 z-[999];
   }
-  .closeHeader h1{
+.factor-analyst .closeHeader h1{
     @apply font-bold text-lg text-black;
   }
-  .itemStyleDetailHeader{
+.factor-analyst .itemStyleDetailHeader{
     @apply bg-[#F0F0FF];
   }
 }

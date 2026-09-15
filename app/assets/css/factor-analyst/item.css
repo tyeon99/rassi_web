@@ -3,141 +3,141 @@
 @tailwind utilities;
 
 @layer components {
-  .itemStyleContent{
+.factor-analyst .itemStyleContent{
     @apply w-full;
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
-  .itemStyleContent__top{
+.factor-analyst .itemStyleContent__top{
     @apply w-full p-[30px_20px] bg-[#F5F7F9] flex flex-col justify-center items-center gap-4;
   }
-  .itemStyleContent__top .item{
+.factor-analyst .itemStyleContent__top .item{
     @apply flex justify-center items-center gap-[6px];
   }
-  .itemStyleContent__top .item p{
+.factor-analyst .itemStyleContent__top .item p{
     @apply font-bold text-2xl text-black;
   }
-  .itemStyleContent__top .style p{
+.factor-analyst .itemStyleContent__top .style p{
     @apply font-normal text-base text-black;
   }
-  .itemStyleContent__top .style p span{
+.factor-analyst .itemStyleContent__top .style p span{
     @apply font-bold text-main;
   }
-  .itemStyleContent__section{
+.factor-analyst .itemStyleContent__section{
     @apply w-full py-6 px-5 border-b-[12px] border-[#F5F7F9] last:border-b-[0px];
   }
-  .itemStyleContent__section--title{
+.factor-analyst .itemStyleContent__section--title{
     @apply font-bold text-lg text-black mb-[6px];
   }
-  .itemStyleContent__section--txt{
+.factor-analyst .itemStyleContent__section--txt{
     @apply font-normal text-base text-[#515F6C] mb-4;
   }
-  .itemStyleContent__section--content{
+.factor-analyst .itemStyleContent__section--content{
     @apply w-full flex flex-col justify-start items-start gap-4;
   }
-  .itemStyleContent__section--content .box{
+.factor-analyst .itemStyleContent__section--content .box{
     @apply w-full p-5 rounded-[16px] border border-[#DEE2E6] bg-white flex flex-col justify-center items-center;
   }
-  .itemStyleContent__section--content .box .round{
+.factor-analyst .itemStyleContent__section--content .box .round{
     @apply mb-[6px] rounded-[50px] p-[4px_13px] font-bold text-[11px] leading-[17px] text-main;
     background: var(--color-blue-7020, #6565FF33);
   }
-  .itemStyleContent__section--content .box .box-title{
+.factor-analyst .itemStyleContent__section--content .box .box-title{
     @apply w-full font-bold text-base text-black;
   }
-  .itemStyleContent__section--content .box .box-txt{
+.factor-analyst .itemStyleContent__section--content .box .box-txt{
     @apply w-full mt-2 text-gray font-normal text-base;
   }
-  .itemStyleContent__section--content .box .donut-chart{
+.factor-analyst .itemStyleContent__section--content .box .donut-chart{
     @apply mt-4 w-full flex justify-center items-stretch gap-4;
   }
-  .itemStyleContent__section--content .box .donut-chart .chart{
+.factor-analyst .itemStyleContent__section--content .box .donut-chart .chart{
     @apply flex-1 flex justify-start items-center flex-col gap-4;
   }
-  .itemStyleContent__section--content .box .donut-chart .chart .donut{
+.factor-analyst .itemStyleContent__section--content .box .donut-chart .chart .donut{
     @apply w-full;
   }
-  .itemStyleContent__section--content .box .donut-chart .chart .txt{
+.factor-analyst .itemStyleContent__section--content .box .donut-chart .chart .txt{
     @apply flex flex-col justify-center items-center;
   }
-  .itemStyleContent__section--content .box .donut-chart .chart .txt span{
+.factor-analyst .itemStyleContent__section--content .box .donut-chart .chart .txt span{
     @apply font-normal text-sm leading-[21px] text-gray;
   }
-  .itemStyleContent__section--content .box .donut-chart .chart .txt p{
+.factor-analyst .itemStyleContent__section--content .box .donut-chart .chart .txt p{
     @apply font-semibold text-base text-black;
   }
-  .itemStyleContent__section--content .no-style{
+.factor-analyst .itemStyleContent__section--content .no-style{
     @apply w-full flex flex-col justify-start items-start gap-4;
   }
-  .itemStyleContent__section--content .no-style .box{
+.factor-analyst .itemStyleContent__section--content .no-style .box{
     @apply border-none gap-2 rounded-[12px] bg-[#F5F7F9];
   }
-  .itemStyleContent__section--content .no-style .box p{
+.factor-analyst .itemStyleContent__section--content .no-style .box p{
     @apply font-normal text-base text-[#364350] text-center;
   }
-  .itemStyleContent__section--content .no-style button{
+.factor-analyst .itemStyleContent__section--content .no-style button{
     @apply w-full h-[54px] bg-main rounded-[12px] p-[10px] font-semibold text-base text-white;
   }
-  .donut-chart .no-payment{
+.factor-analyst .donut-chart .no-payment{
     @apply w-[135px] h-[135px] flex flex-col justify-center items-center gap-[10px] bg-[#F5F7F9] rounded-[12px];
   }
-  .donut-chart .no-payment span{
+.factor-analyst .donut-chart .no-payment span{
     @apply font-normal text-xs text-gray leading-[18px];
   }
-  .donut-chart .signal{
+.factor-analyst .donut-chart .signal{
     @apply w-[135px] h-[135px] flex flex-col justify-center items-center gap-[10px] bg-[#F5F7F9] rounded-[12px];
   }
-  .chart-score{
+.factor-analyst .chart-score{
     @apply w-[135px] h-[135px] flex flex-col justify-end items-center gap-[10px];
   }
-  .chart-score span{
+.factor-analyst .chart-score span{
     @apply font-semibold text-lg text-black;
   }
-  .condition{
+.factor-analyst .condition{
     @apply w-full flex justify-start items-center gap-2 flex-wrap mt-2;
   }
-  .condition span{
+.factor-analyst .condition span{
     @apply rounded-[4px] border border-[#DEE2E6] py-0.5 px-1 font-semibold text-xs text-[#515F6C];
   }
-  .condition span em.high{
+.factor-analyst .condition span em.high{
     @apply text-[#FF5050];
   }
-  .condition span em.midLow{
+.factor-analyst .condition span em.midLow{
     @apply text-[#03B26C];
   }
-  .condition span em.low{
+.factor-analyst .condition span em.low{
     @apply text-[#5886FE];
   }
-  .itemStyleContent__section--content .box .note{
+.factor-analyst .itemStyleContent__section--content .box .note{
     @apply w-full mt-[30px] rounded-[16px] py-4 px-3 bg-[#F5F7F9] flex flex-col justify-start items-start gap-3 font-normal text-base text-[#364350];
   }
-  .itemStyleContent__section--content .box .note strong{
+.factor-analyst .itemStyleContent__section--content .box .note strong{
     @apply font-bold text-main;
   }
-  .itemStyleContent__section--content .box .more{
+.factor-analyst .itemStyleContent__section--content .box .more{
     @apply w-full mt-[30px];
   }
-  .itemStyleContent__section--content .box .more button{
+.factor-analyst .itemStyleContent__section--content .box .more button{
     @apply w-full h-[54px] bg-main rounded-[12px] p-[10px] font-semibold text-base text-white;
   }
-  .itemStyleListContent{
+.factor-analyst .itemStyleListContent{
     @apply py-6;
   }
-  .itemStyleListContent .summary-box{
+.factor-analyst .itemStyleListContent .summary-box{
     @apply w-full p-4 border border-[#DEE2E6] rounded-[12px] flex flex-col justify-center items-center gap-[6px] mb-6;
   }
-  .itemStyleListContent .summary-box p{
+.factor-analyst .itemStyleListContent .summary-box p{
     @apply font-semibold text-base text-black text-center;
   }
-  .itemStyleListContent .summary-box button{
+.factor-analyst .itemStyleListContent .summary-box button{
     @apply flex justify-center items-center gap-1;
   }
-  .itemStyleListContent .summary-box button span{
+.factor-analyst .itemStyleListContent .summary-box button span{
     @apply font-normal text-xs text-gray;
   }
-  .itemStyleListContent .no-item{
+.factor-analyst .itemStyleListContent .no-item{
     @apply w-full py-5 px-3 flex flex-col justify-center items-center gap-2 bg-[#F5F7F9] rounded-[8px];
   }
-  .itemStyleListContent .no-item p{
+.factor-analyst .itemStyleListContent .no-item p{
     @apply font-normal text-base text-black text-center;
   }
 }

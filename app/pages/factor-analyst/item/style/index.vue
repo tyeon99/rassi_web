@@ -1,5 +1,5 @@
 <template>
-  <div id="wrap">
+  <div id="wrap" class="factor-analyst">
     <BackHeader />
     <MainTab />
     <main id="main" class="main">

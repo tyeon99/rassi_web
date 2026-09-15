@@ -1,5 +1,5 @@
 <template>
-  <div id="wrap">
+  <div id="wrap" class="factor-analyst">
     <CloseHeader />
     <main id="main" class="main">
       <AllStyleContent class="p-5" />

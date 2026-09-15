@@ -1,5 +1,5 @@
 <template>
-  <div id="wrap">
+  <div id="wrap" class="factor-analyst">
     <BackTitleHeader title="퀄리티 종목 스타일 전체 보기" />
     <main id="main" class="main">
       <ItemStyleListContent />

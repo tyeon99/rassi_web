@@ -236,7 +236,3 @@ onMounted(async () => {
   updateIndicator(0)
 })
 </script>
-
-<style scoped>
-  @import '~/assets/css/trigger-view/common.css';
-</style>

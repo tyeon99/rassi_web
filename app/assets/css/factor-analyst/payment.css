@@ -3,103 +3,103 @@
 @tailwind utilities;
 
 @layer components {
-  .paymentContent{
+.factor-analyst .paymentContent{
     @apply w-full;
   }
-  .paymentContent__top{
+.factor-analyst .paymentContent__top{
     @apply w-full py-4 flex flex-col justify-center items-center gap-4;
   }
-  .paymentContent__top strong{
+.factor-analyst .paymentContent__top strong{
     @apply font-bold text-2xl text-black;
   }
-  .paymentContent__top p{
+.factor-analyst .paymentContent__top p{
     @apply font-normal text-base text-black text-center;
   }
-  .paymentContent__banner{
+.factor-analyst .paymentContent__banner{
     @apply w-full mb-6;
   }
-  .paymentContent__section{
+.factor-analyst .paymentContent__section{
     @apply w-full pb-[30px] px-4 flex flex-col justify-start items-start gap-[30px];
   }
-  .paymentSection{
+.factor-analyst .paymentSection{
     @apply w-full flex flex-col justify-start items-start gap-4;
   }
-  .paymentSection .title{
+.factor-analyst .paymentSection .title{
     @apply font-bold text-lg text-black;
   }
-  .paymentSection .box{
+.factor-analyst .paymentSection .box{
     @apply w-full p-4 rounded-[16px] border border-[#DEE2E6];
   }
-  .paymentSection .box-txt{
+.factor-analyst .paymentSection .box-txt{
     @apply w-full flex flex-col justify-start items-start gap-3;
   }
-  .paymentSection .box-txt .txt{
+.factor-analyst .paymentSection .box-txt .txt{
     @apply w-full flex justify-start items-start gap-[6px];
   }
-  .paymentSection .box-txt .txt svg{
+.factor-analyst .paymentSection .box-txt .txt svg{
     @apply block mt-0.5;
   }
-  .paymentSection .box-txt .txt p{
+.factor-analyst .paymentSection .box-txt .txt p{
     @apply font-normal text-base text-[#364350];
   }
-  .paymentSection .select-box{
+.factor-analyst .paymentSection .select-box{
     @apply w-full flex flex-col justify-start items-start gap-4;
   }
-  .paymentSection .select-box .box{
+.factor-analyst .paymentSection .select-box .box{
     @apply w-full flex justify-between items-center;
   }
-  .paymentSection .select-box .box .left{
+.factor-analyst .paymentSection .select-box .box .left{
     @apply flex justify-between items-center w-[calc(100%-48px)];
   }
-  .paymentSection .select-box .box .left .txt{
+.factor-analyst .paymentSection .select-box .box .left .txt{
     @apply flex flex-col justify-start items-start;
   }
-  .paymentSection .select-box .box .left .txt p{
+.factor-analyst .paymentSection .select-box .box .left .txt p{
     @apply font-normal text-base text-[#515F6C] flex justify-start items-center gap-[6px];
   }
-  .paymentSection .select-box .box .left .txt p span{
+.factor-analyst .paymentSection .select-box .box .left .txt p span{
     @apply line-through;
   }
-  .paymentSection .select-box .box .left .txt p strong{
+.factor-analyst .paymentSection .select-box .box .left .txt p strong{
     @apply font-bold text-[#364350];
   }
-  .paymentSection .select-box .box .left .sale{
+.factor-analyst .paymentSection .select-box .box .left .sale{
     @apply flex justify-center items-center bg-main rounded-[4px] py-1 px-2 font-semibold text-sm text-white;
   }
-  .paymentSection .select-box .box.selected{
+.factor-analyst .paymentSection .select-box .box.selected{
     @apply border-main;
   }
-  .paymentSection .select-box .box.selected .right svg path{
+.factor-analyst .paymentSection .select-box .box.selected .right svg path{
     @apply fill-main;
   }
-  .paymentSection .guide{
+.factor-analyst .paymentSection .guide{
     @apply font-normal text-base text-gray;
   }
-  .paymentSection .box .contract{
+.factor-analyst .paymentSection .box .contract{
     @apply w-full flex justify-between items-center pb-2 border-b border-[#EDF0F3] last:border-b-0 last:pb-0 last:pt-2;
   }
-  .paymentSection .box .contract p{
+.factor-analyst .paymentSection .box .contract p{
     @apply font-normal text-base text-[#515F6C];
   }
-  .paymentSection .box .contract button{
+.factor-analyst .paymentSection .box .contract button{
     @apply flex justify-end items-center gap-[6px];
   }
-  .paymentSection .box .contract button span{
+.factor-analyst .paymentSection .box .contract button span{
     @apply font-normal text-base text-[#515F6C];
   }
-  .paymentFooter{
+.factor-analyst .paymentFooter{
     @apply w-full py-6 px-4 bg-[#F5F7F9] flex flex-col justify-start items-start gap-4;
   }
-  .paymentFooter .title{
+.factor-analyst .paymentFooter .title{
     @apply font-bold text-lg text-black;
   }
-  .paymentFooter .txt{
+.factor-analyst .paymentFooter .txt{
     @apply font-normal text-base text-gray;
   }
-  .paymentStart{
+.factor-analyst .paymentStart{
     @apply w-full fixed bottom-0 left-0 right-0;
   }
-  .paymentStart button{
+.factor-analyst .paymentStart button{
     @apply w-full bg-main h-[54px] flex justify-center items-center font-semibold text-lg text-white;
   }
 }

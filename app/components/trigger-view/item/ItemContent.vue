@@ -114,7 +114,3 @@ watch(isDetailOffcanvasOpen, (isOpen) => {
   }
 })
 </script>
-
-<style scoped>
-  @import '~/assets/css/trigger-view/common.css';
-</style>

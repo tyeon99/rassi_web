@@ -84,7 +84,3 @@ onMounted(async () => {
   updateIndicator(props.modelValue)
 })
 </script>
-
-<style scoped>
-  @import '~/assets/css/trigger-view/common.css';
-</style>

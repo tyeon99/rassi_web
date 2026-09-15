@@ -5,7 +5,7 @@
     </div>
 
     <div class="recommendResultContent__section--content">
-      <div class="recommendListContent__list p-0">
+      <div class="recommendListContent__list !p-0">
         <div class="list">
           <button 
             v-for="(card, cIdx) in styleCards" 

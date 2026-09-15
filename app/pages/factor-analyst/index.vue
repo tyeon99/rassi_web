@@ -1,6 +1,6 @@
 <!-- app/pages/index.vue -->
 <template>
-  <div id="wrap">
+  <div id="wrap" class="factor-analyst">
     <MainHeader />
     <MainTab />
     <main id="main" class="main">

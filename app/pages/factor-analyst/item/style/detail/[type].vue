@@ -1,5 +1,5 @@
 <template>
-  <div id="wrap">
+  <div id="wrap" class="factor-analyst">
     <CloseHeader class="itemStyleDetailHeader" />
     <main id="main" class="main">
 

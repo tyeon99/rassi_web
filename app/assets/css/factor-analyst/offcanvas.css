@@ -3,149 +3,155 @@
 @tailwind utilities;
 
 @layer components {
-  .offcanvas-overlay {
+.factor-analyst .offcanvas-overlay {
     @apply fixed inset-0 bg-black/50 z-[999] flex justify-end items-stretch;
   }
-  .offcanvas-content {
+.factor-analyst .offcanvas-content {
     @apply w-full max-w-full bg-white p-5 flex flex-col justify-start items-stretch shadow-2xl pt-[10px];
   }
-  .offcanvas-close {
+.factor-analyst .offcanvas-close {
     @apply w-full flex justify-end items-center py-2;
   }
-  .offcanvas-body{
+.factor-analyst .offcanvas-body{
     @apply w-full;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
-  .offcanvas-body::-webkit-scrollbar{
+.factor-analyst .offcanvas-body::-webkit-scrollbar{
     display: none;
   }
-  .offcanvas-overlay.itemStyleListOffcanvas, .offcanvas-overlay.paymentOffcanvas, .offcanvas-overlay.recommendInfoOffcanvas{
+  .factor-analyst .offcanvas-overlay.itemStyleListOffcanvas, 
+  .factor-analyst .offcanvas-overlay.paymentOffcanvas, 
+  .factor-analyst .offcanvas-overlay.recommendInfoOffcanvas {
     @apply items-end;
   }
-  .offcanvas-content.itemStyleListOffcanvas, .offcanvas-content.paymentOffcanvas, .offcanvas-content.recommendInfoOffcanvas{
+  .factor-analyst .offcanvas-content.itemStyleListOffcanvas, 
+  .factor-analyst .offcanvas-content.paymentOffcanvas, 
+  .factor-analyst .offcanvas-content.recommendInfoOffcanvas {
     @apply max-h-[90%] rounded-t-[20px];
   }
-  .itemStyleListOffcanvas .offcanvas-body, .paymentOffcanvas .offcanvas-body, .recommendInfoOffcanvas .offcanvas-body{
+  .factor-analyst .itemStyleListOffcanvas .offcanvas-body, 
+  .factor-analyst .paymentOffcanvas .offcanvas-body, 
+  .factor-analyst .recommendInfoOffcanvas .offcanvas-body {
     @apply overflow-auto;
   }
-  .itemStyleListOffcanvas .body-top{
+.factor-analyst .itemStyleListOffcanvas .body-top{
     @apply w-full pt-2 pb-4 border-b border-[#EDF0F3] flex flex-col justify-start items-start gap-1 mb-4;
   }
-  .itemStyleListOffcanvas .body-top strong{
+.factor-analyst .itemStyleListOffcanvas .body-top strong{
     @apply font-bold text-lg text-black;
   }
-  .itemStyleListOffcanvas .body-top p{
+.factor-analyst .itemStyleListOffcanvas .body-top p{
     @apply font-normal text-sm text-gray;
   }
-  .itemStyleListOffcanvas .body-content{
+.factor-analyst .itemStyleListOffcanvas .body-content{
     @apply w-full flex flex-col justify-start items-start gap-4;
   }
-  .itemStyleListOffcanvas .quality-box{
+.factor-analyst .itemStyleListOffcanvas .quality-box{
     @apply w-full py-5 px-3 rounded-[12px] flex flex-col justify-center items-center gap-[10px];
     background: var(--color-blue-7010, #6565FF1A);
   }
-  .itemStyleListOffcanvas .quality-box strong{
+.factor-analyst .itemStyleListOffcanvas .quality-box strong{
     @apply font-bold text-lg text-black;
   }
-  .itemStyleListOffcanvas .quality-box p{
+.factor-analyst .itemStyleListOffcanvas .quality-box p{
     @apply font-normal text-sm text-gray;
   }
-  .itemStyleListOffcanvas .txt-group{
+.factor-analyst .itemStyleListOffcanvas .txt-group{
     @apply w-full flex flex-col justify-start items-start gap-4;
   }
-  .itemStyleListOffcanvas .txt-group .txt{
+.factor-analyst .itemStyleListOffcanvas .txt-group .txt{
     @apply w-full flex flex-col justify-start items-start gap-2;
   }
-  .itemStyleListOffcanvas .txt-group .txt strong{
+.factor-analyst .itemStyleListOffcanvas .txt-group .txt strong{
     @apply font-semibold text-base text-black;
   }
-  .itemStyleListOffcanvas .txt-group .txt p{
+.factor-analyst .itemStyleListOffcanvas .txt-group .txt p{
     @apply font-normal text-base text-[#515F6C];
   }
-  .recommendInfoOffcanvas .offcanvas-body{
+.factor-analyst .recommendInfoOffcanvas .offcanvas-body{
     @apply flex flex-col justify-start items-start gap-4;
   }
-  .recommendInfoOffcanvas .offcanvas-body .title{
+.factor-analyst .recommendInfoOffcanvas .offcanvas-body .title{
     @apply font-bold text-lg text-black;
   }
-  .recommendInfoOffcanvas .offcanvas-body .box-group{
+.factor-analyst .recommendInfoOffcanvas .offcanvas-body .box-group{
     @apply w-full flex flex-col justify-start items-start gap-4;
   }
-  .recommendInfoOffcanvas .offcanvas-body .box-group .box{
+.factor-analyst .recommendInfoOffcanvas .offcanvas-body .box-group .box{
     @apply w-full py-6 px-5 bg-[#F7F7F8] rounded-[16px] flex flex-col justify-start items-start gap-4;
   }
-  .recommendInfoOffcanvas .offcanvas-body .box-group .box .box-title{
+.factor-analyst .recommendInfoOffcanvas .offcanvas-body .box-group .box .box-title{
     @apply font-semibold text-base text-black;
   }
-  .recommendInfoOffcanvas .offcanvas-body .box-group .box .box-txt{
+.factor-analyst .recommendInfoOffcanvas .offcanvas-body .box-group .box .box-txt{
     @apply font-normal text-base text-[#515F6C];
   }
-  .recommendInfoOffcanvas .offcanvas-body .guide{
+.factor-analyst .recommendInfoOffcanvas .offcanvas-body .guide{
     @apply font-normal text-base text-gray;
   }
-  .paymentOffcanvas .offcanvas-body{
+.factor-analyst .paymentOffcanvas .offcanvas-body{
     @apply w-full flex flex-col justify-start items-start gap-[30px] pb-[84px];
   }
-  .paymentOffcanvas .body-title{
+.factor-analyst .paymentOffcanvas .body-title{
     @apply w-full flex flex-col justify-start items-start gap-4;
   }
-  .paymentOffcanvas .body-title strong{
+.factor-analyst .paymentOffcanvas .body-title strong{
     @apply font-bold text-2xl text-[#364350];
   }
-  .paymentOffcanvas .body-title p{
+.factor-analyst .paymentOffcanvas .body-title p{
     @apply font-normal text-base text-[#364350];
   }
-  .paymentOffcanvas .body-title span{
+.factor-analyst .paymentOffcanvas .body-title span{
     @apply font-normal text-sm text-[#A1ABB5];
   }
-  .paymentOffcanvas .body-box{
+.factor-analyst .paymentOffcanvas .body-box{
     @apply w-full rounded-[16px] py-6 px-5 bg-[#F7F7F8] flex flex-col justify-start items-start gap-4;
   }
-  .paymentOffcanvas .body-box .box-title{
+.factor-analyst .paymentOffcanvas .body-box .box-title{
     @apply font-bold text-[15px] leading-[19px] text-[#364350];
   }
-  .paymentOffcanvas .body-box .box-txt{
+.factor-analyst .paymentOffcanvas .body-box .box-txt{
     @apply w-full flex flex-col justify-start items-start gap-3;
   }
-  .paymentOffcanvas .body-box .box-txt .txt{
+.factor-analyst .paymentOffcanvas .body-box .box-txt .txt{
     @apply w-full flex justify-start items-start gap-[6px];
   }
-  .paymentOffcanvas .body-box .box-txt .txt svg{
+.factor-analyst .paymentOffcanvas .body-box .box-txt .txt svg{
     @apply block mt-0.5;
   }
-  .paymentOffcanvas .body-box .box-txt .txt p{
+.factor-analyst .paymentOffcanvas .body-box .box-txt .txt p{
     @apply font-normal text-base text-[#364350];
   }
-  .paymentOffcanvas .body-select{
+.factor-analyst .paymentOffcanvas .body-select{
     @apply w-full flex flex-col justify-start items-start gap-4;
   }
-  .paymentOffcanvas .body-select .select-title{
+.factor-analyst .paymentOffcanvas .body-select .select-title{
     @apply font-normal text-base text-black;
   }
-  .paymentOffcanvas .body-select .select-box{
+.factor-analyst .paymentOffcanvas .body-select .select-box{
     @apply w-full flex flex-col justify-start items-start gap-4;
   }
-  .paymentOffcanvas .body-select .select-box .box{
+.factor-analyst .paymentOffcanvas .body-select .select-box .box{
     @apply w-full flex flex-col justify-start items-start gap-[5px] border border-[#D2D2D2] p-4 rounded-[16px];
   }
-  .paymentOffcanvas .body-select .select-box .box.selected{
+.factor-analyst .paymentOffcanvas .body-select .select-box .box.selected{
     @apply border-main;
   }
-  .paymentOffcanvas .body-select .select-box .box .box-title{
+.factor-analyst .paymentOffcanvas .body-select .select-box .box .box-title{
     @apply w-full flex justify-between items-center font-bold text-base text-black;
   }
-  .paymentOffcanvas .body-select .select-box .box .box-title span{
+.factor-analyst .paymentOffcanvas .body-select .select-box .box .box-title span{
     @apply py-0.5 px-2 font-bold text-[11px] leading-[17px] text-white bg-main rounded-[50px];
   }
-  .paymentOffcanvas .body-select .select-box .box .box-txt{
+.factor-analyst .paymentOffcanvas .body-select .select-box .box .box-txt{
     @apply font-normal text-base text-black text-left;
   }
-  .paymentOffcanvas .offcanvas-footer{
+.factor-analyst .paymentOffcanvas .offcanvas-footer{
     @apply w-full p-5 fixed bottom-0 right-0 left-0;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 35.48%);
   }
-  .paymentOffcanvas .offcanvas-footer button{
+.factor-analyst .paymentOffcanvas .offcanvas-footer button{
     @apply w-full h-[54px] rounded-[12px] bg-main font-semibold text-base text-white;
   }
 }

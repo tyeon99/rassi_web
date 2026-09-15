@@ -1,5 +1,5 @@
 <template>
-  <div id="wrap">
+  <div id="wrap" class="trigger-view">
     <MainHeader />
 
     <MainTab v-model="currentTabIdx" />
@@ -19,6 +19,9 @@
 </template>
 
 <script setup lang="ts">
+// css
+import '~/assets/css/trigger-view/common.css'
+
 import { ref, computed } from 'vue'
 import type { Component } from 'vue'
 
@@ -80,7 +83,3 @@ const handleTouchEnd = () => {
   endY.value = 0
 }
 </script>
-
-<style scoped>
-  @import '~/assets/css/trigger-view/common.css';
-</style>
