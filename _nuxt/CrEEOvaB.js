@@ -1,0 +1,1 @@
+import{C as a}from"./BReIyfZS.js";import{A as o}from"./BPijPIoo.js";import{d as s,B as t,E as e,C as n,A as r}from"./Bh8idjNA.js";import{_ as c}from"./DlAUqK2U.js";const _={id:"wrap"},d={id:"main",class:"main"},i=s({__name:"index",setup(m){return(p,l)=>(r(),t("div",_,[e(a),n("main",d,[e(o,{class:"p-5"})])]))}}),B=c(i,[["__scopeId","data-v-bc5d8a11"]]);export{B as default};
