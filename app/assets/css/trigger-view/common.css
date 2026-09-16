@@ -15,7 +15,7 @@
     @apply flex justify-start items-center gap-[10px];
   }
   .trigger-view .mainHeader .left .title{
-    @apply font-bold text-lg text-black;
+    @apply font-bold text-lg leading-[27px] text-black flex justify-start items-center gap-[6px];
   }
   .trigger-view .mainHeader .right{
     @apply flex;
@@ -154,6 +154,88 @@
   }
 
   /* 트리거뷰 내용보기 css */
+  .trigger-view .detailContent{
+    @apply w-full;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .trigger-view .detailContent__header {
+    @apply w-full p-[10px_20px_16px] bg-white;
+  }
+  .trigger-view .detailContent__header .title{
+    @apply flex flex-col justify-start items-start gap-1;
+  }
+  .trigger-view .detailContent__header .title .top{
+    @apply flex justify-start items-center gap-[6px];
+  }
+  .trigger-view .detailContent__header .title .top strong{
+    @apply font-bold text-lg text-[#364350];
+  }
+  .trigger-view .detailContent__header .title .bottom{
+    @apply font-normal text-xs text-gray;
+  }
+  .trigger-view .detailContent__header button{
+    @apply -translate-y-1;
+  }
+  .trigger-view .detailContent__body{
+    @apply w-full overflow-auto px-5 pb-5 h-[calc(100dvh-177px)];
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .trigger-view .detailContent__body::-webkit-scrollbar{
+    display: none;
+  }
+  .trigger-view .detailContent__tab{
+    @apply w-full relative pl-5 flex justify-start items-center gap-0.5 flex-nowrap whitespace-nowrap overflow-x-auto pb-5 flex-shrink-0 bg-white;
+    -ms-overflow-style: none;  /* IE, 에지 */
+    scrollbar-width: none;  /* 파이어폭스 */
+  }
+  .trigger-view .detailContent__tab::-webkit-scrollbar {
+    display: none;
+  }
+  .trigger-view .detailContent__tab button{
+    @apply relative p-[6.5px_16px] rounded-[6px] font-normal text-base text-gray last:mr-5 bg-transparent z-[1];
+  }
+  .trigger-view .detailContent__tab button.active{
+    @apply font-semibold text-[#364350];
+  }
+  .trigger-view .detailContent__tab .tab-indicator {
+    @apply h-[37px] absolute rounded-[6px] bg-[#DEE2E6] z-0 ease-out top-0 bottom-0 left-5;
+    transition: transform 0.3s ease-out, width 0.3s ease-out; 
+  }
+  .trigger-view .detailContent__body .tab-content{
+    @apply w-full;
+  }
+  .trigger-view .detailContent__body .tab-content .txt-box{
+    @apply font-normal text-base text-[#364350];
+  }
+  .trigger-view .detailContent__body .tab-content .check-group{
+    @apply w-full flex flex-col justify-start items-start gap-5;
+  }
+  .trigger-view .detailContent__body .tab-content .check-group .check{
+    @apply w-full flex flex-col justify-start items-start gap-[10px];
+  }
+  .trigger-view .detailContent__body .tab-content .check-group .check .title{
+    @apply w-full flex justify-start items-center gap-[10px];
+  }
+  .trigger-view .detailContent__body .tab-content .check-group .check .title span{
+    @apply font-bold text-[13px] leading-[20px] text-main;
+  }
+  .trigger-view .detailContent__body .tab-content .check-group .check .title strong{
+    @apply font-bold text-base text-black;
+  }
+  .trigger-view .detailContent__body .tab-content .check-group .check .box-group{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .trigger-view .detailContent__body .tab-content .check-group .check .box-group .box{
+    @apply w-full p-4 border border-[#D2D2D2] rounded-[16px] flex flex-col justify-start items-start gap-[5px];
+  }
+  .trigger-view .detailContent__body .tab-content .check-group .check .box-group .box .title{
+    @apply font-bold text-base text-black;
+  }
+  .trigger-view .detailContent__body .tab-content .check-group .check .box-group .box .txt{
+    @apply font-normal text-base text-black;
+  }
+
   .trigger-view .offcanvas-overlay.detailOffcanvas {
     @apply fixed inset-0 bg-black/50 z-[999] flex justify-end items-end;
   }

@@ -6,7 +6,10 @@
           <path d="M13.5625 16.625L8.14461 11.2071C7.75408 10.8166 7.75408 10.1834 8.14461 9.79289L13.5625 4.375" stroke="#141414" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </button>
-      <h1 class="title">트리거뷰</h1>
+      <div class="title">
+        <img width="17" src="~/assets/img/trigger-view/main/ai-icon.png" alt="ai 아이콘">
+        <h1>트리거뷰</h1>
+      </div>
     </div>
     
     <div class="right">
