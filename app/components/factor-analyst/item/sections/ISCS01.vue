@@ -16,17 +16,42 @@
         <span class="round">라운드{{ box.roundNum }}</span>
         <div class="box-title text-center">{{ box.title }}</div>
         
-        <div class="donut-chart">
-          <button 
+        <div class="chart-group">
+          <div 
             v-for="(chart, cIdx) in box.charts" 
             :key="cIdx" 
             @click="goToDetail(chart.itemStyle)"
             class="chart"
           >
 
+            <div class="txt">
+              <p>{{ chart.itemStyle }}</p>
+            </div>
+
             <!-- 도넛차트 -->
-            <div v-if="chart.isPayment" class="donut">
-              <img width="135" src="~/assets/img/factor-analyst/item/donut-chart.png" alt="도넛차트">
+            <div v-if="chart.isPayment" class="donut-chart">
+              <svg class="w-full h-[88px] max-w-[135px]" viewBox="0 0 100 65">
+                <path
+                  d="M 10,50 A 40,40 0 0,1 90,50"
+                  fill="none"
+                  stroke="#E8EDF7"
+                  stroke-width="8"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M 10,50 A 40,40 0 0,1 90,50"
+                  fill="none"
+                  stroke="#6565FF"
+                  stroke-width="8"
+                  stroke-linecap="round"
+                  :stroke-dasharray="125.66"
+                  :stroke-dashoffset="getDashOffset(chart.score)"
+                  class="transition-all duration-500 ease-out"
+                />
+              </svg>
+              <span>
+                {{ chart.score }}
+              </span>
             </div>
 
             <!-- 스코어가 포함된 차트 -->
@@ -42,11 +67,16 @@
             </div>
 
             <div class="txt">
-              <p>{{ chart.itemStyle }}</p>
               <span>{{ chart.isPayment ? chart.analyzeTxt : '-' }}</span>
+              <button>
+                분석보기
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.5 12.75L11.25 9L7.5 5.25" stroke="#6565FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
             </div>
 
-          </button>
+          </div>
         </div>
       </div>
     </div>
@@ -58,6 +88,13 @@ import { useRouter } from 'vue-router'
 import '~/assets/css/factor-analyst/common.css'
 
 const router = useRouter()
+
+// 점수에 따른 반원 svg
+const getDashOffset = (score: number = 0) => {
+  const circumference = 125.66
+  const progress = Math.min(Math.max(score, 0), 100) / 100
+  return circumference * (1 - progress)
+}
 
 const typeMap: Record<string, string> = {
   '퀄리티': 'quality',
@@ -87,40 +124,40 @@ const roundBoxes = [
     roundNum: 1,
     title: '이 회사가 돈 버는 능력',
     charts: [
-      { itemStyle: '퀄리티', isPayment: true, analyzeTxt: '튼튼하지만 수익 낮은 퀄리티' },
-      { itemStyle: '주가모멘텀', isPayment: false, analyzeTxt: '단기조정' }
+      { itemStyle: '퀄리티', isPayment: true, score: 85.6, analyzeTxt: '튼튼하지만 수익 낮은 퀄리티' },
+      { itemStyle: '주가모멘텀', isPayment: false, score: 0, analyzeTxt: '단기조정' }
     ]
   },
   {
     roundNum: 2,
     title: '수익성 및 성장성 분석',
     charts: [
-      { itemStyle: '실적모멘텀', isPayment: true, analyzeTxt: '실적 개선 기대' },
-      { itemStyle: '미래전망', isPayment: true, analyzeTxt: '전망 상향' }
+      { itemStyle: '실적모멘텀', isPayment: true, score: 85.6, analyzeTxt: '실적 개선 기대' },
+      { itemStyle: '미래전망', isPayment: true, score: 85.6, analyzeTxt: '전망 상향' }
     ]
   },
   {
     roundNum: 3,
     title: '주가 변동 및 위험도',
     charts: [
-      { itemStyle: '밸류에이션', isPayment: true, analyzeTxt: '고평가 구간' },
-      { itemStyle: '수급', isPayment: true, analyzeTxt: '거래는 활발' }
+      { itemStyle: '밸류에이션', isPayment: true, score: 62.4, analyzeTxt: '고평가 구간' },
+      { itemStyle: '수급', isPayment: true, score: 78.1, analyzeTxt: '거래는 활발' }
     ]
   },
   {
     roundNum: 4,
     title: '시장 관심도 및 수급',
     charts: [
-      { itemStyle: '주주환원', isPayment: true, analyzeTxt: '배당 높음 자사주 매입 저조' },
-      { itemStyle: '초저평가', isPayment: true, analyzeTxt: '청산가치 보다 낮음' }
+      { itemStyle: '주주환원', isPayment: true, score: 45.0, analyzeTxt: '배당 높음 자사주 매입 저조' },
+      { itemStyle: '초저평가', isPayment: true, score: 91.2, analyzeTxt: '청산가치 보다 낮음' }
     ]
   },
   {
     roundNum: 5,
     title: '밸류에이션 평가',
     charts: [
-      { itemStyle: '저변동성', isPayment: false, analyzeTxt: '변동성 전환' },
-      { itemStyle: '낙폭과대', isPayment: true, analyzeTxt: '과매도 구간' }
+      { itemStyle: '저변동성', isPayment: false, score: 0, analyzeTxt: '변동성 전환' },
+      { itemStyle: '낙폭과대', isPayment: true, score: 88.0, analyzeTxt: '과매도 구간' }
     ]
   }
 ]
