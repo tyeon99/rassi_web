@@ -16,7 +16,7 @@
           <div class="item">
             <div class="title">
               <div class="left">
-                <img width="20" src="~/assets/img/trigger-view/main/item-img.png" alt="종목 이미지">
+                <img width="24" src="~/assets/img/trigger-view/main/item-img.png" alt="종목 이미지">
                 <div class="name">{{ dateItem.item.name }}</div>
               </div>
               <div class="right">
@@ -34,7 +34,7 @@
             :key="iidx"
             class="detail-box"
             :class="{ bg: detail.isBg }"
-            @click="openDetailOffcanvas"
+            @click="openDetailModal"
           >
             <div class="title">
               <strong>
@@ -65,10 +65,10 @@
     </div>
 
     <!-- 내용보기 레이어 -->
-    <DetailOffcanvas 
-      v-if="isDetailOffcanvasOpen"
-      :isOffcanvasAni="isOffcanvasAni"
-      @close-detailOffcanvas="closeDetailOffcanvas"
+    <DetailModal 
+      v-if="isDetailModalOpen"
+      :isModalAni="isModalAni"
+      @close-detailModal="closeDetailModal"
       @touchstart.stop
       @touchmove.stop
       @touchend.stop
@@ -80,10 +80,10 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue'
 
-import DetailOffcanvas from '~/components/trigger-view/main/DetailOffcanvas.vue'
+import DetailModal from '~/components/trigger-view/main/DetailModal.vue'
 
-const isDetailOffcanvasOpen = ref(false)
-const isOffcanvasAni = ref(false)
+const isDetailModalOpen = ref(false)
+const isModalAni = ref(false)
 
 const dateListData = [
   { 
@@ -143,20 +143,20 @@ const dateListData = [
 ]
 
 // 트리거뷰 내용보기 열기
-const openDetailOffcanvas = () => {
-  isDetailOffcanvasOpen.value = true
-  isOffcanvasAni.value = true
+const openDetailModal = () => {
+  isDetailModalOpen.value = true
+  isModalAni.value = true
 }
 
 // 트리거뷰 내용보기 닫기
-const closeDetailOffcanvas = () => {
-  isOffcanvasAni.value = false
+const closeDetailModal = () => {
+  isModalAni.value = false
   setTimeout(() => {
-    isDetailOffcanvasOpen.value = false
+    isDetailModalOpen.value = false
   }, 300)
 }
 
-watch(isDetailOffcanvasOpen, (isOpen) => {
+watch(isDetailModalOpen, (isOpen) => {
   if (isOpen) {
     document.body.classList.add('scroll-lock')
   } else {

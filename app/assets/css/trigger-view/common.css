@@ -61,7 +61,7 @@
     @apply w-full flex flex-col justify-start items-start mb-5;
   }
   .trigger-view .mainTabContent .dateList .list{
-    @apply relative w-full pb-5 last:pb-0 flex flex-col justify-start items-start gap-5 pl-[25px];
+    @apply relative w-full pb-[30px] last:pb-0 flex flex-col justify-start items-start gap-4 pl-[25px];
   }
   .trigger-view .mainTabContent .dateList .list::before{
     @apply content-[''] w-2.5 h-2.5 rounded-full bg-[#DEE2E6] absolute left-1 top-1 z-[1];
@@ -76,7 +76,7 @@
     @apply font-normal text-[13px] leading-[20px] text-gray;
   }
   .trigger-view .mainTabContent .dateList .list .item-group{
-    @apply w-full flex flex-col justify-start items-start gap-5;
+    @apply w-full flex flex-col justify-start items-start gap-4;
   }
   .trigger-view .mainTabContent .dateList .list .item-group .item{
     @apply w-full flex flex-col justify-start items-start gap-[6px];
@@ -100,7 +100,7 @@
     @apply text-[#FF5050] text-[12px] leading-[18px];
   }
   .trigger-view .mainTabContent .dateList .list .item-group .item .txt{
-    @apply font-normal text-base text-black;
+    @apply w-full font-normal text-base text-black;
   }
   .trigger-view .mainTabContent .dateList .list .item-group .detail-box{
     @apply w-full text-left rounded-[12px] bg-[#F5F7F9] p-4;
@@ -236,87 +236,122 @@
     @apply font-normal text-base text-black;
   }
 
-  .trigger-view .offcanvas-overlay.detailOffcanvas {
-    @apply fixed inset-0 bg-black/50 z-[999] flex justify-end items-end;
+  .trigger-view .modal-overlay.detailModal {
+    @apply fixed top-0 left-0 right-0 bottom-0 bg-[rgba(0,0,0,0.5)] flex justify-center items-end z-[9999] p-3;
   }
-  .trigger-view .offcanvas-content {
-    @apply w-full max-w-full h-[calc(100%-60px)] max-h-[calc(100%-60px)] bg-white flex flex-col justify-start items-stretch shadow-2xl rounded-t-[25px];
+  .trigger-view .modal-content {
+    @apply w-full max-w-full h-[calc(100%-58px)] max-h-[calc(100%-58px)] bg-white flex flex-col justify-start items-stretch shadow-2xl rounded-[25px];
   }
-  .trigger-view .offcanvas-header {
+  .trigger-view .modal-header {
     @apply w-full flex justify-between items-start p-[30px_20px_16px];
   }
-  .trigger-view .offcanvas-header .title{
+  .trigger-view .modal-header .title{
     @apply flex flex-col justify-start items-start gap-1;
   }
-  .trigger-view .offcanvas-header .title .top{
+  .trigger-view .modal-header .title .top{
     @apply flex justify-start items-center gap-[6px];
   }
-  .trigger-view .offcanvas-header .title .top strong{
+  .trigger-view .modal-header .title .top strong{
     @apply font-bold text-lg text-[#364350];
   }
-  .trigger-view .offcanvas-header .title .bottom{
+  .trigger-view .modal-header .title .bottom{
     @apply font-normal text-xs text-gray;
   }
-  .trigger-view .offcanvas-header button{
-    @apply -translate-y-1;
+  .trigger-view .modal-header button{
+    @apply -translate-y-4 translate-x-1;
   }
-  .trigger-view .offcanvas-body{
-    @apply w-full h-full overflow-auto px-5 pb-5;
+  .trigger-view .modal-body{
+    @apply w-full h-full overflow-auto px-6 pb-5;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
-  .trigger-view .offcanvas-body::-webkit-scrollbar{
+  .trigger-view .modal-body::-webkit-scrollbar{
     display: none;
   }
-  .trigger-view .offcanvas__tab{
+  .trigger-view .modal__tab{
     @apply relative w-full pl-5 flex justify-start items-center gap-0.5 flex-nowrap whitespace-nowrap overflow-x-auto mb-5 flex-shrink-0;
     -ms-overflow-style: none;  /* IE, 에지 */
     scrollbar-width: none;  /* 파이어폭스 */
   }
-  .trigger-view .offcanvas__tab::-webkit-scrollbar {
+  .trigger-view .modal__tab::-webkit-scrollbar {
     display: none;
   }
-  .trigger-view .offcanvas__tab button{
+  .trigger-view .modal__tab button{
     @apply relative p-[6.5px_16px] rounded-[6px] font-normal text-base text-gray last:mr-5 bg-transparent z-[1];
   }
-  .trigger-view .offcanvas__tab button.active{
+  .trigger-view .modal__tab button.active{
     @apply font-semibold text-[#364350];
   }
-  .trigger-view .offcanvas__tab .tab-indicator {
+  .trigger-view .modal__tab .tab-indicator {
     @apply h-[37px] absolute rounded-[6px] bg-[#DEE2E6] z-0 ease-out top-0 bottom-0 left-5;
     transition: transform 0.3s ease-out, width 0.3s ease-out; 
   }
-  .trigger-view .offcanvas-body .tab-content{
+  .trigger-view .modal-body .tab-content{
     @apply w-full;
   }
-  .trigger-view .offcanvas-body .tab-content .txt-box{
-    @apply font-normal text-base text-[#364350];
+  .trigger-view .modal-body .tab-content .txt-box{
+    @apply font-normal text-base leading-[26px] text-[#364350];
   }
-  .trigger-view .offcanvas-body .tab-content .check-group{
+  .trigger-view .modal-body .tab-content .check-group{
     @apply w-full flex flex-col justify-start items-start gap-5;
   }
-  .trigger-view .offcanvas-body .tab-content .check-group .check{
+  .trigger-view .modal-body .tab-content .check-group .check{
     @apply w-full flex flex-col justify-start items-start gap-[10px];
   }
-  .trigger-view .offcanvas-body .tab-content .check-group .check .title{
+  .trigger-view .modal-body .tab-content .check-group .check .title{
     @apply w-full flex justify-start items-center gap-[10px];
   }
-  .trigger-view .offcanvas-body .tab-content .check-group .check .title span{
+  .trigger-view .modal-body .tab-content .check-group .check .title span{
     @apply font-bold text-[13px] leading-[20px] text-main;
   }
-  .trigger-view .offcanvas-body .tab-content .check-group .check .title strong{
+  .trigger-view .modal-body .tab-content .check-group .check .title strong{
     @apply font-bold text-base text-black;
   }
-  .trigger-view .offcanvas-body .tab-content .check-group .check .box-group{
+  .trigger-view .modal-body .tab-content .check-group .check .box-group{
     @apply w-full flex flex-col justify-start items-start gap-4;
   }
-  .trigger-view .offcanvas-body .tab-content .check-group .check .box-group .box{
+  .trigger-view .modal-body .tab-content .check-group .check .box-group .box{
     @apply w-full p-4 border border-[#D2D2D2] rounded-[16px] flex flex-col justify-start items-start gap-[5px];
   }
-  .trigger-view .offcanvas-body .tab-content .check-group .check .box-group .box .title{
+  .trigger-view .modal-body .tab-content .check-group .check .box-group .box .title{
     @apply font-bold text-base text-black;
   }
-  .trigger-view .offcanvas-body .tab-content .check-group .check .box-group .box .txt{
+  .trigger-view .modal-body .tab-content .check-group .check .box-group .box .txt{
     @apply font-normal text-base text-black;
+  }
+
+  /* 스켈레톤 UI */
+  .trigger-view .skeleton {
+    border-radius: 20px;
+    animation: skeleton-loading 3s infinite linear;
+    background: linear-gradient(
+      90deg,
+      #e9e9e9 25%,
+      #f5f5f5 50%,
+      #e9e9e9 75%
+    );
+    background-size: 200% 100%;
+  }
+
+  @keyframes skeleton-loading {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
+  .trigger-view .mainTabContent .dateList .list .date.skeleton{
+    @apply w-[100px] h-[20px];
+  }
+  .trigger-view .mainTabContent .dateList .list .item-group .item .title .left .name.skeleton{
+    @apply w-[76px] h-[24px];
+  }
+  .trigger-view .mainTabContent .dateList .list .item-group .item .title .right{
+    @apply w-[98px] h-[24px];
+  }
+  .trigger-view .mainTabContent .dateList .list .item-group .detail-box .title strong.skeleton{
+    @apply w-[105px] h-[24px];
   }
 }

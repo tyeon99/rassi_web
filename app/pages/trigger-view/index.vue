@@ -12,6 +12,7 @@
       @touchend="handleTouchEnd"
     >
       <div class="main__tabContent">
+        <!-- <SkeletonContent /> -->
         <component :is="activeTabComponent" />
       </div>
     </main>
@@ -31,6 +32,7 @@ import MainTab from '~/components/trigger-view/main/MainTab.vue'
 import TrendingTabContent from '~/components/trigger-view/main/TrendingTabContent.vue'
 import HighestTabContent from '~/components/trigger-view/main/HighestTabContent.vue'
 import FocusTabContent from '~/components/trigger-view/main/FocusTabContent.vue'
+import SkeletonContent from '~/components/trigger-view/main/SkeletonContent.vue'
 
 const currentTabIdx = ref(0)
 

@@ -23,7 +23,7 @@
             <button 
               v-for="(item, iidx) in box.items" 
               :key="iidx"
-              @click="openDetailOffcanvas(item)"
+              @click="openDetailModal(item)"
             >
               {{ item }}
             </button>
@@ -33,10 +33,10 @@
     </div>
 
     <!-- 내용보기 레이어 -->
-    <DetailOffcanvas 
-      v-if="isDetailOffcanvasOpen"
-      :isOffcanvasAni="isOffcanvasAni"
-      @close-detailOffcanvas="closeDetailOffcanvas"
+    <DetailModal 
+      v-if="isDetailModalOpen"
+      :isModalAni="isModalAni"
+      @close-detailModal="closeDetailModal"
       @touchstart.stop
       @touchmove.stop
       @touchend.stop
@@ -47,10 +47,10 @@
 
 <script setup lang="ts">
 import { ref, watch, nextTick } from 'vue'
-import DetailOffcanvas from '~/components/trigger-view/main/DetailOffcanvas.vue'
+import DetailModal from '~/components/trigger-view/main/DetailModal.vue'
 
-const isDetailOffcanvasOpen = ref(false)
-const isOffcanvasAni = ref(false)
+const isDetailModalOpen = ref(false)
+const isModalAni = ref(false)
 
 const itemListData = [
   {
@@ -90,21 +90,21 @@ const itemListData = [
 ]
 
 // 트리거뷰 내용보기 열기
-const openDetailOffcanvas = async (item?: string) => {
-  isDetailOffcanvasOpen.value = true
+const openDetailModal = async (item?: string) => {
+  isDetailModalOpen.value = true
   await nextTick() // DOM 생성 타이밍 보장
-  isOffcanvasAni.value = true
+  isModalAni.value = true
 }
 
 // 트리거뷰 내용보기 닫기
-const closeDetailOffcanvas = () => {
-  isOffcanvasAni.value = false
+const closeDetailModal = () => {
+  isModalAni.value = false
   setTimeout(() => {
-    isDetailOffcanvasOpen.value = false
+    isDetailModalOpen.value = false
   }, 300)
 }
 
-watch(isDetailOffcanvasOpen, (isOpen) => {
+watch(isDetailModalOpen, (isOpen) => {
   if (isOpen) {
     document.documentElement.classList.add('scroll-lock')
     document.body.classList.add('scroll-lock')
