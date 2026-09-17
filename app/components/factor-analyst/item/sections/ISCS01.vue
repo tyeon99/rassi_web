@@ -45,8 +45,8 @@
                   stroke-width="8"
                   stroke-linecap="round"
                   :stroke-dasharray="125.66"
-                  :stroke-dashoffset="getDashOffset(chart.score)"
-                  class="transition-all duration-500 ease-out"
+                  :stroke-dashoffset="isLoaded ? getDashOffset(chart.score) : 125.66"
+                  class="transition-all duration-1000 ease-out"
                 />
               </svg>
               <span>
@@ -84,10 +84,19 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import '~/assets/css/factor-analyst/common.css'
 
 const router = useRouter()
+
+const isLoaded = ref(false)
+
+onMounted(() => {
+  setTimeout(() => {
+    isLoaded.value = true
+  }, 100)
+})
 
 // 점수에 따른 반원 svg
 const getDashOffset = (score: number = 0) => {
