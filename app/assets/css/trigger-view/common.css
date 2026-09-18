@@ -348,7 +348,7 @@
   .trigger-view .mainTabContent .dateList .list .item-group .item .title .left .name.skeleton{
     @apply w-[76px] h-[24px];
   }
-  .trigger-view .mainTabContent .dateList .list .item-group .item .title .right{
+  .trigger-view .mainTabContent .dateList .list .item-group .item .title .right.skeleton{
     @apply w-[98px] h-[24px];
   }
   .trigger-view .mainTabContent .dateList .list .item-group .detail-box .title strong.skeleton{
