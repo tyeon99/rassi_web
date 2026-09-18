@@ -6,9 +6,6 @@
 .factor-analyst .mainTab, .detailTab {
     @apply w-full border-b border-[#DEE2E6] flex justify-center items-center gap-3 sticky bg-white top-[58px] left-0 right-0 z-[999];
   }
-.factor-analyst .detailTab{
-    @apply gap-7;
-  }
 .factor-analyst .mainTab button, .detailTab button {
     @apply p-2.5 text-base text-[#A1ABB5] font-semibold transition-colors duration-200;
   }

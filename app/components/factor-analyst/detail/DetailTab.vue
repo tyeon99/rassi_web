@@ -34,9 +34,9 @@ const props = defineProps({
 const emit = defineEmits(['update:modelValue'])
 
 const tabs = [
-  { id: 'style-item', name: '스타일 종목' },
-  { id: 'style-intro', name: '스타일 소개' },
-  { id: 'style-record', name: '스타일 기록' }
+  { id: 'style-item', name: '스타일+ 종목' },
+  { id: 'style-intro', name: '스타일+ 소개' },
+  { id: 'style-record', name: '스타일+ 기록' }
 ]
 
 const tabContainer = ref<HTMLDivElement | null>(null)
