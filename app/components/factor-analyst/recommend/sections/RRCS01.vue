@@ -18,7 +18,7 @@
       <div class="box-title">
         <strong>
           <img width="22" src="~/assets/img/factor-analyst/recommend/pin-icon.png" alt="핀 아이콘">
-          <span>스타일⁺ 체크 포인트</span>
+          <span>스타일+ 체크 포인트</span>
         </strong>
       </div>
       <div class="box-txt">

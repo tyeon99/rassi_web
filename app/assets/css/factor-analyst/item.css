@@ -63,7 +63,7 @@
     @apply flex flex-col justify-center items-center gap-2;
   }
 .factor-analyst .itemStyleContent__section--content .box .chart-group .chart .txt span{
-    @apply font-normal text-sm leading-[18px] text-black;
+    @apply font-normal text-[15px] leading-[20px] text-black;
   }
 .factor-analyst .itemStyleContent__section--content .box .chart-group .chart .txt p{
     @apply font-semibold text-base text-black;

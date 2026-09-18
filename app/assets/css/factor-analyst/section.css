@@ -44,7 +44,7 @@
 .factor-analyst .mainSection__content{
     @apply w-full;
   }
-  /* 오늘의 추천 스타일⁺ */
+  /* 오늘의 추천 스타일+ */
 .factor-analyst .recommendItemSwiper, .recommendItemSwiper .swiper-slide{
     @apply w-full;
   }
@@ -112,7 +112,7 @@
 .factor-analyst .itemList.masking .listGroup .list .circle.circle04 { @apply bg-[#DF9CAC]; }
 .factor-analyst .itemList.masking .listGroup .list .circle.circle05 { @apply bg-[#9DACBA]; }
 
-  /* 날짜별 추천 스타일⁺ */
+  /* 날짜별 추천 스타일+ */
 .factor-analyst .dateList{
     @apply w-full flex flex-col justify-start items-start mb-5;
   }

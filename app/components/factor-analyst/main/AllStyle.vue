@@ -1,7 +1,7 @@
 <template>
   <section class="mainSection px-0">
     <div class="mainSection__title px-5">
-      <h2>모든 스타일⁺ 보기</h2>
+      <h2>모든 스타일+ 보기</h2>
       <button>
         <span>스타일 전체보기</span>
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">

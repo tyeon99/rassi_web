@@ -1,6 +1,6 @@
 <template>
   <div id="wrap" class="factor-analyst">
-    <BackTitleHeader title="추천 스타일⁺" />
+    <BackTitleHeader title="추천 스타일+" />
     <main id="main" class="main">
       <RecommendListContent />
     </main>
