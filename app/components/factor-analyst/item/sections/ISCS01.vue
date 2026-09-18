@@ -48,6 +48,22 @@
                   :stroke-dashoffset="isLoaded ? getDashOffset(chart.score) : 125.66"
                   class="transition-all duration-1000 ease-out"
                 />
+                <g
+                  class="transition-transform duration-1000 ease-out origin-[50px_50px]"
+                  :style="{
+                    transform: `rotate(${isLoaded ? getRotationAngle(chart.score) : 0}deg)`,
+                    transformOrigin: '50px 50px'
+                  }"
+                >
+                  <circle
+                    cx="10"
+                    cy="50"
+                    r="6"
+                    fill="#FFFFFF"
+                    stroke="#6565FF"
+                    stroke-width="3"
+                  />
+                </g>
               </svg>
               <span>
                 {{ chart.score }}
@@ -60,20 +76,15 @@
               <span>92.8</span>
             </div> -->
 
+            <div v-if="chart.isPayment" class="txt">
+              <span>{{ chart.isPayment ? chart.analyzeTxt : '신호없음' }}</span>
+              <button>분석보기</button>
+            </div>
+
             <!-- 결제정보 없을 때 -->
             <div v-else class="no-payment">
               <img width="24" src="~/assets/img/factor-analyst/item/question-icon.png" alt="물음표 아이콘">
               <span>눌러서<br />종목 스타일을<br />확인해 보세요.</span>
-            </div>
-
-            <div class="txt">
-              <span>{{ chart.isPayment ? chart.analyzeTxt : '-' }}</span>
-              <button>
-                분석보기
-                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7.5 12.75L11.25 9L7.5 5.25" stroke="#6565FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </button>
             </div>
 
           </div>
@@ -103,6 +114,12 @@ const getDashOffset = (score: number = 0) => {
   const circumference = 125.66
   const progress = Math.min(Math.max(score, 0), 100) / 100
   return circumference * (1 - progress)
+}
+
+// 점수에 따른 동그라미 노브
+const getRotationAngle = (score: number = 0) => {
+  const progress = Math.min(Math.max(score, 0), 100) / 100
+  return progress * 180
 }
 
 const typeMap: Record<string, string> = {
