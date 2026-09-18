@@ -46,7 +46,7 @@ const indicatorStyle = ref({
   left: 0
 })
 
-const styleTabs = ['종목스타일', '스타일+', '추천스타일']
+const styleTabs = ['종목스타일', '스타일<strong class="plus-up">+</strong>', '추천스타일']
 
 const tabComponents: Component[] = [
   ItemStyleTabContent,

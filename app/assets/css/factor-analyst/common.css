@@ -56,3 +56,6 @@ body.scroll-lock {
   @apply text-[#03B26C];
   background: var(--color-spring-green-3510, #03B26C1A);
 }
+.factor-analyst .plus-up{
+  @apply !font-bold !text-[115%];
+}

@@ -15,7 +15,7 @@
           <!-- 기록이 없을 때 -->
           <div class="no-record">
             <img width="20" src="~/assets/img/factor-analyst/detail/no-icon.png" alt="아이콘">
-            <p>해당 스타일+는 추천 스타일+ 선정이 되지 않아 스타일+ 기록이 없습니다.</p>
+            <p>해당 스타일<strong class="plus-up">+</strong>는 추천 스타일<strong class="plus-up">+</strong> 선정이 되지 않아 스타일<strong class="plus-up">+</strong> 기록이 없습니다.</p>
           </div>
           <!-- 1개월 수익률이 모두 음전인 경우 -->
           <!-- <div class="no-record">
@@ -31,7 +31,7 @@
     
     <div class="detailContent__wrap">
       <div class="detailContent__wrap--title">
-        <h1>추천 스타일+ PICK5</h1>
+        <h1>추천 스타일<strong class="plus-up">+</strong> PICK5</h1>
       </div>
       <div class="detailContent__wrap--content">
         <div class="dateList">
@@ -53,7 +53,7 @@
         </div>
         <div class="no-record bg-white">
           <img width="20" src="~/assets/img/factor-analyst/detail/no-icon.png" alt="아이콘">
-          <p>해당 스타일+는 추천 스타일+ 선정이 되지 않아 스타일+ 기록이 없습니다.</p>
+          <p>해당 스타일<strong class="plus-up">+</strong>는 추천 스타일<strong class="plus-up">+</strong> 선정이 되지 않아 스타일<strong class="plus-up">+</strong> 기록이 없습니다.</p>
         </div>
       </div>
     </div>

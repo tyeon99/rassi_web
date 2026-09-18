@@ -2,7 +2,7 @@
   <div class="recommendResultContent__section">
     <div class="recommendResultContent__section--title">
       <h1>
-        추천 스타일+ 종목 Pick5 1개월 성과 추적
+        추천 스타일<strong class="plus-up">+</strong> 종목 Pick5 1개월 성과 추적
         <button @click="openRecommendInfoOffcanvas">
           <img width="20" src="~/assets/img/factor-analyst/recommend/info-icon.png" alt="안내">
         </button>
