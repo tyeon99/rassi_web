@@ -3,6 +3,22 @@
 @tailwind utilities;
 
 @layer components {
+
+  .trigger-view {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .trigger-view input,
+  .trigger-view textarea {
+    -webkit-user-select: auto;
+    user-select: auto;
+  }
+
   .trigger-view .wrap, .trigger-view .main{
     @apply w-full h-full;
   }

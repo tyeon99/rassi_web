@@ -13,6 +13,21 @@
 @tailwind components;
 @tailwind utilities;
 
+.factor-analyst {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.factor-analyst input,
+.factor-analyst textarea {
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
 .factor-analyst em{
   @apply not-italic;
 }
