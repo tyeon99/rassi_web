@@ -1,0 +1,1 @@
+/* empty css        */import{C as a}from"./CKjmr-3e.js";import{A as s}from"./__-o6o_h.js";import{d as t,B as o,E as e,C as n,A as r}from"./BiGCgafw.js";const c={id:"wrap",class:"factor-analyst"},i={id:"main",class:"main"},u=t({__name:"index",setup(m){return(d,l)=>(r(),o("div",c,[e(a),n("main",i,[e(s,{class:"p-5"})])]))}});export{u as default};
