@@ -40,7 +40,8 @@
         </div>
 
         <!-- 종목 리스트 -->
-        <div v-if="activeTab.list && activeTab.list.length > 0" class="listGroup">
+        <!-- 마스킹 클래스 추가 -->
+        <div v-if="activeTab.list && activeTab.list.length > 0" class="listGroup masking">
           <div 
             v-for="(item, idx) in activeTab.list" 
             :key="idx" 

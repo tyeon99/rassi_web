@@ -71,7 +71,7 @@
     @apply w-full;
   }
   .trigger-view .mainTabContent .tab-title{
-    @apply font-normal text-base text-black mb-4;
+    @apply font-normal text-base text-black mb-6;
   }
   .trigger-view .mainTabContent .dateList{
     @apply w-full flex flex-col justify-start items-start mb-5;
@@ -92,7 +92,7 @@
     @apply font-normal text-[13px] leading-[20px] text-gray;
   }
   .trigger-view .mainTabContent .dateList .list .item-group{
-    @apply w-full flex flex-col justify-start items-start gap-4;
+    @apply w-full flex flex-col justify-start items-start gap-4 pb-[14px] last:pb-[6px];
   }
   .trigger-view .mainTabContent .dateList .list .item-group .item{
     @apply w-full flex flex-col justify-start items-start gap-[6px];

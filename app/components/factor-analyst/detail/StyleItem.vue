@@ -149,12 +149,12 @@
         </div>
       </div>
 
-      <div class="itemList box02">
+      <div class="itemList box02 masking">
         <div class="listGroup">
           <div class="list">
             <div class="left">
-              <div class="circle">
-                <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+              <div class="circle circle01">
+                <span>872</span>
               </div>
               <div class="name">
                 <p>삼성전자</p><span>055872</span>
@@ -166,8 +166,8 @@
           </div>
           <div class="list">
             <div class="left">
-              <div class="circle">
-                <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+              <div class="circle circle02">
+                <span>872</span>
               </div>
               <div class="name">
                 <p>SK하이닉스</p><span>000660</span>
@@ -179,8 +179,8 @@
           </div>
           <div class="list">
             <div class="left">
-              <div class="circle">
-                <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+              <div class="circle circle03">
+                <span>872</span>
               </div>
               <div class="name">
                 <p>현대차</p><span>005380</span>
@@ -192,8 +192,8 @@
           </div>
           <div class="list">
             <div class="left">
-              <div class="circle">
-                <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+              <div class="circle circle04">
+                <span>872</span>
               </div>
               <div class="name">
                 <p>네이버</p><span>035420</span>
@@ -205,8 +205,8 @@
           </div>
           <div class="list">
             <div class="left">
-              <div class="circle">
-                <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+              <div class="circle circle05">
+                <span>872</span>
               </div>
               <div class="name">
                 <p>카카오</p><span>035720</span>
@@ -218,8 +218,8 @@
           </div>
           <div class="list">
             <div class="left">
-              <div class="circle">
-                <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
+              <div class="circle circle01">
+                <span>872</span>
               </div>
               <div class="name">
                 <p>카카오</p><span>035720</span>

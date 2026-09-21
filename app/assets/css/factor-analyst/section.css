@@ -200,4 +200,12 @@
 .factor-analyst .style-box button .bottom .word span{
     @apply relative px-2 py-1 bg-white rounded-[4px] font-normal text-sm text-[#364350];
   }
+
+  /* 마스킹 */
+  .factor-analyst .listGroup.masking .list .left, .factor-analyst .listGroup.masking .list .right, .factor-analyst .recommendListContent__list .list.masking button .bottom .item{
+    @apply blur-[4px];
+  }
+  .factor-analyst .itemStyleListContent .listGroup.masking .list .right{
+    @apply blur-0;
+  }
 }

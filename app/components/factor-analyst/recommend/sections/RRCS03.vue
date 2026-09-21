@@ -7,7 +7,8 @@
       추천 스타일<strong class="plus-up">+</strong> 종목으로 선정된 후 최대 1달 동안 성과 추척이 이루어지며, 이후에는 별도의 성과 추적이 진행되지 않습니다.
     </div>
     <div class="recommendResultContent__section--content">
-      <div class="listGroup">
+      <!-- 마스킹 클래스 추가 -->
+      <div class="listGroup masking">
         <div 
           v-for="(item, idx) in pickList" 
           :key="idx" 

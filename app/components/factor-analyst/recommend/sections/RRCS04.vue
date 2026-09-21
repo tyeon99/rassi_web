@@ -6,7 +6,8 @@
 
     <div class="recommendResultContent__section--content">
       <div class="recommendListContent__list !p-0">
-        <div class="list">
+        <!-- 마스킹 클래스 추가 -->
+        <div class="list masking">
           <button 
             v-for="(card, cIdx) in styleCards" 
             :key="cIdx"
