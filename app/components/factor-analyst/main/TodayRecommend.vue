@@ -21,19 +21,21 @@
               class="itemList box01"
               :class="{ masking: idx == 1 }"
             >
-              <div class="recommend-item">
-                <div class="circle">
-                  <img 
-                    width="30" 
-                    src="~/assets/img/factor-analyst/main/item-circle.png" 
-                    alt="종목로고"
-                  >
+              <div class="recommend-title">Pick 종목 현황</div>
+              <div class="inner-box">
+                <div class="recommend-style">
+                  {{ item.styleName }}에서 추천되었어요.
                 </div>
-                <strong>{{ item.name }}</strong>
-                <p>추천되었어요.</p>
-              </div>
-              <div class="recommend-style">
-                {{ item.styleName }}
+                <div class="recommend-item">
+                  <div class="circle">
+                    <img 
+                      width="30" 
+                      src="~/assets/img/factor-analyst/main/item-circle.png" 
+                      alt="종목로고"
+                    >
+                  </div>
+                  <strong>{{ item.name }}</strong>
+                </div>
               </div>
               <div class="recommend-pagination">
                 <strong>{{ idx + 1 }}</strong>/<span>{{ items.length }}</span>

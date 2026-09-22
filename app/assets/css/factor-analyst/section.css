@@ -52,7 +52,7 @@
     @apply w-full;
   }
 .factor-analyst .recommendItemSwiper .itemList .recommend-pagination{
-  @apply w-auto absolute !bottom-4 right-4 bg-white rounded-[8px] p-[1.5px_8px] top-auto left-auto font-normal text-xs leading-[18px] text-main m-0;
+  @apply w-auto h-6 flex justify-center items-end absolute top-4 right-3 bg-main rounded-[8px] px-[13.5px] pb-[2.5px] font-normal text-xs leading-[18px] text-[#eee] m-0;
 }
 .factor-analyst .recommendItemSwiper .itemList .recommend-pagination strong{
   @apply font-bold text-sm;
@@ -61,7 +61,7 @@
     @apply w-full h-full rounded-[20px] p-4 text-left flex flex-col justify-start items-start;
   }
 .factor-analyst .itemList.box01{
-    background: linear-gradient(160.25deg, #F0F0FF 67.85%, #FEF7FF 96.06%);
+    @apply bg-[#F0F0FF];
   }
 .factor-analyst .itemList.box02{
     @apply bg-white;
@@ -72,14 +72,20 @@
 .factor-analyst .itemList .box-txt{
     @apply w-full font-normal text-sm text-gray mb-5;
   }
+  .factor-analyst .itemList .recommend-title{
+    @apply font-bold text-base text-main mb-2;
+  }
+  .factor-analyst .itemList .inner-box{
+    @apply w-full rounded-[8px] bg-white p-3 flex flex-col justify-center items-center gap-2;
+  }
   .factor-analyst .itemList .recommend-item{
-    @apply w-full flex justify-start items-center gap-[6px] mb-3;
+    @apply w-full flex justify-center items-center gap-[6px];
   }
   .factor-analyst .itemList .recommend-item .circle{
     @apply shrink-0;
   }
   .factor-analyst .itemList .recommend-item strong{
-    @apply w-auto max-w-[calc(100%-70px)] line-clamp-1 font-bold text-lg text-black;
+    @apply max-w-[calc(100%-40px)] truncate font-bold text-lg text-black;
   }
   .factor-analyst .itemList .recommend-item p{
     @apply font-normal text-base leading-[28px] text-black shrink-0;
