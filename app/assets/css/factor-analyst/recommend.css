@@ -130,7 +130,7 @@
     @apply w-full p-[16px_20px_12px] bg-[#F8F9FA] flex flex-col justify-end items-end gap-2;
   }
   .factor-analyst .recommendTodayTop .txt{
-    @apply w-full text-left font-normal text-sm text-main;
+    @apply w-full text-left font-normal text-sm text-[#364350];
   }
   .factor-analyst .recommendTodayTop button{
     @apply flex justify-end items-center;
@@ -142,7 +142,7 @@
     @apply w-full py-6 px-5 flex flex-col justify-start items-start gap-4;
   }
   .factor-analyst .recommendTodayContent .txt{
-    @apply font-normal text-sm text-[#364350];
+    @apply font-normal text-sm text-main;
   }
   .factor-analyst .recommendTodayContent .box-group{
     @apply w-full flex flex-col justify-start items-start gap-4;
@@ -169,10 +169,10 @@
     @apply font-normal text-xs leading-[18px] text-gray;
   }
   .factor-analyst .recommendTodayContent .box-group .box .top .right{
-    @apply font-normal text-sm text-[#364350] shrink-0;
+    @apply font-normal text-sm text-main shrink-0;
   }
   .factor-analyst .recommendTodayContent .box-group .box .bottom{
-    @apply w-full flex justify-start items-center flex-wrap gap-4;
+    @apply w-full flex justify-start items-center flex-wrap gap-[8px_16px];
   }
   .factor-analyst .recommendTodayContent .box-group .box .bottom p{
     @apply flex justify-start items-center gap-2;
