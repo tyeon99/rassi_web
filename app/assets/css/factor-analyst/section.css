@@ -17,11 +17,14 @@
 .factor-analyst .mainSection__title h2{
     @apply font-bold text-black text-lg;
   }
-.factor-analyst .mainSection__title h2 span{
+.factor-analyst .mainSection__title .date{
     @apply block font-normal text-xs text-gray mb-1;
   }
 .factor-analyst .mainSection__title em, .mainSection__title button{
     @apply font-normal text-[13px] leading-5 text-gray flex justify-start items-center gap-0.5;
+  }
+  .factor-analyst .mainSection__txt{
+    @apply w-full font-normal text-sm text-gray mb-4;
   }
 .factor-analyst .mainSection__tab{
     @apply relative w-full pl-5 flex justify-start items-center gap-0.5 flex-nowrap whitespace-nowrap overflow-x-auto mb-5;
@@ -48,9 +51,12 @@
 .factor-analyst .recommendItemSwiper, .recommendItemSwiper .swiper-slide{
     @apply w-full;
   }
-.factor-analyst .recommendItemSwiper .swiper-slide{
-    @apply h-[404px];
-  }
+.factor-analyst .recommendItemSwiper .itemList .recommend-pagination{
+  @apply w-auto absolute !bottom-4 right-4 bg-white rounded-[8px] p-[1.5px_8px] top-auto left-auto font-normal text-xs leading-[18px] text-main m-0;
+}
+.factor-analyst .recommendItemSwiper .itemList .recommend-pagination strong{
+  @apply font-bold text-sm;
+}
 .factor-analyst .itemList{
     @apply w-full h-full rounded-[20px] p-4 text-left flex flex-col justify-start items-start;
   }
@@ -65,6 +71,24 @@
   }
 .factor-analyst .itemList .box-txt{
     @apply w-full font-normal text-sm text-gray mb-5;
+  }
+  .factor-analyst .itemList .recommend-item{
+    @apply w-full flex justify-start items-center gap-[6px] mb-3;
+  }
+  .factor-analyst .itemList .recommend-item .circle{
+    @apply shrink-0;
+  }
+  .factor-analyst .itemList .recommend-item strong{
+    @apply w-auto max-w-[calc(100%-70px)] line-clamp-1 font-bold text-lg text-black;
+  }
+  .factor-analyst .itemList .recommend-item p{
+    @apply font-normal text-base leading-[28px] text-black shrink-0;
+  }
+  .factor-analyst .itemList .recommend-style{
+    @apply font-normal text-sm text-main;
+  }
+  .factor-analyst .itemList.masking .recommend-item .circle, .factor-analyst .itemList.masking .recommend-item strong{
+    @apply blur-[4px];
   }
 .factor-analyst .recommend-pick{
     @apply p-[7px_16px] bg-main flex justify-center items-center gap-[5px] rounded-[50px] m-[0_auto] mb-5;
@@ -154,6 +178,27 @@
   }
 .factor-analyst .dateList .date .item-group.masking{
     @apply blur-[4px] select-none;
+  }
+  .factor-analyst .current-recommend{
+    @apply w-full flex justify-center items-center gap-2;
+  }
+  .factor-analyst .current-recommend .box{
+    @apply flex-1 py-3 px-[10px] bg-[#F5F7F9] rounded-[8px] flex flex-col justify-between items-end gap-[30px];
+  }
+  .factor-analyst .current-recommend .box .title{
+    @apply line-clamp-1 w-full text-left font-bold text-[15px] leading-[23px] text-black;
+  }
+  .factor-analyst .current-recommend .box .txt{
+    @apply flex flex-col justify-end items-end;
+  }
+  .factor-analyst .current-recommend .box .txt p{
+    @apply font-normal text-xs leading-[18px] text-gray;
+  }
+  .factor-analyst .current-recommend .box .txt strong{
+    @apply font-semibold text-base text-black;
+  }
+  .factor-analyst .style-all {
+    @apply w-full mt-4;
   }
 .factor-analyst .style-all button{
     @apply w-full h-[46px] rounded-[8px] border border-[#DEE2E6] text-[#364350] font-normal text-base;

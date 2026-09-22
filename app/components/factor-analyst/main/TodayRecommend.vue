@@ -1,79 +1,50 @@
 <template>
   <section class="mainSection">
-    <div class="mainSection__title items-start">
+    <div class="mainSection__title !mb-2">
       <h2>
-        <span>6월 10일 (MON)</span>
-        오늘의 추천 스타일<strong class="plus-up">+</strong>
+        오늘의 스타일 추천
       </h2>
-      <button>
-        <img width="24" src="~/assets/img/factor-analyst/main/detail-btn.png" alt="상세보기 버튼">
-      </button>
+      <span class="date">6월 10일 (MON)</span>
+    </div>
+    <div class="mainSection__txt">
+      고민없이 Pick! 앞으로 한달 강세를 보일 종목을 추천해드려요.
     </div>
     <div class="mainSection__content">
       <div class="swiper recommendItemSwiper">
         <div class="swiper-wrapper">
           <div 
-            v-for="(slide, sidx) in slides" 
-            :key="sidx" 
+            v-for="(item, idx) in items" 
+            :key="idx" 
             class="swiper-slide"
           >
             <button
               class="itemList box01"
-              :class="{ masking: sidx === 1 }"
+              :class="{ masking: idx == 1 }"
             >
-              <div class="box-title">
-                수급선행 스타일<strong class="plus-up">+</strong> 추천종목 5
-              </div>
-              <div class="box-txt">
-                강세와 트랜드를 분석하여 가장 많이 상승할 스타일<strong class="plus-up">+</strong>를 추천해 드려요.
-              </div>
-              
-              <div class="listGroup">
-                <div 
-                  v-for="(item, iidx) in slide.items" 
-                  :key="iidx" 
-                  class="list"
-                >
-                
-                <!-- 기본 리스트 -->
-                  <template v-if="sidx === 0">
-                    <div class="left">
-                      <div class="circle">
-                        <img width="30" src="~/assets/img/factor-analyst/main/item-circle.png" alt="종목로고">
-                        <!-- 종목 로고 없을 때 대체 이미지 -->
-                        <!-- <img width="30" src="~/assets/img/factor-analyst/main/item-circle_no.png" alt="종목로고 디폴트"> -->
-                      </div>
-                      <div class="name">
-                        <p>{{ item.name }}</p>
-                        <span>{{ item.code }}</span>
-                      </div>
-                    </div>
-                  </template>
-
-                  <!-- 마스킹 리스트 -->
-                  <template v-else>
-                    <div class="left">
-                      <div class="circle" :class="`circle0${iidx + 1}`">
-                        <span>872</span>
-                      </div>
-                      <div class="name">
-                        <p>{{ item.name }}</p>
-                        <span>{{ item.code }}</span>
-                      </div>
-                    </div>
-                  </template>
-
-                  <div class="right">
-                    <span>스코어</span>
-                    <p class="up">{{ item.score }}점</p>
-                  </div>
+              <div class="recommend-item">
+                <div class="circle">
+                  <img 
+                    width="30" 
+                    src="~/assets/img/factor-analyst/main/item-circle.png" 
+                    alt="종목로고"
+                  >
                 </div>
+                <strong>{{ item.name }}</strong>
+                <p>추천되었어요.</p>
+              </div>
+              <div class="recommend-style">
+                {{ item.styleName }}
+              </div>
+              <div class="recommend-pagination">
+                <strong>{{ idx + 1 }}</strong>/<span>{{ items.length }}</span>
               </div>
             </button>
           </div>
         </div>
+      </div>
 
-        <div class="swiper-pagination"></div>
+      <div class="style-all">
+        <button>오늘의 스타일 추천 모두 보기</button>
       </div>
     </div>
   </section>
@@ -83,25 +54,23 @@
 import { onMounted } from 'vue'
 import '~/assets/css/factor-analyst/common.css'
 
-const slides = [
-  {
-    items: [
-      { name: '삼성전자삼성전자삼성전자삼성전자삼성전자', code: '055872', score: 95.3 },
-      { name: 'SK하이닉스', code: '000660', score: 88.5 },
-      { name: '현대차', code: '005380', score: 82.1 },
-      { name: '네이버', code: '035420', score: 79.4 },
-      { name: '카카오', code: '035720', score: 75.8 }
-    ]
-  },
-  {
-    items: [
-      { name: 'LG에너지솔루션', code: '373220', score: 91.2 },
-      { name: '삼성바이오로직스', code: '207940', score: 86.4 },
-      { name: '셀트리온', code: '068270', score: 84.5 },
-      { name: '기아', code: '000270', score: 80.1 },
-      { name: '포스코홀딩스', code: '005490', score: 77.3 }
-    ]
-  }
+// 15개 종목 데이터
+const items = [
+  { name: '삼성전자', code: '005930', score: 95.3, styleName: '황금코어 스타일' },
+  { name: 'SK하이닉스', code: '000660', score: 92.1, styleName: '황금코어 스타일' },
+  { name: '현대차현대차현대차현대차현대차', code: '005380', score: 89.5, styleName: '황금코어 스타일' },
+  { name: '네이버', code: '035420', score: 88.0, styleName: '황금코어 스타일' },
+  { name: '카카오', code: '035720', score: 86.4, styleName: '황금코어 스타일' },
+  { name: 'LG에너지솔루션', code: '373220', score: 85.1, styleName: '황금코어 스타일' },
+  { name: '삼성바이오로직스', code: '207940', score: 84.0, styleName: '황금코어 스타일' },
+  { name: '셀트리온', code: '068270', score: 82.9, styleName: '황금코어 스타일' },
+  { name: '기아', code: '000270', score: 81.5, styleName: '황금코어 스타일' },
+  { name: '포스코홀딩스', code: '005490', score: 80.2, styleName: '황금코어 스타일' },
+  { name: 'KB금융', code: '105560', score: 79.1, styleName: '황금코어 스타일' },
+  { name: '신한지주', code: '055550', score: 78.4, styleName: '황금코어 스타일' },
+  { name: '삼성물산', code: '028260', score: 77.0, styleName: '황금코어 스타일' },
+  { name: '현대모비스', code: '012330', score: 75.8, styleName: '황금코어 스타일' },
+  { name: '하나금융지주', code: '086790', score: 74.2, styleName: '황금코어 스타일' }
 ]
 
 // Swiper 인스턴스 초기화
@@ -123,11 +92,7 @@ onMounted(() => {
         new globalWithSwiper.Swiper('.recommendItemSwiper', {
           loop: false,
           slidesPerView: 1,
-          spaceBetween: 16,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
+          spaceBetween: 16
         })
         return 
       }

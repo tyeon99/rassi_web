@@ -124,4 +124,63 @@
 .factor-analyst .recommendResultContent__section--content .chart-box{
     @apply w-full h-full rounded-[12px] mt-4;
   }
+
+  /* 오늘의 스타일 추천 */
+  .factor-analyst .recommendTodayTop{
+    @apply w-full p-[16px_20px_12px] bg-[#F8F9FA] flex flex-col justify-end items-end gap-2;
+  }
+  .factor-analyst .recommendTodayTop .txt{
+    @apply w-full text-left font-normal text-sm text-main;
+  }
+  .factor-analyst .recommendTodayTop button{
+    @apply flex justify-end items-center;
+  }
+  .factor-analyst .recommendTodayTop button p{
+    @apply font-normal text-[13px] leading-[20px] text-gray;
+  }
+  .factor-analyst .recommendTodayContent{
+    @apply w-full py-6 px-5 flex flex-col justify-start items-start gap-4;
+  }
+  .factor-analyst .recommendTodayContent .txt{
+    @apply font-normal text-sm text-[#364350];
+  }
+  .factor-analyst .recommendTodayContent .box-group{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .factor-analyst .recommendTodayContent .box-group .box{
+    @apply w-full py-6 px-5 bg-white rounded-[20px] border border-[#DEE2E6] flex flex-col justify-start items-start gap-3;
+  }
+  .factor-analyst .recommendTodayContent .box-group .box .top{
+    @apply w-full flex justify-between items-center gap-2;
+  }
+  .factor-analyst .recommendTodayContent .box-group .box .top .left{
+    @apply flex justify-start items-center gap-3 min-w-0;
+  }
+  .factor-analyst .recommendTodayContent .box-group .box .top .left .circle{
+    @apply shrink-0;
+  }
+  .factor-analyst .recommendTodayContent .box-group .box .top .left .name{
+    @apply flex flex-col justify-start items-start w-full min-w-0;
+  }
+  .factor-analyst .recommendTodayContent .box-group .box .top .left .name strong{
+    @apply font-semibold text-base text-black w-full truncate;
+  }
+  .factor-analyst .recommendTodayContent .box-group .box .top .left .name span{
+    @apply font-normal text-xs leading-[18px] text-gray;
+  }
+  .factor-analyst .recommendTodayContent .box-group .box .top .right{
+    @apply font-normal text-sm text-[#364350] shrink-0;
+  }
+  .factor-analyst .recommendTodayContent .box-group .box .bottom{
+    @apply w-full flex justify-start items-center flex-wrap gap-4;
+  }
+  .factor-analyst .recommendTodayContent .box-group .box .bottom p{
+    @apply flex justify-start items-center gap-2;
+  }
+  .factor-analyst .recommendTodayContent .box-group .box .bottom p strong{
+    @apply font-semibold text-sm text-black;
+  }
+  .factor-analyst .recommendTodayContent .box-group .box .bottom p span{
+    @apply h-[22px]
+  }
 }
