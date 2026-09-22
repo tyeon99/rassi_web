@@ -51,11 +51,14 @@
 .factor-analyst .recommendItemSwiper, .recommendItemSwiper .swiper-slide{
     @apply w-full;
   }
-.factor-analyst .recommendItemSwiper .itemList .recommend-pagination{
-  @apply w-auto h-6 flex justify-center items-end absolute top-4 right-3 bg-main rounded-[8px] px-[13.5px] pb-[2.5px] font-normal text-xs leading-[18px] text-[#eee] m-0;
+.factor-analyst .today-recommend .recommend-pagination{
+  @apply w-[52px] h-6 flex justify-center items-end absolute top-4 right-3 left-auto bottom-auto bg-main rounded-[8px] pb-[2.5px] font-normal text-xs leading-[18px] text-[#eee] m-0;
 }
-.factor-analyst .recommendItemSwiper .itemList .recommend-pagination strong{
+.factor-analyst .today-recommend .recommend-pagination .swiper-pagination-current{
   @apply font-bold text-sm;
+}
+.factor-analyst .today-recommend{
+  @apply relative w-full bg-[#F0F0FF] py-4 px-3 flex flex-col justify-start items-start gap-2 rounded-[12px];
 }
 .factor-analyst .itemList{
     @apply w-full h-full rounded-[20px] p-4 text-left flex flex-col justify-start items-start;
@@ -72,8 +75,8 @@
 .factor-analyst .itemList .box-txt{
     @apply w-full font-normal text-sm text-gray mb-5;
   }
-  .factor-analyst .itemList .recommend-title{
-    @apply font-bold text-base text-main mb-2;
+  .factor-analyst .today-recommend .recommend-title{
+    @apply font-bold text-base text-main;
   }
   .factor-analyst .itemList .inner-box{
     @apply w-full rounded-[8px] bg-white p-3 flex flex-col justify-center items-center gap-2;
