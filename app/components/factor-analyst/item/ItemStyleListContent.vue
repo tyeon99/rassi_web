@@ -48,12 +48,13 @@
             class="list"
           >
             <div class="left">
-              <div class="circle">
-                <img 
+              <div class="circle circle01"> <!--circle01 ~ circle05까지 넣어주면 됩니다 !-->
+                <span>872</span>
+                <!-- <img 
                   width="30" 
                   src="~/assets/img/factor-analyst/main/item-circle.png" 
                   alt="종목로고"
-                >
+                > -->
               </div>
               <div class="name">
                 <p>{{ item.name }}</p>
