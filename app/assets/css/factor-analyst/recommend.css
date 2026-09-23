@@ -42,6 +42,9 @@
 .factor-analyst .recommendListContent__list .list button .bottom .item .left{
     @apply flex-1 flex justify-start items-center gap-[6px] min-w-0;
   }
+  .factor-analyst .recommendListContent__list .list button .bottom .item .left .circle{
+    @apply shrink-0 w-[20px] h-[20px] rounded-full flex justify-center items-center text-[8px] leading-[14px] text-white font-normal;
+  }
 .factor-analyst .recommendListContent__list .list button .bottom .item .left img {
   @apply shrink-0;
 }

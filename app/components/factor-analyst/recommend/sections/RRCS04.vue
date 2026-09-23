@@ -23,11 +23,14 @@
                 class="item"
               >
                 <div class="left">
-                  <img 
-                    width="20" 
-                    src="~/assets/img/factor-analyst/main/item-circle.png" 
-                    alt="종목 아이콘"
-                  >
+                  <div class="circle circle01"> <!--circle01 ~ circle05-->
+                    <span>872</span>
+                    <!-- <img 
+                      width="20" 
+                      src="~/assets/img/factor-analyst/main/item-circle.png" 
+                      alt="종목 아이콘"
+                    > -->
+                  </div>
                   <p>{{ item.name }}</p>
                 </div>
                 <div class="right">

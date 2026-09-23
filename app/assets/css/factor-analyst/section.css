@@ -151,6 +151,12 @@
 .factor-analyst .listGroup.masking .list .circle.circle04 { @apply bg-[#DF9CAC]; }
 .factor-analyst .listGroup.masking .list .circle.circle05 { @apply bg-[#9DACBA]; }
 
+.factor-analyst .recommendListContent__list .list.masking button .bottom .item .left .circle.circle01{ @apply bg-[#BCBCBC]; }
+.factor-analyst .recommendListContent__list .list.masking button .bottom .item .left .circle.circle02 { @apply bg-white text-[#968989] }
+.factor-analyst .recommendListContent__list .list.masking button .bottom .item .left .circle.circle03 { @apply bg-[#BCB5EB]; }
+.factor-analyst .recommendListContent__list .list.masking button .bottom .item .left .circle.circle04 { @apply bg-[#DF9CAC]; }
+.factor-analyst .recommendListContent__list .list.masking button .bottom .item .left .circle.circle05 { @apply bg-[#9DACBA]; }
+
   /* 날짜별 추천 스타일+ */
 .factor-analyst .dateList{
     @apply w-full flex flex-col justify-start items-start mb-5;
