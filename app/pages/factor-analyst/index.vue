@@ -12,7 +12,9 @@
       <!-- // -->
 
         <!-- 오늘의 추천 스타일 스켈레톤 UI -->
-        <!-- <TodayRecommendSkeleton /> -->
+        <TodayRecommendSkeleton />
+        <!-- 최근 스타일 추천 종목 스켈레톤 UI -->
+        <DateRecommendSkeleton />
 
       <TodayRecommend />
       <DateRecommend />
@@ -53,7 +55,8 @@ import AllStyle from '~/components/factor-analyst/main/AllStyle.vue'
 import FreePaymentOffcanvas from '~/components/factor-analyst/offcanvas/FreePaymentOffcanvas.vue'
 import UnderPaymentOffcanvas from '~/components/factor-analyst/offcanvas/UnderPaymentOffcanvas.vue'
 import OverPaymentOffcanvas from '~/components/factor-analyst/offcanvas/OverPaymentOffcanvas.vue'
-// import TodayRecommendSkeleton from '~/components/factor-analyst/main/TodayRecommendSkeleton.vue'
+import TodayRecommendSkeleton from '~/components/factor-analyst/main/TodayRecommendSkeleton.vue'
+import DateRecommendSkeleton from '~/components/factor-analyst/main/DateRecommendSkeleton.vue'
 
 const isFreePaymentOffcanvasOpen = ref(false)
 const isUnderPaymentOffcanvasOpen = ref(false)

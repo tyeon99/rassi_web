@@ -18,7 +18,7 @@
     @apply font-bold text-black text-lg;
   }
 .factor-analyst .mainSection__title .date{
-    @apply block font-normal text-xs text-gray mb-1;
+    @apply block font-normal text-xs text-gray;
   }
 .factor-analyst .mainSection__title em, .mainSection__title button{
     @apply font-normal text-[13px] leading-5 text-gray flex justify-start items-center gap-0.5;
@@ -222,7 +222,7 @@
     @apply w-full mt-4;
   }
 .factor-analyst .style-all button{
-    @apply w-full h-[46px] rounded-[8px] border border-[#DEE2E6] text-[#364350] font-normal text-base;
+    @apply w-full h-[46px] rounded-[8px] border border-[#DEE2E6] text-[#364350] font-normal text-base flex justify-center items-center;
   }
   /* 추천 스타일 기록 */
 .factor-analyst .record{

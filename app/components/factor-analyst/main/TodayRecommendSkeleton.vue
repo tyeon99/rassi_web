@@ -1,111 +1,31 @@
 <template>
   <section class="mainSection">
-    <div class="mainSection__title items-start">
-      <h2>
-        <span class="skeleton"></span>
-        <!-- 오늘의 추천 스타일 패스 -->
-        <p class="skeleton"></p>
-      </h2>
-      <button>
-        <img width="24" src="~/assets/img/factor-analyst/main/detail-btn.png" alt="상세보기 버튼">
-      </button>
+    <div class="mainSection__title !mb-2">
+      <h2 class="skeleton"></h2>
+      <span class="date skeleton"></span>
     </div>
+    <div class="mainSection__txt skeleton"></div>
+
     <div class="mainSection__content">
-      <button class="itemList box01">
-        <div class="box-title skeleton"></div>
-        <div class="box-txt !mb-[30px]">
-          <p class="skeleton bt01"></p>
-          <p class="skeleton bt02"></p>
-        </div>
-
-        <div class="listGroup">
-          <div class="list">
-
-            <div class="left">
-              <div class="circle">
-                <img width="30" src="~/assets/img/factor-analyst/main/item-circle_no.png" alt="종목로고 디폴트">
-              </div>
-              <div class="name">
-                <p class="skeleton w-20"></p>
-                <span class="skeleton"></span>
-              </div>
-            </div>
-
-            <div class="right">
-              <span class="skeleton"></span>
-              <p class="skeleton"></p>
+      <div class="today-recommend">
+        <div class="recommend-title skeleton"></div>
+        <div class="recommend-pagination skeleton"></div>
+        <button class="itemList !p-0">
+          <div class="inner-box">
+            <div class="recommend-style skeleton"></div>
+            <div class="recommend-item">
+              <div class="circle skeleton"></div>
+              <strong class="skeleton"></strong>
             </div>
           </div>
-          <div class="list">
+        </button>
+      </div>
 
-            <div class="left">
-              <div class="circle">
-                <img width="30" src="~/assets/img/factor-analyst/main/item-circle_no.png" alt="종목로고 디폴트">
-              </div>
-              <div class="name">
-                <p class="skeleton w-24"></p>
-                <span class="skeleton"></span>
-              </div>
-            </div>
-
-            <div class="right">
-              <span class="skeleton"></span>
-              <p class="skeleton"></p>
-            </div>
-          </div>
-          <div class="list">
-
-            <div class="left">
-              <div class="circle">
-                <img width="30" src="~/assets/img/factor-analyst/main/item-circle_no.png" alt="종목로고 디폴트">
-              </div>
-              <div class="name">
-                <p class="skeleton w-16"></p>
-                <span class="skeleton"></span>
-              </div>
-            </div>
-
-            <div class="right">
-              <span class="skeleton"></span>
-              <p class="skeleton"></p>
-            </div>
-          </div>
-          <div class="list">
-
-            <div class="left">
-              <div class="circle">
-                <img width="30" src="~/assets/img/factor-analyst/main/item-circle_no.png" alt="종목로고 디폴트">
-              </div>
-              <div class="name">
-                <p class="skeleton w-20"></p>
-                <span class="skeleton"></span>
-              </div>
-            </div>
-
-            <div class="right">
-              <span class="skeleton"></span>
-              <p class="skeleton"></p>
-            </div>
-          </div>
-          <div class="list">
-
-            <div class="left">
-              <div class="circle">
-                <img width="30" src="~/assets/img/factor-analyst/main/item-circle_no.png" alt="종목로고 디폴트">
-              </div>
-              <div class="name">
-                <p class="skeleton w-28"></p>
-                <span class="skeleton"></span>
-              </div>
-            </div>
-
-            <div class="right">
-              <span class="skeleton"></span>
-              <p class="skeleton"></p>
-            </div>
-          </div>
-        </div>
-      </button>
+      <div class="style-all">
+        <button>
+          <p class="skeleton"></p>
+        </button>
+      </div>
     </div>
 
   </section>

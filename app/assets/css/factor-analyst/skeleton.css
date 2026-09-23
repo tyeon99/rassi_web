@@ -25,11 +25,29 @@
   }
 
   /* 메인 (오늘의 추천 스타일 패스) */
-  .factor-analyst .mainSection__title h2 span.skeleton {
-    @apply w-[90px] h-[14px] mb-[6px];
+  .factor-analyst .mainSection__title h2.skeleton {
+    @apply w-[140px] h-[28px];
   }
-  .factor-analyst .mainSection__title h2 p.skeleton {
-    @apply h-[24px] w-[170px] mb-1;
+  .factor-analyst .mainSection__title span.skeleton {
+    @apply h-[16px] w-[85px];
+  }
+  .factor-analyst .mainSection__txt.skeleton{
+    @apply w-[320px] h-[20px];
+  }
+  .factor-analyst .today-recommend .recommend-title.skeleton{
+    @apply w-[100px] h-[24px];
+  }
+  .factor-analyst .itemList .recommend-style.skeleton{
+    @apply w-[200px] h-[20px];
+  }
+  .factor-analyst .itemList .recommend-item .circle.skeleton{
+    @apply w-[30px] h-[30px];
+  }
+  .factor-analyst .itemList .recommend-item strong.skeleton{
+    @apply w-[120px] h-[28px];
+  }
+  .factor-analyst .style-all button p.skeleton{
+    @apply w-[180px] h-[24px];
   }
   .factor-analyst .itemList .box-title.skeleton {
     @apply w-[200px] h-[24px] mb-[14px];
@@ -51,6 +69,15 @@
   }
   .factor-analyst .listGroup .list .right p.skeleton {
     @apply w-[50px] h-[18px] mt-2;
+  }
+  .factor-analyst .current-recommend .box .title.skeleton{
+    @apply w-[90px] h-[23px];
+  }
+  .factor-analyst .current-recommend .box .txt p.skeleton{
+    @apply w-[45px] h-[18px];
+  }
+  .factor-analyst .current-recommend .box .txt strong.skeleton{
+    @apply w-[68px] h-[20px] mt-1;
   }
   .factor-analyst .itemStyleContent__top .item p.skeleton {
     @apply w-[120px] h-[32px];
