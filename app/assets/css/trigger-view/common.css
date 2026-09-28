@@ -37,7 +37,7 @@
     @apply flex;
   }
   .trigger-view .mainHeader .right button{
-    @apply font-normal text-xs text-gray underline;
+    @apply font-normal text-xs text-gray;
   }
   /* 닫기 헤더 */
   .trigger-view .closeHeader{
