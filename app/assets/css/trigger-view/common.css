@@ -336,6 +336,52 @@
     @apply font-normal text-base text-black;
   }
 
+  /* offcanvas */
+  .trigger-view .offcanvas-overlay {
+    @apply fixed inset-0 bg-black/50 z-[999] flex justify-end items-end;
+  }
+  .trigger-view .offcanvas-content {
+    @apply w-full max-w-full bg-white p-5 flex flex-col justify-start items-stretch shadow-2xl pt-[10px];
+  }
+  .trigger-view .offcanvas-close {
+    @apply w-full flex justify-end items-center py-2;
+  }
+  .trigger-view .offcanvas-body{
+    @apply w-full;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .trigger-view .offcanvas-body::-webkit-scrollbar{
+    display: none;
+  }
+  .trigger-view .offcanvas-content.guideOffcanvas{
+    @apply max-h-[calc(100dvh-60px)] rounded-t-[20px] pb-0;
+  }
+  .trigger-view .guideOffcanvas .offcanvas-body{
+    @apply overflow-auto flex-1 min-h-0 flex flex-col justify-start items-start gap-4 pb-5;
+  }
+  .trigger-view .guideOffcanvas .offcanvas-header{
+    @apply w-full flex justify-end items-center;
+  }
+  .trigger-view .guideOffcanvas .offcanvas-body .title{
+    @apply w-full flex justify-start items-center gap-[6px];
+  }
+  .trigger-view .guideOffcanvas .offcanvas-body .title p{
+    @apply font-bold text-lg text-[#364350];
+  }
+  .trigger-view .guideOffcanvas .offcanvas-body .box-group{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .trigger-view .guideOffcanvas .offcanvas-body .box-group .box{
+    @apply w-full flex flex-col justify-start items-start gap-[5px] border border-[#D2D2D2] rounded-[16px] p-4;
+  }
+  .trigger-view .guideOffcanvas .offcanvas-body .box-group .box strong{
+    @apply font-bold text-base text-black;
+  }
+  .trigger-view .guideOffcanvas .offcanvas-body .box-group .box p{
+    @apply font-normal text-base text-black;
+  }
+
   /* 스켈레톤 UI */
   .trigger-view .skeleton {
     border-radius: 20px;
