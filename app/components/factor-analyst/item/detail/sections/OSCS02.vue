@@ -1,67 +1,88 @@
 <template>
   <div class="content-section">
     <div class="title">
-      <span>고점 대비로는 얼마나 빠졌을까?</span>
-      <h1>고점 대비 하락폭은?</h1>
+      <span>최근 주가는 고점과 저점 중 어디에 가까울까?</span>
+      <h1>주가 위치는?</h1>
     </div>
 
-    <div class="list">
-      <div class="gpa-title">
-        <p>최근 1개월 고점 대비 많이 빠졌을까?</p>
-        <!-- <span>86.2</span> -->
-      </div>
-      <div class="gpa-txt !mb-0">
-        최근 1개월 고점 대비 <strong>-18.5%</strong> 하락했고, 저점 대비로는 <strong>+3.1%</strong> 반등한 상태예요.
-      </div>
-    </div>
-
-    <div class="list">
-      <div class="gpa-title">
-        <p>최근 3개월로 보면 낙폭이 더 클까?</p>
-        <!-- <span>86.2</span> -->
-      </div>
-      <div class="gpa-txt !mb-0">
-        최근 3개월 고점 대비 <strong>-22.0%</strong> 하락했고, 저점 대비로는 <strong>+5.4%</strong> 반등한 상태예요.
+    <div class="box-group">
+      <div 
+        v-for="(item, idx) in rateList" 
+        :key="idx" 
+        class="box"
+      >
+        <div class="box-title">
+          <span>Q</span>
+          <p>{{ item.question }}</p>
+        </div>
+        <div class="inner-box">
+          <p v-html="item.description"></p>
+        </div>
       </div>
     </div>
 
     <div class="list-group">
       <div 
-        v-for="(item, idx) in itemList" 
-        :key="idx" 
+        v-for="(group, gIdx) in locationGroups" 
+        :key="gIdx" 
         class="list"
       >
         <div class="gray-box">
           <div class="box-title">
-            <strong>{{ item.title }}</strong>
-            <p>{{ item.subTitle }}</p>
+            <strong>{{ group.title }}</strong>
           </div>
 
           <div class="period-group">
-            <div
-              v-for="(group, gIdx) in item.periodGroups"
-              :key="gIdx"
-              class="range-group"
+            <div 
+              v-for="(item, idx) in group.periodList" 
+              :key="idx" 
+              class="period-box"
             >
-              <span class="period">{{ group.period }}</span>
-              <div 
-                v-for="(range, rIdx) in group.ranges" 
-                :key="rIdx" 
-                class="range-wrap"
-              >
-                <div class="txt mb-1">
-                  <p>{{ range.label }}</p>
-                  <strong>{{ range.val }}</strong>
-                </div>
-                <div class="range">
-                  <div class="bar"></div>
-                  <div class="score" :style="{ width: `${range.score}%` }"></div>
-                </div>
-              </div>
-            </div>
-          </div>
+              <span class="period">{{ item.period }}</span>
+              
+              <div class="range-box">
+                <div class="box-txt" v-html="item.marketTxt"></div>
 
+                <div class="range-wrap">
+                  <div class="txt mb-1">
+                    <p>전체 시장</p>
+                    <strong>백분위 : {{ item.marketPercentile }}</strong>
+                  </div>
+                  <div class="range">
+                    <div class="bar">
+                      <span class="avg"></span>
+                    </div>
+                    <div class="score" :style="{ width: `${item.marketPercentile}%` }"></div>
+                  </div>
+                  <div class="txt">
+                    <span>하위</span>
+                    <span>평균 {{ item.marketAvg }}</span>
+                    <span>상위</span>
+                  </div>
+                </div> <!-- range-wrap -->
+              </div> <!-- range-box -->
 
+              <div class="range-box">
+                <div class="box-txt" v-html="item.sectorTxt"></div>
+
+                <div class="range-wrap">
+                  <div class="txt mb-1">
+                    <p>{{ item.sectorName }}</p>
+                    <strong>백분위 : {{ item.sectorPercentile }}</strong>
+                  </div>
+                  <div class="range">
+                    <div class="bar"></div>
+                    <div class="score" :style="{ width: `${item.sectorPercentile}%` }"></div>
+                  </div>
+                  <div class="txt">
+                    <span>하위</span>
+                    <span>상위</span>
+                  </div>
+                </div> <!-- range-wrap -->
+              </div> <!-- range-box -->
+
+            </div> <!-- period-box -->
+          </div> <!-- period-group -->
 
         </div>
       </div>
@@ -74,67 +95,61 @@
 import { ref } from 'vue'
 import '~/assets/css/factor-analyst/common.css'
 
-const itemList = ref([
+const rateList = [
   {
-    title: '전체 시장과 비교하면?',
-    subTitle: '전체 종목 중 SK하이닉스보다 고점 대비 하락폭이 작았던 종목의 비율, 그리고 저점 대비 반등폭이 작았던 종목의 비율',
-    isScore: false,
-    periodGroups: [
+    question: '최근 1개월 주가 위치는?',
+    description: 'SK하이닉스의 최근 1개월 주가는 고점 대비 -12.5%, 저점 대비 +8.3% 수준이에요.'
+  },
+  {
+    question: '최근 3개월 주가 위치는?',
+    description: 'SK하이닉스의 최근 3개월 주가는 고점 대비 -12.5%, 저점 대비 +8.3% 수준이에요.'
+  }
+]
+
+const locationGroups = ref([
+  {
+    title: '다른 종목과 비교해서 최근 1개월 주가 위치는?',
+    periodList: [
       {
-        period: '1개월',
-        ranges: [
-          { label: '고점대비 하락 전체', val: '91.2', score: 91.2 },
-          { label: '저점대비 반등 전체', val: '91.2', score: 91.2 }
-        ]
+        period: '고점 대비 하락',
+        marketTxt: '전체 종목과 비교해서 SK하이닉스의 최근 1개월 고점 대비 하락은 <strong>하위 12.2%</strong> 수준이고, SK하이닉스가 속한 정보기술 섹터의 평균은 <strong>68</strong>이에요.',
+        marketPercentile: 54.2,
+        marketAvg: 68,
+        sectorName: '정보기술 섹터',
+        sectorTxt: '정보기술 섹터 종목과 비교해서 SK하이닉스의 최근 1개월 고점 대비 하락은 <strong>중간</strong> 수준이에요.',
+        sectorPercentile: 28.2
       },
       {
-        period: '3개월',
-        ranges: [
-          { label: '고점대비 하락 전체', val: '91.2', score: 91.2 },
-          { label: '저점대비 반등 전체', val: '91.2', score: 91.2 }
-        ]
+        period: '저점 대비 상승',
+        marketTxt: '전체 종목과 비교해서 SK하이닉스의 최근 1개월 저점 대비 상승은 <strong>하위 12.2%</strong>이고, SK하이닉스가 속한 정보기술 섹터의 평균은 <strong>68</strong>이에요.',
+        marketPercentile: 54.2,
+        marketAvg: 68,
+        sectorName: '정보기술 섹터',
+        sectorTxt: '정보기술 섹터 종목과 비교해서 SK하이닉스의 최근 1개월 저점 대비 상승은 <strong>중간</strong> 수준이에요.',
+        sectorPercentile: 28.2
       }
     ]
   },
   {
-    title: 'SK하이닉스가 속한 반도체 업종의 평균 스코어는?',
-    subTitle: '반도체 업종 (총 32종목)에 속한 종목들의 평균 스코어',
-    isScore: false,
-    periodGroups: [
+    title: '다른 종목과 비교해서 최근 3개월 주가 위치는?',
+    periodList: [
       {
-        period: '1개월',
-        ranges: [
-          { label: '고점대비 하락 업종평균', val: '85.0', score: 85.0 },
-          { label: '저점대비 반등 업종평균', val: '78.4', score: 78.4 }
-        ]
+        period: '고점 대비 하락',
+        marketTxt: '전체 종목과 비교해서 SK하이닉스의 최근 3개월 고점 대비 하락은 <strong>하위 12.2%</strong>이고, SK하이닉스가 속한 정보기술 섹터의 평균은 <strong>68</strong>이에요.',
+        marketPercentile: 54.2,
+        marketAvg: 68,
+        sectorName: '정보기술 섹터',
+        sectorTxt: '정보기술 섹터 종목과 비교해서 SK하이닉스의 최근 3개월 고점 대비 하락은 <strong>중간</strong> 수준이에요.',
+        sectorPercentile: 28.2
       },
       {
-        period: '3개월',
-        ranges: [
-          { label: '고점대비 하락 업종평균', val: '88.2', score: 88.2 },
-          { label: '저점대비 반등 업종평균', val: '80.1', score: 80.1 }
-        ]
-      }
-    ]
-  },
-  {
-    title: '같은 업종과 비교하면?',
-    subTitle: '반도체 업종 안에서 SK하이닉스보다 고점 대비 하락폭이 작았던 종목의 비율, 그리고 저점 대비 반등폭이 작았던 종목의 비율',
-    isScore: false,
-    periodGroups: [
-      {
-        period: '1개월',
-        ranges: [
-          { label: '고점대비 하락 업종', val: '76.2', score: 76.2 },
-          { label: '저점대비 반등 업종', val: '70.5', score: 70.5 }
-        ]
-      },
-      {
-        period: '3개월',
-        ranges: [
-          { label: '고점대비 하락 업종', val: '81.0', score: 81.0 },
-          { label: '저점대비 반등 업종', val: '73.2', score: 73.2 }
-        ]
+        period: '저점 대비 상승',
+        marketTxt: '전체 종목과 비교해서 SK하이닉스의 최근 3개월 저점 대비 상승은 <strong>하위 12.2%</strong>이고, SK하이닉스가 속한 정보기술 섹터의 평균은 <strong>68</strong>이에요.',
+        marketPercentile: 54.2,
+        marketAvg: 68,
+        sectorName: '정보기술 섹터',
+        sectorTxt: '정보기술 섹터 종목과 비교해서 SK하이닉스의 최근 3개월 저점 대비 상승은 <strong>중간</strong> 수준이에요.',
+        sectorPercentile: 28.2
       }
     ]
   }

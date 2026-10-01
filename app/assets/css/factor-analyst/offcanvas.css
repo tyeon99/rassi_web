@@ -9,7 +9,7 @@
 .factor-analyst .offcanvas-content {
     @apply w-full max-w-full bg-white p-5 flex flex-col justify-start items-stretch shadow-2xl pt-[10px];
   }
-.factor-analyst .offcanvas-close {
+.factor-analyst .offcanvas-close, .factor-analyst .modal-close {
     @apply w-full flex justify-end items-center py-2;
   }
 .factor-analyst .offcanvas-body{
@@ -22,17 +22,20 @@
   }
   .factor-analyst .offcanvas-overlay.itemStyleListOffcanvas, 
   .factor-analyst .offcanvas-overlay.paymentOffcanvas, 
-  .factor-analyst .offcanvas-overlay.recommendInfoOffcanvas {
+  .factor-analyst .offcanvas-overlay.recommendInfoOffcanvas,
+  .factor-analyst .offcanvas-overlay.itemStyleDetailOffcanvas {
     @apply items-end;
   }
   .factor-analyst .offcanvas-content.itemStyleListOffcanvas, 
   .factor-analyst .offcanvas-content.paymentOffcanvas, 
-  .factor-analyst .offcanvas-content.recommendInfoOffcanvas {
+  .factor-analyst .offcanvas-content.recommendInfoOffcanvas,
+  .factor-analyst .offcanvas-content.itemStyleDetailOffcanvas {
     @apply max-h-[90%] rounded-t-[20px];
   }
   .factor-analyst .itemStyleListOffcanvas .offcanvas-body, 
   .factor-analyst .paymentOffcanvas .offcanvas-body, 
-  .factor-analyst .recommendInfoOffcanvas .offcanvas-body {
+  .factor-analyst .recommendInfoOffcanvas .offcanvas-body,
+  .factor-analyst .itemStyleDetailOffcanvas .offcanvas-body {
     @apply overflow-auto;
   }
 .factor-analyst .itemStyleListOffcanvas .body-top{
@@ -89,6 +92,39 @@
   }
 .factor-analyst .recommendInfoOffcanvas .offcanvas-body .guide{
     @apply font-normal text-base text-gray;
+  }
+  .factor-analyst .offcanvas-content.itemStyleDetailOffcanvas{
+    @apply pb-0;
+  }
+  .factor-analyst .itemStyleDetailOffcanvas .offcanvas-body{
+    @apply w-full flex flex-col justify-start items-start gap-5 pb-5;
+  }
+  .factor-analyst .itemStyleDetailOffcanvas .offcanvas-body .txt-group {
+    @apply w-full flex flex-col justify-start items-start gap-[10px];
+  }
+  .factor-analyst .itemStyleDetailOffcanvas .offcanvas-body .txt-group strong{
+    @apply font-bold text-lg text-[#364350];
+  }
+  .factor-analyst .itemStyleDetailOffcanvas .offcanvas-body .txt-group p{
+    @apply font-normal text-base text-[#364350];
+  }
+  .factor-analyst .itemStyleDetailOffcanvas .offcanvas-body .txt-group p strong{
+    @apply text-base;
+  }
+  .factor-analyst .itemStyleDetailOffcanvas .offcanvas-body .txt-group .txt-box{
+    @apply w-full flex flex-col justify-start items-start gap-1;
+  }
+  .factor-analyst .itemStyleDetailOffcanvas .offcanvas-body .txt-group .box{
+    @apply w-full p-4 bg-[#F5F7F9] rounded-[12px];
+  }
+  .factor-analyst .itemStyleDetailOffcanvas .offcanvas-body .txt-group .box button{
+    @apply w-full flex justify-between items-center text-left py-3 border-b border-[#DEE2E6] first:pt-0 last:pb-0 last:border-none;
+  }
+  .factor-analyst .itemStyleDetailOffcanvas .offcanvas-body .txt-group .box button .txt{
+    @apply flex flex-col justify-start items-start gap-[3px];
+  }
+  .factor-analyst .itemStyleDetailOffcanvas .offcanvas-body .txt-group .box button .txt strong{
+    @apply font-semibold text-base text-black;
   }
 .factor-analyst .paymentOffcanvas .offcanvas-body{
     @apply w-full flex flex-col justify-start items-start gap-[30px] pb-[84px];
@@ -153,5 +189,28 @@
   }
 .factor-analyst .paymentOffcanvas .offcanvas-footer button{
     @apply w-full h-[54px] rounded-[12px] bg-main font-semibold text-base text-white;
+  }
+
+  /* modal */
+  .factor-analyst .modal-overlay.itemStyleDetailModal {
+    @apply fixed top-0 left-0 right-0 bottom-0 bg-[rgba(0,0,0,0.5)] flex justify-center items-center z-[9999] p-3;
+  }
+  .factor-analyst .modal-content.itemStyleDetailModal {
+    @apply w-full bg-white shadow-2xl rounded-[25px] p-[30px_20px] pt-2;
+  }
+  .factor-analyst .itemStyleDetailModal .modal-body{
+    @apply w-full;
+  }
+  .factor-analyst .itemStyleDetailModal .modal-body .txt-group{
+    @apply w-full flex flex-col justify-start items-start gap-[10px];
+  }
+  .factor-analyst .itemStyleDetailModal .modal-body .txt-group strong{
+    @apply font-bold text-lg text-[#364350];
+  }
+  .factor-analyst .itemStyleDetailModal .modal-body .txt-group .txt-box{
+    @apply w-full;
+  }
+  .factor-analyst .itemStyleDetailModal .modal-body .txt-group .txt-box p{
+    @apply font-normal text-base text-[#364350];
   }
 }

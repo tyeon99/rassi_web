@@ -5,56 +5,80 @@
       <h1>공급안정성은?</h1>
     </div>
 
-    <div class="list">
-      <div class="gpa-title">
-        <p>공매도 잔고가 많이 쌓여있을까?</p>
-        <span>86.2</span>
-      </div>
-      <div class="gpa-txt !mb-0">
-        공매도잔고율은 <strong>1.8%</strong>로 낮은 편이에요. <br />
-        (낮을수록 공급 부담이 적어요)
-      </div>
-    </div>
-
-    <div class="list">
-      <div class="gpa-title">
-        <p>대차잔고가 많이 쌓여있을까?</p>
-        <span>86.2</span>
-      </div>
-      <div class="gpa-txt !mb-0">
-        대차잔고율은 <strong>2.3%</strong>로 낮은 편이에요.<br />
-        (낮을수록 공급 부담이 적어요)
+    <div class="box-group">
+      <div 
+        v-for="(item, idx) in rateList" 
+        :key="idx" 
+        class="box"
+      >
+        <div class="box-title">
+          <span>Q</span>
+          <p>{{ item.question }}</p>
+        </div>
+        <div class="inner-box">
+          <p v-html="item.description"></p>
+        </div>
       </div>
     </div>
 
     <div class="list-group">
-      <div 
-        v-for="(item, idx) in itemList" 
-        :key="idx" 
-        class="list"
-      >
+      <div class="list">
         <div class="gray-box">
           <div class="box-title">
-            <strong>{{ item.title }}</strong>
-            <p>{{ item.subTitle }}</p>
+            <strong>다른 종목들과 비교해서 공급안정성은 어느 정도일까?</strong>
           </div>
 
-          <div 
-            v-for="(range, rIdx) in item.ranges" 
-            :key="rIdx" 
-            class="range-wrap"
-          >
-            <div class="txt mb-1">
-              <p>{{ range.label }}</p>
-              <strong>{{ range.val }}</strong>
-            </div>
-            <div class="range">
-              <div class="bar"></div>
-              <div class="score" :style="{ width: `${range.score}%` }"></div>
-            </div>
-          </div>
+          <div class="period-group">
+            <div 
+              v-for="(item, idx) in periodList" 
+              :key="idx" 
+              class="period-box"
+            >
+              <span class="period">{{ item.period }}</span>
+              
+              <div class="range-box">
+                <div class="box-txt" v-html="item.marketTxt"></div>
 
+                <div class="range-wrap">
+                  <div class="txt mb-1">
+                    <p>전체 시장</p>
+                    <strong>백분위 : {{ item.marketPercentile }}</strong>
+                  </div>
+                  <div class="range">
+                    <div class="bar">
+                      <span class="avg"></span>
+                    </div>
+                    <div class="score" :style="{ width: `${item.marketPercentile}%` }"></div>
+                  </div>
+                  <div class="txt">
+                    <span>하위</span>
+                    <span>평균 {{ item.marketAvg }}</span>
+                    <span>상위</span>
+                  </div>
+                </div> <!-- range-wrap -->
+              </div> <!-- range-box -->
 
+              <div class="range-box">
+                <div class="box-txt" v-html="item.sectorTxt"></div>
+
+                <div class="range-wrap">
+                  <div class="txt mb-1">
+                    <p>{{ item.sectorName }}</p>
+                    <strong>백분위 : {{ item.sectorPercentile }}</strong>
+                  </div>
+                  <div class="range">
+                    <div class="bar"></div>
+                    <div class="score" :style="{ width: `${item.sectorPercentile}%` }"></div>
+                  </div>
+                  <div class="txt">
+                    <span>하위</span>
+                    <span>상위</span>
+                  </div>
+                </div> <!-- range-wrap -->
+              </div> <!-- range-box -->
+
+            </div> <!-- period-box -->
+          </div> <!-- period-group -->
 
         </div>
       </div>
@@ -67,33 +91,35 @@
 import { ref } from 'vue'
 import '~/assets/css/factor-analyst/common.css'
 
-const itemList = ref([
+const rateList = [
   {
-    title: '전체 시장과 비교하면?',
-    subTitle: '전체 종목 중 SK하이닉스보다 공매도잔고율이 낮았던 종목의 비율, 그리고 대차잔고율이 낮았던 종목의 비율',
-    isScore: false,
-    ranges: [
-      { label: '공매도잔고율 전체', val: '91.2', score: 91.2 },
-      { label: '대차잔고율 전체', val: '91.2', score: 91.2 }
-    ]
+    question: '공매도 잔고가 얼마일까?',
+    description: '유동시가총액 대비 공매도 잔고는 <strong class="up">1.8%</strong> 수준이에요.<br />낮을수록 공매도 잔고 부담이 적어요.'
   },
   {
-    title: 'SK하이닉스가 속한 반도체 업종의 평균 스코어는?',
-    subTitle: '반도체 업종 (총 32종목)에 속한 종목들의 평균 스코어',
-    isScore: true, 
-    ranges: [
-      { label: '공매도잔고율 업종평균', val: '85.4', score: 85.4 },
-      { label: '대차잔고율 업종평균', val: '88.0', score: 88.0 }
-    ]
+    question: '대차 잔고가 얼마일까?',
+    description: '유동시가총액 대비 대차 잔고는 <strong class="up">3.2%</strong> 수준이에요.<br />낮을수록 대차 잔고 부담이 적어요.'
+  }
+]
+
+const periodList = ref([
+  {
+    period: '공매도',
+    marketTxt: '전체 종목과 비교해서 SK하이닉스의 공매도 잔고율은 <strong>하위 72%</strong> 수준이고, SK하이닉스가 속한 정보기술 섹터의 평균은 <strong>68</strong>이에요.',
+    marketPercentile: 28,
+    marketAvg: 68,
+    sectorName: '정보기술 섹터',
+    sectorTxt: '정보기술 섹터 종목과 비교해서 SK하이닉스의 공매도 잔고율은 <strong>하위 72%</strong> 수준이에요.',
+    sectorPercentile: 28
   },
   {
-    title: '같은 업종과 비교하면?',
-    subTitle: '반도체 업종 안에서 SK하이닉스보다 공매도잔고율이 낮았던 종목의 비율, 그리고 대차잔고율이 낮았던 종목의 비율',
-    isScore: false,
-    ranges: [
-      { label: '공매도잔고율 업종', val: '74.5', score: 74.5 },
-      { label: '대차잔고율 업종', val: '80.1', score: 80.1 }
-    ]
+    period: '대차',
+    marketTxt: '전체 종목과 비교해서 SK하이닉스의 대차 잔고율은 <strong>하위 72%</strong> 수준이고, SK하이닉스가 속한 정보기술 섹터의 평균은 <strong>68</strong>이에요.',
+    marketPercentile: 28,
+    marketAvg: 68,
+    sectorName: '정보기술 섹터',
+    sectorTxt: '정보기술 섹터 종목과 비교해서 SK하이닉스의 대차 잔고율은 <strong>하위 72%</strong> 수준이에요.',
+    sectorPercentile: 28
   }
 ])
 </script>

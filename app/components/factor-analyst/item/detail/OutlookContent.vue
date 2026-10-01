@@ -1,8 +1,12 @@
 <template>
   <div class="itemStyleDetailContent">
     <div class="content-top">
-      <div class="title">
+      <div class="top-title">
         <h1>미래전망</h1>
+        <button @click="openItemStyleDetailOffcanvas">
+          <span>미래전망은?</span>
+          <img width="20" src="~/assets/img/factor-analyst/item/question-icon.png">
+        </button>
       </div>
 
       <div class="top-box">
@@ -35,25 +39,25 @@
             <span>전망 상향</span>
           </div>
         </div>
+
         <div class="inner-box">
           <p>시장 전망치가 꾸준히 상향되고 있는 종목이에요.</p>
-          <button>
-            <p>전망 상향 종목 모두 보기</p>
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M7.5 12.75L11.25 9L7.5 5.25" stroke="#D3D3D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </button>
         </div>
+
         <div class="inner-box no-signal">
           <img width="20" src="~/assets/img/factor-analyst/detail/no-icon.png" alt="신호 없음">
           <p>종목 스타일 신호가 발생하지 않았습니다.</p>
+        </div>
+
+        <div class="box-bottom">
           <button>
-            <p>전망 상향 종목 모두 보기</p>
+            <p>전망 상향 종목 [123]개 보기</p>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M7.5 12.75L11.25 9L7.5 5.25" stroke="#D3D3D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </button>
         </div>
+
       </div>
 
       <div class="txt-box">
@@ -70,6 +74,11 @@
       <OCS01 />
       <OCS02 />
     </div>
+    <ItemStyleDetailOffcanvas 
+      v-if="isItemStyleDetailOffcanvasOpen"
+      :isOffcanvasAni="isOffcanvasAni"
+      @close-itemStyleDetailOffcanvas="closeItemStyleDetailOffcanvas"
+    />
   </div>
 </template>
 
@@ -77,18 +86,34 @@
 import OCS01 from '~/components/factor-analyst/item/detail/sections/OCS01.vue'
 import OCS02 from '~/components/factor-analyst/item/detail/sections/OCS02.vue'
 import NODATA from '~/components/factor-analyst/item/detail/sections/NODATA.vue'
+import { ref, watch } from 'vue'
+import '~/assets/css/factor-analyst/common.css'
+import ItemStyleDetailOffcanvas from '~/components/factor-analyst/offcanvas/OutlookDetailOffcanvas.vue'
 
-defineProps({
-  isOffcanvasAni: {
-    type: Boolean,
-    default: false
-  }
-})
+const isItemStyleDetailOffcanvasOpen = ref(false)
+const isOffcanvasAni = ref(false)
 
-const emit = defineEmits(['close-qualityOffcanvas'])
 const score = ref(86.2)
 
-const closeQualityOffcanvas = () => {
-  emit('close-qualityOffcanvas')
+// 종목 스타일 상세보기 열기
+const openItemStyleDetailOffcanvas = () => {
+  isOffcanvasAni.value = true
+  isItemStyleDetailOffcanvasOpen.value = true
 }
+
+// 종목 스타일 상세보기 닫기
+const closeItemStyleDetailOffcanvas = () => {
+  isOffcanvasAni.value = false
+  setTimeout(() => {
+    isItemStyleDetailOffcanvasOpen.value = false
+  }, 300)
+}
+
+watch(isItemStyleDetailOffcanvasOpen, (isOpen) => {
+  if (isOpen) {
+    document.body.classList.add('scroll-lock')
+  } else {
+    document.body.classList.remove('scroll-lock')
+  }
+})
 </script>

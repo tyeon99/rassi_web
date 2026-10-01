@@ -109,14 +109,38 @@
 .factor-analyst .itemStyleDetailContent .content-top{
     @apply w-full p-[8px_20px_30px] flex flex-col justify-start items-start gap-4;
   }
-.factor-analyst .itemStyleDetailContent .title{
-    @apply w-full flex flex-col justify-start items-start gap-1;
+.factor-analyst .itemStyleDetailContent .top-title{
+    @apply w-full flex justify-between items-center gap-1;
+  }
+.factor-analyst .itemStyleDetailContent .top-title h1{
+    @apply font-bold text-2xl text-[#364350];
+  }
+  .factor-analyst .itemStyleDetailContent .top-title button{
+    @apply flex justify-end items-center gap-[3px];
+  }
+.factor-analyst .itemStyleDetailContent .top-title button span{
+    @apply font-normal text-sm leading-[20px] text-gray underline;
+  }
+  .factor-analyst .itemStyleDetailContent .top-box .box-bottom{
+    @apply w-full border-t border-[#DEE2E6];
+  }
+  .factor-analyst .itemStyleDetailContent .top-box .box-bottom button{
+    @apply w-full flex justify-between items-center pt-[10px];
+  }
+  .factor-analyst .itemStyleDetailContent .top-box .box-bottom button p{
+    @apply font-normal text-base text-main;
+  }
+  .factor-analyst .itemStyleDetailContent .title{
+    @apply w-full flex flex-col justify-start items-start gap-1 relative;
   }
 .factor-analyst .itemStyleDetailContent .title h1{
     @apply font-bold text-2xl text-[#364350];
   }
 .factor-analyst .itemStyleDetailContent .title span{
     @apply font-normal text-[13px] leading-[20px] text-gray;
+  }
+  .factor-analyst .itemStyleDetailContent .title button.detail{
+    @apply absolute bottom-1 right-0;
   }
 .factor-analyst .itemStyleDetailContent .top-box{
     @apply w-full py-5 px-4 bg-white rounded-[16px] flex flex-col justify-start items-start gap-5
@@ -137,7 +161,7 @@
     @apply font-bold text-3xl leading-[40px] text-black;
   }
 .factor-analyst .itemStyleDetailContent .quality-score .right span{
-    @apply py-0.5 px-3 bg-main rounded-[50px] font-semibold text-[16px] leading-[21px] text-white;
+    @apply py-1 px-3 bg-main rounded-[50px] font-semibold text-sm text-white;
   }
 .factor-analyst .itemStyleDetailContent .quality-score .right span.no-signal{
     @apply flex w-[74px] h-[22px] justify-center items-center bg-gray;
@@ -149,10 +173,13 @@
     @apply w-full flex flex-col justify-start items-start gap-4;
   }
 .factor-analyst .itemStyleDetailContent .period{
-    @apply p-[3px_13px] rounded-[20px] bg-[#DEE2E6] font-semibold text-[12px] leading-[18px] text-[#364350];
+    @apply p-[5px_10px] rounded-[20px] bg-[#DEE2E6] font-semibold text-[12px] leading-[18px] text-[#364350];
   }
 .factor-analyst .itemStyleDetailContent .range-wrap{
-    @apply w-full;
+    @apply w-full pb-4 border-b border-[#DEE2E6] last:pb-0 last:border-none;
+  }
+  .factor-analyst .itemStyleDetailContent .top-box .range-wrap{
+    @apply border-none pb-0;
   }
 .factor-analyst .itemStyleDetailContent .range-wrap .range{
     @apply w-full relative py-1;
@@ -184,6 +211,49 @@
 .factor-analyst .itemStyleDetailContent .range-wrap .txt.four-span span{
     @apply flex-none;
   }
+  .factor-analyst .itemStyleDetailContent .graph-wrap{
+    @apply w-full flex flex-col justify-start items-start gap-5;
+  }
+  .factor-analyst .itemStyleDetailContent .graph-wrap .txt{
+    @apply w-full flex justify-start items-center gap-[11px];
+  }
+  .factor-analyst .itemStyleDetailContent .graph-wrap .txt p{
+    @apply font-normal text-sm text-[#364350];
+  }
+  .factor-analyst .itemStyleDetailContent .graph-wrap .txt span{
+    @apply font-normal text-xs leading-[18px] text-[#364350] flex justify-center items-center gap-1 before:content-[''] before:block before:w-[10px] before:h-[10px] before:rounded-full;
+  }
+  .factor-analyst .itemStyleDetailContent .graph-wrap span.m12{
+    @apply before:bg-[#FFCC00];
+  }
+  .factor-analyst .itemStyleDetailContent .graph-wrap span.m24{
+    @apply before:bg-[#F642FF];
+  }
+  .factor-analyst .itemStyleDetailContent .graph-wrap span.m36{
+    @apply before:bg-[#6565FF];
+  }
+  .factor-analyst .itemStyleDetailContent .graph-wrap .graph-box{
+    @apply w-full flex flex-col justify-start items-start gap-[5px];
+  }
+  .factor-analyst .itemStyleDetailContent .graph-wrap .graph-box .graph{
+    @apply relative w-full pb-5;
+  }
+  .factor-analyst .itemStyleDetailContent .graph-wrap .graph-box .graph .bar{
+    @apply w-full h-[5px] rounded-[50px] bg-[#DEE2E6];
+  }
+  .factor-analyst .itemStyleDetailContent .graph-wrap .graph-box .graph span{
+    @apply absolute -top-1 font-normal text-[11px] leading-[17px] text-[#364350] flex flex-col justify-center items-center;
+  }
+  .factor-analyst .itemStyleDetailContent .graph-wrap .graph-box .graph span::before{
+    @apply content-[''] w-[14px] h-[14px] block rounded-full border-2 border-white;
+    box-shadow: 0px 0px 4px 0px #00000040;
+  }
+  .factor-analyst .itemStyleDetailContent .graph-wrap .graph-txt{
+    @apply w-full flex justify-between items-center;
+  }
+  .factor-analyst .itemStyleDetailContent .graph-wrap .graph-txt span{
+    @apply font-normal text-[11px] leading-[17px] text-gray;
+  }
 .factor-analyst .itemStyleDetailContent .score-box{
     @apply w-full flex justify-center items-center gap-1 p-5 rounded-[12px] bg-white;
   }
@@ -211,9 +281,9 @@
 .factor-analyst .itemStyleDetailContent .inner-box p{
     @apply font-normal text-base text-[#364350];
   }
-.factor-analyst .itemStyleDetailContent .inner-box p strong{
+/* .factor-analyst .itemStyleDetailContent .inner-box p strong{
     @apply font-normal;
-  }
+  } */
 .factor-analyst .itemStyleDetailContent .inner-box button{
     @apply flex justify-start items-center gap-[6px];
   }
@@ -232,41 +302,44 @@
 .factor-analyst .itemStyleDetailContent .calculate-wrap{
     @apply w-full flex flex-col  justify-start items-start gap-3 mt-[6px];
   }
-.factor-analyst .itemStyleDetailContent .inner-box .white-box{
+.factor-analyst .itemStyleDetailContent .white-box{
     @apply w-full rounded-[8px] p-3 bg-white flex flex-col justify-start items-start gap-[6px];
   }
-.factor-analyst .itemStyleDetailContent .inner-box .white-box .price{
+.factor-analyst .itemStyleDetailContent .white-box .price{
     @apply w-full flex justify-start items-center gap-[6px];
   }
-.factor-analyst .itemStyleDetailContent .inner-box .white-box .price p{
+.factor-analyst .itemStyleDetailContent .white-box .price p{
     @apply font-normal text-sm text-gray;
   }
-.factor-analyst .itemStyleDetailContent .inner-box .white-box .price strong{
+.factor-analyst .itemStyleDetailContent .white-box .price strong{
     @apply font-semibold text-base text-gray;
   }
-.factor-analyst .itemStyleDetailContent .inner-box .white-box .price.current p, .itemStyleDetailContent .inner-box .white-box .price.current strong{
+.factor-analyst .itemStyleDetailContent .white-box .price.current p, .itemStyleDetailContent .inner-box .white-box .price.current strong{
     @apply text-black;
   }
-.factor-analyst .itemStyleDetailContent .inner-box .white-box .top{
+.factor-analyst .itemStyleDetailContent .white-box .top{
     @apply w-full pb-1 flex flex-col justify-center items-center border-b border-[#EDF0F3];
   }
-.factor-analyst .itemStyleDetailContent .inner-box .white-box .top p{
+.factor-analyst .itemStyleDetailContent .white-box .top p{
     @apply font-normal text-sm text-gray;
   }
-.factor-analyst .itemStyleDetailContent .inner-box .white-box .top strong{
+.factor-analyst .itemStyleDetailContent .white-box .top strong{
     @apply font-bold text-base text-black;
   }
-.factor-analyst .itemStyleDetailContent .inner-box .white-box .bottom{
+.factor-analyst .itemStyleDetailContent .white-box .bottom{
     @apply w-full flex justify-around items-center gap-[6px];
   }
-.factor-analyst .itemStyleDetailContent .inner-box .white-box .bottom .txt{
+.factor-analyst .itemStyleDetailContent .white-box .bottom .txt{
     @apply flex justify-center items-center flex-col;
   }
-.factor-analyst .itemStyleDetailContent .inner-box .white-box .bottom .txt p{
+.factor-analyst .itemStyleDetailContent .white-box .bottom .txt p{
     @apply font-normal text-[11px] leading-[17px] text-gray border-[#EDF0F3];
   }
-.factor-analyst .itemStyleDetailContent .inner-box .white-box .bottom .txt strong{
-    @apply font-normal text-[11px] leading-[17px] text-black;
+.factor-analyst .itemStyleDetailContent .white-box .bottom .txt strong{
+    @apply font-normal text-[11px] leading-[17px] text-black text-center;
+  }
+  .factor-analyst .itemStyleDetailContent .white-box .wbox-stxt{
+    @apply w-full text-center font-bold text-base text-black;
   }
 .factor-analyst .itemStyleDetailContent .txt-box{
     @apply w-full flex flex-col justify-start items-start gap-[6px];
@@ -282,6 +355,9 @@
   }
 .factor-analyst .itemStyleDetailContent .content-section{
     @apply w-full py-6 px-5 border-b-[12px] border-[#F5F7F9] bg-white flex flex-col justify-start items-start gap-6 last:border-b-[0px];
+  }
+  .factor-analyst .itemStyleDetailContent .content-section .section-group{
+    @apply w-full flex flex-col justify-start items-start gap-6;
   }
 .factor-analyst .itemStyleDetailContent  .box-wrap{
     @apply w-full flex flex-col justify-start items-start gap-4;
@@ -326,14 +402,26 @@
 .factor-analyst .itemStyleDetailContent .gray-box .box-title{
     @apply w-full flex flex-col justify-start items-start gap-[6px];
   }
+  .factor-analyst .itemStyleDetailContent .gray-box .box-title p strong{
+    @apply text-sm;
+  }
 .factor-analyst .itemStyleDetailContent .gray-box strong{
     @apply font-bold text-base text-black;
   }
 .factor-analyst .itemStyleDetailContent .gray-box p{
-    @apply font-normal text-base text-black;
+    @apply font-normal text-sm text-[#515F6C];
   }
 .factor-analyst .itemStyleDetailContent .gray-box .inner-box{
     @apply bg-white
+  }
+  .factor-analyst .itemStyleDetailContent .gray-box .period-group{
+    @apply w-full flex flex-col justify-start items-start gap-[30px];
+  }
+  .factor-analyst .itemStyleDetailContent .gray-box .period-box{
+    @apply w-full flex flex-col justify-start items-start gap-3;
+  }
+  .factor-analyst .itemStyleDetailContent .gray-box .range-box{
+    @apply w-full flex flex-col justify-start items-start gap-4 pb-4 border-b border-[#DEE2E6] pt-1 first:pt-0 last:pb-0 last:border-none;
   }
 .factor-analyst .itemStyleDetailContent .score-wrap{
     @apply w-full flex justify-center items-center gap-3;

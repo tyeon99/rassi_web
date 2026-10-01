@@ -16,94 +16,76 @@
           <p>{{ item.question }}</p>
         </div>
         <div class="inner-box">
-          <span 
-            :class="item.isPass ? 'pass' : 'fail'"
-          >
+          <span :class="item.isPass ? 'pass' : 'fail'">
             {{ item.isPass ? 'PASS' : 'FAIL' }}
           </span>
           <p v-html="item.description"></p>
-          
-          <div class="calculate-wrap">
-            <div class="white-box">
-              <div class="top">
-                <p>순유통자산</p>
-                <strong>4,900억</strong>
-              </div>
-              <div class="bottom">
-                <div class="txt">
-                  <p>유동자산</p>
-                  <strong>8,200억</strong>
-                </div>
-                <img width="19" src="~/assets/img/factor-analyst/detail/minus.png" alt="마이너스">
-                <div class="txt">
-                  <p>총부채</p>
-                  <strong>3,100억</strong>
-                </div>
-                <img width="19" src="~/assets/img/factor-analyst/detail/minus.png" alt="마이너스">
-                <div class="txt">
-                  <p>우선주</p>
-                  <strong>0</strong>
-                </div>
-                <img width="19" src="~/assets/img/factor-analyst/detail/minus.png" alt="마이너스">
-                <div class="txt">
-                  <p>비지배지분</p>
-                  <strong>200억</strong>
-                </div>
-              </div>
-            </div>
-
-            <div class="white-box">
-              <div class="top">
-                <p>NCAV 비율</p>
-                <strong>3,800억</strong>
-              </div>
-              <div class="bottom">
-                <div class="txt">
-                  <p class="border-b">순유동자산 (NCAV)</p>
-                  <strong>시가총액</strong>
-                </div>
-                <img width="19" src="~/assets/img/factor-analyst/detail/equal.png" alt="마이너스">
-                <div class="txt">
-                  <p class="border-b">4,900억</p>
-                  <strong>3,800억</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </div>
-    
-    <div class="list-group">
-      <div 
-        v-for="(item, idx) in gpaList" 
-        :key="idx" 
-        class="list"
-      >
-        <div class="gray-box">
-          <p>{{ item.boxTxt }}</p>
 
-          <div class="range-wrap">
-            <div class="range">
-              <div class="bar">
-                <span class="avg"></span>
-              </div>
-              <div class="score" :style="{ width: `${item.score}%` }">
-                <img
-                  class="item-icon"
-                  width="18"
-                  src="~/assets/img/factor-analyst/main/item-circle.png"
-                  alt="종목 아이콘"
-                />
-              </div>
-            </div>
+    <div class="gray-box">
+      <div class="box-title">
+        <strong>순유동자산은?</strong>
+      </div>
+      <div class="white-box">
+        <div class="wbox-stxt">순유동자산 : 4,900억 8250만</div>
+      </div>
+      <div class="calculate-wrap">
+        <div class="white-box">
+          <div class="bottom">
             <div class="txt">
-              <span>0</span>
-              <span>전종목 평균</span>
-              <span>12000</span>
+              <p>유동자산</p>
+              <strong>1452억<br />9000만</strong>
+            </div>
+            <img width="19" src="~/assets/img/factor-analyst/detail/minus.png" alt="마이너스">
+            <div class="txt">
+              <p>총부채</p>
+              <strong>52억<br />9500만</strong>
+            </div>
+            <img width="19" src="~/assets/img/factor-analyst/detail/minus.png" alt="마이너스">
+            <div class="txt">
+              <p>우선주</p>
+              <strong>0</strong>
+            </div>
+            <img width="19" src="~/assets/img/factor-analyst/detail/minus.png" alt="마이너스">
+            <div class="txt">
+              <p>비지배지분</p>
+              <strong>52억<br />9500만</strong>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="list-group">
+      <div class="list">
+        <div class="gray-box">
+          <div class="box-title">
+            <strong>순유동자산 비율은?</strong>
+          </div>
+
+          <div class="range-box">
+            <div class="box-txt" v-html="marketTxt"></div>
+
+            <div class="range-wrap">
+              <div class="txt mb-1">
+                <p>전체 시장</p>
+                <strong>백분위 : {{ marketPercentile }}</strong>
+              </div>
+              <div class="range">
+                <div class="bar">
+                  <span class="avg"></span>
+                </div>
+                <div class="score" :style="{ width: `${marketPercentile}%` }"></div>
+              </div>
+              <div class="txt">
+                <span>하위</span>
+                <span>상위</span>
+              </div>
+            </div> <!-- range-wrap -->
+          </div> <!-- range-box -->
+
         </div>
       </div>
     </div>
@@ -118,14 +100,10 @@ const rateList = [
   {
     question: '순유동자산(NCAV)이 시가총액보다 큰가요?',
     isPass: true,
-    description: '네, SK하이닉스를 지금 당장 청산해도 남는 자산이 시가총액보다 <strong class="up">1.29배</strong> 많아요.'
+    description: '순유동자산은 4900억 8520만원이고, 시가총액은 724억 1100만원으로 순유동자산은 현재 시가총액의 <strong class="up">116.65%</strong> 수준이에요.'
   }
 ]
 
-const gpaList = ref([
-  {
-    score: 86.2,
-    boxTxt: '전 종목 중 SK하이닉스 NCAV 비율의 위치는?'
-  }
-])
+const marketTxt = 'SK하이닉스의 순유동자산(NCAV)비율은 전체 시장에서 <strong>상위 12%</strong> 수준이에요.'
+const marketPercentile = ref(78)
 </script>

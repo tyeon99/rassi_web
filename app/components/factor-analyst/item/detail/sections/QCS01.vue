@@ -33,26 +33,23 @@
         class="list"
       >
         <div class="gray-box">
-          <p>{{ item.boxTxt }}</p>
+          <div class="box-title">
+            <strong>{{ item.boxTitle }}</strong>
+            <p v-html="item.boxTxt"></p>
+          </div>
 
           <div class="range-wrap">
+            <div class="txt mb-1">
+              <p>전체시장</p>
+              <strong>78%</strong>
+            </div>
             <div class="range">
-              <div class="bar">
-                <span class="avg"></span>
-              </div>
-              <div class="score" :style="{ width: `${item.score}%` }">
-                <img
-                  class="item-icon"
-                  width="18"
-                  src="~/assets/img/factor-analyst/main/item-circle.png"
-                  alt="종목 아이콘"
-                />
-              </div>
+              <div class="bar"></div>
+              <div class="score" :style="{ width: `${item.score}%` }"></div>
             </div>
             <div class="txt">
-              <span>0</span>
-              <span>전종목 평균</span>
-              <span>100</span>
+              <span>하위</span>
+              <span>상위</span>
             </div>
           </div>
         </div>
@@ -67,51 +64,52 @@ import '~/assets/css/factor-analyst/common.css'
 
 const fScoreList = [
   {
-    question: '올해 당기순이익은 0보다 큰가?',
+    question: '당기순이익은 0보다 큰가?',
     isPass: true,
-    description: '네, 2026년 SK하이닉스의 당기순이익은 <strong class="up">1조 3500억</strong>이예요.  '
+    description: '최근 12개월 SK하이닉스의 당기순이익은 <strong class="up">1조 3500억원</strong>이에요.'
   },
   {
-    question: '올해 영업으로 번 진짜 현금이 0보다 큰가?',
+    question: '영업으로 번 진짜 현금이 0보다 큰가?',
     isPass: true,
-    description: '네, 2026년 SK하이닉스의 영업현금흐름은 <strong class="up">2500억</strong>이예요.  '
+    description: '최근 12개월 SK하이닉스의 영업현금흐름은 <strong class="up">2500억원</strong>이에요. '
   },
   {
-    question: '작년보다 자산 대비 이익률(ROA)이 좋아졌나?',
-    isPass: false,
-    description: '아니요, 2026년 자산 대비 이익률은 <strong class="up">+17.18%</strong>이고, 2025년 자산 대비 이익률은 <strong class="up">+25.21%</strong> 이예요.'
+    question: '자산 대비 이익률(ROA)이 좋아졌나?',
+    isPass: true,
+    description: '이전 12개월 자산 대비 이익률은 <strong class="up">+24.59%</strong>이고, 최근 12개월 자산 대비 이익률은 <strong class="up">+62.77%</strong>이에요.'
   },
   {
-    question: '작년보다 빚(부채비율)이 줄었나?',
+    question: '빚(부채비율)이 줄었나?',
     isPass: false,
-    description: '네, 2025년 부채비율은 <strong class="up">+25.21%</strong>이고, 2026년 부채비율은 <strong class="up">+12.12%</strong> 이예요.   '
+    description: '이전 12개월 부채비율은 <strong class="up">+24.59%</strong>이고, 최근 12개월 부채비율은 <strong class="up">+32.49%</strong>이에요. '
   },
   {
     question: '바로 갚을 수 있는 돈(유동비율)이 늘었나?',
     isPass: true,
-    description: '네, 2025년 유동비율은 <strong class="up">+25.21%</strong>이고, 2026년 유동비율은 <strong class="up">+32.12%</strong> 이예요. '
+    description: '이전 12개월 유동비율은 <strong class="up">+178%</strong>이고, 최근 12개월 유동비율은 <strong class="up">+259%</strong>이에요.'
   },
   {
-    question: '주식을 새로 찍어내서 가치를 떨어뜨리지 않았나?',
-    isPass: true,
-    description: '네, 신주발행은 없었어요.'
+    question: '신주 발행 없이 기존 주식의 가치를 유지했나?',
+    isPass: false,
+    description: '아니요, 신주 발행이 있었어요. 이전 12개월에 비해 <strong class="down">20,000주</strong> 늘었어요.'
   },
   {
-    question: '작년보다 마진(매출총이익률)이 좋아졌나?',
+    question: '마진(매출총이익률)이 좋아졌나?',
     isPass: true,
-    description: '네, 2025년 매출총이익률은 <strong class="up">+25.21%</strong>이고, 2026년 매출총이익은 <strong class="up">+32.12%</strong> 이예요.'
+    description: '이전 12개월 매출총이익률은 <strong class="up">+25.21%</strong>이고, 최근 12개월 매출총이익률은 <strong class="up">+32.12%</strong>이에요.'
   },
   {
-    question: '작년보다 재산(자산회전율)을 굴려서 매출을 더 팍팍 일으켰나?',
+    question: '재산(자산회전율)을 굴려서 매출을 더 팍팍 일으켰나?',
     isPass: true,
-    description: '네, 2025년 자산회전율은 <strong class="up">+25.21%</strong>이고, 2026년 자산회전율은 <strong class="up">+32.12%</strong> 이예요.  '
+    description: '이전 12개월 자산회전율은 <strong class="up">+65.4%</strong>이고, 최근 12개월 자산회전율은 <strong class="up">+79.16%</strong>이에요. '
   }
 ]
 
 const itemFScore = ref([
   {
     score: 86.2,
-    boxTxt: 'SK하이닉스의 F스코어의 위치는?'
+    boxTitle: 'SK하이닉스의 F스코어의 위치는?',
+    boxTxt: 'SK하이닉스의 F스코어는 전체 시장에서 <strong>상위 22%</strong> 수준이에요.'
   }
 ])
 </script>

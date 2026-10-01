@@ -2,50 +2,74 @@
   <div class="content-section">
     <div class="title">
       <span>배당을 얼마나 줄까?</span>
-      <h1>배당은?</h1>
+      <h1>배당수익률은?</h1>
     </div>
 
-    <div 
-      v-for="(info, iIdx) in infoList" 
-      :key="iIdx" 
-      class="list"
-    >
-      <div class="gpa-title">
-        <p>{{ info.question }}</p>
-        <span>{{ info.gpaScore }}</span>
+    <div class="box-group">
+      <div 
+        v-for="(item, idx) in boxItem" 
+        :key="idx" 
+        class="box"
+      >
+        <div class="box-title">
+          <span>Q</span>
+          <p>{{ item.question }}</p>
+        </div>
+        <div class="inner-box">
+          <p v-html="item.description"></p>
+        </div>
       </div>
-      <div class="gpa-txt !mb-0" v-html="info.description"></div>
     </div>
 
     <div class="list-group">
-      <div 
-        v-for="(item, cIdx) in chartList" 
-        :key="cIdx" 
-        class="list"
-      >
+      <div class="list">
         <div class="gray-box">
-          <p>{{ item.boxTxt }}</p>
-
-          <div class="range-wrap">
-            <div class="range">
-              <div class="bar">
-                <span class="avg"></span>
-              </div>
-              <div class="score" :style="{ width: `${item.score}%` }">
-                <img
-                  class="item-icon"
-                  width="18"
-                  src="~/assets/img/factor-analyst/main/item-circle.png"
-                  alt="종목 아이콘"
-                />
-              </div>
-            </div>
-            <div class="txt">
-              <span>0</span>
-              <span>전종목 평균</span>
-              <span>12000</span>
-            </div>
+          <div class="box-title">
+            <strong>다른 종목과 비교해서 배당수익률은?</strong>
           </div>
+
+          <div class="range-box">
+            <div class="box-txt" v-html="marketTxt"></div>
+
+            <div class="range-wrap">
+              <div class="txt mb-1">
+                <p>전체 시장</p>
+                <strong>백분위 : {{ marketPercentile }}</strong>
+              </div>
+              <div class="range">
+                <div class="bar">
+                  <span class="avg"></span>
+                </div>
+                <div class="score" :style="{ width: `${marketPercentile}%` }"></div>
+              </div>
+              <div class="txt">
+                <span>하위</span>
+                <span>평균 {{ marketAvg }}</span>
+                <span>상위</span>
+              </div>
+            </div> <!-- range-wrap -->
+          </div> <!-- range-box -->
+
+          <!-- 섹터 레인지 박스 -->
+          <div class="range-box">
+            <div class="box-txt" v-html="sectorTxt"></div>
+
+            <div class="range-wrap">
+              <div class="txt mb-1">
+                <p>정보기술 섹터</p>
+                <strong>백분위 : {{ sectorPercentile }}</strong>
+              </div>
+              <div class="range">
+                <div class="bar"></div>
+                <div class="score" :style="{ width: `${sectorPercentile}%` }"></div>
+              </div>
+              <div class="txt">
+                <span>하위</span>
+                <span>상위</span>
+              </div>
+            </div> <!-- range-wrap -->
+          </div> <!-- range-box -->
+
         </div>
       </div>
     </div>
@@ -54,30 +78,23 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-// style
 import '~/assets/css/factor-analyst/common.css'
 
-const infoList = ref([
+const boxItem = [
   {
     question: '최근 1년 동안 배당을 얼마나 줬을까?',
-    gpaScore: 86.2,
-    description: '배당수익률은 <strong>0.7%</strong>이고 최근 1년 배당금 총액 <strong>3조 2,000억</strong>원을 시가총액 <strong>178조</strong>원으로 나눈 값이에요.'
+    description: '배당수익률은 <strong class="up">0.7%</strong>이고 최근 1년 배당금 총액은 <strong>3조 2,000억</strong>원이에요.'
   },
   {
-    question: '반도체 섹터의 평균 스코어는?',
-    gpaScore: 74.5,
-    description: '반도체 섹터의 총 종목수는 <strong>32종목</strong>이고, 가장 높은 스코어는 <strong>99.2</strong>, 가장 낮은 스코어는 <strong>35.2</strong> 예요.'
+    question: '정보기술 섹터의 배당수익률은?',
+    description: 'SK하이닉스가 속한 정보기술 섹터는 총 634종목이고, 가장 높은 배당수익률은 19.2%, 가장 낮은 배당수익률은 2.3%로 평균은 <strong>8.3%</strong>이에요.'
   }
-])
+]
 
-const chartList = ref([
-  {
-    boxTxt: '전 종목 중 SK하이닉스 배당의 위치는?',
-    score: 86.2
-  },
-  {
-    boxTxt: '업종 내 SK하이닉스 배당의 위치는?',
-    score: 74.5
-  }
-])
+const marketTxt = '전체 종목과 비교해서 SK하이닉스의 배당수익률은 <strong>하위 12.2%</strong>이고, SK하이닉스가 속한 정보기술 섹터의 평균값인 <strong>68</strong>보다 낮아요.'
+const marketPercentile = ref(54.2)
+const marketAvg = ref(68)
+
+const sectorTxt = '정보기술 섹터 종목과 비교해서 SK하이닉스의 배당수익률은 <strong>중간</strong> 수준이에요.'
+const sectorPercentile = ref(28.2)
 </script>

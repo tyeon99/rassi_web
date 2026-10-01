@@ -1,56 +1,84 @@
 <template>
   <div class="content-section">
     <div class="title">
-      <span>얼마나 안정적일까?</span>
-      <h1>실현변동성은?</h1>
+      <span>주가는 얼마나 크게 움직였을까?</span>
+      <h1>주가 변동성은?</h1>
     </div>
 
-    <div class="list">
-      <div class="gpa-title">
-        <p>최근 3개월 동안 주가가 안정적이었을까? </p>
-        <span>86.2</span>
-      </div>
-      <div class="gpa-txt !mb-0">
-        SK하이닉스의 최근 3개월 변동성은 <strong>+18.7%</strong> 로 낮은편이에요. 낮을 수록 안정적인 흐름이에요
-      </div>
-    </div>
-
-    <div class="list">
-      <div class="gpa-title">
-        <p>최근 12개월 동안도 안정적인 흐름이 <br />이어졌을까?</p>
-        <span>86.2</span>
-      </div>
-      <div class="gpa-txt !mb-0">
-        SK하이닉스의 최근 12개월 변동성으은 <strong>+36.6%</strong>로 낮은 편이에요. 낮을 수록 안정적인 흐름이에요
+    <div class="box-group">
+      <div 
+        v-for="(item, idx) in rateList" 
+        :key="idx" 
+        class="box"
+      >
+        <div class="box-title">
+          <span>Q</span>
+          <p>{{ item.question }}</p>
+        </div>
+        <div class="inner-box">
+          <p v-html="item.description"></p>
+        </div>
       </div>
     </div>
 
     <div class="list-group">
-      <div 
-        v-for="(item, idx) in itemList" 
-        :key="idx" 
-        class="list"
-      >
+      <div class="list">
         <div class="gray-box">
           <div class="box-title">
-            <strong>{{ item.title }}</strong>
-            <p>{{ item.subTitle }}</p>
+            <strong>다른 종목들과 비교해서 변동성은 어느 정도일까?</strong>
           </div>
 
-          <div 
-            v-for="(range, rIdx) in item.ranges" 
-            :key="rIdx" 
-            class="range-wrap"
-          >
-            <div class="txt mb-1">
-              <p>{{ range.label }}</p>
-              <strong>{{ range.val }}</strong>
-            </div>
-            <div class="range">
-              <div class="bar"></div>
-              <div class="score" :style="{ width: `${range.score}%` }"></div>
-            </div>
-          </div>
+          <div class="period-group">
+            <div 
+              v-for="(item, idx) in periodList" 
+              :key="idx" 
+              class="period-box"
+            >
+              <span class="period">{{ item.period }}</span>
+              
+              <div class="range-box">
+                <div class="box-txt" v-html="item.marketTxt"></div>
+
+                <div class="range-wrap">
+                  <div class="txt mb-1">
+                    <p>전체 시장</p>
+                    <strong>백분위 : {{ item.marketPercentile }}</strong>
+                  </div>
+                  <div class="range">
+                    <div class="bar">
+                      <span class="avg"></span>
+                    </div>
+                    <div class="score" :style="{ width: `${item.marketPercentile}%` }"></div>
+                  </div>
+                  <div class="txt">
+                    <span>하위</span>
+                    <span>평균 {{ item.marketAvg }}</span>
+                    <span>상위</span>
+                  </div>
+                </div> <!-- range-wrap -->
+              </div> <!-- range-box -->
+
+              <div class="range-box">
+                <div class="box-txt" v-html="item.sectorTxt"></div>
+
+                <div class="range-wrap">
+                  <div class="txt mb-1">
+                    <p>{{ item.sectorName }}</p>
+                    <strong>백분위 : {{ item.sectorPercentile }}</strong>
+                  </div>
+                  <div class="range">
+                    <div class="bar"></div>
+                    <div class="score" :style="{ width: `${item.sectorPercentile}%` }"></div>
+                  </div>
+                  <div class="txt">
+                    <span>하위</span>
+                    <span>상위</span>
+                  </div>
+                </div> <!-- range-wrap -->
+              </div> <!-- range-box -->
+
+            </div> <!-- period-box -->
+          </div> <!-- period-group -->
 
         </div>
       </div>
@@ -63,33 +91,35 @@
 import { ref } from 'vue'
 import '~/assets/css/factor-analyst/common.css'
 
-const itemList = ref([
+const rateList = [
   {
-    title: '전체 시장과 비교하면?',
-    subTitle: '전체 종목 중 SK 하이닉스보다 변동성이 더 컸던 (불안정했던) 종목의 비율',
-    isScore: false,
-    ranges: [
-      { label: '3개월 전체', val: '91.2', score: 91.2 },
-      { label: '12개월 전체', val: '91.2', score: 91.2 }
-    ]
+    question: '최근 3개월 동안 주가 변동성은?',
+    description: 'SK하이닉스의 최근 3개월 변동성은 <strong>18.7%</strong>로, 주가 수익률의 변동 정도를 표준편차로 나타낸 값이에요.'
   },
   {
-    title: 'SK하이닉스가 속한 반도체 업종의 평균 스코어는?',
-    subTitle: '반도체 업종 (총 32종목)에 속한 종목들의 평균 스코어',
-    isScore: true, 
-    ranges: [
-      { label: '3개월 업종평균', val: '85.4', score: 85.4 },
-      { label: '12개월 업종평균', val: '88.0', score: 88.0 }
-    ]
+    question: '최근 12개월 동안 주가 변동성은?',
+    description: 'SK하이닉스의 최근 12개월 변동성은 <strong>18.7%</strong>로, 주가 수익률의 변동 정도를 표준편차로 나타낸 값이에요.'
+  }
+]
+
+const periodList = ref([
+  {
+    period: '3개월',
+    marketTxt: '전체 종목과 비교해서 SK하이닉스의 3개월 변동성은 <strong>하위 72%</strong> 수준이고, SK하이닉스가 속한 전기전자 섹터의 평균은 <strong>68</strong>이에요.',
+    marketPercentile: 28,
+    marketAvg: 68,
+    sectorName: '정보기술 섹터',
+    sectorTxt: '정보기술 섹터 종목과 비교해서 SK하이닉스의 3개월 변동성은 <strong>하위 72%</strong> 수준이에요.',
+    sectorPercentile: 28
   },
   {
-    title: '같은 업종과 비교하면?',
-    subTitle: '반도체 업종 안에서 SK하이닉스보다 자사주매입 비율이 낮은 종목의 비율',
-    isScore: false,
-    ranges: [
-      { label: '3개월 업종', val: '74.5', score: 74.5 },
-      { label: '12개월 업종', val: '80.1', score: 80.1 }
-    ]
+    period: '12개월',
+    marketTxt: '전체 종목과 비교해서 SK하이닉스의 12개월 변동성은 <strong>하위 72%</strong> 수준이고, SK하이닉스가 속한 전기전자 섹터의 평균은 <strong>68</strong>이에요.',
+    marketPercentile: 28,
+    marketAvg: 68,
+    sectorName: '정보기술 섹터',
+    sectorTxt: '정보기술 섹터 종목과 비교해서 SK하이닉스의 12개월 변동성은 <strong>하위 72%</strong> 수준이에요.',
+    sectorPercentile: 28
   }
 ])
 </script>
