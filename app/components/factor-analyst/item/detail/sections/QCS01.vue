@@ -41,7 +41,7 @@
           <div class="range-wrap">
             <div class="txt mb-1">
               <p>전체시장</p>
-              <strong>78%</strong>
+              <strong>백분위 : 78</strong>
             </div>
             <div class="range">
               <div class="bar"></div>
@@ -108,7 +108,7 @@ const fScoreList = [
 const itemFScore = ref([
   {
     score: 86.2,
-    boxTitle: 'SK하이닉스의 F스코어의 위치는?',
+    boxTitle: '다른 종목들과 비교해서 F스코어는 어느 정도일까?',
     boxTxt: 'SK하이닉스의 F스코어는 전체 시장에서 <strong>상위 22%</strong> 수준이에요.'
   }
 ])

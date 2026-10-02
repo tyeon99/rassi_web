@@ -93,7 +93,7 @@ const boxItem = [
 
 const gpaList = ref([
   {
-    title: 'SK하이닉스의 GP/A 위치는?',
+    title: '다른 종목들과 비교해서 GP/A는 어느 정도일까?',
     subTitle: '정보기술 섹터의 평균은 <strong>52.1</strong>이고, SK하이닉스의 GP/A는 전체 시장에서 <strong>상위 2%</strong> 수준이에요.',
     marketPercentile: 78,
     marketScore: 78,
