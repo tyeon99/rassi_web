@@ -213,6 +213,10 @@ onMounted(() => {
             el: '.recommend-pagination03',
             type: 'fraction'
           },
+          autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+          },
           on: {
             init(swiper: SwiperCore) {
               updateProgress(swiper.realIndex, flatItems.value.length)
