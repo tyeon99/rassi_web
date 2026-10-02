@@ -141,6 +141,9 @@
   .factor-analyst .recommend-pagination01 button span{
     @apply font-normal text-xs text-main;
   }
+  .factor-analyst .recommend-pagination01 button.active span{
+    @apply font-semibold text-[#F0F0FF];
+  }
   .factor-analyst .pagination-group{
     @apply w-full flex justify-start items-center gap-2 px-5;
   }
