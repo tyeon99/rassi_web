@@ -32,19 +32,37 @@
     @apply h-[16px] w-[85px];
   }
   .factor-analyst .mainSection__txt.skeleton{
-    @apply w-[320px] h-[20px];
+    @apply w-[320px] h-[18px] ml-5;
   }
-  .factor-analyst .today-recommend .recommend-title.skeleton{
-    @apply w-[100px] h-[24px];
+  .factor-analyst .recommend-pagination01 button.skeleton{
+    @apply w-[161px] h-[37px] border-none;
   }
-  .factor-analyst .itemList .recommend-style.skeleton{
-    @apply w-[200px] h-[20px];
+  .factor-analyst .today-recommend .top .pick.skeleton{
+    @apply w-[40px] h-[18px];
   }
-  .factor-analyst .itemList .recommend-item .circle.skeleton{
-    @apply w-[30px] h-[30px];
+  .factor-analyst .today-recommend .top span.skeleton{
+    @apply w-[120px] h-[26px];
   }
-  .factor-analyst .itemList .recommend-item strong.skeleton{
-    @apply w-[120px] h-[28px];
+  .factor-analyst .today-recommend .item .name strong.skeleton{
+    @apply w-[120px] h-[29px];
+  }
+  .factor-analyst .today-recommend .item .name span.skeleton{
+    @apply w-[43px] h-[18px];
+  }
+  .factor-analyst .today-recommend .txt strong.skeleton{
+    @apply w-[90px] h-[24px];
+  }
+  .factor-analyst .today-recommend .txt .span-group span.skeleton{
+    @apply h-[22px] first:w-[70px] last:w-[90px];
+  }
+  .factor-analyst .today-recommend .txt p.skeleton{
+    @apply h-[20px];
+  }
+  .factor-analyst .today-recommend button p.skeleton{
+    @apply w-[240px] h-[23px];
+  }
+  .factor-analyst .pagination-group .recommend-pagination03.skeleton{
+    @apply w-[20px] h-[10px];
   }
   .factor-analyst .style-all button p.skeleton{
     @apply w-[180px] h-[24px];
