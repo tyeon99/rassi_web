@@ -35,7 +35,7 @@
           </div>
           <div class="txt">
             <span>전망 하향</span>
-            <span>급격한 상향</span>
+            <span>전망 급 상향</span>
             <span>전망 상향</span>
           </div>
         </div>
@@ -58,14 +58,6 @@
           </button>
         </div>
 
-      </div>
-
-      <div class="txt-box">
-        <div class="txt-title">
-          <img width="18" src="~/assets/img/factor-analyst/offcanvas/quality-icon.png" alt="퀄리티 계산">
-          <p>미래전망 점수 계산의 근거</p>
-        </div>
-        <div class="txt">미래전망 점수는 최근 1개월·3개월 동안 매출, 영업이익, 순이익 전망이 얼마나 상향 조정됐는지를 종합해 계산해요. 1개월 변화로 최근 흐름을, 3개월 변화로 업종 내 위치를 함께 봐요.</div>
       </div>
     </div>
 

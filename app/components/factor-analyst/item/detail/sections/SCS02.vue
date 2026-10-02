@@ -25,7 +25,7 @@
       <div class="list">
         <div class="gray-box">
           <div class="box-title">
-            <strong>전체 시장에서 참여 강도는?</strong>
+            <strong>다른 종목들과 비교해서 참여 강도는 어느 정도일까?</strong>
           </div>
 
           <div class="period-group">

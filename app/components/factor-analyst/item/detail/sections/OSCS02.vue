@@ -108,7 +108,7 @@ const rateList = [
 
 const locationGroups = ref([
   {
-    title: '다른 종목과 비교해서 최근 1개월 주가 위치는?',
+    title: '다른 종목과 비교해서 최근 1개월 주가 위치는 어느 정도일까?',
     periodList: [
       {
         period: '고점 대비 하락',
@@ -131,7 +131,7 @@ const locationGroups = ref([
     ]
   },
   {
-    title: '다른 종목과 비교해서 최근 3개월 주가 위치는?',
+    title: '다른 종목과 비교해서 최근 3개월 주가 위치는 어느 정도일까?',
     periodList: [
       {
         period: '고점 대비 하락',

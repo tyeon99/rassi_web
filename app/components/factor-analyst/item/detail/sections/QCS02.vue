@@ -36,7 +36,7 @@
           <div class="range-wrap">
             <div class="txt mb-1">
               <p>전체시장</p>
-              <strong>백분위 : {{ item.marketPercentile }}%</strong>
+              <strong>백분위 : {{ item.marketPercentile }}</strong>
             </div>
             <div class="range">
               <div class="bar">
@@ -58,7 +58,7 @@
           <div class="range-wrap">
             <div class="txt mb-1">
               <p>{{ item.sectorName }}</p>
-              <strong>백분위 : {{ item.sectorPercentile }}%</strong>
+              <strong>백분위 : {{ item.sectorPercentile }}</strong>
             </div>
             <div class="range">
               <div class="bar"></div>

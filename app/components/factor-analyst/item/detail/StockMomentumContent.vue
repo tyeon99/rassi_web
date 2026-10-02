@@ -57,14 +57,6 @@
           </button>
         </div>
       </div>
-
-      <div class="txt-box">
-        <div class="txt-title">
-          <img width="18" src="~/assets/img/factor-analyst/offcanvas/quality-icon.png" alt="퀄리티 계산">
-          <p>주가모멘텀 점수 계산의 근거</p>
-        </div>
-        <div class="txt">주가모멘텀 점수는 최근 3·6·12개월 주가 수익률과 시장 대비 상대적인 강도를 함께 반영하여 계산해요.</div>
-      </div>
     </div>
 
     <div class="body-content">

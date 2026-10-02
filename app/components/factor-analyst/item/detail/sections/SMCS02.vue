@@ -1,15 +1,15 @@
 <template>
   <div class="content-section">
     <div class="title">
-      <span>얼마나 올랐을까?</span>
-      <h1>상대강도는?</h1>
+      <span>다른 종목보다 많이 올랐을까?</span>
+      <h1>주가 상대강도는?</h1>
     </div>
     
     <div class="list-group">
       <div class="list">
         <div class="gray-box">
           <div class="box-title">
-            <strong>다른 종목들과 비교해서 외국인 순매수 비율은 어느 정도일까?</strong>
+            <strong>다른 종목들과 비교해서 수익률 변화율은 어느 정도일까?</strong>
           </div>
 
           <div class="period-group">

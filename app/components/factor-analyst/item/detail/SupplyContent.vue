@@ -58,14 +58,6 @@
         </div>
 
       </div>
-
-      <div class="txt-box">
-        <div class="txt-title">
-          <img width="18" src="~/assets/img/factor-analyst/offcanvas/quality-icon.png" alt="퀄리티 계산">
-          <p>수급 점수 계산의 근거</p>
-        </div>
-        <div class="txt">수급 점수는 외국인·기관의 순매수가 얼마나 꾸준히 이어졌는지, 매수세가 얼마나 강했는지, 공매도·대차 동향을 종합해 계산해요. <br /> 외국인·기관의 수급이 안정적으로 유입될수록 높은 점수를 받아요.</div>
-      </div>
     </div>
 
     <div class="body-content">

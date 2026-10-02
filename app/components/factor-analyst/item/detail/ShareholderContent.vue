@@ -57,14 +57,6 @@
         </div>
 
       </div>
-
-      <div class="txt-box">
-        <div class="txt-title">
-          <img width="18" src="~/assets/img/factor-analyst/offcanvas/quality-icon.png" alt="퀄리티 계산">
-          <p>주주환원 점수 계산의 근거</p>
-        </div>
-        <div class="txt">주주환원 점수는 배당수익률과 자사주매입 규모가 시장 및 업종 대비 얼마나 높은지를 함께 반영하여 계산해요.</div>
-      </div>
     </div>
 
     <div class="body-content">

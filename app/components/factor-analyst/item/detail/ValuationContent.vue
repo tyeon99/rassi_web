@@ -56,14 +56,6 @@
         </div>
 
       </div>
-
-      <div class="txt-box">
-        <div class="txt-title">
-          <img width="18" src="~/assets/img/factor-analyst/offcanvas/quality-icon.png" alt="퀄리티 계산">
-          <p>밸류에이션 점수 계산의 근거</p>
-        </div>
-        <div class="txt">밸류에이션 점수는 이익, 매출, 순자산을 기준으로 현재 주가가 얼마나 저평가되어 있는지를 측정해요. 각 지표별로 업종 내 상대적 위치와 최근 1~3년간의 변화 추이를 함께 반영한 뒤, 지표별 중요도(가중치)를 더해 최종 점수를 구해요.</div>
-      </div>
     </div>
 
     <div class="body-content">

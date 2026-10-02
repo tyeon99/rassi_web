@@ -4,7 +4,7 @@
       <div class="top-title">
         <h1>딥밸류</h1>
         <button @click="openItemStyleDetailOffcanvas">
-          <span>딥밸류은?</span>
+          <span>딥밸류는?</span>
           <img width="20" src="~/assets/img/factor-analyst/item/question-icon.png">
         </button>
       </div>
@@ -57,14 +57,6 @@
           </button>
         </div>
 
-      </div>
-
-      <div class="txt-box">
-        <div class="txt-title">
-          <img width="18" src="~/assets/img/factor-analyst/offcanvas/quality-icon.png" alt="퀄리티 계산">
-          <p>초저평가 점수 계산의 근거</p>
-        </div>
-        <div class="txt">저변동성 점수는 순유동자산이 시가총액보다 큰 종목만을 대상으로 저평가 정도를 계산해요. "충분히 안전마진이 있는지"부터 걸러내는 종목 스타일이에요.</div>
       </div>
     </div>
 

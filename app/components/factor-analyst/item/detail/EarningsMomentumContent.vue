@@ -57,14 +57,6 @@
           </button>
         </div>
       </div>
-
-      <div class="txt-box">
-        <div class="txt-title">
-          <img width="18" src="~/assets/img/factor-analyst/offcanvas/quality-icon.png" alt="퀄리티 계산">
-          <p>실적모멘텀 점수 계산의 근거</p>
-        </div>
-        <div class="txt">실적모멘텀 점수는 최근 1년간의 실적 성장과 향후 12개월 실적 전망을 기업 규모를 고려해 계산하고, 시장 및 업종 대비 성장 강도를 종합해요.</div>
-      </div>
     </div>
 
     <div class="body-content">

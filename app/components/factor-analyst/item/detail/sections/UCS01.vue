@@ -62,7 +62,7 @@
       <div class="list">
         <div class="gray-box">
           <div class="box-title">
-            <strong>순유동자산 비율은?</strong>
+            <strong>다른 종목과 비교해서 순유동자산 비율은 어느 정도 일까?</strong>
           </div>
 
           <div class="range-box">

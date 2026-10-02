@@ -5,7 +5,6 @@
       <h1>이격도는?</h1>
     </div>
 
-    <!-- 1. Q&A 박스 영역 -->
     <div class="box-group">
       <div 
         v-for="(item, idx) in rateList" 
@@ -22,12 +21,11 @@
       </div>
     </div>
 
-    <!-- 2. 백분위 비교 리스트 영역 (.period-group 구조) -->
     <div class="list-group">
       <div class="list">
         <div class="gray-box">
           <div class="box-title">
-            <strong>다른 종목과 비교해서 이격도는?</strong>
+            <strong>다른 종목과 비교해서 이격도는 어느 정도일까?</strong>
           </div>
 
           <div class="period-group">
@@ -93,7 +91,6 @@
 import { ref } from 'vue'
 import '~/assets/css/factor-analyst/common.css'
 
-// 1. Q&A 데이터 (이미지 1:1 매칭)
 const rateList = [
   {
     question: '최근 1개월 이동평균선과의 차이는?',
@@ -105,7 +102,6 @@ const rateList = [
   }
 ]
 
-// 2. 이격도 백분위 데이터 (최근 1개월 / 최근 3개월)
 const periodList = ref([
   {
     period: '최근 1개월',

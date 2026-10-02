@@ -58,14 +58,6 @@
         </div>
         
       </div>
-
-      <div class="txt-box">
-        <div class="txt-title">
-          <img width="18" src="~/assets/img/factor-analyst/offcanvas/quality-icon.png" alt="퀄리티 계산">
-          <p>낙폭과대 점수 계산의 근거</p>
-        </div>
-        <div class="txt">낙폭과대 점수는 최근 단기 수익률, 고점 대비 하락폭, 이동평균선과의 차이를 종합해 계산해요. 최근 많이 하락한 종목일수록 점수가 높아요.</div>
-      </div>
     </div>
 
     <div class="body-content">

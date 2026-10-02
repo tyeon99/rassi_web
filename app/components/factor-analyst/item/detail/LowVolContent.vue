@@ -57,14 +57,6 @@
         </div>
 
       </div>
-
-      <div class="txt-box">
-        <div class="txt-title">
-          <img width="18" src="~/assets/img/factor-analyst/offcanvas/quality-icon.png" alt="퀄리티 계산">
-          <p>저변동성 점수 계산의 근거</p>
-        </div>
-        <div class="txt">저변동성 점수는 최근 3·12개월 주가변동성이 시장 및 업종 대비 얼마나 낮은지를 종합하여 계산해요. </div>
-      </div>
     </div>
 
     <div class="body-content">

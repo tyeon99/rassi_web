@@ -49,20 +49,12 @@
         </div>
         <div class="box-bottom">
           <button>
-            <p>고컬리티 종목 [123]개 보기</p>
+            <p>고퀄리티 종목 [123]개 보기</p>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M7.5 12.75L11.25 9L7.5 5.25" stroke="#D3D3D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </button>
         </div>
-      </div>
-
-      <div class="txt-box">
-        <div class="txt-title">
-          <img width="18" src="~/assets/img/factor-analyst/offcanvas/quality-icon.png" alt="퀄리티 계산">
-          <p>퀄리티 점수 계산의 근거</p>
-        </div>
-        <div class="txt">퀄리티 점수는 회사 장부를 바탕으로 하는 F스코어와 돈버는 효율성인 GP/A로 계산해요.</div>
       </div>
     </div>
 

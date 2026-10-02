@@ -156,7 +156,7 @@ const analystGroups = ref([
   },
   {
     period: '기관',
-    listTitle: '다른 종목들과 비교해서 기관의 순매수 비율은 어느 정도일까?',
+    listTitle: '다른 종목들과 비교해서 기관 순매수 비율은 어느 정도일까?',
     rateList: [
       {
         question: '기관이 최근 1주 동안 샀을까?',

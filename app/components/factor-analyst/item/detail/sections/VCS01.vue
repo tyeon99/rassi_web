@@ -57,28 +57,35 @@
               <strong>{{ groupSet.listTitle }}</strong>
             </div>
 
-            <div 
-              v-for="(item, idx) in groupSet.rangeList" 
-              :key="idx" 
-              class="range-box"
-            >
-              <div class="box-txt" v-html="item.txt"></div>
+            <div class="period-group">
+              <div 
+                v-for="(item, idx) in groupSet.periodList" 
+                :key="idx" 
+                class="period-box"
+              >
+                <span class="period">{{ item.period }}</span>
+                
+                <div class="range-box">
+                  <div class="box-txt" v-html="item.txt"></div>
 
-              <div class="range-wrap">
-                <div class="txt mb-1">
-                  <p>{{ item.label }}</p>
-                  <strong>백분위 : {{ item.percentile }}</strong>
-                </div>
-                <div class="range">
-                  <div class="bar"></div>
-                  <div class="score" :style="{ width: `${item.percentile}%` }"></div>
-                </div>
-                <div class="txt">
-                  <span>하위</span>
-                  <span>상위</span>
-                </div>
-              </div> <!-- range-wrap -->
-            </div> <!-- range-box -->
+                  <div class="range-wrap">
+                    <div class="txt mb-1">
+                      <p>{{ item.label }}</p>
+                      <strong>백분위 : {{ item.percentile }}</strong>
+                    </div>
+                    <div class="range">
+                      <div class="bar"></div>
+                      <div class="score" :style="{ width: `${item.percentile}%` }"></div>
+                    </div>
+                    <div class="txt">
+                      <span>하위</span>
+                      <span>상위</span>
+                    </div>
+                  </div> <!-- range-wrap -->
+                </div> <!-- range-box -->
+
+              </div> <!-- period-box -->
+            </div> <!-- period-group -->
 
           </div>
         </div>
@@ -109,22 +116,25 @@ const eyGroups = ref([
     m12: 91.2,
     m24: 23.2,
     m36: 50.0,
-    listTitle: '실적 기준 EY 위치는?',
-    rangeList: [
+    listTitle: '다른 종목들과 비교해서 실적 기준 EY 위치는 어느 정도일까?',
+    periodList: [
       {
+        period: '과거',
         label: '과거 비교',
         txt: 'SK하이닉스의 실적 기준 EY는 과거와 비교해 <strong>상위 12.25%</strong> 수준이에요.',
-        percentile: 91.2
+        percentile: 28
       },
       {
+        period: '피어그룹',
         label: '피어그룹 비교',
         txt: 'SK하이닉스의 실적 기준 EY는 피어그룹에서 <strong>상위 12.25%</strong> 수준이에요.',
-        percentile: 91.2
+        percentile: 54
       },
       {
+        period: '종합',
         label: '종합 비교',
         txt: '과거와 피어그룹 비교를 종합한 SK하이닉스의 실적 기준 EY는 전체 시장에서 <strong>상위 15%</strong> 수준이에요',
-        percentile: 91.2
+        percentile: 85
       }
     ]
   },
@@ -134,22 +144,25 @@ const eyGroups = ref([
     m12: 91.2,
     m24: 23.2,
     m36: 50.0,
-    listTitle: '전망 기준 EY 위치는?',
-    rangeList: [
+    listTitle: '다른 종목들과 비교해서 전망 기준 EY 위치는 어느 정도일까?',
+    periodList: [
       {
+        period: '과거',
         label: '과거 비교',
         txt: 'SK하이닉스의 전망 기준 EY는 과거와 비교해 <strong>상위 12.25%</strong> 수준이에요.',
-        percentile: 91.2
+        percentile: 28
       },
       {
+        period: '피어그룹',
         label: '피어그룹 비교',
         txt: 'SK하이닉스의 전망 기준 EY는 피어그룹에서 <strong>상위 12.25%</strong> 수준이에요.',
-        percentile: 91.2
+        percentile: 54
       },
       {
+        period: '종합',
         label: '종합 비교',
         txt: '과거와 피어그룹 비교를 종합한 SK하이닉스의 전망 기준 EY는 전체 시장에서 <strong>상위 15%</strong> 수준이에요',
-        percentile: 91.2
+        percentile: 85
       }
     ]
   }
