@@ -47,13 +47,15 @@
                   </div>
                   <div class="range">
                     <div class="bar">
-                      <span class="avg"></span>
+                      <span class="avg" :style="{ left: `${item.foreignerAvg}%` }"></span>
                     </div>
                     <div class="score" :style="{ width: `${item.foreignerPercentile}%` }"></div>
                   </div>
                   <div class="txt">
                     <span>하위</span>
-                    <span>평균 {{ item.foreignerAvg }}</span>
+                    <span class="avg-txt" :style="{ left: `${item.foreignerAvg}%` }">
+                      평균 {{ item.foreignerAvg }}
+                    </span>
                     <span>상위</span>
                   </div>
                 </div> <!-- range-wrap -->

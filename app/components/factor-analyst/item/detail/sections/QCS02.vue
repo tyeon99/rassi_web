@@ -40,13 +40,15 @@
             </div>
             <div class="range">
               <div class="bar">
-                <span class="avg"></span>
+                <span class="avg" :style="{ left: `${item.marketAvg}%` }"></span>
               </div>
               <div class="score" :style="{ width: `${item.marketScore}%` }"></div>
             </div>
             <div class="txt">
               <span>하위</span>
-              <span>평균 52.1</span>
+              <span class="avg-txt" :style="{ left: `${item.marketAvg}%` }">
+                평균 {{ item.marketAvg }}
+              </span>
               <span>상위</span>
             </div>
           </div>
@@ -97,6 +99,7 @@ const gpaList = ref([
     subTitle: '정보기술 섹터의 평균은 <strong>52.1</strong>이고, SK하이닉스의 GP/A는 전체 시장에서 <strong>상위 2%</strong> 수준이에요.',
     marketPercentile: 78,
     marketScore: 78,
+    marketAvg: 52.1,
     sectorDesc: 'SK하이닉스의 GP/A는 정보기술 섹터에서 <strong>상위 2%</strong> 수준이에요.',
     sectorName: '정보기술 섹터',
     sectorPercentile: 78,

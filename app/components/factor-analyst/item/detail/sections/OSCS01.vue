@@ -5,7 +5,6 @@
       <h1>단기 하락 OX</h1>
     </div>
 
-    <!-- 1. Q&A 박스 영역 -->
     <div class="box-group">
       <div 
         v-for="(item, idx) in rateList" 
@@ -25,7 +24,6 @@
       </div>
     </div>
 
-    <!-- 2. 백분위 비교 리스트 영역 (.period-group 구조) -->
     <div class="list-group">
       <div class="list">
         <div class="gray-box">
@@ -51,13 +49,15 @@
                   </div>
                   <div class="range">
                     <div class="bar">
-                      <span class="avg"></span>
+                      <span class="avg" :style="{ left: `${item.marketAvg}%` }"></span>
                     </div>
                     <div class="score" :style="{ width: `${item.marketPercentile}%` }"></div>
                   </div>
                   <div class="txt">
                     <span>하위</span>
-                    <span>평균 {{ item.marketAvg }}</span>
+                    <span class="avg-txt" :style="{ left: `${item.marketAvg}%` }">
+                      평균 {{ item.marketAvg }}
+                    </span>
                     <span>상위</span>
                   </div>
                 </div> <!-- range-wrap -->

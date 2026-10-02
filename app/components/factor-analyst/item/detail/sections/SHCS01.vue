@@ -38,13 +38,15 @@
               </div>
               <div class="range">
                 <div class="bar">
-                  <span class="avg"></span>
+                  <span class="avg" :style="{ left: `${marketAvg}%` }"></span>
                 </div>
                 <div class="score" :style="{ width: `${marketPercentile}%` }"></div>
               </div>
               <div class="txt">
                 <span>하위</span>
-                <span>평균 {{ marketAvg }}</span>
+                <span class="avg-txt" :style="{ left: `${marketAvg}%` }">
+                  평균 {{ marketAvg }}
+                </span>
                 <span>상위</span>
               </div>
             </div> <!-- range-wrap -->

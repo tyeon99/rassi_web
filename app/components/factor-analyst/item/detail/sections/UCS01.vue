@@ -74,9 +74,7 @@
                 <strong>백분위 : {{ marketPercentile }}</strong>
               </div>
               <div class="range">
-                <div class="bar">
-                  <span class="avg"></span>
-                </div>
+                <div class="bar"></div>
                 <div class="score" :style="{ width: `${marketPercentile}%` }"></div>
               </div>
               <div class="txt">

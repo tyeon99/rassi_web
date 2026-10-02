@@ -197,10 +197,13 @@
     @apply absolute w-[18px] h-[18px] rounded-full outline outline-2 outline-white top-1/2 -translate-y-1/2 right-0 translate-x-1/2;
   }
 .factor-analyst .itemStyleDetailContent .range-wrap .txt{
-    @apply w-full flex justify-between items-center;
+    @apply relative w-full flex justify-between items-center;
   }
 .factor-analyst .itemStyleDetailContent .range-wrap .txt span{
     @apply flex-1 font-normal text-[11px] leading-[17px] text-gray text-center first:text-left last:text-right whitespace-nowrap;
+  }
+  .factor-analyst .itemStyleDetailContent .range-wrap .txt span.avg-txt{
+    @apply absolute -translate-x-1/2;
   }
 .factor-analyst .itemStyleDetailContent .range-wrap .txt p{
     @apply font-normal text-sm text-gray;
