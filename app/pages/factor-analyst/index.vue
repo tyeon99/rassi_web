@@ -12,9 +12,9 @@
       <!-- // -->
 
         <!-- 오늘의 추천 스타일 스켈레톤 UI -->
-        <TodayRecommendSkeleton />
+        <!-- <TodayRecommendSkeleton /> -->
         <!-- 최근 스타일 추천 종목 스켈레톤 UI -->
-        <DateRecommendSkeleton />
+        <!-- <DateRecommendSkeleton /> -->
 
       <TodayRecommend />
       <DateRecommend />
