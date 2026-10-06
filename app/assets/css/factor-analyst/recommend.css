@@ -130,34 +130,37 @@
 
   /* 오늘의 스타일 추천 */
   .factor-analyst .recommendTodayTop{
-    @apply w-full p-[16px_20px_12px] bg-[#F8F9FA] flex flex-col justify-end items-end gap-2;
+    @apply w-full py-6 px-5 bg-[#F0F0FF] flex flex-col justify-start items-start gap-3;
+  }
+  .factor-analyst .recommendTodayTop span{
+    @apply font-semibold text-[11px] leading-[17px] text-main;
   }
   .factor-analyst .recommendTodayTop .txt{
     @apply w-full text-left font-normal text-sm text-[#364350];
   }
   .factor-analyst .recommendTodayTop button{
-    @apply flex justify-end items-center;
+    @apply flex justify-center items-center gap-[5px] bg-[#6565FF1A] p-[2px_4px_2px_10px] rounded-[6px];
   }
   .factor-analyst .recommendTodayTop button p{
-    @apply font-normal text-[13px] leading-[20px] text-gray;
+    @apply font-semibold text-[13px] leading-[20px] text-main;
   }
   .factor-analyst .recommendTodayContent{
     @apply w-full py-6 px-5 flex flex-col justify-start items-start gap-4;
   }
   .factor-analyst .recommendTodayContent .txt{
-    @apply font-normal text-sm text-main;
+    @apply font-normal text-sm text-[#364350];
   }
   .factor-analyst .recommendTodayContent .box-group{
     @apply w-full flex flex-col justify-start items-start gap-4;
   }
   .factor-analyst .recommendTodayContent .box-group .box{
-    @apply w-full py-6 px-5 bg-white rounded-[20px] border border-[#DEE2E6] flex flex-col justify-start items-start gap-3;
+    @apply w-full p-4 bg-white rounded-[16px] border border-[#DEE2E6] flex flex-col justify-start items-start gap-5;
   }
   .factor-analyst .recommendTodayContent .box-group .box .top{
     @apply w-full flex justify-between items-center gap-2;
   }
   .factor-analyst .recommendTodayContent .box-group .box .top .left{
-    @apply flex justify-start items-center gap-3 min-w-0;
+    @apply flex justify-start items-center gap-[6px] min-w-0;
   }
   .factor-analyst .recommendTodayContent .box-group .box .top .left .circle{
     @apply shrink-0;
@@ -172,18 +175,21 @@
     @apply font-normal text-xs leading-[18px] text-gray;
   }
   .factor-analyst .recommendTodayContent .box-group .box .top .right{
-    @apply font-normal text-sm text-main shrink-0;
+    @apply flex justify-center items-center p-[2px_10px] bg-[#6565FF1A] rounded-[6px] font-semibold text-xs leading-[18px] text-main shrink-0;
   }
   .factor-analyst .recommendTodayContent .box-group .box .bottom{
-    @apply w-full flex justify-start items-center flex-wrap gap-[8px_16px];
+    @apply w-full flex flex-col justify-start items-start gap-[6px] p-3 bg-[#F5F7F9] rounded-[8px];
+  }
+  .factor-analyst .recommendTodayContent .box-group .box .bottom strong{
+    @apply font-semibold text-base text-black;
   }
   .factor-analyst .recommendTodayContent .box-group .box .bottom p{
-    @apply flex justify-start items-center gap-2;
+    @apply font-normal text-sm text-gray;
   }
-  .factor-analyst .recommendTodayContent .box-group .box .bottom p strong{
-    @apply font-semibold text-sm text-black;
+  .factor-analyst .recommendTodayContent .box-group .box .bottom .tag-group{
+    @apply w-full flex justify-start items-center gap-[6px] flex-wrap;
   }
-  .factor-analyst .recommendTodayContent .box-group .box .bottom p span{
-    @apply h-[22px]
+  .factor-analyst .recommendTodayContent .box-group .box .bottom .tag-group span{
+    @apply p-[2px_4px] rounded-[4px] bg-white font-normal text-xs leading-[18px] text-gray;
   }
 }
