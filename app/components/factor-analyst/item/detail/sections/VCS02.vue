@@ -32,16 +32,17 @@
             </div>
 
             <div class="graph-box">
-              <div class="graph-txt">
-                <span>하위</span>
-                <span>상위</span>
-              </div>
               
               <div class="graph">
                 <div class="bar"></div>
-                <span class="m12" :style="{ left: `${groupSet.m12}%` }">12M</span>
-                <span class="m24" :style="{ left: `${groupSet.m24}%` }">24M</span>
-                <span class="m36" :style="{ left: `${groupSet.m36}%` }">36M</span>
+                <span class="m12" :style="{ left: `${groupSet.m12}%` }"></span>
+                <span class="m24" :style="{ left: `${groupSet.m24}%` }"></span>
+                <span class="m36" :style="{ left: `${groupSet.m36}%` }"></span>
+              </div>
+              
+              <div class="graph-txt">
+                <span>하위</span>
+                <span>상위</span>
               </div>
             </div>
 

@@ -239,7 +239,7 @@
     @apply w-full flex flex-col justify-start items-start gap-[5px];
   }
   .factor-analyst .itemStyleDetailContent .graph-wrap .graph-box .graph{
-    @apply relative w-full pb-5;
+    @apply relative w-full;
   }
   .factor-analyst .itemStyleDetailContent .graph-wrap .graph-box .graph .bar{
     @apply w-full h-[5px] rounded-[50px] bg-[#DEE2E6];
