@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .my-portfolio .mainSection{
+    @apply w-full py-6 px-5 border-b-[12px] border-[#F5F7F9] last:border-none;
+  }
+  .my-portfolio .mainSection__title{
+    @apply font-bold text-lg text-black mb-5;
+  }
+  .my-portfolio .createPortfolioSwiper{
+    @apply w-full px-5;
+  }
+  .my-portfolio .createPortfolioSwiper .swiper-wrapper{
+    @apply w-full;
+  }
+  .my-portfolio .createPortfolioSwiper .swiper-slide{
+    @apply h-[395px] p-5 rounded-[20px] flex flex-col justify-center items-start;
+    background: linear-gradient(162.04deg, #DDEAFD 15.6%, #ECF7F4 87.76%);
+  }
+  .my-portfolio .createPortfolioSwiper .slide-tag{
+    @apply inline-block py-1 px-3 bg-[#364350] mb-5 rounded-[50px] font-semibold text-xs leading-[18px] text-white;
+  }
+  .my-portfolio .createPortfolioSwiper .slide-title{
+    @apply font-bold text-[24px] leading-[29px] text-[#364350] mb-3;
+  }
+  .my-portfolio .createPortfolioSwiper .slide-txt{
+    @apply font-normal text-sm text-gray mb-5;
+  }
+  .my-portfolio .createPortfolioSwiper .slide-txtbox{
+    @apply w-full flex flex-col justify-start items-start gap-3 mb-5;
+  }
+  .my-portfolio .createPortfolioSwiper .slide-txtbox p{
+    @apply flex justify-start items-center gap-[6px];
+  }
+  .my-portfolio .createPortfolioSwiper .slide-txtbox p span{
+    @apply font-normal text-base text-[#364350];
+  }
+  .my-portfolio .createPortfolioSwiper .slide-button{
+    @apply w-full;
+  }
+  .my-portfolio .createPortfolioSwiper .slide-button button{
+    @apply w-full h-[54px] bg-[#5886FE] rounded-[12px] font-semibold text-base text-white;
+  }
+  .my-portfolio .createPortfolioSwiper .inner-box{
+    @apply w-full p-4 bg-white rounded-[12px];
+  }
+  .my-portfolio .createPortfolioSwiper .inner-box .txt-group{
+    @apply w-full flex flex-col justify-start items-start gap-[6px] mb-3;
+  }
+  .my-portfolio .createPortfolioSwiper .inner-box .txt-group p{
+    @apply flex justify-start items-start gap-[6px];
+  }
+  .my-portfolio .createPortfolioSwiper .inner-box .txt-group p img{
+    @apply inline-block mt-1;
+  }
+  .my-portfolio .createPortfolioSwiper .inner-box .txt-group p span{
+    @apply font-normal text-base text-[#364350];
+  }
+  .my-portfolio .createPortfolioSwiper .inner-box button{
+    @apply w-full pt-[10px] border-t border-[#DEE2E6] flex justify-between items-center;
+  }
+  .my-portfolio .createPortfolioSwiper .inner-box button p{
+    @apply font-normal text-[15px] leading-[23px] text-[#515F6C];
+  }
+  .my-portfolio .createPortfolioSwiper .swiper-pagination{
+    @apply relative bottom-0 top-0 left-0 right-0 flex justify-center items-center gap-[6px] mt-4;
+  }
+  .my-portfolio .createPortfolioSwiper .swiper-pagination-bullet{
+    @apply m-0 bg-[#DEE2E6] opacity-100;
+  }
+  .my-portfolio .createPortfolioSwiper .swiper-pagination-bullet-active{
+    @apply bg-black;
+  }
+  .my-portfolio .mainSection .box-group{
+    @apply w-full flex flex-col justify-start items-start gap-5;
+  }
+  .my-portfolio .mainSection .box-group .box{
+    @apply w-full rounded-[16px] border border-[#DEE2E6] p-4 flex flex-col justify-start items-start gap-5;
+  }
+  .my-portfolio .mainSection .box-group .box .box-title{
+    @apply w-full flex justify-start items-center gap-3;
+  }
+  .my-portfolio .mainSection .box-group .box .box-title .left{
+    @apply shrink-0;
+  }
+  .my-portfolio .mainSection .box-group .box .box-title .right{
+    @apply flex flex-col justify-start items-start gap-1;
+  }
+  .my-portfolio .mainSection .box-group .box .box-title .right strong{
+    @apply font-bold text-xl text-black;
+  }
+  .my-portfolio .mainSection .box-group .box .box-title .right .span-group{
+    @apply flex justify-start items-center flex-wrap gap-[5px];
+  }
+  .my-portfolio .mainSection .box-group .box .box-title .right .span-group span{
+    @apply p-[2px_6px] border border-[#DEE2E6] rounded-[4px] font-bold text-[11px] leading-[17px] text-gray;
+  }
+  .my-portfolio .mainSection .box-group .box .box-title .right .span-group span.rassi{
+    @apply border-main bg-main text-white;
+  }
+  .my-portfolio .mainSection .box-group .box .inner-box{
+    @apply w-full rounded-[8px] py-5 px-3 bg-[#F5F7F9] flex justify-center items-center gap-1;
+  }
+  .my-portfolio .mainSection .box-group .box .inner-box p{
+    @apply flex-1 flex flex-col justify-center items-center gap-1;
+  }
+  .my-portfolio .mainSection .box-group .box .inner-box p span{
+    @apply font-normal text-sm text-gray;
+  }
+  .my-portfolio .mainSection .box-group .box .inner-box p strong{
+    @apply font-semibold text-base;
+  }
+  .my-portfolio .mainSection .box-group .box .box-txt{
+    @apply font-normal text-base text-[#515F6C];
+  }
+  .my-portfolio .mainSection .box-group .box .box-button{
+    @apply w-full pt-[10px] border-t border-[#DEE2E6];
+  }
+  .my-portfolio .mainSection .box-group .box .box-button button{
+    @apply w-full flex justify-between items-center;
+  }
+  .my-portfolio .mainSection .box-group .box .box-button button p{
+    @apply font-normal text-[15px] leading-[23px] text-[#515F6C];
+  }
+}
