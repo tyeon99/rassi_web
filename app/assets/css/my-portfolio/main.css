@@ -107,13 +107,13 @@
     @apply flex-1 flex flex-col justify-center items-center gap-1;
   }
   .my-portfolio .mainSection .box-group .box .inner-box p span{
-    @apply font-normal text-sm text-gray;
+    @apply font-normal text-sm text-black;
   }
   .my-portfolio .mainSection .box-group .box .inner-box p strong{
     @apply font-semibold text-base;
   }
   .my-portfolio .mainSection .box-group .box .box-txt{
-    @apply font-normal text-base text-[#515F6C];
+    @apply font-normal text-base text-[#364350];
   }
   .my-portfolio .mainSection .box-group .box .box-button{
     @apply w-full pt-[10px] border-t border-[#DEE2E6];

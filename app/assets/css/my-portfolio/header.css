@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+.my-portfolio .mainHeader{
+    @apply w-full flex justify-between p-[10px_20px] bg-white sticky top-0 left-0 right-0 z-[999];
+  }
+.my-portfolio .mainHeader__logo{
+    @apply flex justify-start items-center gap-2.5;
+  }
+.my-portfolio .mainHeader__logo--name{
+    @apply font-bold text-black text-xl;
+  }
+.my-portfolio .mainHeader__logo--dropdown, .mainHeader__search{
+    @apply flex;
+  }
+.my-portfolio .backHeader{
+    @apply w-full p-[18.5px_12px] bg-white flex justify-start items-center sticky top-0 left-0 right-0 z-[999];
+  }
+.my-portfolio .backTitleHeader{
+    @apply w-full p-[15px_12px] bg-white flex justify-start items-center gap-2.5 sticky top-0 left-0 right-0 z-[999] border-b border-[#DEE2E6];
+  }
+.my-portfolio .backTitleHeader h1{
+    @apply font-bold text-lg text-black;
+  }
+.my-portfolio .closeHeader{
+    @apply w-full p-[16px_20px] bg-white flex justify-end items-center gap-2.5 sticky top-0 left-0 right-0 z-[999];
+  }
+.my-portfolio .closeHeader h1{
+    @apply font-bold text-lg text-black;
+  }
+.my-portfolio .itemStyleDetailHeader{
+    @apply bg-[#F0F0FF];
+  }
+}

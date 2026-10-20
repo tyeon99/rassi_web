@@ -1,4 +1,9 @@
 @import "~/assets/css/my-portfolio/main.css";
+@import "~/assets/css/my-portfolio/header.css";
+@import "~/assets/css/my-portfolio/detail.css";
+@import "~/assets/css/my-portfolio/tab.css";
+@import "~/assets/css/my-portfolio/create.css";
+
 
 @tailwind base;
 @tailwind components;

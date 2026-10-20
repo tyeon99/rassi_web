@@ -1,0 +1,417 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .my-portfolio .detailSection {
+    @apply w-full py-6 px-5 border-b-[12px] border-[#F5F7F9] last:border-none;
+  }
+  .my-portfolio .detailSection__toptitle{
+    @apply font-bold text-[24px] leading-[29px] text-black mb-3;
+  }
+  .my-portfolio .detailSection__toptxt{
+    @apply font-normal text-base text-[#515F6C] mb-6;
+  }
+  .my-portfolio .tabContent{
+    @apply w-full;
+  }
+  .my-portfolio .tabContent .period{
+    @apply w-full flex flex-col justify-start items-start gap-4 mt-4;
+  }
+  .my-portfolio .tabContent .period .top{
+    @apply w-full flex justify-between items-center;
+  }
+  .my-portfolio .tabContent .period .top p{
+    @apply flex flex-col justify-center items-start last:items-end;
+  }
+  .my-portfolio .tabContent .period .top p span{
+    @apply font-normal text-sm text-gray;
+  }
+  .my-portfolio .tabContent .period .top p strong{
+    @apply font-bold text-[24px] leading-[30px] text-[#364350];
+  }
+  .my-portfolio .tabContent .period .bottom{
+    @apply w-full bg-[#F5F7F9] rounded-[12px] p-4 flex justify-evenly items-center gap-[10px];
+  }
+  .my-portfolio .tabContent .period .bottom p{
+    @apply flex justify-center items-center flex-col;
+  }
+  .my-portfolio .tabContent .period .bottom p span{
+    @apply font-normal text-[12px] leading-[18px] text-gray text-center;
+  }
+  .my-portfolio .tabContent .period .bottom p span em{
+    @apply text-[11px] leading-[17px];
+  }
+  .my-portfolio .tabContent .period .bottom .line{
+    @apply w-[1px] h-[42px] bg-[#DEE2E6];
+  }
+  .my-portfolio .detailSection__title{
+    @apply w-full mb-4 font-bold text-lg text-black;
+  }
+  .my-portfolio .detailSection .guide-box{
+    @apply w-full rounded-[12px] border border-[#DEE2E6] p-4 mb-4;
+  }
+  .my-portfolio .detailSection .guide-box p{
+    @apply pt-[10px] pb-2 first:pt-0 last:pb-0 border-b border-[#DEE2E6] last:border-none flex justify-between items-center;
+  }
+  .my-portfolio .detailSection .guide-box p span{
+    @apply font-normal text-[15px] leading-[23px] text-[#515F6C];
+  }
+  .my-portfolio .detailSection .guide-box p strong{
+    @apply font-semibold text-[15px] leading-[23px] text-black;
+  }
+  .my-portfolio .detailSection .guide-txt{
+    @apply w-full flex flex-col justify-start items-start gap-3;
+  }
+  .my-portfolio .detailSection .guide-txt p{
+    @apply font-normal text-sm text-[#515F6C];
+  }
+  .my-portfolio .tabContent .rate-chart{
+    @apply w-full mt-4;
+  }
+  .my-portfolio .tabContent .rate-chart .txt{
+    @apply w-full flex justify-between items-center mb-4;
+  }
+  .my-portfolio .tabContent .rate-chart .txt strong{
+    @apply font-semibold text-base text-black;
+  }
+  .my-portfolio .tabContent .rate-chart .txt span{
+    @apply font-normal text-xs text-gray;
+  }
+  .my-portfolio .tabContent .chart-box{
+    @apply w-full h-full;
+  }
+  .my-portfolio .detailSection__txt{
+    @apply w-full font-normal text-base text-[#515F6C];
+  }
+  .my-portfolio .detailSection .rate-box{
+    @apply w-full mt-4;
+  }
+  .my-portfolio .detailSection .rate-box .box-group{
+    @apply w-full flex flex-nowrap overflow-x-auto justify-start items-center gap-3 mb-4 px-5;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+  }
+  .my-portfolio .detailSection .rate-box .box-group::-webkit-scrollbar {
+    display: none;
+  }
+  .my-portfolio .detailSection .rate-box .box-group .box{
+    @apply shrink-0 w-[95px] h-[78px] bg-[#F5F7F9] rounded-[8px] p-3 flex flex-col justify-between items-end;
+  }
+  .my-portfolio .detailSection .rate-box .box-group .box span{
+    @apply w-full text-left font-normal text-[13px] leading-[20px] text-gray;
+  }
+  .my-portfolio .detailSection .rate-box .box-group .box strong{
+    @apply font-semibold text-base text-black;
+  }
+  .my-portfolio .detailSection__calender{
+    @apply w-full flex justify-between items-center mb-4;
+  }
+  .my-portfolio .detailSection__calender button.next{
+    @apply rotate-180;
+  }
+  .my-portfolio .detailSection__calender button.last{
+    @apply opacity-15;
+  }
+  .my-portfolio .detailSection__calender p{
+    @apply font-bold text-lg text-black;
+  }
+  .my-portfolio .detailSection .current-situation{
+    @apply w-full mt-4 flex flex-col justify-start items-start gap-4;
+  }
+  .my-portfolio .detailSection .current-situation .box{
+    @apply w-full rounded-[16px] border border-[#DEE2E6] p-4 flex flex-col justify-start items-start gap-5;
+  }
+  .my-portfolio .detailSection .current-situation .box .top{
+    @apply w-full flex justify-between items-center gap-4;
+  }
+  .my-portfolio .detailSection .current-situation .box .top .left{
+    @apply flex justify-start items-center gap-[6px] min-w-0;
+  }
+  .my-portfolio .detailSection .current-situation .box .top .left img{
+    @apply shrink-0;
+  }
+  .my-portfolio .detailSection .current-situation .box .top .left .item{
+    @apply flex flex-col justify-start items-start min-w-0;
+  }
+  .my-portfolio .detailSection .current-situation .box .top .left .item .name{
+    @apply w-full flex justify-start items-center gap-[6px];
+  }
+  .my-portfolio .detailSection .current-situation .box .top .left .item .name strong{
+    @apply font-semibold text-base text-black truncate min-w-0;
+  }
+  .my-portfolio .detailSection .current-situation .box .top .left .item .name span{
+    @apply font-normal text-xs text-gray;
+  }
+  .my-portfolio .detailSection .current-situation .box .top .left .item .date{
+    @apply flex justify-start items-center gap-1;
+  }
+  .my-portfolio .detailSection .current-situation .box .top .left .item .date p{
+    @apply font-normal text-xs text-gray;
+  }
+  .my-portfolio .detailSection .current-situation .box .top .left .item .date span{
+    @apply px-[5px] rounded-[4px] bg-[#6565FF33] font-semibold text-xs leading-[18px] text-main;
+  }
+  .my-portfolio .detailSection .current-situation .box .top .right span{
+    @apply shrink-0 p-[5px_10px] rounded-[6px] bg-[#FF50501A] font-bold text-lg text-black;
+  }
+  .my-portfolio .range-wrap{
+    @apply w-full pb-4 flex flex-col justify-start items-start gap-[6px];
+  }
+  .my-portfolio .range-wrap .range{
+    @apply w-full relative py-1;
+  }
+  .my-portfolio .range-wrap .range .bar{
+    @apply relative w-full h-[10px] bg-[#EBEBEB] rounded-[50px];
+  }
+  .my-portfolio .range-wrap .range .bar .avg{
+    @apply absolute w-[1px] h-[14px] bg-[#A1ABB5] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-[10];
+  }
+  .my-portfolio .range-wrap .range .score{
+    @apply absolute h-[10px] bg-[#A1ABB5] rounded-[50px] left-0 top-1;
+  }
+  .my-portfolio .range-wrap .range .score.up{
+    @apply bg-[#FF5050];
+  }
+  .my-portfolio .range-wrap .txt{
+    @apply relative w-full flex justify-start items-center gap-[6px];
+  }
+  .my-portfolio .range-wrap .txt span{
+    @apply px-2 bg-[#FF5050] rounded-[50px] font-normal text-xs leading-[18px] text-white;
+  }
+  .my-portfolio .range-wrap .txt .avg-txt{
+    @apply absolute -translate-x-1/2 font-normal text-[11px] leading-[17px] text-gray mt-3;
+  }
+  .my-portfolio .range-wrap .txt p{
+    @apply font-normal text-sm text-gray;
+  }
+  .my-portfolio .range-wrap .txt strong{
+    @apply font-bold text-sm text-[#364350];
+  }
+  .my-portfolio .detailSection .current-situation .box .inner-box{
+    @apply w-full bg-[#F5F7F9] rounded-[12px] p-4;
+  }
+  .my-portfolio .detailSection .current-situation .box .inner-box .txt-group{
+    @apply w-full flex flex-col justify-start items-start gap-[2px];
+  }
+  .my-portfolio .detailSection .current-situation .box .inner-box .txt-group p{
+    @apply w-full flex justify-between items-center;
+  }
+  .my-portfolio .detailSection .current-situation .box .inner-box .txt-group p span{
+    @apply font-normal text-base text-gray;
+  }
+  .my-portfolio .detailSection .current-situation .box .inner-box .txt-group p strong{
+    @apply font-bold text-base text-black;
+  }
+  .my-portfolio .detailSection .current-situation .gray-box{
+    @apply w-full p-4 bg-[#EDF0F3] rounded-[12px] flex flex-col justify-start items-start gap-4;
+  }
+  .my-portfolio .detailSection .current-situation .gray-box .top{
+    @apply w-full flex justify-between items-start;
+  }
+  .my-portfolio .detailSection .current-situation .gray-box .top .left{
+    @apply flex flex-col justify-start items-start gap-1;
+  }
+  .my-portfolio .detailSection .current-situation .gray-box .top .left span{
+    @apply font-normal text-sm text-[#364350];
+  }
+  .my-portfolio .detailSection .current-situation .gray-box .top .left strong{
+    @apply font-bold text-2xl text-black;
+  }
+  .my-portfolio .detailSection .current-situation .gray-box .top .right{
+    @apply flex justify-center items-center p-[4px_12px] rounded-[50px] bg-main font-semibold text-xs leading-[18px] text-white;
+  }
+  .my-portfolio .detailSection .current-situation .gray-box .inner-box{
+    @apply w-full flex justify-between items-center bg-white py-5 px-3 rounded-[8px] gap-1;
+  }
+  .my-portfolio .detailSection .current-situation .gray-box .inner-box p{
+    @apply px-2 last:px-[15px] flex flex-col justify-center items-center gap-1;
+  }
+  .my-portfolio .detailSection .current-situation .gray-box .inner-box p span{
+    @apply font-normal text-sm text-gray;
+  }
+  .my-portfolio .detailSection .current-situation .gray-box .inner-box p strong{
+    @apply font-semibold text-base text-black;
+  }
+  .my-portfolio .detailSection .current-situation .box .box-group{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .my-portfolio .detailSection .current-situation .box .inner-box .buy-sell{    @apply w-full flex justify-between items-center;
+  }
+  .my-portfolio .detailSection .current-situation .box .inner-box .buy-sell .txt{
+    @apply flex flex-col justify-start items-start last:items-end;
+  }
+  .my-portfolio .detailSection .current-situation .box .inner-box .buy-sell .txt span{
+    @apply font-normal text-xs leading-[18px] text-black;
+  }
+  .my-portfolio .detailSection .current-situation .box .inner-box .buy-sell .txt p{
+    @apply font-semibold text-sm leading-[21px] text-gray;
+  }
+  .my-portfolio .detailSection .current-situation .box .inner-box .buy-sell .txt strong{
+    @apply font-bold text-base text-black;
+  }
+  .my-portfolio .detailSection .current-situation .box .inner-box .buy-sell .date{
+    @apply relative px-[10px] flex justify-center items-center bg-gray rounded-[50px] font-semibold text-[13px] leading-[20px] text-white before:content-[''] before:absolute before:w-[15px] before:h-0 before:border-b-[1px] before:border-gray before:border-dashed before:-left-[15px] before:opacity-50 after:content-[''] after:absolute after:w-[15px] after:h-0 after:border-b-[1px] after:border-gray after:border-dashed after:-right-[15px] after:opacity-50;
+  }
+  .my-portfolio .detailSection .current-situation .box .inner-box .bottom{
+    @apply w-full mt-2 border-t border-[#DEE2E6] pt-[10px] flex justify-between items-center
+  }
+  .my-portfolio .detailSection .current-situation .box .inner-box .bottom p{
+    @apply font-bold text-base text-black;
+  }
+  .my-portfolio .detailSection .current-situation .box .inner-box .top{
+    @apply w-full flex justify-between items-center;
+  }
+  .my-portfolio .detailSection .current-situation .box .inner-box .top p{
+    @apply font-bold text-base text-black;
+  }
+  .my-portfolio .detailSection .current-situation .box .inner-box .top img.rotate{
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+  }
+  .my-portfolio .detailSection .current-situation .box .inner-box .inner-more{
+    @apply w-full pt-2;
+    will-change: height;
+  }
+  .my-portfolio .detailSection .current-situation .box .inner-box .inner-more .price-txt{
+    @apply w-full flex flex-col justify-start items-start gap-[2px];
+  }
+  .my-portfolio .detailSection .current-situation .box .inner-box .inner-more .price-txt p{
+    @apply w-full flex justify-between items-center;
+  }
+  .my-portfolio .detailSection .current-situation .box .inner-box .inner-more .price-txt p span{
+    @apply font-normal text-sm leading-[21px] text-gray;
+  }
+  .my-portfolio .detailSection .current-situation .box .inner-box .inner-more .price-txt p strong{
+    @apply font-semibold text-sm leading-[21px] text-gray;
+  }
+  .my-portfolio .detailSection .sellHistory{
+    @apply w-full mt-4 flex flex-col justify-start items-start gap-6;
+  }
+  .my-portfolio .detailSection .sellHistory .all{
+    @apply w-full;
+  }
+  .my-portfolio .detailSection .sellHistory .sort{
+    @apply w-full flex flex-col justify-start items-start gap-6;
+  }
+  .my-portfolio .detailSection .sellHistory .box-group{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .my-portfolio .detailSection .sellHistory .box{
+    @apply w-full rounded-[16px] border border-[#DEE2E6] p-4;
+  }
+  .my-portfolio .detailSection .sellHistory .box .all-top{
+    @apply w-full flex flex-col justify-start items-start gap-1 pb-4 border-b border-[#DEE2E6] mb-[10px];
+  }
+  .my-portfolio .detailSection .sellHistory .box .all-top span{
+    @apply font-normal text-[13px] leading-[20px] text-gray;
+  }
+  .my-portfolio .detailSection .sellHistory .box .all-top strong{
+    @apply font-bold text-2xl leading-[29px] text-black;
+  }
+  .my-portfolio .detailSection .sellHistory .box .all-top p{
+    @apply font-normal text-sm text-gray;
+  }
+  .my-portfolio .detailSection .sellHistory .box .all-top p em{
+    @apply text-[#364350];
+  }
+  .my-portfolio .detailSection .sellHistory .box .graph{
+    @apply w-full flex flex-col justify-start items-start gap-4 mb-5;
+  }
+  .my-portfolio .detailSection .sellHistory .box .graph .txt{
+    @apply w-full flex justify-between items-center;
+  }
+  .my-portfolio .detailSection .sellHistory .box .graph .txt p{
+    @apply w-full flex flex-col justify-start items-start last:items-end;
+  }
+  .my-portfolio .detailSection .sellHistory .box .graph .txt p span{
+    @apply font-semibold text-sm leading-[21px] text-black;
+  }
+  .my-portfolio .detailSection .sellHistory .box .graph .txt p strong{
+    @apply font-bold text-xl leading-[29px] text-black;
+  }
+  .my-portfolio .detailSection .sellHistory .box .graph .graph-bar{
+    @apply w-full rounded-[50px] bg-[#5886FE] h-[10px] overflow-hidden;
+  }
+  .my-portfolio .detailSection .sellHistory .box .graph .graph-bar .return{
+    @apply h-[10px] bg-[#FF5050] border-r border-[#EBEBEB];
+  }
+  .my-portfolio .detailSection .sellHistory .box .inner-box{
+    @apply w-full p-[10px_16px] rounded-[12px] bg-[#F5F7F9] flex justify-center items-center gap-[2px];
+  }
+  .my-portfolio .detailSection .sellHistory .box .inner-box .txt{
+    @apply flex-1 flex flex-col justify-center items-center;
+  }
+  .my-portfolio .detailSection .sellHistory .box .inner-box .txt p{
+    @apply font-semibold text-sm leading-[21px] text-black;
+  }
+  .my-portfolio .detailSection .sellHistory .box .inner-box .txt  strong{
+    @apply font-bold text-xl leading-[29px] text-black;
+  }
+  .my-portfolio .detailSection .sellHistory .box .inner-box .txt  span{
+    @apply font-normal text-[13px] leading-[20px] text-gray;
+  }
+  .my-portfolio .detailSection .sellHistory .box .all-bottom{
+    @apply w-full mt-4 flex justify-evenly items-center gap-[10px];
+  }
+  .my-portfolio .detailSection .sellHistory .box .all-bottom p{
+    @apply flex flex-col justify-center items-center;
+  }
+  .my-portfolio .detailSection .sellHistory .box .all-bottom p span{
+    @apply font-normal text-[13px] leading-[20px] text-gray;
+  }
+  .my-portfolio .detailSection .sellHistory .box .all-bottom p strong{
+    @apply font-bold text-base text-black;
+  }
+  .my-portfolio .detailSection .sellHistory .box .all-bottom .line{
+    @apply w-[1px] h-[44px] bg-[#DEE2E6]
+  }
+  .my-portfolio .detailSection .sellHistory .sortby{
+    @apply relative w-full flex justify-end items-center;
+  }
+  .my-portfolio .detailSection .sellHistory .sortby-btn{
+    @apply w-full flex justify-end items-center;
+  }
+  .my-portfolio .detailSection .sellHistory .sortby-btn p{
+    @apply font-normal text-[13px] leading-[20px] text-gray;
+  }
+  .my-portfolio .detailSection .sellHistory .sortby-dropdown{
+    @apply absolute p-4 border border-[#DEE2E6] rounded-[8px] flex flex-col justify-center items-start top-[29px] right-0 bg-white z-[10];
+  }
+  .my-portfolio .detailSection .sellHistory .sortby-dropdown button{
+    @apply font-normal text-[13px] leading-[20px] text-[#364350] text-left;
+  }
+  .my-portfolio .detailSection .sellHistory .box .top{
+    @apply w-full flex justify-between items-center mb-2 min-w-0;
+  }
+  .my-portfolio .detailSection .sellHistory .box .top .left{
+    @apply flex justify-start items-center gap-3 min-w-0 flex-1;
+  }
+  .my-portfolio .detailSection .sellHistory .box .top .left img{
+    @apply shrink-0;
+  }
+  .my-portfolio .detailSection .sellHistory .box .top .left .name{
+    @apply flex flex-col justify-start items-start w-full min-w-0;
+  }
+  .my-portfolio .detailSection .sellHistory .box .top .left .name strong{
+    @apply font-semibold text-base text-black truncate min-w-0 w-full;
+  }
+  .my-portfolio .detailSection .sellHistory .box .top .left .name span{
+    @apply font-normal text-xs leading-[18px] text-gray;
+  }
+  .my-portfolio .detailSection .sellHistory .box .top .right{
+    @apply shrink-0 flex flex-col justify-start items-end;
+  }
+  .my-portfolio .detailSection .sellHistory .box .top .right strong{
+    @apply font-semibold text-base text-black;
+  }
+  .my-portfolio .detailSection .sellHistory .box .top .right span{
+    @apply font-normal text-[13px] leading-[20px] text-gray;
+  }
+  .my-portfolio .detailSection .sellHistory .box .inner-box .p-group{
+    @apply w-full flex flex-col justify-start items-start gap-[2px];
+  }
+  .my-portfolio .detailSection .sellHistory .box .inner-box .p-group p{
+    @apply font-normal text-[13px] leading-[20px] text-[#364350];
+  }
+}

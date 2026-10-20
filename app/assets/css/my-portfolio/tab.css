@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .my-portfolio .custom-tab{
+    @apply relative w-full h-[38px] flex justify-center items-center bg-[#EDF0F3] p-1 rounded-[8px];
+  }
+  .my-portfolio .custom-tab button{
+    @apply relative flex-1 rounded-[6px] font-normal text-base text-gray bg-transparent z-[1];
+  }
+  .my-portfolio .custom-tab button.active{
+    @apply font-bold text-black;
+  }
+  .my-portfolio .custom-tab .tab-indicator {
+    @apply h-[30px] absolute rounded-[6px] bg-white z-0 ease-out top-1 bottom-1 left-5;
+    transition: transform 0.3s ease-out, width 0.3s ease-out; 
+    box-shadow: 0px 0px 4px 0px #0000001A;
+  }
+}
