@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .my-portfolio .createTop{
+    @apply w-full px-5 mb-[30px] flex flex-col justify-center items-center gap-[30px];
+  }
+  .my-portfolio .createTop h1.title{
+    @apply font-bold text-[24px] leading-[29px] text-[#364350];
+  }
+  .my-portfolio .createTop .stepper{
+    @apply relative flex justify-center items-center gap-9 before:content-[''] before:absolute before:w-[183px] before:h-[1px] before:bg-[#DEE2E6] before:top-[10px] before:left-1/2 before:-translate-x-1/2 before:z-[10];
+  }
+  .my-portfolio .createTop .stepper .step{
+    @apply flex flex-col justify-center items-center gap-[10px] relative z-[20];
+  }
+  .my-portfolio .createTop .stepper .step span{
+    @apply w-[20px] h-[20px] flex justify-center items-center bg-[#DEE2E6] rounded-full text-[#282B2F] font-normal text-xs;
+  }
+  .my-portfolio .createTop .stepper .step.active span{
+    @apply bg-main text-white;
+  }
+  .my-portfolio .createTop .stepper .step p{
+    @apply font-normal text-xs text-gray;
+  }
+  .my-portfolio .createTop .stepper .step.active p{
+    @apply text-main;
+  }
+}
