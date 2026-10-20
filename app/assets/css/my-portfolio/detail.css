@@ -96,7 +96,10 @@
     display: none;
   }
   .my-portfolio .detailSection .rate-box .box-group .box{
-    @apply shrink-0 w-[95px] h-[78px] bg-[#F5F7F9] rounded-[8px] p-3 flex flex-col justify-between items-end;
+    @apply shrink-0 w-[95px] h-[78px] bg-[#F5F7F9] rounded-[8px] p-3 flex flex-col justify-between items-end border border-[#F5F7F9];
+  }
+  .my-portfolio .detailSection .rate-box .box-group .box.active{
+    @apply border-main;
   }
   .my-portfolio .detailSection .rate-box .box-group .box span{
     @apply w-full text-left font-normal text-[13px] leading-[20px] text-gray;

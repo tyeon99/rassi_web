@@ -5,22 +5,19 @@
 
     <div class="rate-box">
 
-      <div class="box-group">
-        <div class="box">
-          <span>2023</span>
-          <strong class="up">+26.8%</strong>
-        </div>
-        <div class="box">
-          <span>2024</span>
-          <strong class="down">-12.6%</strong>
-        </div>
-        <div class="box">
-          <span>2025</span>
-          <strong class="up">+17.9%</strong>
-        </div>
-        <div class="box">
-          <span>2026</span>
-          <strong class="up">+57.9%</strong>
+      <div ref="boxGroupRef" class="box-group">
+        <div 
+          v-for="(item, idx) in yearData" 
+          :key="item.year"
+          :ref="(el) => setBoxRef(el, idx)"
+          class="box"
+          :class="{ active: selectedYear === item.year }"
+          @click="selectYear(item.year, idx)"
+        >
+          <span>{{ item.year }}</span>
+          <strong :class="item.rate >= 0 ? 'up' : 'down'">
+            {{ item.rate >= 0 ? `+${item.rate}%` : `${item.rate}%` }}
+          </strong>
         </div>
       </div>
 
@@ -36,6 +33,58 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted, nextTick, type ComponentPublicInstance } from 'vue'
 import '~/assets/css/my-portfolio/common.css'
 
+interface YearRateItem {
+  year: number
+  rate: number
+}
+
+const yearData = ref<YearRateItem[]>([
+  { year: 2023, rate: 26.8 },
+  { year: 2024, rate: -12.6 },
+  { year: 2025, rate: 17.9 },
+  { year: 2026, rate: 57.9 }
+])
+
+const selectedYear = ref(2026)
+
+const boxGroupRef = ref<HTMLDivElement | null>(null)
+const boxRefs = ref<HTMLDivElement[]>([])
+
+const setBoxRef = (el: Element | ComponentPublicInstance | null, index: number) => {
+  if (el) {
+    boxRefs.value[index] = el as HTMLDivElement
+  }
+}
+
+const scrollToBox = (index: number, behavior: ScrollBehavior = 'smooth') => {
+  const targetBox = boxRefs.value[index]
+  const container = boxGroupRef.value
+
+  if (targetBox && container) {
+    const boxCenter = targetBox.offsetLeft + (targetBox.offsetWidth / 2)
+    const containerHalfWidth = container.offsetWidth / 2
+    const targetScrollLeft = boxCenter - containerHalfWidth
+
+    container.scrollTo({
+      left: targetScrollLeft,
+      behavior
+    })
+  }
+}
+
+const selectYear = (year: number, index: number) => {
+  selectedYear.value = year
+  scrollToBox(index, 'smooth')
+}
+
+onMounted(async () => {
+  await nextTick()
+  const defaultIndex = yearData.value.findIndex(item => item.year === selectedYear.value)
+  if (defaultIndex !== -1) {
+    scrollToBox(defaultIndex, 'auto')
+  }
+})
 </script>
