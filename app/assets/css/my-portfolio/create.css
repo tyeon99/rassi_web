@@ -27,4 +27,149 @@
   .my-portfolio .createTop .stepper .step.active p{
     @apply text-main;
   }
+  .my-portfolio .createStep{
+    @apply w-full px-5 pb-5 flex flex-col justify-start items-start gap-[30px];
+  }
+  .my-portfolio .createStep .strategy-selection{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .my-portfolio .createStep .strategy-selection .box{
+    @apply w-full rounded-[16px] border border-[#D2D2D2] p-4 flex justify-start items-center gap-3;
+  }
+  .my-portfolio .createStep .strategy-selection .box .check{
+    @apply shrink-0
+  }
+  .my-portfolio .createStep .strategy-selection .box .txt-group{
+    @apply flex flex-col justify-start items-start gap-[5px];
+  }
+  .my-portfolio .createStep .strategy-selection .box .txt-group .top{
+    @apply w-full flex justify-between items-center;
+  }
+  .my-portfolio .createStep .strategy-selection .box .txt-group .top .title{
+    @apply flex justify-start items-center gap-2;
+  }
+  .my-portfolio .createStep .strategy-selection .box .txt-group .top .title strong{
+    @apply font-bold text-base text-black;
+  }
+  .my-portfolio .createStep .strategy-selection .box .txt-group .top .title span{
+    @apply p-[2px_8px] rounded-[6px] bg-[#6565FF4D] font-bold text-[11px] leading-[17px] text-main;
+  }
+  .my-portfolio .createStep .strategy-selection .box .txt-group .bottom{
+    @apply w-full flex flex-col justify-start items-start gap-[5px];
+  }
+  .my-portfolio .createStep .strategy-selection .box .txt-group .bottom p{
+    @apply relative font-normal text-base text-[#364350] pl-3 before:content-[''] before:w-[3px] before:h-[3px] before:rounded-full before:bg-[#364350] before:absolute before:top-[10px] before:left-[3px];
+  }
+  .my-portfolio .createStep .chosen-strategy{
+    @apply w-full flex justify-between items-center border border-[#DEE2E6] rounded-[12px] p-4;
+  }
+  .my-portfolio .createStep .chosen-strategy .left{
+    @apply flex justify-start items-center gap-3;
+  }
+  .my-portfolio .createStep .chosen-strategy .left .txt{
+    @apply flex flex-col justify-start items-start;
+  }
+  .my-portfolio .createStep .chosen-strategy .left .txt span{
+    @apply font-normal text-[13px] leading-[20px] text-gray;
+  }
+  .my-portfolio .createStep .chosen-strategy .left .txt strong{
+    @apply font-semibold text-base text-black;
+  }
+  .my-portfolio .createStep .chosen-strategy .right button{
+    @apply font-normal text-sm text-gray underline;
+  }
+  .my-portfolio .createStep .step-section{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .my-portfolio .createStep .step-section .title{
+    @apply font-bold text-lg text-black;
+  }
+  .my-portfolio .createStep .step-section .input-wrap{
+    @apply w-full flex flex-col justify-start items-start gap-[6px];
+  }
+  .my-portfolio .createStep .step-section .input-wrap .input-box{
+    @apply w-full border border-[#DEE2E6] rounded-[12px] p-4 flex justify-between items-center;
+  }
+  .my-portfolio .createStep .step-section .input-wrap .input-box input{
+    @apply font-bold text-lg text-[#364350] placeholder:text-gray;
+  }
+  .my-portfolio .createStep .step-section .input-wrap .input-box .right{
+    @apply flex justify-end items-center gap-[10px];
+  }
+  .my-portfolio .createStep .step-section .input-wrap .input-box .right span{
+    @apply font-normal text-[15px] leading-[23px] text-black;
+  }
+  .my-portfolio .createStep .step-section .input-wrap p{
+    @apply font-semibold text-xs text-gray;
+  }
+  .my-portfolio .createStep .step-section .quick-btns{
+    @apply w-full flex justify-start items-start gap-3;
+  }
+  .my-portfolio .createStep .step-section .quick-btns button{
+    @apply flex-1 p-[6px] rounded-[8px] bg-[#F5F7F9] font-semibold text-sm leading-[21px] text-[#364350];
+  }
+  .my-portfolio .createStep .step-section .info-box{
+    @apply w-full p-4 rounded-[12px] bg-[#5886FE1A] flex justify-start items-start gap-[6px];
+  }
+  .my-portfolio .createStep .step-section .info-box.gray{
+    @apply bg-[#F5F7F9];
+  }
+  .my-portfolio .createStep .step-section .info-box svg{
+    @apply shrink-0;
+  }
+  .my-portfolio .createStep .step-section .info-box .checkbox{
+    @apply shrink-0;
+  }
+  .my-portfolio .createStep .step-section .info-box p{
+    @apply font-normal text-sm leading-[21px] text-[#515F6C];
+  }
+  .my-portfolio .createStep .step-section .info-box.gray strong{
+    @apply font-semibold text-[#364350];
+  }
+  .my-portfolio .createStep .step-section .info-box strong{
+    @apply font-normal text-main;
+  }
+  .my-portfolio .createStep .step-section .tabContent .txt{
+    @apply font-normal text-base text-[#515F6C] mb-4;
+  }
+  .my-portfolio .createStep .step-section .list-box{
+    @apply w-full rounded-[12px] p-4 border border-[#DEE2E6];
+  }
+  .my-portfolio .createStep .step-section .list-box p{
+    @apply w-full pt-[10px] pb-2 first:pt-0 last:pb-0 border-b border-[#DEE2E6] last:border-none flex justify-between items-center;
+  }
+  .my-portfolio .createStep .step-section .list-box p span{
+    @apply font-normal text-[15px] leading-[23px] text-[#515F6C];
+  }
+  .my-portfolio .createStep .step-section .list-box p strong{
+    @apply font-semibold text-[15px] leading-[23px] text-black;
+  }
+  .my-portfolio .createStep .guide{
+    @apply mt-6 w-full flex flex-col justify-start items-start gap-[6px];
+  }
+  .my-portfolio .createStep .guide p{
+    @apply font-normal text-sm text-[#515F6C];
+  }
+  .my-portfolio .createStep .create-box{
+    @apply w-full rounded-[20px] p-5 flex flex-col justify-center items-center gap-5;
+    background: linear-gradient(162.04deg, #DDEAFD 15.6%, #ECF7F4 87.76%);
+  }
+  .my-portfolio .createStep .create-box strong{
+    @apply font-bold text-[24px] leading-[29px] text-[#364350] text-center;
+  }
+  .my-portfolio .createStep .create-box p{
+    @apply font-normal text-base text-[#364350] text-center;
+  }
+  .my-portfolio .createStep .create-btn{
+    @apply w-full;
+  }
+  .my-portfolio .createStep .create-btn button{
+    @apply w-full h-[54px] rounded-[12px] bg-main font-semibold text-base text-white disabled:bg-[#DEE2E6];
+  }
+  .my-portfolio .createStep .create-btn a{
+    @apply flex justify-center items-center mt-4 gap-1;
+  }
+  .my-portfolio .createStep .create-btn a span{
+    @apply font-normal text-sm text-[#515F6C] underline;
+  }
 }

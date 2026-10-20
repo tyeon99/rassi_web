@@ -379,10 +379,14 @@
     @apply font-normal text-[13px] leading-[20px] text-gray;
   }
   .my-portfolio .detailSection .sellHistory .sortby-dropdown{
-    @apply absolute p-4 border border-[#DEE2E6] rounded-[8px] flex flex-col justify-center items-start top-[29px] right-0 bg-white z-[10];
+    @apply absolute p-4 border border-[#DEE2E6] rounded-[8px] flex flex-col justify-center items-start gap-[6px] top-[29px] right-0 bg-white z-[10];
+    box-shadow: 0px 1px 10px 0px #00000026;
   }
   .my-portfolio .detailSection .sellHistory .sortby-dropdown button{
-    @apply font-normal text-[13px] leading-[20px] text-[#364350] text-left;
+    @apply font-normal text-[13px] leading-[20px] text-[#282B2F] text-left;
+  }
+  .my-portfolio .detailSection .sellHistory .sortby-dropdown button.active{
+    @apply text-main;
   }
   .my-portfolio .detailSection .sellHistory .box .top{
     @apply w-full flex justify-between items-center mb-2 min-w-0;
