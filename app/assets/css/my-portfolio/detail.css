@@ -52,13 +52,13 @@
     @apply w-full rounded-[12px] border border-[#DEE2E6] p-4 mb-4;
   }
   .my-portfolio .detailSection .guide-box p{
-    @apply pt-[10px] pb-2 first:pt-0 last:pb-0 border-b border-[#DEE2E6] last:border-none flex justify-between items-center;
+    @apply pt-[10px] pb-2 first:pt-0 last:pb-0 border-b border-[#DEE2E6] last:border-none flex justify-between items-start gap-4;
   }
   .my-portfolio .detailSection .guide-box p span{
-    @apply font-normal text-[15px] leading-[23px] text-[#515F6C];
+    @apply shrink-0 font-normal text-[15px] leading-[23px] text-[#515F6C];
   }
   .my-portfolio .detailSection .guide-box p strong{
-    @apply font-semibold text-[15px] leading-[23px] text-black;
+    @apply font-semibold text-[15px] leading-[23px] text-black text-right;
   }
   .my-portfolio .detailSection .guide-txt{
     @apply w-full flex flex-col justify-start items-start gap-3;
