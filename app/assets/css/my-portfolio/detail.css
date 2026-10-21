@@ -156,7 +156,13 @@
     @apply px-[5px] rounded-[4px] bg-[#6565FF33] font-semibold text-xs leading-[18px] text-main;
   }
   .my-portfolio .detailSection .current-situation .box .top .right span{
-    @apply shrink-0 p-[5px_10px] rounded-[6px] bg-[#FF50501A] font-bold text-lg text-black;
+    @apply shrink-0 p-[5px_10px] rounded-[6px] font-bold text-lg text-[#515F6C] bg-[#EDF0F3];
+  }
+  .my-portfolio .detailSection .current-situation .box .top .right span.up{
+    @apply bg-[#FF50501A];
+  }
+  .my-portfolio .detailSection .current-situation .box .top .right span.down{
+    @apply bg-[#5886FE1A];
   }
   .my-portfolio .range-wrap{
     @apply w-full pb-4 flex flex-col justify-start items-start gap-[6px];
