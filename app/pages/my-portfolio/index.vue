@@ -12,6 +12,8 @@
       <!-- 포트폴리오 만든 후 -->
       <template v-else>
         <MyPortfolio />
+        <AssetComposition />
+        <Holdings />
       </template>
     </main>
   </div>
@@ -23,6 +25,8 @@ import '~/assets/css/my-portfolio/common.css'
 import CreatePortfolio from '~/components/my-portfolio/main/CreatePortfolio.vue';
 import PortfolioStrategy from '~/components/my-portfolio/main/PortfolioStrategy.vue';
 import MyPortfolio from '~/components/my-portfolio/main/MyPortfolio.vue';
+import AssetComposition from '~/components/my-portfolio/main/AssetComposition.vue';
+import Holdings from '~/components/my-portfolio/main/Holdings.vue';
 
 const hasPortfolio = ref(true)
 

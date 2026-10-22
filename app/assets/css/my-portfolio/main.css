@@ -7,7 +7,13 @@
     @apply w-full py-6 px-5 border-b-[12px] border-[#F5F7F9] last:border-none;
   }
   .my-portfolio .mainSection__title{
-    @apply font-bold text-lg text-black mb-4;
+    @apply font-bold text-lg text-black mb-4 flex justify-between items-center;
+  }
+  .my-portfolio .mainSection__title strong{
+    @apply font-bold;
+  }
+  .my-portfolio .mainSection__title span{
+    @apply font-normal text-base text-[#364350];
   }
   .my-portfolio .createPortfolioSwiper{
     @apply w-full px-5;
@@ -517,5 +523,179 @@
   }
   .my-portfolio .mainSection .revenue .sort .box-group .box .inner-box .buy-sell .date{
     @apply relative px-[10px] flex justify-center items-center bg-gray rounded-[50px] font-semibold text-[13px] leading-[20px] text-white before:content-[''] before:absolute before:w-[15px] before:h-0 before:border-b-[1px] before:border-gray before:border-dashed before:-left-[15px] before:opacity-50 after:content-[''] after:absolute after:w-[15px] after:h-0 after:border-b-[1px] after:border-gray after:border-dashed after:-right-[15px] after:opacity-50;
+  }
+  /* 자산구성 */
+  .my-portfolio .mainSection .chart-group{
+    @apply w-full flex justify-center items-center gap-[30px] mb-4;
+  }
+  .my-portfolio .mainSection .chart-group .donut-chart {
+    @apply relative w-[104px] h-[104px] flex justify-center items-center shrink-0;
+  }
+  .my-portfolio .mainSection .chart-group .donut-chart .circular-chart {
+    @apply w-[104px] h-[104px] shrink-0;
+  }
+  .my-portfolio .mainSection .chart-group .donut-chart .circular-chart .circle-bg {
+    fill: none;
+    stroke: #DEE2E6;
+    stroke-width: 10;
+  }
+  .my-portfolio .mainSection .chart-group .donut-chart .circular-chart .circle {
+    fill: none;
+    stroke: #6565FF; 
+    stroke-width: 10;
+    transition: stroke-dasharray 0.5s ease;
+  }
+  .my-portfolio .mainSection .chart-group .donut-chart .donut-txt {
+    @apply absolute flex flex-col items-center justify-center text-center;
+  }
+  .my-portfolio .mainSection .chart-group .donut-chart .donut-txt span {
+    @apply font-normal text-xs text-gray;
+  }
+  .my-portfolio .mainSection .chart-group .donut-chart .donut-txt strong {
+    @apply font-bold text-base text-black;
+  }
+  .my-portfolio .mainSection .chart-group .chart-legend {
+    @apply flex flex-col gap-3;
+  }
+  .my-portfolio .mainSection .chart-group .legend-item .top {
+    @apply flex items-center gap-[6px] mb-1;
+  }
+  .my-portfolio .mainSection .chart-group .legend-item .top span {
+    @apply w-[11px] h-[11px] rounded-[4px] shrink-0 bg-[#DEE2E6];
+  }
+  .my-portfolio .mainSection .chart-group .legend-item .top span.stock {
+    @apply bg-main;
+  }
+  .my-portfolio .mainSection .chart-group .legend-item .top p {
+    @apply text-xs leading-[18px] text-gray font-normal truncate;
+  }
+  .my-portfolio .mainSection .chart-group .legend-item strong {
+    @apply text-base text-black font-bold pl-[17px] block;
+  }
+  .my-portfolio .mainSection .rebalancing-box{
+    @apply bg-[#F5F7F9] rounded-[12px] p-4 flex flex-col gap-[2px];
+  }
+  .my-portfolio .mainSection .rebalancing-box .top {
+    @apply flex justify-between items-center;
+  }
+  .my-portfolio .mainSection .rebalancing-box .top .left {
+    @apply flex items-center gap-3;
+  }
+  .my-portfolio .mainSection .rebalancing-box .top .txt {
+    @apply flex flex-col justify-center;
+  }
+  .my-portfolio .mainSection .rebalancing-box .top .txt span {
+    @apply font-normal text-base text-black;
+  }
+  .my-portfolio .mainSection .rebalancing-box .top .txt strong {
+    @apply font-bold text-base text-black;
+  }
+  .my-portfolio .mainSection .rebalancing-box .d-day {
+    @apply w-[74px] h-[41px] bg-main text-white text-[17px] font-bold flex justify-center items-center rounded-[6px];
+  }
+  .my-portfolio .mainSection .rebalancing-box .gauge-wrap {
+    @apply flex flex-col gap-2 pt-5;
+  }
+  .my-portfolio .mainSection .rebalancing-box .gauge-bar {
+    @apply w-full h-2.5 bg-[#DEE2E6] rounded-full overflow-hidden;
+  }
+  .my-portfolio .mainSection .rebalancing-box .gauge-fill {
+    @apply h-full bg-main rounded-full transition-all duration-300;
+  }
+  .my-portfolio .mainSection .rebalancing-box .gauge-txt {
+    @apply flex justify-between text-xs text-gray font-normal;
+  }
+  .my-portfolio .mainSection .rebalancing-box .bottom {
+    @apply flex justify-between items-center mt-[6.5px] pt-[10px] pb-[6.5px] border-t border-[#DEE2E6];
+  }
+  .my-portfolio .mainSection .rebalancing-box .bottom p{
+    @apply font-normal text-sm text-[#364350];
+  }
+  .my-portfolio .mainSection .rebalancing-box .bottom p strong{
+    @apply font-semibold;
+  }
+  .my-portfolio .mainSection .rebalancing-box button {
+    @apply flex items-center gap-[6px] font-normal text-sm text-[#515F6C];
+  }
+  .my-portfolio .mainSection .current-situation{
+    @apply w-full mt-4 flex flex-col justify-start items-start gap-4;
+  }
+  .my-portfolio .mainSection .current-situation .date-group{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .my-portfolio .mainSection .current-situation .date-group .date{
+    @apply w-full flex justify-between items-center;
+  }
+  .my-portfolio .mainSection .current-situation .date-group .date .left{
+    @apply flex justify-start items-center gap-[6px];
+  }
+  .my-portfolio .mainSection .current-situation .date-group .date .left span{
+    @apply px-[5px] rounded-[4px] bg-[#5886FE1A] font-semibold text-xs leading-[18px] text-[#5886FE];
+  }
+  .my-portfolio .mainSection .current-situation .date-group .date .left strong{
+    @apply font-bold text-base text-black;
+  }
+  .my-portfolio .mainSection .current-situation .date-group .date .right{
+    @apply font-normal text-sm text-[#515F6C];
+  }
+  .my-portfolio .mainSection .current-situation .date-group .date .right strong{
+    @apply font-semibold;
+  }
+  .my-portfolio .mainSection .current-situation .box{
+    @apply w-full rounded-[16px] border border-[#DEE2E6] p-4 flex flex-col justify-start items-start gap-5;
+  }
+  .my-portfolio .mainSection .current-situation .box .top{
+    @apply w-full flex justify-between items-center gap-4;
+  }
+  .my-portfolio .mainSection .current-situation .box .top .left{
+    @apply flex justify-start items-center gap-[6px] min-w-0;
+  }
+  .my-portfolio .mainSection .current-situation .box .top .left img{
+    @apply shrink-0;
+  }
+  .my-portfolio .mainSection .current-situation .box .top .left .item{
+    @apply flex flex-col justify-start items-start min-w-0;
+  }
+  .my-portfolio .mainSection .current-situation .box .top .left .item .name{
+    @apply w-full flex justify-start items-center gap-[6px];
+  }
+  .my-portfolio .mainSection .current-situation .box .top .left .item .name strong{
+    @apply font-semibold text-base text-black truncate min-w-0;
+  }
+  .my-portfolio .mainSection .current-situation .box .top .left .item .name span{
+    @apply font-normal text-xs text-gray;
+  }
+  .my-portfolio .mainSection .current-situation .box .top .left .item .date{
+    @apply flex justify-start items-center gap-1;
+  }
+  .my-portfolio .mainSection .current-situation .box .top .left .item .date p{
+    @apply font-normal text-xs text-gray;
+  }
+  .my-portfolio .mainSection .current-situation .box .top .left .item .date span{
+    @apply px-[5px] rounded-[4px] bg-[#6565FF33] font-semibold text-xs leading-[18px] text-main;
+  }
+  .my-portfolio .mainSection .current-situation .box .top .right span{
+    @apply shrink-0 p-[5px_10px] rounded-[6px] font-bold text-lg text-[#515F6C] bg-[#EDF0F3];
+  }
+  .my-portfolio .mainSection .current-situation .box .top .right span.up{
+    @apply bg-[#FF50501A];
+  }
+  .my-portfolio .mainSection .current-situation .box .top .right span.down{
+    @apply bg-[#5886FE1A];
+  }
+  .my-portfolio .mainSection .current-situation .box .inner-box{
+    @apply w-full bg-[#F5F7F9] rounded-[12px] p-4;
+  }
+  .my-portfolio .mainSection .current-situation .box .inner-box .txt-group{
+    @apply w-full flex flex-col justify-start items-start gap-[2px];
+  }
+  .my-portfolio .mainSection .current-situation .box .inner-box .txt-group p{
+    @apply w-full flex justify-between items-center;
+  }
+  .my-portfolio .mainSection .current-situation .box .inner-box .txt-group p span{
+    @apply font-normal text-base text-gray;
+  }
+  .my-portfolio .mainSection .current-situation .box .inner-box .txt-group p strong{
+    @apply font-bold text-base text-black;
   }
 }
