@@ -3,6 +3,7 @@
 @import "~/assets/css/my-portfolio/detail.css";
 @import "~/assets/css/my-portfolio/tab.css";
 @import "~/assets/css/my-portfolio/create.css";
+@import "~/assets/css/my-portfolio/offcanvas.css";
 
 
 @tailwind base;

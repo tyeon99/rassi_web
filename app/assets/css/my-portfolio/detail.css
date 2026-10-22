@@ -379,7 +379,7 @@
     @apply relative w-full flex justify-end items-center;
   }
   .my-portfolio .detailSection .sellHistory .sortby-btn{
-    @apply w-full flex justify-end items-center;
+    @apply flex justify-end items-center;
   }
   .my-portfolio .detailSection .sellHistory .sortby-btn p{
     @apply font-normal text-[13px] leading-[20px] text-gray;

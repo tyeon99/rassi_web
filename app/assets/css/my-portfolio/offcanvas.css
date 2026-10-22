@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .my-portfolio .offcanvas-overlay {
+    @apply fixed inset-0 bg-black/50 z-[999] flex justify-end items-end;
+  }
+  .my-portfolio .offcanvas-content {
+    @apply w-full max-w-full bg-white p-5 flex flex-col justify-start items-stretch shadow-2xl pt-[10px] max-h-[90%] rounded-t-[20px] pb-0;
+  }
+  .my-portfolio .offcanvas-close, .my-portfolio .modal-close {
+    @apply w-full flex justify-end items-center py-2;
+  }
+  .my-portfolio .offcanvas-body{
+    @apply w-full overflow-auto pb-5 flex flex-col justify-start items-start gap-[30px];
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .my-portfolio .offcanvas-body::-webkit-scrollbar{
+    display: none;
+  }
+  .my-portfolio .offcanvas-body .title{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .my-portfolio .offcanvas-body .title span{
+    @apply px-[5px] rounded-[4px] bg-[#5886FE1A] font-semibold text-xs leading-[18px] text-black;
+  }
+  .my-portfolio .offcanvas-body .title strong{
+    @apply font-bold text-[24px] leading-[29px] text-[#364350];
+  }
+  .my-portfolio .offcanvas-body .title p{
+    @apply font-normal text-base text-[#364350];
+  }
+  .my-portfolio .moreOffcanvas .portfolio-list{
+    @apply w-full pb-[30px] flex flex-col justify-start items-start gap-[30px] border-b border-[#EDF0F3];
+  }
+  .my-portfolio .moreOffcanvas .portfolio-list .list-group{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .my-portfolio .moreOffcanvas .portfolio-list .list-group .box{
+    @apply w-full border border-[#DEE2E6] rounded-[12px] p-4 flex justify-between items-center text-left;
+  }
+  .my-portfolio .moreOffcanvas .portfolio-list .list-group .box.active{
+    @apply border-main;
+  }
+  .my-portfolio .moreOffcanvas .portfolio-list .list-group .box .left{
+    @apply flex flex-col justify-start items-start;
+  }
+  .my-portfolio .moreOffcanvas .portfolio-list .list-group .box .left .top{
+    @apply flex justify-start items-center gap-[6px];
+  }
+  .my-portfolio .moreOffcanvas .portfolio-list .list-group .box .left .top strong{
+    @apply font-semibold text-base text-black;
+  }
+  .my-portfolio .moreOffcanvas .portfolio-list .list-group .box .left .top span{
+    @apply px-[5px] rounded-[4px] bg-[#5886FE1A] font-semibold text-xs leading-[18px] text-[#5886FE];
+  }
+  .my-portfolio .moreOffcanvas .portfolio-list .list-group .box .left p{
+    @apply font-normal text-[13px] leading-[20px] text-gray;
+  }
+  .my-portfolio .moreOffcanvas .portfolio-list .list-group .box .right{
+    @apply w-[66px] h-[28px] bg-[#EDF0F3] rounded-[6px] flex justify-center items-center font-bold text-base text-[#515F6C];
+  }
+  .my-portfolio .moreOffcanvas .portfolio-list .list-group .box .right.up{
+    @apply bg-[#FF50501A];
+  }
+  .my-portfolio .moreOffcanvas .portfolio-list .list-group .box .right.down{
+    @apply bg-[#5886FE1A];
+  }
+  .my-portfolio .moreOffcanvas .portfolio-list .more{
+    @apply w-full rounded-[6px] bg-[#EFEFFF] h-[54px] flex justify-center items-center gap-[6px];
+  }
+  .my-portfolio .moreOffcanvas .portfolio-list .more p{
+    @apply font-bold text-base text-main;
+  }
+  .my-portfolio .moreOffcanvas .shortcut{
+    @apply w-full;
+  }
+  .my-portfolio .offcanvas-body .sub-title{
+    @apply w-full flex flex-col justify-start items-start;
+  }
+  .my-portfolio .offcanvas-body .sub-title strong{
+    @apply font-bold text-lg text-black mb-4;
+  }
+  .my-portfolio .moreOffcanvas .shortcut .shortcut-list{
+    @apply w-full flex flex-col justify-start items-start gap-4;
+  }
+  .my-portfolio .moreOffcanvas .shortcut .shortcut-list button{
+    @apply w-full flex justify-between items-center;
+  }
+  .my-portfolio .moreOffcanvas .shortcut .shortcut-list button .left{
+    @apply flex justify-start items-center gap-3;
+  }
+  .my-portfolio .moreOffcanvas .shortcut .shortcut-list button .left img{
+    @apply shrink-0;
+  }
+  .my-portfolio .moreOffcanvas .shortcut .shortcut-list button .left .txt{
+    @apply flex flex-col justify-start items-start;
+  }
+  .my-portfolio .moreOffcanvas .shortcut .shortcut-list button .left .txt strong{
+    @apply font-semibold text-base text-black;
+  }
+  .my-portfolio .moreOffcanvas .shortcut .shortcut-list button .left .txt span{
+    @apply font-normal text-[13px] leading-[20px] text-gray;
+  }
+  .my-portfolio .moreOffcanvas .banner{
+    @apply w-full;
+  }
+  .my-portfolio .infoOffcanvas .portfolio-info{
+    @apply w-full flex flex-col justify-start items-start;
+  }
+  .my-portfolio .infoOffcanvas .portfolio-info .info-list{
+    @apply py-4 border-b border-[#EDF0F3] first:border-t w-full flex justify-between items-center;
+  }
+  .my-portfolio .infoOffcanvas .portfolio-info .info-list .left{
+    @apply flex justify-start items-center gap-[10px];
+  }
+  .my-portfolio .infoOffcanvas .portfolio-info .info-list .left img{
+    @apply shrink-0;
+  }
+  .my-portfolio .infoOffcanvas .portfolio-info .info-list strong{
+    @apply font-semibold text-base text-black;
+  }
+  .my-portfolio .infoOffcanvas .portfolio-info .info-list p{
+    @apply font-normal text-sm text-[#364350] text-right;
+  }
+  .my-portfolio .infoOffcanvas .portfolio-info .info-list .right{
+    @apply flex flex-col justify-end items-end;
+  }
+  .my-portfolio .infoOffcanvas .portfolio-delete{
+    @apply w-full;
+  }
+  .my-portfolio .infoOffcanvas .portfolio-delete .guide-box{
+    @apply w-full rounded-[12px] p-4 bg-[#FFCC001A] flex justify-start items-start gap-[6px];
+  }
+  .my-portfolio .infoOffcanvas .portfolio-delete .guide-box img{
+    @apply inline-block mt-[2px];
+  }
+  .my-portfolio .infoOffcanvas .portfolio-delete .guide-box p{
+    @apply font-normal text-sm leading-[21px] text-[#364350];
+  }
+  .my-portfolio .infoOffcanvas .portfolio-delete .guide-box p strong{
+    @apply font-semibold;
+  }
+  .my-portfolio .infoOffcanvas button.delete{
+    @apply w-full h-[54px] rounded-[12px] bg-main font-semibold text-base text-white shrink-0;
+  }
+}
