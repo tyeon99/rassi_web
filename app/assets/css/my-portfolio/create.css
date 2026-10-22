@@ -91,7 +91,7 @@
     @apply w-full border border-[#DEE2E6] rounded-[12px] p-4 flex justify-between items-center;
   }
   .my-portfolio .createStep .step-section .input-wrap .input-box input{
-    @apply font-bold text-lg text-[#364350] placeholder:text-gray;
+    @apply w-[calc(100%-50px)] font-bold text-lg text-[#364350] placeholder:text-gray;
   }
   .my-portfolio .createStep .step-section .input-wrap .input-box .right{
     @apply flex justify-end items-center gap-[10px];

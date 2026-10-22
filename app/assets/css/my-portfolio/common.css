@@ -4,6 +4,7 @@
 @import "~/assets/css/my-portfolio/tab.css";
 @import "~/assets/css/my-portfolio/create.css";
 @import "~/assets/css/my-portfolio/offcanvas.css";
+@import "~/assets/css/my-portfolio/calendar.css";
 
 
 @tailwind base;
@@ -37,6 +38,9 @@
 }
 .my-portfolio .red{
   @apply !text-[#FF5050];
+}
+.my-portfolio .blue{
+  @apply !text-[#5886FE];
 }
 .my-portfolio .green{
   @apply !text-[#03B26C];

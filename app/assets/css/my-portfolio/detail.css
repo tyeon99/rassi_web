@@ -107,16 +107,16 @@
   .my-portfolio .detailSection .rate-box .box-group .box strong{
     @apply font-semibold text-base text-black;
   }
-  .my-portfolio .detailSection__calender{
+  .my-portfolio .detailSection__calendar{
     @apply w-full flex justify-between items-center mb-4;
   }
-  .my-portfolio .detailSection__calender button.next{
+  .my-portfolio .detailSection__calendar button.next{
     @apply rotate-180;
   }
-  .my-portfolio .detailSection__calender button.last{
+  .my-portfolio .detailSection__calendar button.last{
     @apply opacity-15;
   }
-  .my-portfolio .detailSection__calender p{
+  .my-portfolio .detailSection__calendar p{
     @apply font-bold text-lg text-black;
   }
   .my-portfolio .detailSection .current-situation{

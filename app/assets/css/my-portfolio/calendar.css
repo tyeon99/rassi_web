@@ -1,0 +1,135 @@
+  @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {  
+  .my-portfolio .rebalancing-calendar{
+    @apply w-full py-6 px-5 pt-0;
+  }
+  .my-portfolio .rebalancing-calendar .title{
+    @apply font-bold text-[24px] leading-[29px] text-[#364350] mb-[30px];
+  }
+  .my-portfolio .rebalancing-calendar .calendar-wrap{
+    @apply w-full flex flex-col justify-start items-start gap-[30px];
+  }
+  .my-portfolio .rebalancing-calendar .rebalancing-box{
+    @apply w-full bg-[#F5F7F9] rounded-[12px] p-4 flex justify-between items-center;
+  }
+  .my-portfolio .rebalancing-calendar .rebalancing-box .left {
+    @apply flex items-center gap-3;
+  }
+  .my-portfolio .rebalancing-calendar .rebalancing-box .txt {
+    @apply flex flex-col justify-center;
+  }
+  .my-portfolio .rebalancing-calendar .rebalancing-box .txt span {
+    @apply font-normal text-base text-black;
+  }
+  .my-portfolio .rebalancing-calendar .rebalancing-box .txt strong {
+    @apply font-bold text-base text-black;
+  }
+  .my-portfolio .rebalancing-calendar .rebalancing-box .d-day {
+    @apply w-[74px] h-[41px] bg-main text-white text-[17px] font-bold flex justify-center items-center rounded-[6px];
+  }
+
+  /* 달력 css */
+  .my-portfolio .calendar{
+    @apply w-full p-[10px_12px] bg-white border border-[#DEE2E6] rounded-[14px];
+  }
+  .my-portfolio .calendar-header{
+    @apply w-full flex justify-between items-center py-2;
+  }
+  .my-portfolio .calendar-header strong{
+    @apply font-bold text-base text-[#364350];
+  }
+  .my-portfolio .calendar .week-days{
+    @apply grid grid-cols-7 text-center text-[11px] font-semibold text-[#A3A3AA] py-2;
+  }
+  .my-portfolio .calendar .days-grid {
+    @apply grid grid-cols-7 gap-y-2 text-center;
+  }
+  .my-portfolio .calendar .days-grid .day-cell {
+    @apply flex flex-col items-center justify-start h-[43px];
+  }
+  .my-portfolio .calendar .days-grid .day-cell .day {
+    @apply flex flex-col items-center justify-center gap-0.5;
+  }
+  .my-portfolio .calendar .days-grid .day-cell .day .day-num {
+    @apply w-[25px] h-[25px] flex items-center justify-center rounded-full text-xs font-medium text-[#364350];
+  }
+  .my-portfolio .calendar .days-grid .day-cell.sun .day-num { @apply text-[#FF5050]; }
+  .my-portfolio .calendar .days-grid .day-cell.sat .day-num { @apply text-[#5886FE]; }
+  /* 배지 상태 */
+  .my-portfolio .calendar .days-grid .day-cell .day .day-num.badge-completed {
+    @apply bg-[#364350] text-white; 
+  }
+  .my-portfolio .calendar .days-grid .day-cell .day .day-num.badge-scheduled {
+    @apply bg-main text-white;
+  }
+  .my-portfolio .calendar .days-grid .day-cell .day .day-num.badge-reference {
+    @apply border border-dashed border-[#282B2F] text-[#FF5050]; 
+  }
+  .my-portfolio .calendar .days-grid .day-cell .day .day-num.badge-today {
+    @apply border border-solid border-[#282B2F] text-[#282B2F]; 
+  }
+  .my-portfolio .calendar .days-grid .day-cell .day .sub-txt {
+    @apply text-[11px] text-[#A1ABB5] font-normal leading-none mt-0.5;
+  }
+
+  /* 하단 범례 */
+  .my-portfolio .calendar .legend-bar {
+    @apply bg-[#F5F7F9] rounded-[12px] py-[10.5px] flex items-center justify-center gap-2 text-[10px] leading-[11px] text-[#515F6C];
+  }
+  .my-portfolio .calendar .legend-bar span {
+    @apply flex items-center gap-[3px];
+  }
+  .my-portfolio .calendar .legend-bar .dot {
+    @apply w-[9px] h-[9px] rounded-full inline-block;
+  }
+  .my-portfolio .calendar .legend-bar .dot.scheduled { @apply bg-main; }
+  .my-portfolio .calendar .legend-bar .dot.completed { @apply bg-[#364350]; }
+  .my-portfolio .calendar .legend-bar .dot.reference { @apply border border-dashed border-[#282B2F]; }
+  .my-portfolio .calendar .legend-bar .dot.today { @apply border border-solid border-[#282B2F]; }
+
+  .my-portfolio .rebalancing-wrap{
+    @apply w-full mt-[30px] flex flex-col justify-start items-start gap-4;
+  }
+  .my-portfolio .rebalancing-wrap .sub-title{
+    @apply w-full flex flex-col justify-start items-start;
+  }
+  .my-portfolio .rebalancing-wrap .sub-title strong{
+    @apply font-bold text-lg leading-[27px] text-black;
+  }
+  .my-portfolio .rebalancing-wrap .sub-title span{
+    @apply font-normal text-base text-[#515F6C];
+  }
+  .my-portfolio .rebalancing-wrap .rebalancing-list{
+    @apply w-full flex flex-col justify-start items-start gap-3;
+  }
+  .my-portfolio .rebalancing-wrap .rebalancing-list .list{
+    @apply w-full p-4 border border-[#DEE2E6] rounded-[12px] flex justify-start items-center gap-4 first:border-main;
+  }
+  .my-portfolio .rebalancing-wrap .rebalancing-list .list .left{
+    @apply shrink-0 flex flex-col justify-center items-center w-[56px] pr-4 border-r border-[#DEE2E6];
+  }
+  .my-portfolio .rebalancing-wrap .rebalancing-list .list .right {
+    @apply w-full flex flex-col justify-start items-start;
+  }
+  .my-portfolio .rebalancing-wrap .rebalancing-list .list .right .top{
+    @apply w-full flex justify-between items-center;
+  }
+  .my-portfolio .rebalancing-wrap .rebalancing-list .list .right p{
+    @apply flex flex-col justify-start items-start;
+  }
+  .my-portfolio .rebalancing-wrap .rebalancing-list .list .right p strong{
+    @apply font-semibold text-base text-black;
+  }
+  .my-portfolio .rebalancing-wrap .rebalancing-list .list .right p span{
+    @apply font-normal text-[13px] leading-[20px] text-gray;
+  }
+  .my-portfolio .rebalancing-wrap .rebalancing-list .list .right .d-day{
+    @apply w-[65px] h-[24px] flex justify-center items-center bg-main rounded-[6px] font-bold text-sm leading-[16px] text-white;
+  }
+  .my-portfolio .rebalancing-wrap .rebalancing-list .list .right .guide{
+    @apply font-normal text-xs leading-[18px] text-gray;
+  }
+}

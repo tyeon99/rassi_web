@@ -1,7 +1,7 @@
 <template>
   <div class="detailSection">
     
-    <div class="detailSection__calender">
+    <div class="detailSection__calendar">
       <button class="prev"> <!-- 마지막 일때 'last' 클래스 추가 -->
         <img width="24" src="~/assets/img/my-portfolio/detail/arrow-icon.png" alt="이전 버튼">
       </button>
