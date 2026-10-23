@@ -53,18 +53,29 @@
           </div>
         </div>
 
-        <button class="delete">
+        <button class="delete" @click="openConfirmModal">
           포트폴리오 삭제하기
         </button>
 
       </div>
 
     </div>
+
+    <!-- 포트폴리오 삭제 모달 -->
+    <ConfirmModal
+      v-if="isConfirmModalOpen"
+      :isModalAni="isConfirmModalAni"
+      :message="deleteConfirmMessage"
+      confirmText="확인"
+      cancelText="취소"
+      @close-confirmModal="closeConfirmModal"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch, nextTick } from 'vue'
+import ConfirmModal from '~/components/my-portfolio/modal/ConfirmModal.vue'
 
 import icon01 from '~/assets/img/my-portfolio/offcanvas/list-icon01.png'
 import icon02 from '~/assets/img/my-portfolio/offcanvas/list-icon02.png'
@@ -84,6 +95,37 @@ const emit = defineEmits(['close-portfolioInfoOffcanvas'])
 const closePortfolioInfoOffcanvas = () => {
   emit('close-portfolioInfoOffcanvas')
 }
+
+const isConfirmModalOpen = ref(false)
+const isConfirmModalAni = ref(false)
+
+const deleteConfirmMessage = ref('2026년 10월 2일 생성한 황금코어 포트폴리오를 삭제하시겠습니까? 확인을 누르시면 즉시 삭제되며, 복원이 불가능 합니다.')
+
+// 모달 열기
+const openConfirmModal = async () => {
+  isConfirmModalOpen.value = true
+  await nextTick()
+  isConfirmModalAni.value = true
+}
+
+// 모달 닫기
+const closeConfirmModal = () => {
+  isConfirmModalAni.value = false
+  setTimeout(() => {
+    isConfirmModalOpen.value = false
+  }, 300)
+}
+
+// 스크롤 락 처리
+watch(isConfirmModalOpen, (isOpen) => {
+  if (isOpen) {
+    document.documentElement.classList.add('scroll-lock')
+    document.body.classList.add('scroll-lock')
+  } else {
+    document.documentElement.classList.remove('scroll-lock')
+    document.body.classList.remove('scroll-lock')
+  }
+})
 
 const infoList = ref([
   {

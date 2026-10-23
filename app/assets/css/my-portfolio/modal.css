@@ -22,4 +22,13 @@
   .my-portfolio .TermGuideModal .modal-body .txt{
     @apply font-normal text-[15px] leading-[22px] text-[#364350];
   }
+  .my-portfolio .confirmModal .modal-body .txt{
+    @apply font-normal text-base text-[#364350];
+  }
+  .my-portfolio .confirmModal .modal-body .btn-group{
+    @apply w-full mt-5 flex justify-center items-center gap-4;
+  }
+  .my-portfolio .confirmModal .modal-body .btn-group button{
+    @apply flex-1 h-[50px] bg-gray rounded-[12px] font-semibold text-base text-white last:bg-main;
+  }
 }
