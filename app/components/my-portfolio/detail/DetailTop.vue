@@ -45,6 +45,9 @@
 
         <div class="bottom">
           <p>
+            <button @click="openTermGuideModal('CAGR')">
+              <img width="14" src="~/assets/img/my-portfolio/detail/question-icon.png" alt="물음표">
+            </button>
             <span>
               CAGR <em>연평균 수익률</em>
             </span>
@@ -52,6 +55,9 @@
           </p>
           <div class="line"></div>
           <p>
+            <button @click="openTermGuideModal('MDD')">
+              <img width="14" src="~/assets/img/my-portfolio/detail/question-icon.png" alt="물음표">
+            </button>
             <span>
               MDD <em>최대 낙폭</em>
             </span>
@@ -68,12 +74,71 @@
 
     </div>
 
+    <!-- 용어 설명 모달 -->
+    <TermGuideModal 
+      v-if="isTermGuideModalOpen"
+      :isModalAni="isModalAni"
+      :title="modalContent.title"
+      :description="modalContent.description"
+      @close-termGuideModal="closeTermGuideModal"
+    />
+
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, nextTick, type ComponentPublicInstance } from 'vue'
+import { ref, computed, watch, onMounted, nextTick, type ComponentPublicInstance } from 'vue'
 import '~/assets/css/my-portfolio/common.css'
+import TermGuideModal from '~/components/my-portfolio/modal/TermGuideModal.vue'
+
+const isTermGuideModalOpen = ref(false)
+const isModalAni = ref(false)
+
+const modalContent = ref({
+  title: '',
+  description: ''
+})
+
+// 용어 정의
+const termDictionary: Record<string, { title: string; description: string }> = {
+  CAGR: {
+    title: 'CAGR (연평균 수익률)',
+    description: '일정 기간의 투자 성과를 연평균 수익률로 환산한 값이에요. 기간이 달라도 연간 기준으로 성과를 확인할 수 있어요.'
+  },
+  MDD: {
+    title: 'MDD (최대 낙폭)',
+    description: '투자 기간 중 고점 대비 가장 크게 하락한 폭이에요. <br>수치가 클수록 해당 기간의 최대 하락폭이 컸다는 의미예요.'
+  }
+}
+
+// 용어 설명 모달 열기
+const openTermGuideModal = async (termKey?: string) => {
+  if (termKey && termDictionary[termKey]) {
+    modalContent.value = termDictionary[termKey]
+  }
+
+  isTermGuideModalOpen.value = true
+  await nextTick() // DOM 생성 타이밍 보장
+  isModalAni.value = true
+}
+
+// 용어 설명 모달 닫기
+const closeTermGuideModal = () => {
+  isModalAni.value = false
+  setTimeout(() => {
+    isTermGuideModalOpen.value = false
+  }, 300)
+}
+
+watch(isTermGuideModalOpen, (isOpen) => {
+  if (isOpen) {
+    document.documentElement.classList.add('scroll-lock')
+    document.body.classList.add('scroll-lock')
+  } else {
+    document.documentElement.classList.remove('scroll-lock')
+    document.body.classList.remove('scroll-lock')
+  }
+})
 
 interface PeriodData {
   returnScore: string

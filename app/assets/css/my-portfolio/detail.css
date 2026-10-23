@@ -34,13 +34,16 @@
     @apply w-full bg-[#F5F7F9] rounded-[12px] p-4 flex justify-evenly items-center gap-[10px];
   }
   .my-portfolio .tabContent .period .bottom p{
-    @apply flex justify-center items-center flex-col;
+    @apply relative flex justify-center items-center flex-col;
   }
   .my-portfolio .tabContent .period .bottom p span{
     @apply font-normal text-[12px] leading-[18px] text-gray text-center;
   }
   .my-portfolio .tabContent .period .bottom p span em{
     @apply text-[11px] leading-[17px];
+  }
+  .my-portfolio .tabContent .period .bottom p button{
+    @apply absolute -top-2 -right-[17px]
   }
   .my-portfolio .tabContent .period .bottom .line{
     @apply w-[1px] h-[42px] bg-[#DEE2E6];

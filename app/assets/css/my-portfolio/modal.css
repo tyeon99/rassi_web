@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {  
+  
+  .my-portfolio .modal-overlay {
+    @apply fixed top-0 left-0 right-0 bottom-0 bg-[rgba(0,0,0,0.5)] flex justify-center items-center z-[9999] p-3;
+  }
+  .my-portfolio .modal-content {
+    @apply w-full bg-white shadow-2xl rounded-[25px] p-[30px_20px] pt-2;
+  }
+  .my-portfolio .modal-header{
+    @apply w-full flex justify-end items-center;
+  }
+  .my-portfolio .modal-body{
+    @apply w-full pt-3;
+  }
+  .my-portfolio .TermGuideModal .modal-body .title{
+    @apply font-bold text-base mb-3 text-[#364350];
+  }
+  .my-portfolio .TermGuideModal .modal-body .txt{
+    @apply font-normal text-[15px] leading-[22px] text-[#364350];
+  }
+}

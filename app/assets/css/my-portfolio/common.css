@@ -5,6 +5,7 @@
 @import "~/assets/css/my-portfolio/create.css";
 @import "~/assets/css/my-portfolio/offcanvas.css";
 @import "~/assets/css/my-portfolio/calendar.css";
+@import "~/assets/css/my-portfolio/modal.css";
 
 
 @tailwind base;

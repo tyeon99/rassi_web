@@ -99,6 +99,9 @@
   .my-portfolio .createStep .step-section .input-wrap .input-box .right span{
     @apply font-normal text-[15px] leading-[23px] text-black;
   }
+  .my-portfolio .createStep .step-section .input-wrap .input-box .right button{
+    @apply shrink-0;
+  }
   .my-portfolio .createStep .step-section .input-wrap p{
     @apply font-semibold text-xs text-gray;
   }
