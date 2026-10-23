@@ -343,4 +343,26 @@
   .factor-analyst .itemStyleListContent .listGroup.masking .list .right{
     @apply blur-0;
   }
+
+  /* 분석중 */
+  .factor-analyst .mainSection .analyzing{
+    @apply w-full px-5;
+  }
+  .factor-analyst .mainSection .analyzing .box{
+    @apply w-full h-[184px] flex flex-col justify-center items-center gap-4 bg-[#F5F7F9] rounded-[8px];
+  }
+  .factor-analyst .mainSection .analyzing .box img.rotate{
+    @apply block animate-spin origin-center;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .factor-analyst .mainSection .analyzing .box p{
+    @apply font-normal text-base text-black text-center;
+  }
 }

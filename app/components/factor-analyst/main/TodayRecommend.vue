@@ -1,7 +1,7 @@
 <template>
   <section class="mainSection !px-0">
     <div class="mainSection__title !mb-2 !px-5">
-      <h2>오늘의 추천 스타일 Pick</h2>
+      <h2>오늘의 파워스타일 Pick</h2>
       <span class="date">6월 10일 (MON)</span>
     </div>
     <div class="mainSection__txt">
@@ -76,6 +76,23 @@
         <div class="recommend-pagination03"></div>
       </div>
     </div>
+
+
+    <!-- 분석중 -->
+    <div class="analyzing">
+
+      <div class="box">
+
+        <img class="rotate" width="24" src="~/assets/img/factor-analyst/main/loading.png" alt="로딩 아이콘">
+        <p>
+          오늘의 파워스타일을 분석하고 있어요. <br />분석이 완료되면 Pick 종목을 확인할 수 있어요.
+        </p>
+
+      </div>
+
+    </div>
+
+
   </section>
 </template>
 
