@@ -6,7 +6,7 @@
 
       <div class="rebalancing-box">
         <div class="left">
-          <img width="45" src="/rassi_web/_nuxt/assets/img/my-portfolio/main/calendar-icon02.png"
+          <img width="45" src="~/assets/img/my-portfolio/main/calendar-icon02.png"
             alt="달력">
           <div class="txt">
             <span>다음 리밸런싱</span><strong>10월 23일 (화)</strong>
