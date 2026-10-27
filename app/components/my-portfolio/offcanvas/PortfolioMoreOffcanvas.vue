@@ -45,7 +45,7 @@
             </button>
           </div>
 
-          <button class="more">
+          <button class="more" @click="openAlertModal">
             <img width="24" src="~/assets/img/my-portfolio/offcanvas/more-icon.png" alt="+이미지">
             <p>포트폴리오 더 만들기</p>
           </button>
@@ -84,14 +84,27 @@
       </div>
 
     </div>
+    <!-- 알럿 모달 -->
+    <AlertModal 
+      v-if="isAlertModalOpen"
+      :isModalAni="isModalAni"
+      :description="alertDescription"
+      @close-alertModal="closeAlertModal"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch, nextTick } from 'vue'
+import AlertModal from '~/components/my-portfolio/modal/AlertModal.vue'
 
 import icon01 from '~/assets/img/my-portfolio/main/strategy-icon01.png'
 import icon02 from '~/assets/img/my-portfolio/main/strategy-icon02.png'
+
+const isAlertModalOpen = ref(false)
+const isModalAni = ref(false)
+
+const alertDescription = ref('포트폴리오는 최대 3개까지 만들 수 있어요. 새로 만들려면 기존 포트폴리오 중 하나를 삭제해 주세요.')
 
 defineProps({
   isOffcanvasAni: {
@@ -105,6 +118,31 @@ const emit = defineEmits(['close-portfolioMoreOffcanvas'])
 const closePortfolioMoreOffcanvas = () => {
   emit('close-portfolioMoreOffcanvas')
 }
+
+// 용어 설명 모달 열기
+const openAlertModal = async () => {
+  isAlertModalOpen.value = true
+  await nextTick() // DOM 생성 타이밍 보장
+  isModalAni.value = true
+}
+
+// 용어 설명 모달 닫기
+const closeAlertModal = () => {
+  isModalAni.value = false
+  setTimeout(() => {
+    isAlertModalOpen.value = false
+  }, 300)
+}
+
+watch(isAlertModalOpen, (isOpen) => {
+  if (isOpen) {
+    document.documentElement.classList.add('scroll-lock')
+    document.body.classList.add('scroll-lock')
+  } else {
+    document.documentElement.classList.remove('scroll-lock')
+    document.body.classList.remove('scroll-lock')
+  }
+})
 
 const myPortfolioList = ref([
   {
