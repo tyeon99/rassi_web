@@ -1,29 +1,30 @@
 <template>
   <div id="wrap" class="factor-analyst">
-    <BackTitleHeader title="추천 스타일+" />
+    <BackTitleHeader title="날짜별 파워스타일 Pick" />
     <main id="main" class="main">
+
+      <RecommendListFilter />
+
+      <div class="recommendTodayTop">
+        <div class="txt">
+          스타일의 성향과 시장의 모멘텀을 분석한 추천 이력과 이후 한 달간의 흐름을 확인해 보세요.
+        </div>
+        <button>
+          <p>분석 근거 보기</p><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 3.33301L10.6667 7.99967L6 12.6663" stroke="#6565FF" stroke-width="1.33333"></path>
+          </svg>
+        </button>
+      </div>
+
       <RecommendListContent />
     </main>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
 import '~/assets/css/factor-analyst/common.css'
 import BackTitleHeader from '~/components/factor-analyst/header/BackTitleHeader.vue'
+import RecommendListFilter from '~/components/factor-analyst/recommend/RecommendListFilter.vue';
 import RecommendListContent from '~/components/factor-analyst/recommend/RecommendListContent.vue'
 
-const isScrolled = ref(false)
-
-const handleScroll = () => {
-  isScrolled.value = window.scrollY > 0
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
 </script>

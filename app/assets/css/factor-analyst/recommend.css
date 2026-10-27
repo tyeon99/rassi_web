@@ -4,10 +4,10 @@
 
 @layer components {
 .factor-analyst .recommendListContent{
-    @apply w-full flex flex-col justify-start items-start pb-[30px];
+    @apply w-full flex flex-col justify-start items-start gap-5 p-[30px_20px];
   }
 .factor-analyst .recommendListContent__list{
-    @apply w-full px-5 pt-[30px] flex flex-col justify-start items-start gap-4 bg-white;
+    @apply w-full flex flex-col justify-start items-start gap-4 bg-white;
   }
 .factor-analyst .recommendListContent__list .date{
     @apply w-full flex justify-between items-center;
@@ -30,8 +30,11 @@
 .factor-analyst .recommendListContent__list .list button .top strong{
     @apply font-bold text-base text-black;
   }
-.factor-analyst .recommendListContent__list .list button .top span{
-    @apply font-normal text-[13px] leading-[20px] text-gray;
+.factor-analyst .recommendListContent__list .list button .top p{
+    @apply font-normal text-sm text-gray;
+  }
+  .factor-analyst .recommendListContent__list .list button .top p span{
+    @apply font-semibold text-[#282B2F];
   }
 .factor-analyst .recommendListContent__list .list button .bottom{
     @apply w-full flex flex-col justify-start items-start gap-3;
@@ -191,5 +194,87 @@
   }
   .factor-analyst .recommendTodayContent .box-group .box .bottom .tag-group span{
     @apply p-[2px_4px] rounded-[4px] bg-white font-normal text-xs leading-[18px] text-gray;
+  }
+
+  /* 날짜별 파워스타일 PICK */
+  .factor-analyst .recommendListFilter {
+    @apply flex items-center justify-between gap-3 w-full py-2.5 px-4 bg-white;
+  }
+
+  /* 라디오 영역 */
+  .factor-analyst .recommendListFilter .radio-group {
+    @apply flex items-center gap-[15px] shrink-0;
+  }
+  .factor-analyst .recommendListFilter .radio-group label {
+    @apply flex items-center gap-1.5 text-[15px] tracking-[-0.39px] font-normal text-[#2C2C32] cursor-pointer;
+  }
+  .factor-analyst .recommendListFilter .radio-input {
+    @apply appearance-none w-5 h-5 rounded-full bg-[#EEEEF2] border-4 border-[#EEEEF2] checked:bg-main;
+  }
+
+  /* 입력/선택 우측 영역 */
+  .factor-analyst .recommendListFilter .input-group {
+    @apply relative flex-1 max-w-[150px];
+  }
+
+  /* 1. 검색 박스 영역 (Pick종목 선택 시) */
+  .factor-analyst .recommendListFilter .search-box {
+    @apply relative w-full;
+  }
+  .factor-analyst .recommendListFilter .input-box {
+    @apply flex items-center justify-between py-[6px] px-[7px] pl-[10px] rounded-[7px] bg-[#F7F7FA];
+  }
+  .factor-analyst .recommendListFilter .search-input {
+    @apply w-full text-[15px] leading-[20px] text-[#515F6C] bg-transparent outline-none placeholder-[#515F6C] tracking-[-0.39px];
+  }
+  .factor-analyst .recommendListFilter .search-btn {
+    @apply flex items-center justify-center shrink-0;
+  }
+
+  /* 검색어 자동완성 드롭다운 */
+  .factor-analyst .recommendListFilter .autocomplete-list {
+    @apply absolute left-0 top-[110%] w-full bg-white border border-[#DEE2E6] rounded-[7px] z-20 max-h-[160px] overflow-y-auto py-4 px-3 flex flex-col gap-[6px];
+    box-shadow: 0px 1px 10px 0px #00000026;
+  }
+  .factor-analyst .recommendListFilter .autocomplete-list button {
+    @apply flex items-end justify-start text-[13px] leading-[20px] text-left transition-colors w-full gap-1;
+  }
+  .factor-analyst .recommendListFilter .autocomplete-list button strong {
+    @apply text-[#282B2F] font-normal;
+  }
+  .factor-analyst .recommendListFilter .autocomplete-list button .code {
+    @apply text-[10px] text-gray;
+  }
+  .factor-analyst .recommendListFilter .autocomplete-list .empty {
+    @apply text-[12px] text-gray text-center py-2;
+  }
+
+  /* 2. 커스텀 셀렉트 박스 영역 (파워스타일 선택 시) */
+  .factor-analyst .recommendListFilter .select-box {
+    @apply relative w-full cursor-pointer;
+  }
+  .factor-analyst .recommendListFilter .select-trigger {
+    @apply flex items-center justify-between gap-1.5 p-[7px_14px_7px_10px] rounded-[7px] bg-[#F7F7FA] text-[15px] leading-[20px] tracking-[-0.39px] text-[#515F6C] font-normal;
+  }
+
+  /* 커스텀 드롭다운 옵션 목록 (시안 상단 둥근 박스 + 섀도우) */
+  .factor-analyst .recommendListFilter .select-box .select {
+    @apply absolute left-0 top-[110%] w-full bg-white border border-[#DEE2E6] rounded-[7px] z-20 max-h-[160px] overflow-y-auto py-4 px-3 flex flex-col gap-[6px];
+    box-shadow: 0px 1px 10px 0px #00000026;
+  }
+  .factor-analyst .recommendListFilter .select-box .select button {
+    @apply w-full text-[13px] leading-[20px] text-left transition-colors;
+  }
+
+  /* 선택된 항목 (시안 보라색 폰트) */
+  .factor-analyst .recommendListFilter .select-box .select button.active {
+    @apply text-main;
+  }
+
+  .factor-analyst .recommendListFilter .select-box .arrow {
+    @apply flex items-center justify-center transition-transform duration-200;
+  }
+  .factor-analyst .recommendListFilter .select-box .arrow.open {
+    @apply rotate-180;
   }
 }

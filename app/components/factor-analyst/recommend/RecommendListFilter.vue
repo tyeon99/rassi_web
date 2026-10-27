@@ -1,5 +1,5 @@
 <template>
-  <div class="dateListFilter">
+  <div class="recommendListFilter">
     <!-- 라디오 버튼 영역 -->
     <div class="radio-group">
       <label>
