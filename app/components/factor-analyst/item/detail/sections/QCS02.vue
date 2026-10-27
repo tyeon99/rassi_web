@@ -3,6 +3,9 @@
     <div class="title">
       <span>돈 버는 효율성은 괜찮을까?</span>
       <h1>GP/A는?</h1>
+      <button class="detail" @click="openGPADetailModal">
+        <img width="20" src="~/assets/img/factor-analyst/item/question-icon.png">
+      </button>
     </div>
     
     <div class="box-group">
@@ -75,12 +78,23 @@
         </div>
       </div>
     </div>
+    
+    <!-- 용어 설명 -->
+    <GPADetailModal 
+      v-if="isGPADetailModalOpen"
+      :isModalAni="isModalAni"
+      @close-gpaDetailModal="closeGPADetailModal"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import '~/assets/css/factor-analyst/common.css'
+import GPADetailModal from '~/components/factor-analyst/offcanvas/GPADetailModal.vue'
+
+const isGPADetailModalOpen = ref(false)
+const isModalAni = ref(false)
 
 const boxItem = [
   {
@@ -106,4 +120,26 @@ const gpaList = ref([
     sectorScore: 78
   }
 ])
+
+// 용어 설명 열기
+const openGPADetailModal = () => {
+  isModalAni.value = true
+  isGPADetailModalOpen.value = true
+}
+
+// 용어 설명 닫기
+const closeGPADetailModal = () => {
+  isModalAni.value = false
+  setTimeout(() => {
+    isGPADetailModalOpen.value = false
+  }, 300)
+}
+
+watch(isGPADetailModalOpen, (isOpen) => {
+  if (isOpen) {
+    document.body.classList.add('scroll-lock')
+  } else {
+    document.body.classList.remove('scroll-lock')
+  }
+})
 </script>

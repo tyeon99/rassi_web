@@ -3,6 +3,9 @@
     <div class="title">
       <span>이 회사 장부는 괜찮을까?</span>
       <h1>F스코어 OX</h1>
+      <button class="detail" @click="openFSDetailModal">
+        <img width="20" src="~/assets/img/factor-analyst/item/question-icon.png">
+      </button>
     </div>
     
     <div class="box-group">
@@ -55,12 +58,24 @@
         </div>
       </div>
     </div>
+    
+    <!-- 용어 설명 -->
+    <FSDetailModal 
+      v-if="isFSDetailModalOpen"
+      :isModalAni="isModalAni"
+      @close-fsDetailModal="closeFSDetailModal"
+    />
 
   </div>
 </template>
 
 <script setup lang="ts">
+import { ref, watch } from 'vue'
 import '~/assets/css/factor-analyst/common.css'
+import FSDetailModal from '~/components/factor-analyst/offcanvas/FSDetailModal.vue'
+
+const isFSDetailModalOpen = ref(false)
+const isModalAni = ref(false)
 
 const fScoreList = [
   {
@@ -112,4 +127,26 @@ const itemFScore = ref([
     boxTxt: 'SK하이닉스의 F스코어는 전체 시장에서 <strong>상위 22%</strong> 수준이에요.'
   }
 ])
+
+// 용어 설명 열기
+const openFSDetailModal = () => {
+  isModalAni.value = true
+  isFSDetailModalOpen.value = true
+}
+
+// 용어 설명 닫기
+const closeFSDetailModal = () => {
+  isModalAni.value = false
+  setTimeout(() => {
+    isFSDetailModalOpen.value = false
+  }, 300)
+}
+
+watch(isFSDetailModalOpen, (isOpen) => {
+  if (isOpen) {
+    document.body.classList.add('scroll-lock')
+  } else {
+    document.body.classList.remove('scroll-lock')
+  }
+})
 </script>

@@ -3,6 +3,9 @@
     <div class="title">
       <span>청산가치보다 저평가일까?</span>
       <h1>NCAV 스크리닝은?</h1>
+      <button class="detail" @click="openNCAVDetailModal">
+        <img width="20" src="~/assets/img/factor-analyst/item/question-icon.png">
+      </button>
     </div>
 
     <div class="box-group">
@@ -87,12 +90,23 @@
         </div>
       </div>
     </div>
+    
+    <!-- 용어 설명 -->
+    <NCAVDetailModal 
+      v-if="isNCAVDetailModalOpen"
+      :isModalAni="isModalAni"
+      @close-ncavDetailModal="closeNCAVDetailModal"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import '~/assets/css/factor-analyst/common.css'
+import NCAVDetailModal from '~/components/factor-analyst/offcanvas/NCAVDetailModal.vue'
+
+const isNCAVDetailModalOpen = ref(false)
+const isModalAni = ref(false)
 
 const rateList = [
   {
@@ -104,4 +118,27 @@ const rateList = [
 
 const marketTxt = 'SK하이닉스의 순유동자산(NCAV)비율은 전체 시장에서 <strong>상위 12%</strong> 수준이에요.'
 const marketPercentile = ref(78)
+
+
+// 용어 설명 열기
+const openNCAVDetailModal = () => {
+  isModalAni.value = true
+  isNCAVDetailModalOpen.value = true
+}
+
+// 용어 설명 닫기
+const closeNCAVDetailModal = () => {
+  isModalAni.value = false
+  setTimeout(() => {
+    isNCAVDetailModalOpen.value = false
+  }, 300)
+}
+
+watch(isNCAVDetailModalOpen, (isOpen) => {
+  if (isOpen) {
+    document.body.classList.add('scroll-lock')
+  } else {
+    document.body.classList.remove('scroll-lock')
+  }
+})
 </script>
